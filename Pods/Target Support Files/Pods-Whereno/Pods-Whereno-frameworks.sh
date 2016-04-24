@@ -86,7 +86,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/ABFRealmMapView/ABFRealmMapView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Mapper/Mapper.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ModelMapper/Mapper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RBQFetchedResultsController/RBQFetchedResultsController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Realm/Realm.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RealmMapView/RealmMapView.framework"
@@ -96,7 +96,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/ABFRealmMapView/ABFRealmMapView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/Mapper/Mapper.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ModelMapper/Mapper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RBQFetchedResultsController/RBQFetchedResultsController.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Realm/Realm.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RealmMapView/RealmMapView.framework"

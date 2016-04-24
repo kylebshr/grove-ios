@@ -5,7 +5,7 @@ target 'Whereno' do
     pod 'Alamofire'
     pod 'RealmSwift'
     pod 'RealmMapView'
-    pod 'Mapper'
+    pod 'ModelMapper'
 end
 
 target 'WherenoTests' do
