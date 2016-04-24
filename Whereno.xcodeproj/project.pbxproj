@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		27B345C61CCD669A005BA871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345C51CCD669A005BA871 /* AppDelegate.swift */; };
-		27B345C81CCD669A005BA871 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345C71CCD669A005BA871 /* ViewController.swift */; };
+		27B345C81CCD669A005BA871 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345C71CCD669A005BA871 /* MapViewController.swift */; };
 		27B345CB1CCD669A005BA871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B345C91CCD669A005BA871 /* Main.storyboard */; };
 		27B345CD1CCD669A005BA871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B345CC1CCD669A005BA871 /* Assets.xcassets */; };
 		27B345D01CCD669A005BA871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B345CE1CCD669A005BA871 /* LaunchScreen.storyboard */; };
 		27B345DB1CCD669A005BA871 /* WherenoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345DA1CCD669A005BA871 /* WherenoTests.swift */; };
 		27B345E61CCD669A005BA871 /* WherenoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345E51CCD669A005BA871 /* WherenoUITests.swift */; };
+		27DECBF01CCD68B500A4BCD2 /* HammockLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DECBEF1CCD68B500A4BCD2 /* HammockLocation.swift */; };
 		3B722447C3CDB0FFB1B5BF0B /* Pods_WherenoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC078A32BBF94C87DE98670 /* Pods_WherenoTests.framework */; };
 		3DC093D76DCBA63B4B5F625C /* Pods_Whereno.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDCE2D774BD42C3EA6C89DE /* Pods_Whereno.framework */; };
 		B33EC7B266EBE7D02EF8DEDA /* Pods_WherenoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C670B4F585C8C56F8E2468B1 /* Pods_WherenoUITests.framework */; };
@@ -41,7 +42,7 @@
 		20453D8DF56CC3C266883235 /* Pods-Whereno.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whereno.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whereno/Pods-Whereno.debug.xcconfig"; sourceTree = "<group>"; };
 		27B345C21CCD669A005BA871 /* Whereno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B345C51CCD669A005BA871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		27B345C71CCD669A005BA871 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		27B345C71CCD669A005BA871 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		27B345CA1CCD669A005BA871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27B345CC1CCD669A005BA871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27B345CF1CCD669A005BA871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +53,7 @@
 		27B345E11CCD669A005BA871 /* WherenoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WherenoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B345E51CCD669A005BA871 /* WherenoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WherenoUITests.swift; sourceTree = "<group>"; };
 		27B345E71CCD669A005BA871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27DECBEF1CCD68B500A4BCD2 /* HammockLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HammockLocation.swift; sourceTree = "<group>"; };
 		4F9348406D02EB6563C67B51 /* Pods-WherenoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WherenoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WherenoUITests/Pods-WherenoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4FC078A32BBF94C87DE98670 /* Pods_WherenoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WherenoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CDCE2D774BD42C3EA6C89DE /* Pods_Whereno.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whereno.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,11 +117,10 @@
 			isa = PBXGroup;
 			children = (
 				27B345C51CCD669A005BA871 /* AppDelegate.swift */,
-				27B345C71CCD669A005BA871 /* ViewController.swift */,
-				27B345C91CCD669A005BA871 /* Main.storyboard */,
-				27B345CC1CCD669A005BA871 /* Assets.xcassets */,
-				27B345CE1CCD669A005BA871 /* LaunchScreen.storyboard */,
-				27B345D11CCD669A005BA871 /* Info.plist */,
+				27DECBED1CCD687600A4BCD2 /* Storyboards */,
+				27DECBEC1CCD686E00A4BCD2 /* View Controllers */,
+				27DECBF11CCD68C300A4BCD2 /* Models */,
+				27DECBEE1CCD687C00A4BCD2 /* Assets */,
 			);
 			path = Whereno;
 			sourceTree = "<group>";
@@ -140,6 +141,40 @@
 				27B345E71CCD669A005BA871 /* Info.plist */,
 			);
 			path = WherenoUITests;
+			sourceTree = "<group>";
+		};
+		27DECBEC1CCD686E00A4BCD2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				27B345C71CCD669A005BA871 /* MapViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		27DECBED1CCD687600A4BCD2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				27B345C91CCD669A005BA871 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		27DECBEE1CCD687C00A4BCD2 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				27B345CC1CCD669A005BA871 /* Assets.xcassets */,
+				27B345CE1CCD669A005BA871 /* LaunchScreen.storyboard */,
+				27B345D11CCD669A005BA871 /* Info.plist */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		27DECBF11CCD68C300A4BCD2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27DECBEF1CCD68B500A4BCD2 /* HammockLocation.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		5E151DA70E544710E75248E9 /* Frameworks */ = {
@@ -427,8 +462,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B345C81CCD669A005BA871 /* ViewController.swift in Sources */,
+				27B345C81CCD669A005BA871 /* MapViewController.swift in Sources */,
 				27B345C61CCD669A005BA871 /* AppDelegate.swift in Sources */,
+				27DECBF01CCD68B500A4BCD2 /* HammockLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
