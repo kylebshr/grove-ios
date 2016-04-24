@@ -15,6 +15,7 @@
 		27B345DB1CCD669A005BA871 /* WherenoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345DA1CCD669A005BA871 /* WherenoTests.swift */; };
 		27B345E61CCD669A005BA871 /* WherenoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345E51CCD669A005BA871 /* WherenoUITests.swift */; };
 		27DECBF01CCD68B500A4BCD2 /* HammockLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DECBEF1CCD68B500A4BCD2 /* HammockLocation.swift */; };
+		27DECBF51CCD7DDA00A4BCD2 /* Knoxville.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 27DECBF41CCD7DDA00A4BCD2 /* Knoxville.gpx */; };
 		3B722447C3CDB0FFB1B5BF0B /* Pods_WherenoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC078A32BBF94C87DE98670 /* Pods_WherenoTests.framework */; };
 		3DC093D76DCBA63B4B5F625C /* Pods_Whereno.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDCE2D774BD42C3EA6C89DE /* Pods_Whereno.framework */; };
 		B33EC7B266EBE7D02EF8DEDA /* Pods_WherenoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C670B4F585C8C56F8E2468B1 /* Pods_WherenoUITests.framework */; };
@@ -54,6 +55,7 @@
 		27B345E51CCD669A005BA871 /* WherenoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WherenoUITests.swift; sourceTree = "<group>"; };
 		27B345E71CCD669A005BA871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27DECBEF1CCD68B500A4BCD2 /* HammockLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HammockLocation.swift; sourceTree = "<group>"; };
+		27DECBF41CCD7DDA00A4BCD2 /* Knoxville.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Knoxville.gpx; sourceTree = "<group>"; };
 		4F9348406D02EB6563C67B51 /* Pods-WherenoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WherenoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WherenoUITests/Pods-WherenoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4FC078A32BBF94C87DE98670 /* Pods_WherenoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WherenoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CDCE2D774BD42C3EA6C89DE /* Pods_Whereno.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Whereno.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +166,7 @@
 			children = (
 				27B345CC1CCD669A005BA871 /* Assets.xcassets */,
 				27B345CE1CCD669A005BA871 /* LaunchScreen.storyboard */,
+				27DECBF41CCD7DDA00A4BCD2 /* Knoxville.gpx */,
 				27B345D11CCD669A005BA871 /* Info.plist */,
 			);
 			name = Assets;
@@ -314,6 +317,7 @@
 			files = (
 				27B345D01CCD669A005BA871 /* LaunchScreen.storyboard in Resources */,
 				27B345CD1CCD669A005BA871 /* Assets.xcassets in Resources */,
+				27DECBF51CCD7DDA00A4BCD2 /* Knoxville.gpx in Resources */,
 				27B345CB1CCD669A005BA871 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

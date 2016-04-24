@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Location-->
+        <!--Locating...-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="Whereno" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,7 +38,13 @@
                             <constraint firstItem="tCy-zo-wBY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="i7E-qr-roB"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Location" id="J4l-XR-IJZ"/>
+                    <navigationItem key="navigationItem" title="Locating..." id="J4l-XR-IJZ">
+                        <barButtonItem key="leftBarButtonItem" title="Location" id="AWl-99-6BU">
+                            <connections>
+                                <action selector="locationButtonTapped:" destination="BYZ-38-t0r" id="yle-HT-for"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="tCy-zo-wBY" id="AKL-fc-oOO"/>
                     </connections>
