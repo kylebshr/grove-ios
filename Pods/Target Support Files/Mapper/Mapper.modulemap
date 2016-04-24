@@ -1,0 +1,6 @@
+framework module Mapper {
+  umbrella header "Mapper-umbrella.h"
+
+  export *
+  module * { export * }
+}
