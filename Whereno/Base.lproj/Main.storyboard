@@ -44,6 +44,7 @@
                                 <action selector="locationButtonTapped:" destination="BYZ-38-t0r" id="yle-HT-for"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7rb-kp-ENQ"/>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="tCy-zo-wBY" id="AKL-fc-oOO"/>
@@ -73,6 +74,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="location-arrow" width="17" height="17"/>
+        <image name="location-arrow" width="23" height="23"/>
     </resources>
 </document>
