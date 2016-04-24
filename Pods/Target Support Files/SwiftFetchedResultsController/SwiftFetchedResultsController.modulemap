@@ -1,0 +1,6 @@
+framework module SwiftFetchedResultsController {
+  umbrella header "SwiftFetchedResultsController-umbrella.h"
+
+  export *
+  module * { export * }
+}

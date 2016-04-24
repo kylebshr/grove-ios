@@ -1,0 +1,6 @@
+framework module RealmMapView {
+  umbrella header "RealmMapView-umbrella.h"
+
+  export *
+  module * { export * }
+}

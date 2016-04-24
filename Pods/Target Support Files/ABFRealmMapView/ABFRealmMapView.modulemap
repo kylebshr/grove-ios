@@ -1,0 +1,6 @@
+framework module ABFRealmMapView {
+  umbrella header "ABFRealmMapView-umbrella.h"
+
+  export *
+  module * { export * }
+}
