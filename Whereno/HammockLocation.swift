@@ -7,3 +7,9 @@
 //
 
 import Foundation
+import RealmSwift
+
+class HammockLocation: Object {
+
+
+}
