@@ -14,16 +14,23 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: RealmMapView!
 
     let geocoder = CLGeocoder()
+    let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         mapView.zoomOnFirstRefresh = false
-        CLLocationManager.requestLocationPermissionIfNeeded()
+        requestLocationPermissionIfNeeded()
     }
 
     @IBAction func locationButtonTapped(sender: UIBarButtonItem) {
        updateMapRegion(mapView.userLocation.coordinate)
+    }
+
+    func requestLocationPermissionIfNeeded() {
+        if CLLocationManager.authorizationStatus() == .NotDetermined {
+            locationManager.requestWhenInUseAuthorization()
+        }
     }
 
     func updateMapRegion(coordinate: CLLocationCoordinate2D) {
