@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +16,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+
+        do {
+            let realm = try Realm()
+
+            let locations: [NSDictionary] = [
+                ["id": 0, "title": "Nice place by hess", "latitude": 35.95381390160845, "longitude": -83.93056634127164],
+                ["id": 1, "title": "Near Neyland", "latitude": 35.9555183, "longitude": -83.9264314],
+                ["id": 2, "title": "Nice shade", "latitude": 35.9531734, "longitude": -83.9269893],
+            ]
+
+            try realm.write {
+                locations.flatMap {
+                    return HammockLocation.from($0)
+                }.forEach {
+                    realm.add($0, update: true)
+                }
+            }
+        } catch {
+            print("Realm error")
+        }
+
         return true
     }
 

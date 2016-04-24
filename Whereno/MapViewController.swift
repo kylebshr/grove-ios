@@ -7,19 +7,22 @@
 //
 
 import UIKit
+import RealmMapView
+import RealmSwift
 
 class MapViewController: UIViewController {
 
+    @IBOutlet weak var mapView: RealmMapView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
+extension MapViewController: MKMapViewDelegate {
+
+    func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
+        mapView.setCenterCoordinate(userLocation.coordinate, animated: true)
+    }
+}

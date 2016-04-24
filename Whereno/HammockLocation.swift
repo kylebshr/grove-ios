@@ -8,8 +8,26 @@
 
 import Foundation
 import RealmSwift
+import Mapper
 
-class HammockLocation: Object {
+final class HammockLocation: Object, Mappable {
 
+    dynamic var id = 0
+    dynamic var title = ""
+    dynamic var latitude = 0.0
+    dynamic var longitude = 0.0
 
+    required convenience init(map: Mapper) throws {
+
+        self.init()
+
+        try id = map.from("id")
+        try title = map.from("title")
+        try latitude = map.from("latitude")
+        try longitude = map.from("longitude")
+    }
+
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }
