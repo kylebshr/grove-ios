@@ -3,7 +3,6 @@ PODS:
     - RBQFetchedResultsController (>= 2.0)
     - Realm (>= 0.96)
   - Alamofire (3.3.1)
-  - INTULocationManager (4.2.0)
   - ModelMapper (2.0.0)
   - RBQFetchedResultsController (3.0.1):
     - Realm (>= 0.95)
@@ -22,7 +21,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - INTULocationManager
   - ModelMapper
   - RealmMapView
   - RealmSwift
@@ -30,7 +28,6 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   ABFRealmMapView: e3d18e6a2df1713c07b4e518504558ecbadc9968
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
-  INTULocationManager: 73f8254b3d05c897c56bb13c190e5b7c648c0998
   ModelMapper: ba9a60ef4c695c3082e404fc14062e189dcc8409
   RBQFetchedResultsController: 4b8a80647859241abdb3da04b486a6ad02dd5093
   Realm: 0e293bb62999730599efc3048896bbd4f2e43bcd
@@ -38,6 +35,6 @@ SPEC CHECKSUMS:
   RealmSwift: 064262d38113f23ff3508fb20a0a922e696bec01
   SwiftFetchedResultsController: 646da58a5cde2293b692f5c8283d1db001d720bc
 
-PODFILE CHECKSUM: a3abe3ff1f8965569a8554832b6aaec53498e0b6
+PODFILE CHECKSUM: cc686d2fb310882366dff295d5dae17eec1a8aa3
 
 COCOAPODS: 1.0.0.beta.8

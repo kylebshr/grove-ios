@@ -8,7 +8,6 @@
 
 import UIKit
 import RealmMapView
-import INTULocationManager
 
 class MapViewController: UIViewController {
 
@@ -20,6 +19,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
 
         mapView.zoomOnFirstRefresh = false
+        CLLocationManager.requestLocationPermissionIfNeeded()
     }
 
     @IBAction func locationButtonTapped(sender: UIBarButtonItem) {
@@ -35,7 +35,7 @@ class MapViewController: UIViewController {
 
         geocoder.reverseGeocodeLocation(location) { [weak self] placemarks, error in
 
-            // TODO: do on main thread
+            // TODO: do on main thread?
 
             guard let locality = placemarks?.first?.locality else {
                 self?.title = "Current Location"
