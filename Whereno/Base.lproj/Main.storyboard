@@ -39,7 +39,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Locating..." id="J4l-XR-IJZ">
-                        <barButtonItem key="leftBarButtonItem" title="Location" id="AWl-99-6BU">
+                        <barButtonItem key="leftBarButtonItem" image="location-arrow" id="AWl-99-6BU">
                             <connections>
                                 <action selector="locationButtonTapped:" destination="BYZ-38-t0r" id="yle-HT-for"/>
                             </connections>
@@ -72,4 +72,7 @@
             <point key="canvasLocation" x="355" y="1047"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="location-arrow" width="17" height="17"/>
+    </resources>
 </document>
