@@ -40,3 +40,17 @@ final class HammockLocation: Object, Mappable {
         return NSURL(string: imageURLString)!
     }
 }
+
+extension HammockLocation: JSONEncodable {
+
+    func toJSON() -> [String : AnyObject] {
+        return [
+            "id": id,
+            "title": title,
+            "image_url": imageURLString,
+            "description": descriptionText,
+            "latitude": latitude,
+            "longitude": longitude,
+        ]
+    }
+}
