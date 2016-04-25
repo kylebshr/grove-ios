@@ -11,20 +11,26 @@ import UIKit
 class LocationDetailViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var tableView: UITableView!
-
-    var originalImageHeight: CGFloat!
-    var location: HammockLocation!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        originalImageHeight = imageHeightConstraint.constant
-        
-        title = location.title
-        tableView.contentInset = UIEdgeInsets(top: originalImageHeight, left: 0, bottom: 0, right: 0)
+    @IBOutlet weak var imageDimmingView: UIView!
+    @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint! {
+        didSet {
+            originalHeaderHeight = imageHeightConstraint.constant
+        }
     }
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.contentInset = UIEdgeInsets(top: imageHeightConstraint.constant, left: 0, bottom: 0, right: 0)
+            tableView.estimatedRowHeight = 60
+            tableView.rowHeight = UITableViewAutomaticDimension
+        }
+    }
+
+    var location: HammockLocation! {
+        didSet {
+            title = location.title
+        }
+    }
+    var originalHeaderHeight: CGFloat!
 }
 
 extension LocationDetailViewController: UIScrollViewDelegate {
@@ -36,6 +42,7 @@ extension LocationDetailViewController: UIScrollViewDelegate {
             return
         }
 
+        imageDimmingView.alpha = 1 - (offset / originalHeaderHeight)
         imageHeightConstraint.constant = offset
     }
 }
@@ -47,12 +54,15 @@ extension LocationDetailViewController: UITableViewDataSource {
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.headerDescriptionCell)!
-            cell.textLabel?.text = location.descriptionText
+            let cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.detailHeaderCell)!
+            cell.descriptionLabel.text = location.descriptionText
             return cell
         }
 
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.detailCommentCell)!
+        // config comment
+        return cell
     }
 }
