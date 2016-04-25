@@ -1,0 +1,6 @@
+framework module HPGrowingTextView {
+  umbrella header "HPGrowingTextView-umbrella.h"
+
+  export *
+  module * { export * }
+}
