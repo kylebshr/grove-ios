@@ -99,12 +99,16 @@ extension MapViewController: MKMapViewDelegate {
             let annotationView =
                 mapView.dequeueReusableAnnotationViewWithIdentifier(annotationViewReuseId) as? ABFClusterAnnotationView ??
                 ABFClusterAnnotationView(annotation: fetchedAnnotation, reuseIdentifier: annotationViewReuseId)
+            let disclosureButton = UIButton(type: .DetailDisclosure)
+
+            disclosureButton.setImage(R.image.rightChevron(), forState: .Normal)
+            disclosureButton.tintColor = UIColor.blackColor()
 
             annotationView.canShowCallout = true
             annotationView.count = UInt(fetchedAnnotation.safeObjects.count)
             annotationView.annotation = fetchedAnnotation
             annotationView.rightCalloutAccessoryView =
-                fetchedAnnotation.safeObjects.count == 1 ? UIButton(type: .DetailDisclosure) : nil
+                fetchedAnnotation.safeObjects.count == 1 ? disclosureButton : nil
 
             return annotationView
         }

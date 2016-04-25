@@ -18,6 +18,8 @@ final class HammockLocation: Object, Mappable {
     dynamic var latitude = 0.0
     dynamic var longitude = 0.0
 
+    let comments = List<LocationComment>()
+
     required convenience init(map: Mapper) throws {
         self.init()
 

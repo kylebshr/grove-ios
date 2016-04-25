@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		27235A2C1CCE5B96006B1475 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A2B1CCE5B96006B1475 /* R.generated.swift */; };
 		27235A2E1CCE5BAA006B1475 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A2D1CCE5BAA006B1475 /* LocationDetailViewController.swift */; };
+		27235A301CCE67D9006B1475 /* LocationComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A2F1CCE67D9006B1475 /* LocationComment.swift */; };
 		27B345C61CCD669A005BA871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345C51CCD669A005BA871 /* AppDelegate.swift */; };
 		27B345C81CCD669A005BA871 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345C71CCD669A005BA871 /* MapViewController.swift */; };
 		27B345CB1CCD669A005BA871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B345C91CCD669A005BA871 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		20453D8DF56CC3C266883235 /* Pods-Whereno.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whereno.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whereno/Pods-Whereno.debug.xcconfig"; sourceTree = "<group>"; };
 		27235A2B1CCE5B96006B1475 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		27235A2D1CCE5BAA006B1475 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
+		27235A2F1CCE67D9006B1475 /* LocationComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationComment.swift; sourceTree = "<group>"; };
 		27B345C21CCD669A005BA871 /* Whereno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B345C51CCD669A005BA871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27B345C71CCD669A005BA871 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27235A311CCE77E5006B1475 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		27B345B91CCD669A005BA871 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +136,7 @@
 				27B345C51CCD669A005BA871 /* AppDelegate.swift */,
 				27DECBED1CCD687600A4BCD2 /* Storyboards */,
 				27DECBEC1CCD686E00A4BCD2 /* View Controllers */,
+				27235A311CCE77E5006B1475 /* Views */,
 				27DECBF11CCD68C300A4BCD2 /* Models */,
 				27DECBF81CCD843800A4BCD2 /* Extensions */,
 				27DECBEE1CCD687C00A4BCD2 /* Assets */,
@@ -185,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				27DECBEF1CCD68B500A4BCD2 /* HammockLocation.swift */,
+				27235A2F1CCE67D9006B1475 /* LocationComment.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -500,6 +511,7 @@
 			files = (
 				27B345C81CCD669A005BA871 /* MapViewController.swift in Sources */,
 				27DECBFA1CCD901D00A4BCD2 /* UITextField+Extensions.swift in Sources */,
+				27235A301CCE67D9006B1475 /* LocationComment.swift in Sources */,
 				27235A2C1CCE5B96006B1475 /* R.generated.swift in Sources */,
 				27B345C61CCD669A005BA871 /* AppDelegate.swift in Sources */,
 				27235A2E1CCE5BAA006B1475 /* LocationDetailViewController.swift in Sources */,
