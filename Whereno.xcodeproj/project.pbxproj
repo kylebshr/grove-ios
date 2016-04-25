@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27235A2C1CCE5B96006B1475 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A2B1CCE5B96006B1475 /* R.generated.swift */; };
+		27235A2E1CCE5BAA006B1475 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A2D1CCE5BAA006B1475 /* LocationDetailViewController.swift */; };
 		27B345C61CCD669A005BA871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345C51CCD669A005BA871 /* AppDelegate.swift */; };
 		27B345C81CCD669A005BA871 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345C71CCD669A005BA871 /* MapViewController.swift */; };
 		27B345CB1CCD669A005BA871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B345C91CCD669A005BA871 /* Main.storyboard */; };
@@ -42,6 +44,8 @@
 /* Begin PBXFileReference section */
 		0056E4470DD35EA7349FB58D /* Pods-WherenoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WherenoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WherenoTests/Pods-WherenoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		20453D8DF56CC3C266883235 /* Pods-Whereno.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whereno.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whereno/Pods-Whereno.debug.xcconfig"; sourceTree = "<group>"; };
+		27235A2B1CCE5B96006B1475 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		27235A2D1CCE5BAA006B1475 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 		27B345C21CCD669A005BA871 /* Whereno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B345C51CCD669A005BA871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27B345C71CCD669A005BA871 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 			isa = PBXGroup;
 			children = (
 				27B345C71CCD669A005BA871 /* MapViewController.swift */,
+				27235A2D1CCE5BAA006B1475 /* LocationDetailViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -167,6 +172,7 @@
 		27DECBEE1CCD687C00A4BCD2 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				27235A2B1CCE5B96006B1475 /* R.generated.swift */,
 				27B345CC1CCD669A005BA871 /* Assets.xcassets */,
 				27B345CE1CCD669A005BA871 /* LaunchScreen.storyboard */,
 				27DECBF41CCD7DDA00A4BCD2 /* Knoxville.gpx */,
@@ -222,6 +228,7 @@
 			buildConfigurationList = 27B345EA1CCD669A005BA871 /* Build configuration list for PBXNativeTarget "Whereno" */;
 			buildPhases = (
 				0714912BB36D3E92291D364B /* 📦 Check Pods Manifest.lock */,
+				27235A2A1CCE5B6A006B1475 /* R.swift */,
 				27B345BE1CCD669A005BA871 /* Sources */,
 				27B345BF1CCD669A005BA871 /* Frameworks */,
 				27B345C01CCD669A005BA871 /* Resources */,
@@ -395,6 +402,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WherenoUITests/Pods-WherenoUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		27235A2A1CCE5B6A006B1475 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
+		};
 		2EC087DD5BD8254D9221EFB5 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -479,7 +500,9 @@
 			files = (
 				27B345C81CCD669A005BA871 /* MapViewController.swift in Sources */,
 				27DECBFA1CCD901D00A4BCD2 /* UITextField+Extensions.swift in Sources */,
+				27235A2C1CCE5B96006B1475 /* R.generated.swift in Sources */,
 				27B345C61CCD669A005BA871 /* AppDelegate.swift in Sources */,
+				27235A2E1CCE5BAA006B1475 /* LocationDetailViewController.swift in Sources */,
 				27DECBF01CCD68B500A4BCD2 /* HammockLocation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

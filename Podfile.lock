@@ -5,6 +5,9 @@ PODS:
   - Alamofire (3.3.1)
   - AsyncSwift (1.7.2)
   - ModelMapper (2.0.1)
+  - R.swift (2.1.0):
+    - R.swift.Library (~> 2.0.0)
+  - R.swift.Library (2.0.0)
   - RBQFetchedResultsController (3.0.1):
     - Realm (>= 0.95)
   - Realm (0.99.0):
@@ -24,6 +27,7 @@ DEPENDENCIES:
   - Alamofire
   - AsyncSwift
   - ModelMapper
+  - R.swift
   - RealmMapView
   - RealmSwift
 
@@ -32,12 +36,14 @@ SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
   ModelMapper: 798850e5b2ca193a830a8ac18a1b5874997cdee8
+  R.swift: efff131531b5cf142e28fd94957806ff71ccbcf2
+  R.swift.Library: 9f4b2d12040daa1ffe336d8f7e1574f73721fd01
   RBQFetchedResultsController: 4b8a80647859241abdb3da04b486a6ad02dd5093
   Realm: cf275f109b94e5399896960c90285a043edb3d56
   RealmMapView: 2a3de4d3434e8e0778075d1a9cf34e12161a3daf
   RealmSwift: f40e5634bbc74f063163561d02acc4aa040d40a5
   SwiftFetchedResultsController: 646da58a5cde2293b692f5c8283d1db001d720bc
 
-PODFILE CHECKSUM: c5f33edd0e2785fb5ae80933b4f7ef8a09239efa
+PODFILE CHECKSUM: e0286bfceb4bbdb24210cb25befad16f6c9360cc
 
 COCOAPODS: 1.0.0.beta.8
