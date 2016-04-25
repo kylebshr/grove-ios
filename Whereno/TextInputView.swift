@@ -12,9 +12,11 @@ class TextInputView: UIView {
 
     @IBOutlet private var textField: UITextField!
     @IBOutlet private var textView: UITextView!
+    @IBOutlet private var countLabel: UILabel!
     @IBOutlet private var sendButton: UIButton!
 
     private let separator = UIView()
+    private let numberOfCharactersAllowed = 180
 
     var text: String {
         get {
@@ -58,10 +60,20 @@ extension TextInputView: UITextViewDelegate {
 
     func textViewDidChange(textView: UITextView) {
 
+        countLabel.text = "\(textView.text.characters.count)/\(numberOfCharactersAllowed)"
+
         textField.placeholder = textView.text == "" ? "Comment" : nil
 
         textView.scrollEnabled = true
         invalidateIntrinsicContentSize()
         textView.scrollEnabled = false
+    }
+
+    func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if (textView.text.characters.count + text.characters.count) > numberOfCharactersAllowed {
+            return false
+        }
+
+        return true
     }
 }

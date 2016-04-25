@@ -20,6 +20,7 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tCy-zo-wBY" customClass="RealmMapView" customModule="RealmMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.96078431372549022" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.28235294119999998" green="0.54117647059999996" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="entityName" value="HammockLocation"/>
@@ -69,8 +70,9 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Image..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wys-kB-zTQ">
-                                <rect key="frame" x="242" y="81" width="116.5" height="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Image..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wys-kB-zTQ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="180"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -141,7 +143,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nice place!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abB-ep-h1w">
-                                                    <rect key="frame" x="28" y="31.5" width="557" height="16.5"/>
+                                                    <rect key="frame" x="28" y="31" width="557" height="16.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -195,19 +197,21 @@ Must be a nice quiet place!</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wys-kB-zTQ" firstAttribute="leading" secondItem="icZ-S3-4U1" secondAttribute="leading" id="1QL-Id-VeH"/>
                             <constraint firstAttribute="trailing" secondItem="lHM-xE-JmI" secondAttribute="trailing" id="3Hm-MB-zlR"/>
                             <constraint firstItem="Eo2-4Y-NCz" firstAttribute="trailing" secondItem="icZ-S3-4U1" secondAttribute="trailing" id="3bk-aM-h8K"/>
+                            <constraint firstItem="wys-kB-zTQ" firstAttribute="trailing" secondItem="icZ-S3-4U1" secondAttribute="trailing" id="92C-Eh-QQu"/>
                             <constraint firstItem="Ehz-XB-5Pd" firstAttribute="top" secondItem="lHM-xE-JmI" secondAttribute="bottom" id="9iF-ib-omy"/>
                             <constraint firstItem="icZ-S3-4U1" firstAttribute="top" secondItem="bnS-ME-ujK" secondAttribute="top" id="BwV-dC-mqO"/>
                             <constraint firstItem="Eo2-4Y-NCz" firstAttribute="leading" secondItem="icZ-S3-4U1" secondAttribute="leading" id="C8u-ED-BYF"/>
-                            <constraint firstItem="wys-kB-zTQ" firstAttribute="centerX" secondItem="icZ-S3-4U1" secondAttribute="centerX" id="CZw-GN-Dv5"/>
                             <constraint firstItem="icZ-S3-4U1" firstAttribute="leading" secondItem="bnS-ME-ujK" secondAttribute="leading" id="IBP-4c-R9F"/>
-                            <constraint firstItem="wys-kB-zTQ" firstAttribute="centerY" secondItem="icZ-S3-4U1" secondAttribute="centerY" id="Zrw-Po-g2A"/>
+                            <constraint firstItem="wys-kB-zTQ" firstAttribute="top" secondItem="icZ-S3-4U1" secondAttribute="top" id="bGZ-Id-C31"/>
                             <constraint firstItem="lHM-xE-JmI" firstAttribute="leading" secondItem="bnS-ME-ujK" secondAttribute="leading" id="ggd-9C-frJ"/>
                             <constraint firstItem="lHM-xE-JmI" firstAttribute="top" secondItem="bnS-ME-ujK" secondAttribute="top" id="gsr-Ks-6RE"/>
                             <constraint firstAttribute="trailing" secondItem="icZ-S3-4U1" secondAttribute="trailing" id="iOC-vB-Quk"/>
                             <constraint firstItem="Eo2-4Y-NCz" firstAttribute="bottom" secondItem="icZ-S3-4U1" secondAttribute="bottom" id="qmo-ZZ-JNa"/>
                             <constraint firstItem="Eo2-4Y-NCz" firstAttribute="top" secondItem="icZ-S3-4U1" secondAttribute="top" id="wQB-Lo-0rh"/>
+                            <constraint firstItem="wys-kB-zTQ" firstAttribute="bottom" secondItem="icZ-S3-4U1" secondAttribute="bottom" id="zgd-Bs-vZf"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
