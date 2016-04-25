@@ -9,7 +9,6 @@ target 'Whereno' do
     pod 'AsyncSwift'
     pod 'R.swift'
     pod 'Kingfisher'
-    pod 'ALTextInputBar'
 end
 
 target 'WherenoTests' do

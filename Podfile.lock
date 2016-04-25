@@ -3,7 +3,6 @@ PODS:
     - RBQFetchedResultsController (>= 2.0)
     - Realm (>= 0.96)
   - Alamofire (3.3.1)
-  - ALTextInputBar (1.0.10)
   - AsyncSwift (1.7.2)
   - Kingfisher (2.3.1)
   - ModelMapper (2.0.1)
@@ -27,7 +26,6 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
-  - ALTextInputBar
   - AsyncSwift
   - Kingfisher
   - ModelMapper
@@ -38,7 +36,6 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   ABFRealmMapView: e3d18e6a2df1713c07b4e518504558ecbadc9968
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
-  ALTextInputBar: 8c65c9ad4e26d872baf51194314d0937034af376
   AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
   Kingfisher: 6d3fbada4829cbc7b89e883e8218c28afeb64e42
   ModelMapper: 798850e5b2ca193a830a8ac18a1b5874997cdee8
@@ -50,6 +47,6 @@ SPEC CHECKSUMS:
   RealmSwift: f40e5634bbc74f063163561d02acc4aa040d40a5
   SwiftFetchedResultsController: 646da58a5cde2293b692f5c8283d1db001d720bc
 
-PODFILE CHECKSUM: c4c54b7ebfd8864f1d4bbec2fac9b29d49b04bbf
+PODFILE CHECKSUM: 423edc8b6ffabf87122082ea5038f7417e10365e
 
 COCOAPODS: 1.0.0.beta.8
