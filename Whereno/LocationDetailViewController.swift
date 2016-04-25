@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class LocationDetailViewController: UIViewController {
 
@@ -31,6 +32,12 @@ class LocationDetailViewController: UIViewController {
         }
     }
     var originalHeaderHeight: CGFloat!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        imageView.kf_setImageWithURL(location.imageURL)
+    }
 }
 
 extension LocationDetailViewController: UIScrollViewDelegate {

@@ -69,7 +69,13 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test-image" translatesAutoresizingMaskIntoConstraints="NO" id="icZ-S3-4U1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Image..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wys-kB-zTQ">
+                                <rect key="frame" x="242" y="91" width="116.5" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="icZ-S3-4U1">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="hqO-VC-2oO"/>
@@ -167,7 +173,9 @@ Must be a nice quiet place!</string>
                             <constraint firstItem="Ehz-XB-5Pd" firstAttribute="top" secondItem="lHM-xE-JmI" secondAttribute="bottom" id="9iF-ib-omy"/>
                             <constraint firstItem="icZ-S3-4U1" firstAttribute="top" secondItem="bnS-ME-ujK" secondAttribute="top" id="BwV-dC-mqO"/>
                             <constraint firstItem="Eo2-4Y-NCz" firstAttribute="leading" secondItem="icZ-S3-4U1" secondAttribute="leading" id="C8u-ED-BYF"/>
+                            <constraint firstItem="wys-kB-zTQ" firstAttribute="centerX" secondItem="icZ-S3-4U1" secondAttribute="centerX" id="CZw-GN-Dv5"/>
                             <constraint firstItem="icZ-S3-4U1" firstAttribute="leading" secondItem="bnS-ME-ujK" secondAttribute="leading" id="IBP-4c-R9F"/>
+                            <constraint firstItem="wys-kB-zTQ" firstAttribute="centerY" secondItem="icZ-S3-4U1" secondAttribute="centerY" id="Zrw-Po-g2A"/>
                             <constraint firstItem="lHM-xE-JmI" firstAttribute="leading" secondItem="bnS-ME-ujK" secondAttribute="leading" id="ggd-9C-frJ"/>
                             <constraint firstItem="lHM-xE-JmI" firstAttribute="top" secondItem="bnS-ME-ujK" secondAttribute="top" id="gsr-Ks-6RE"/>
                             <constraint firstAttribute="trailing" secondItem="icZ-S3-4U1" secondAttribute="trailing" id="iOC-vB-Quk"/>
@@ -209,7 +217,6 @@ Must be a nice quiet place!</string>
     </scenes>
     <resources>
         <image name="location-arrow" width="23" height="23"/>
-        <image name="test-image" width="680" height="383"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
