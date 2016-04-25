@@ -8,6 +8,7 @@ target 'Whereno' do
     pod 'ModelMapper'
     pod 'AsyncSwift'
     pod 'R.swift'
+    pod 'Kingfisher'
 end
 
 target 'WherenoTests' do
