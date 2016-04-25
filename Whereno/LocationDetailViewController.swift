@@ -9,5 +9,12 @@
 import UIKit
 
 class LocationDetailViewController: UIViewController {
-    
+
+    var location: HammockLocation!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        title = location.title
+    }
 }

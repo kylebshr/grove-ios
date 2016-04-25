@@ -40,6 +40,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Locating..." id="J4l-XR-IJZ">
+                        <barButtonItem key="backBarButtonItem" title=" " id="l6E-K2-DPP"/>
                         <barButtonItem key="leftBarButtonItem" image="location-arrow" id="AWl-99-6BU">
                             <connections>
                                 <action selector="locationButtonTapped:" destination="BYZ-38-t0r" id="yle-HT-for"/>
@@ -49,7 +50,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="tCy-zo-wBY" id="AKL-fc-oOO"/>
-                        <segue destination="HrA-a1-9zL" kind="show" identifier="ShowLocationDetail" id="0Gk-4O-kE2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -69,9 +69,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ojb-lh-3tX">
-                        <barButtonItem key="backBarButtonItem" title=" " id="hYb-D7-zdL"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Ojb-lh-3tX"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4G2-u8-T40" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

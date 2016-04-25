@@ -127,6 +127,8 @@ extension MapViewController: MKMapViewDelegate {
             return
         }
 
-        print(location.id, location.title)
+        let vc = R.storyboard.main.locationDetailViewController()!
+        vc.location = location
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
