@@ -6,6 +6,7 @@ target 'Whereno' do
     pod 'RealmSwift'
     pod 'RealmMapView'
     pod 'ModelMapper'
+    pod 'AsyncSwift'
 end
 
 target 'WherenoTests' do
