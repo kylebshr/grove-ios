@@ -85,7 +85,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lHM-xE-JmI">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lHM-xE-JmI">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="s1s-OD-OjH">
@@ -170,7 +170,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x04-BE-6ZF">
-                                                    <rect key="frame" x="206" y="50" width="188" height="62"/>
+                                                    <rect key="frame" x="206" y="50" width="188" height="42"/>
                                                     <string key="text">No comments
 Must be a nice quiet place!</string>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
@@ -180,7 +180,7 @@ Must be a nice quiet place!</string>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="x04-BE-6ZF" firstAttribute="top" secondItem="jZK-Ud-GNB" secondAttribute="topMargin" constant="40" id="O7M-Sn-ybC"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="x04-BE-6ZF" secondAttribute="bottom" constant="20" id="OBx-6n-9Qm"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="x04-BE-6ZF" secondAttribute="bottom" constant="40" id="OBx-6n-9Qm"/>
                                                 <constraint firstItem="x04-BE-6ZF" firstAttribute="centerX" secondItem="jZK-Ud-GNB" secondAttribute="centerX" id="PP6-PW-EC0"/>
                                             </constraints>
                                         </tableViewCellContentView>

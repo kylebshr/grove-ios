@@ -1,0 +1,6 @@
+framework module ALTextInputBar {
+  umbrella header "ALTextInputBar-umbrella.h"
+
+  export *
+  module * { export * }
+}

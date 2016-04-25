@@ -11,13 +11,13 @@ import RealmSwift
 import RealmMapView
 import Async
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
 
-    @IBOutlet weak var mapView: RealmMapView!
+    @IBOutlet var mapView: RealmMapView!
 
     let geocoder = CLGeocoder()
     let locationManager = CLLocationManager()
-    let annotationViewReuseId = "ABFAnnotationViewReuseId"
+    let annotationViewReuseId = "AnnotationViewReuseId"
     let realm = try! Realm()
 
     var didShowInitialLocation = false
@@ -72,9 +72,6 @@ class MapViewController: UIViewController {
         alert.addAction(ok)
         presentViewController(alert, animated: true, completion: nil)
     }
-}
-
-extension MapViewController: MKMapViewDelegate {
 
     func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
 

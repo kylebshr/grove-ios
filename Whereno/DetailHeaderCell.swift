@@ -10,6 +10,6 @@ import UIKit
 
 class DetailHeaderCell: UITableViewCell {
 
-    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
 
 }

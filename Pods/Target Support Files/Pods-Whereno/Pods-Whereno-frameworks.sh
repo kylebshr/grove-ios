@@ -85,9 +85,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/ABFRealmMapView/ABFRealmMapView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ALTextInputBar/ALTextInputBar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/AsyncSwift/Async.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/HPGrowingTextView/HPGrowingTextView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Kingfisher/Kingfisher.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ModelMapper/Mapper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/R.swift.Library/Rswift.framework"
@@ -99,9 +99,9 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/ABFRealmMapView/ABFRealmMapView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ALTextInputBar/ALTextInputBar.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/AsyncSwift/Async.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/HPGrowingTextView/HPGrowingTextView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Kingfisher/Kingfisher.framework"
   install_framework "$BUILT_PRODUCTS_DIR/ModelMapper/Mapper.framework"
   install_framework "$BUILT_PRODUCTS_DIR/R.swift.Library/Rswift.framework"
