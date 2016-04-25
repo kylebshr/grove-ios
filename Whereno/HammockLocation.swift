@@ -30,6 +30,10 @@ final class HammockLocation: Object, Mappable {
         try descriptionText = map.from("description")
         try latitude = map.from("latitude")
         try longitude = map.from("longitude")
+
+        let comments: [LocationComment] = (try? map.from("comments")) ?? []
+
+        self.comments.appendContentsOf(comments)
     }
 
     override static func primaryKey() -> String? {

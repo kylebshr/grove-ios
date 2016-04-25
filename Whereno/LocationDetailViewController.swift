@@ -72,7 +72,11 @@ extension LocationDetailViewController: UITableViewDataSource {
         }
 
         let cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.detailCommentCell)!
-        // config comment
+        let comment = location.comments[indexPath.row - 1]
+
+        cell.commentLabel.text = comment.text
+        cell.dateLabel.text = comment.formattedDate
+
         return cell
     }
 }

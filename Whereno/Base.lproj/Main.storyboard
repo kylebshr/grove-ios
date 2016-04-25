@@ -89,7 +89,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="s1s-OD-OjH">
-                                    <rect key="frame" x="0.0" y="312" width="600" height="0.0"/>
+                                    <rect key="frame" x="0.0" y="290" width="600" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
@@ -101,14 +101,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="61.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="DESCRIPTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ht-Nz-tfN">
-                                                    <rect key="frame" x="15" y="10" width="75.5" height="13.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ht-Nz-tfN">
+                                                    <rect key="frame" x="15" y="10" width="62" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krf-7Y-Xxy">
-                                                    <rect key="frame" x="15" y="31" width="570" height="20.5"/>
+                                                    <rect key="frame" x="15" y="32" width="570" height="19.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -127,23 +127,49 @@
                                             <outlet property="descriptionLabel" destination="krf-7Y-Xxy" id="VB6-zg-ori"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailCommentCell" rowHeight="80" id="5yp-Rf-gDU" customClass="DetailCommentCell" customModule="Whereno" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="90" width="600" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailCommentCell" rowHeight="58" id="5yp-Rf-gDU" customClass="DetailCommentCell" customModule="Whereno" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="90" width="600" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5yp-Rf-gDU" id="efe-Tt-rNm">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="5yp-Rf-gDU" id="efe-Tt-rNm">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="57.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Posted on May 6th, 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNA-U2-Ba6">
+                                                    <rect key="frame" x="15" y="10" width="134" height="13.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nice place!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abB-ep-h1w">
+                                                    <rect key="frame" x="15" y="31.5" width="570" height="16.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="abB-ep-h1w" firstAttribute="leading" secondItem="efe-Tt-rNm" secondAttribute="leadingMargin" id="0bB-BQ-vuu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="abB-ep-h1w" secondAttribute="bottom" id="9La-AA-1pS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="abB-ep-h1w" secondAttribute="trailing" id="PJH-eL-cZR"/>
+                                                <constraint firstItem="BNA-U2-Ba6" firstAttribute="leading" secondItem="efe-Tt-rNm" secondAttribute="leadingMargin" id="k1I-Ma-n7h"/>
+                                                <constraint firstItem="abB-ep-h1w" firstAttribute="top" secondItem="BNA-U2-Ba6" secondAttribute="bottom" constant="8" id="ocA-Ej-Q0U"/>
+                                                <constraint firstItem="BNA-U2-Ba6" firstAttribute="top" secondItem="efe-Tt-rNm" secondAttribute="topMargin" id="tWX-UB-Zlo"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="abB-ep-h1w" id="At4-lH-2hc"/>
+                                            <outlet property="dateLabel" destination="BNA-U2-Ba6" id="IrN-9K-SZN"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailNoCommentsCell" rowHeight="142" id="TSN-Mb-5aR">
-                                        <rect key="frame" x="0.0" y="170" width="600" height="142"/>
+                                        <rect key="frame" x="0.0" y="148" width="600" height="142"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TSN-Mb-5aR" id="jZK-Ud-GNB">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="TSN-Mb-5aR" id="jZK-Ud-GNB">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="141.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x04-BE-6ZF">
-                                                    <rect key="frame" x="206" y="48" width="188" height="65.5"/>
+                                                    <rect key="frame" x="206" y="50" width="188" height="62"/>
                                                     <string key="text">No comments
 Must be a nice quiet place!</string>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>

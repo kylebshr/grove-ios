@@ -13,6 +13,7 @@
 		27235A331CCE78F2006B1475 /* DetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A321CCE78F2006B1475 /* DetailHeaderCell.swift */; };
 		27235A351CCE78FD006B1475 /* DetailCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A341CCE78FD006B1475 /* DetailCommentCell.swift */; };
 		27235A3A1CCE9791006B1475 /* JSONEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A391CCE9791006B1475 /* JSONEncodable.swift */; };
+		27235A3E1CCEA6E5006B1475 /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A3D1CCEA6E5006B1475 /* NSDate+Extensions.swift */; };
 		27B345C61CCD669A005BA871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345C51CCD669A005BA871 /* AppDelegate.swift */; };
 		27B345C81CCD669A005BA871 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345C71CCD669A005BA871 /* MapViewController.swift */; };
 		27B345CB1CCD669A005BA871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B345C91CCD669A005BA871 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 		27235A321CCE78F2006B1475 /* DetailHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHeaderCell.swift; sourceTree = "<group>"; };
 		27235A341CCE78FD006B1475 /* DetailCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCommentCell.swift; sourceTree = "<group>"; };
 		27235A391CCE9791006B1475 /* JSONEncodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodable.swift; sourceTree = "<group>"; };
+		27235A3D1CCEA6E5006B1475 /* NSDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extensions.swift"; sourceTree = "<group>"; };
 		27B345C21CCD669A005BA871 /* Whereno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B345C51CCD669A005BA871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27B345C71CCD669A005BA871 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				27DECBF91CCD901D00A4BCD2 /* UITextField+Extensions.swift */,
+				27235A3D1CCEA6E5006B1475 /* NSDate+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27235A3E1CCEA6E5006B1475 /* NSDate+Extensions.swift in Sources */,
 				27B345C81CCD669A005BA871 /* MapViewController.swift in Sources */,
 				27235A3A1CCE9791006B1475 /* JSONEncodable.swift in Sources */,
 				27DECBFA1CCD901D00A4BCD2 /* UITextField+Extensions.swift in Sources */,

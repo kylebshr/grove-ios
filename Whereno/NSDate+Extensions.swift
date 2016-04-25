@@ -1,0 +1,29 @@
+//
+//  NSDate+Extensions.swift
+//  Whereno
+//
+//  Created by Kyle Bashour on 4/25/16.
+//  Copyright © 2016 Kyle Bashour. All rights reserved.
+//
+
+import Foundation
+import Mapper
+
+private let iso8601Formatter: NSDateFormatter = {
+    let formatter = NSDateFormatter()
+    let locale = NSLocale(localeIdentifier: "en_US_POSIX")
+    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+    formatter.locale = locale
+    return formatter
+}()
+
+extension NSDate: Convertible {
+
+    public static func fromMap(value: AnyObject?) throws -> NSDate {
+        guard let string = value as? String, date = iso8601Formatter.dateFromString(string) else {
+            throw MapperError()
+        }
+
+        return date
+    }
+}

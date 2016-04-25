@@ -20,7 +20,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let realm = try! Realm()
 
         let locations: [NSDictionary] = [
-            ["id": 0, "title": "Tall Trees by Hess", "latitude": 35.953819, "longitude": -83.9327127, "description": "Usually pretty nice, but sometimes there are smokers hanging out. Right next to a water fountain 💧", "image_url": "https://s-media-cache-ak0.pinimg.com/736x/62/c3/fc/62c3fc38e1a852ad4a12e0121e13ebf3.jpg"],
+            [
+                "id": 0,
+                "title": "Grove by Hess",
+                "latitude": 35.953119,
+                "longitude": -83.9317127,
+                "description": "Usually pretty nice, but sometimes there are smokers hanging out. Right next to a water fountain 💧",
+                "image_url": "https://s-media-cache-ak0.pinimg.com/736x/62/c3/fc/62c3fc38e1a852ad4a12e0121e13ebf3.jpg",
+                "comments": [
+                    [
+                        "id": 0,
+                        "text": "Love it, great place for lots of people 👍",
+                        "date": "2015-04-15T08:49:58.157+0000"
+                    ],[
+                        "id": 1,
+                        "text": "Really great place! Bit loud during the school day, between 9AM-3PM, but pretty quiet after that. You can hear a water fountain, which it pretty relaxing :)",
+                        "date": "2016-04-18T08:49:58.157+0000"
+                    ]
+                ]
+            ],
+
             ["id": 1, "title": "Near Neyland", "latitude": 35.9555183, "longitude": -83.932715, "description": "Really fun to watch the crowds on game day!", "image_url": "https://www.eaglesnestoutfittersinc.com/wp-content/uploads/2014/03/indoor-e1363222403948.jpg"],
             ["id": 2, "title": "Nice Shade", "latitude": 35.9531734, "longitude": -83.9269893, "description": "Shade man, shade"],
         ]

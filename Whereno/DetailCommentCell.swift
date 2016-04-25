@@ -10,5 +10,7 @@ import UIKit
 
 class DetailCommentCell: UITableViewCell {
 
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var commentLabel: UILabel!
 
 }
