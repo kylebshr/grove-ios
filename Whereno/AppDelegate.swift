@@ -31,10 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     [
                         "id": 0,
                         "text": "Love it, great place for lots of people 👍",
-                        "date": "2015-04-15T08:49:58.157+0000"
+                        "date": "2016-04-15T08:49:58.157+0000"
                     ],[
                         "id": 1,
-                        "text": "Really great place! Bit loud during the school day, between 9AM-3PM, but pretty quiet after that. You can hear a water fountain, which it pretty relaxing :)",
+                        "text": "Really great place! Bit loud during the school day, between 9AM-3PM, but pretty quiet after that. You can hear a water fountain, which is pretty relaxing.",
                         "date": "2016-04-18T08:49:58.157+0000"
                     ]
                 ]
