@@ -14,6 +14,7 @@ final class HammockLocation: Object, Mappable {
 
     dynamic var id = 0
     dynamic var title = ""
+    dynamic var descriptionText = ""
     dynamic var latitude = 0.0
     dynamic var longitude = 0.0
 
@@ -22,6 +23,7 @@ final class HammockLocation: Object, Mappable {
 
         try id = map.from("id")
         try title = map.from("title")
+        try descriptionText = map.from("description")
         try latitude = map.from("latitude")
         try longitude = map.from("longitude")
     }

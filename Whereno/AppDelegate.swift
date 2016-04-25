@@ -20,9 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let realm = try! Realm()
 
         let locations: [NSDictionary] = [
-            ["id": 0, "title": "Nice place by hess", "latitude": 35.9538139, "longitude": -83.9305663],
-            ["id": 1, "title": "Near Neyland", "latitude": 35.9555183, "longitude": -83.9264314],
-            ["id": 2, "title": "Nice shade", "latitude": 35.9531734, "longitude": -83.9269893],
+            ["id": 0, "title": "Nice place by hess", "latitude": 35.9538139, "longitude": -83.9305663, "description": "Usually pretty nice, but sometimes there are smokers hanging out."],
+            ["id": 1, "title": "Near Neyland", "latitude": 35.9555183, "longitude": -83.9264314, "description": "Really fun to watch the crowds on game day!"],
+            ["id": 2, "title": "Nice shade", "latitude": 35.9531734, "longitude": -83.9269893, "description": "Shade man, shade"],
         ]
 
         try! realm.write {
