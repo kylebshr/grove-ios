@@ -88,10 +88,6 @@ extension MapViewController: MKMapViewDelegate {
         }
     }
 
-    func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-        self.mapView.refreshMapView()
-    }
-
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
 
         if let fetchedAnnotation = annotation as? ABFAnnotation {
@@ -100,9 +96,6 @@ extension MapViewController: MKMapViewDelegate {
                 mapView.dequeueReusableAnnotationViewWithIdentifier(annotationViewReuseId) as? ABFClusterAnnotationView ??
                 ABFClusterAnnotationView(annotation: fetchedAnnotation, reuseIdentifier: annotationViewReuseId)
             let disclosureButton = UIButton(type: .DetailDisclosure)
-
-//            disclosureButton.setImage(R.image.rightChevron(), forState: .Normal)
-//            disclosureButton.tintColor = UIColor.blackColor()
 
             annotationView.canShowCallout = true
             annotationView.count = UInt(fetchedAnnotation.safeObjects.count)
