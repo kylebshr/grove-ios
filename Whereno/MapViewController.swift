@@ -18,6 +18,7 @@ class MapViewController: UIViewController {
     let geocoder = CLGeocoder()
     let locationManager = CLLocationManager()
     let annotationViewReuseId = "ABFAnnotationViewReuseId"
+    let realm = try! Realm()
 
     var didShowInitialLocation = false
 
@@ -63,6 +64,14 @@ class MapViewController: UIViewController {
             }
         }
     }
+
+    func showNoInformationAlert() {
+        let alert = UIAlertController(title: "No More Info", message: "Unfortunately, there's no more information for this location. You should go check it out!", preferredStyle: .Alert)
+        let ok = UIAlertAction(title: "OK", style: .Default, handler: nil)
+
+        alert.addAction(ok)
+        presentViewController(alert, animated: true, completion: nil)
+    }
 }
 
 extension MapViewController: MKMapViewDelegate {
@@ -92,9 +101,10 @@ extension MapViewController: MKMapViewDelegate {
             if annotationView == nil {
                 annotationView = ABFClusterAnnotationView(annotation: fetchedAnnotation, reuseIdentifier: annotationViewReuseId)
                 annotationView!.canShowCallout = true
-                annotationView!.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
             }
 
+            annotationView!.rightCalloutAccessoryView =
+                fetchedAnnotation.safeObjects.count == 1 ? UIButton(type: .DetailDisclosure) : nil
             annotationView!.count = UInt(fetchedAnnotation.safeObjects.count)
             annotationView!.annotation = fetchedAnnotation
 
@@ -105,6 +115,20 @@ extension MapViewController: MKMapViewDelegate {
     }
 
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-        print(try! Realm().objects(HammockLocation).filter("latitude == \(view.annotation!.coordinate.latitude) AND longitude == \(view.annotation!.coordinate.longitude)"))
+
+        guard let annotation = view.annotation else {
+            return
+        }
+
+        let latitude = annotation.coordinate.latitude
+        let longitude = annotation.coordinate.longitude
+        let filter = "latitude == \(latitude) AND longitude == \(longitude)"
+
+        guard let location = realm.objects(HammockLocation).filter(filter).first else {
+            showNoInformationAlert()
+            return
+        }
+
+        print(location.id, location.title)
     }
 }
