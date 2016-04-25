@@ -18,7 +18,6 @@ final class HammockLocation: Object, Mappable {
     dynamic var longitude = 0.0
 
     required convenience init(map: Mapper) throws {
-
         self.init()
 
         try id = map.from("id")

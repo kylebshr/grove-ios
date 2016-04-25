@@ -16,6 +16,8 @@ class MapViewController: UIViewController {
     let geocoder = CLGeocoder()
     let locationManager = CLLocationManager()
 
+    var didShowInitialLocation = false
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -62,7 +64,10 @@ extension MapViewController: MKMapViewDelegate {
             updateLocationTitle(location)
         }
 
-        updateMapRegion(userLocation.coordinate)
+        if !didShowInitialLocation {
+            updateMapRegion(userLocation.coordinate)
+            didShowInitialLocation = true
+        }
     }
 
     func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
