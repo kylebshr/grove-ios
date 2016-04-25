@@ -135,13 +135,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Posted on May 6th, 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNA-U2-Ba6">
-                                                    <rect key="frame" x="24" y="10" width="134" height="13.5"/>
+                                                    <rect key="frame" x="28" y="10" width="134" height="13.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nice place!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abB-ep-h1w">
-                                                    <rect key="frame" x="24" y="31.5" width="561" height="16.5"/>
+                                                    <rect key="frame" x="28" y="31.5" width="557" height="16.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -156,7 +156,7 @@
                                                 <constraint firstItem="BNA-U2-Ba6" firstAttribute="top" secondItem="efe-Tt-rNm" secondAttribute="topMargin" id="tWX-UB-Zlo"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <edgeInsets key="layoutMargins" top="8" left="24" bottom="8" right="8"/>
+                                        <edgeInsets key="layoutMargins" top="8" left="28" bottom="8" right="8"/>
                                         <connections>
                                             <outlet property="commentLabel" destination="abB-ep-h1w" id="At4-lH-2hc"/>
                                             <outlet property="dateLabel" destination="BNA-U2-Ba6" id="IrN-9K-SZN"/>
