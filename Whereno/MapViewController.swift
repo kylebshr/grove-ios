@@ -101,8 +101,8 @@ extension MapViewController: MKMapViewDelegate {
                 ABFClusterAnnotationView(annotation: fetchedAnnotation, reuseIdentifier: annotationViewReuseId)
             let disclosureButton = UIButton(type: .DetailDisclosure)
 
-            disclosureButton.setImage(R.image.rightChevron(), forState: .Normal)
-            disclosureButton.tintColor = UIColor.blackColor()
+//            disclosureButton.setImage(R.image.rightChevron(), forState: .Normal)
+//            disclosureButton.tintColor = UIColor.blackColor()
 
             annotationView.canShowCallout = true
             annotationView.count = UInt(fetchedAnnotation.safeObjects.count)

@@ -50,7 +50,7 @@ extension LocationDetailViewController: UIScrollViewDelegate {
 extension LocationDetailViewController: UITableViewDataSource {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return location.comments.count + 1
+        return (location.comments.count == 0 ? 1 : location.comments.count) + 1
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -59,6 +59,9 @@ extension LocationDetailViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.detailHeaderCell)!
             cell.descriptionLabel.text = location.descriptionText
             return cell
+        }
+        if indexPath.row == 1 && location.comments.count == 0 {
+            return tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.detailNoCommentsCell)!
         }
 
         let cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.detailCommentCell)!
