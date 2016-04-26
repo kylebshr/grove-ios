@@ -65,19 +65,20 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIViewControllerPr
         }
     }
 
-    func hammockLocationForAnnotationView(view: MKAnnotationView) -> HammockLocation? {
+    func hammockLocationsForAnnotationView(view: MKAnnotationView) -> [HammockLocation]? {
 
-        guard let annotation = view.annotation as? ABFAnnotation where annotation.safeObjects.count == 1 else {
+        guard let annotation = view.annotation as? ABFAnnotation else {
             return nil
         }
 
-        let latitude = annotation.coordinate.latitude
-        let longitude = annotation.coordinate.longitude
-        let filter = "latitude == \(latitude) AND longitude == \(longitude)"
+        let locations = annotation.safeObjects.flatMap { (object) -> HammockLocation? in
+            let latitude = object.coordinate.latitude
+            let longitude = object.coordinate.longitude
+            let filter = "latitude == \(latitude) AND longitude == \(longitude)"
+            return realm.objects(HammockLocation).filter(filter).first
+        }
 
-        let location = realm.objects(HammockLocation).filter(filter).first
-
-        return location
+        return locations
     }
 
     func showNoInformationAlert() {
@@ -111,14 +112,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIViewControllerPr
             annotationView.canShowCallout = true
             annotationView.count = UInt(fetchedAnnotation.safeObjects.count)
             annotationView.annotation = fetchedAnnotation
+            annotationView.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
 
-            if fetchedAnnotation.safeObjects.count == 1 {
-                registerForPreviewingWithDelegate(self, sourceView: annotationView)
-                annotationView.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
-            }
-            else {
-                annotationView.rightCalloutAccessoryView = nil
-            }
+            registerForPreviewingWithDelegate(self, sourceView: annotationView)
 
             return annotationView
         }
@@ -128,19 +124,27 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIViewControllerPr
 
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
 
-        guard let location = hammockLocationForAnnotationView(view) else {
+        guard let locations = hammockLocationsForAnnotationView(view) where locations.count > 0 else {
             showNoInformationAlert()
             return
         }
 
-        let vc = R.storyboard.main.locationDetailViewController()!
-        vc.location = location
-        navigationController?.pushViewController(vc, animated: true)
+        if locations.count == 1 {
+            let vc = R.storyboard.main.locationDetailViewController()!
+            vc.location = locations[0]
+            vc.shouldShowTextInputView = false
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        else {
+            let vc = R.storyboard.main.locationListViewController()!
+            vc.locations = locations
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
 
     func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
 
-        if let tappedView = previewingContext.sourceView as? ABFClusterAnnotationView, hammockLocation = hammockLocationForAnnotationView(tappedView) {
+        if let tappedView = previewingContext.sourceView as? ABFClusterAnnotationView, locations = hammockLocationsForAnnotationView(tappedView) where locations.count > 0 {
 
             for subview in tappedView.subviews {
                 if subview.frame.height > tappedView.frame.height {
@@ -149,19 +153,29 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIViewControllerPr
                 }
             }
 
-            let vc = R.storyboard.main.locationDetailViewController()!
-            vc.location = hammockLocation
-            vc.shouldShowTextInputView = false
-            return vc
+            if locations.count == 1 {
+                let vc = R.storyboard.main.locationDetailViewController()!
+                vc.location = locations[0]
+                vc.shouldShowTextInputView = false
+                return vc
+            }
+            else {
+                let vc = R.storyboard.main.locationListViewController()!
+                vc.locations = locations
+                return vc
+            }
+
         }
 
         return nil
     }
 
     func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+
         if let vc = viewControllerToCommit as? LocationDetailViewController {
             vc.shouldShowTextInputView = true
-            navigationController?.pushViewController(viewControllerToCommit, animated: true)
         }
+
+        navigationController?.pushViewController(viewControllerToCommit, animated: true)
     }
 }

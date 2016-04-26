@@ -15,6 +15,15 @@ class LocationListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        clearsSelectionOnViewWillAppear = false
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        tableView.indexPathsForSelectedRows?.forEach {
+            tableView.deselectRowAtIndexPath($0, animated: true)
+        }
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,5 +38,15 @@ class LocationListViewController: UITableViewController {
         cell.configureWithLocation(location)
 
         return cell
+    }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+        let location = locations[indexPath.row]
+        let vc = R.storyboard.main.locationDetailViewController()!
+
+        vc.location = location
+
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
