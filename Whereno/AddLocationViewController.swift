@@ -17,6 +17,8 @@ class AddLocationViewController: UITableViewController, UINavigationControllerDe
 
     let picker = UIImagePickerController()
 
+    var descriptionTextHeight: CGFloat = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -86,7 +88,18 @@ class AddLocationViewController: UITableViewController, UINavigationControllerDe
 
     func textViewDidChange(textView: UITextView) {
         descriptionPlaceholder.placeholder = textView.text == "" ? "Describe this location" : ""
-        tableView.beginUpdates()
-        tableView.endUpdates()
+
+        /*
+         Animate the table view growing for the description text view.
+
+         The beginUpdates/endUpdates causes the table view to glitch to the top,
+         so we only do it if the height has actually changed.
+         */
+        let newHeight = descriptionTextView.intrinsicContentSize().height
+        if newHeight != descriptionTextHeight {
+            descriptionTextHeight = newHeight
+            tableView.beginUpdates()
+            tableView.endUpdates()
+        }
     }
 }
