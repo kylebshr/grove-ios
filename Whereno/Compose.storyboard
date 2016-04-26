@@ -155,7 +155,7 @@
                     <navigationItem key="navigationItem" title="Add a Location" id="ewd-JV-gI0">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="03g-eG-KGb">
                             <connections>
-                                <segue destination="kJL-FK-TLy" kind="unwind" unwindAction="unwindToMap:" id="RuP-hX-TP4"/>
+                                <action selector="cancelTapped:" destination="j14-fp-pKu" id="5Ft-Pm-LDu"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Post" style="done" id="rK6-ki-VZD"/>
@@ -168,7 +168,6 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ch-Mn-0nu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="kJL-FK-TLy" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1185" y="256"/>
         </scene>

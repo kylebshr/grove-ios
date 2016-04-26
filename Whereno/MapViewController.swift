@@ -36,8 +36,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIViewControllerPr
         updateMapRegion(mapView.userLocation.coordinate)
     }
 
-    @IBAction func unwindToMap(segue: UIStoryboardSegue) { }
-
     // Ask for location use permission if not granted
     func requestLocationPermissionIfNeeded() {
         if CLLocationManager.authorizationStatus() == .NotDetermined {

@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Locating...-->
+        <!--View Controller-->
         <scene sceneID="eTZ-ad-TnP">
             <objects>
                 <viewController id="NQd-1S-LIT" sceneMemberID="viewController">
@@ -18,15 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.97647058823529409" green="0.96078431372549022" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Locating..." id="Dzo-Uh-c0B">
-                        <barButtonItem key="backBarButtonItem" title=" " id="ywA-gP-xnQ"/>
-                        <barButtonItem key="leftBarButtonItem" image="location-arrow" id="q6x-sx-9DV">
-                            <connections>
-                                <action selector="locationButtonTapped:" destination="NQd-1S-LIT" id="ahb-Jc-Sl1"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Aw7-Kr-x7m"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Dzo-Uh-c0B"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgE-QA-aK9" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,8 +44,5 @@
             <point key="canvasLocation" x="355" y="1047"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="location-arrow" width="23" height="23"/>
-    </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
