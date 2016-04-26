@@ -62,12 +62,12 @@
                 <constraint firstItem="4wo-ss-hej" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="e2c-Xc-d5E"/>
                 <constraint firstItem="rWO-Vi-jh7" firstAttribute="leading" secondItem="4wo-ss-hej" secondAttribute="trailing" constant="8" id="gS2-if-WWq"/>
                 <constraint firstItem="n55-vn-Bb2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hFi-8K-k0g"/>
+                <constraint firstItem="WnZ-Yc-8g7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" priority="500" constant="8" id="hfq-CQ-MMn"/>
                 <constraint firstAttribute="trailing" secondItem="rWO-Vi-jh7" secondAttribute="trailing" constant="8" id="ivX-N1-jpV"/>
                 <constraint firstAttribute="bottom" secondItem="Iiy-Qy-TrL" secondAttribute="bottom" constant="4" id="jUV-6c-mdv"/>
                 <constraint firstAttribute="trailing" secondItem="n55-vn-Bb2" secondAttribute="trailing" id="oxA-os-5r2"/>
                 <constraint firstAttribute="bottom" secondItem="rWO-Vi-jh7" secondAttribute="bottom" id="q2T-no-WA2"/>
                 <constraint firstItem="WnZ-Yc-8g7" firstAttribute="leading" secondItem="4wo-ss-hej" secondAttribute="trailing" constant="8" id="uHl-1f-a98"/>
-                <constraint firstItem="WnZ-Yc-8g7" firstAttribute="top" secondItem="4wo-ss-hej" secondAttribute="top" priority="500" constant="4" id="vhz-yB-W4R"/>
                 <constraint firstItem="Iiy-Qy-TrL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="z6T-Go-Ifn"/>
                 <constraint firstItem="rWO-Vi-jh7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" priority="510" id="zXi-K0-BQt"/>
             </constraints>
