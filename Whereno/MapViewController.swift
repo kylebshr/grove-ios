@@ -109,10 +109,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIViewControllerPr
                 mapView.dequeueReusableAnnotationViewWithIdentifier(annotationViewReuseId) as? ABFClusterAnnotationView ??
                 ABFClusterAnnotationView(annotation: fetchedAnnotation, reuseIdentifier: annotationViewReuseId)
 
+            let disclosureButton = UIButton(type: .DetailDisclosure)
+            disclosureButton.tintColor = UIColor(hex: "#488A16")
+
             annotationView.canShowCallout = true
             annotationView.count = UInt(fetchedAnnotation.safeObjects.count)
             annotationView.annotation = fetchedAnnotation
-            annotationView.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
+            annotationView.rightCalloutAccessoryView = disclosureButton
 
             registerForPreviewingWithDelegate(self, sourceView: annotationView)
 
