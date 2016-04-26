@@ -8,9 +8,12 @@
 
 import UIKit
 
-class AddLocationViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class AddLocationViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var descriptionPlaceholder: UITextField!
+    @IBOutlet weak var descriptionTextView: UITextView!
 
     let picker = UIImagePickerController()
 
@@ -19,15 +22,31 @@ class AddLocationViewController: UITableViewController, UINavigationControllerDe
 
         picker.delegate = self
         picker.sourceType = .Camera
+
+        descriptionTextView.textContainerInset = UIEdgeInsets(top: 0, left: -4, bottom: 0, right: 0)
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
 
-        guard indexPath.row == 0 else { return }
+        if indexPath.row == 0 {
+            imageView.image == nil ? showCamera() : showPhotoOptions()
+        }
+        else if indexPath.row == 1 {
+            titleTextField.becomeFirstResponder()
+        }
+        else if indexPath.row == 2 {
+            descriptionTextView.becomeFirstResponder()
+        }
+    }
 
-        imageView.image == nil ? showCamera() : showPhotoOptions()
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+
+    override func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100
     }
 
     func showCamera() {
@@ -55,5 +74,19 @@ class AddLocationViewController: UITableViewController, UINavigationControllerDe
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         imageView.image = image
         dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField === titleTextField {
+            descriptionTextView.becomeFirstResponder()
+        }
+
+        return true
+    }
+
+    func textViewDidChange(textView: UITextView) {
+        descriptionPlaceholder.placeholder = textView.text == "" ? "Describe this location" : ""
+        tableView.beginUpdates()
+        tableView.endUpdates()
     }
 }
