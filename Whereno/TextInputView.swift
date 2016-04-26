@@ -31,6 +31,8 @@ class TextInputView: UIView, UITextViewDelegate {
     override func awakeFromNib() {
         super.awakeFromNib()
 
+        sendButton.enabled = false
+
         autoresizingMask = .FlexibleHeight
         translatesAutoresizingMaskIntoConstraints = false
 
@@ -59,6 +61,8 @@ class TextInputView: UIView, UITextViewDelegate {
     // MARK: UITextViewDelegate
 
     func textViewDidChange(textView: UITextView) {
+
+        sendButton.enabled = textView.text.stringByRemovingWhiteSpace() != ""
 
         countLabel.text = "\(textView.text.characters.count)/\(numberOfCharactersAllowed)"
 

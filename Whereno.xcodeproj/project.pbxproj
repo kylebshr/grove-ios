@@ -19,6 +19,7 @@
 		2750DE081CCFDC44002F9C72 /* Compose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2750DE071CCFDC44002F9C72 /* Compose.storyboard */; };
 		2750DE0A1CCFDEEE002F9C72 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2750DE091CCFDEEE002F9C72 /* AddLocationViewController.swift */; };
 		2750DE0C1CCFEF8C002F9C72 /* Alamofire+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2750DE0B1CCFEF8C002F9C72 /* Alamofire+Extensions.swift */; };
+		27A9232A1CD032CE0020739D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A923291CD032CE0020739D /* String+Extensions.swift */; };
 		27B345C61CCD669A005BA871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345C51CCD669A005BA871 /* AppDelegate.swift */; };
 		27B345C81CCD669A005BA871 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345C71CCD669A005BA871 /* MapViewController.swift */; };
 		27B345CB1CCD669A005BA871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B345C91CCD669A005BA871 /* Main.storyboard */; };
@@ -70,6 +71,7 @@
 		2750DE071CCFDC44002F9C72 /* Compose.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Compose.storyboard; sourceTree = "<group>"; };
 		2750DE091CCFDEEE002F9C72 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		2750DE0B1CCFEF8C002F9C72 /* Alamofire+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+Extensions.swift"; sourceTree = "<group>"; };
+		27A923291CD032CE0020739D /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		27B345C21CCD669A005BA871 /* Whereno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B345C51CCD669A005BA871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27B345C71CCD669A005BA871 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				27DECBF91CCD901D00A4BCD2 /* UITextField+Extensions.swift */,
 				27235A3D1CCEA6E5006B1475 /* NSDate+Extensions.swift */,
 				2750DE0B1CCFEF8C002F9C72 /* Alamofire+Extensions.swift */,
+				27A923291CD032CE0020739D /* String+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -588,6 +591,7 @@
 				27235A301CCE67D9006B1475 /* LocationComment.swift in Sources */,
 				27235A2C1CCE5B96006B1475 /* R.generated.swift in Sources */,
 				27B345C61CCD669A005BA871 /* AppDelegate.swift in Sources */,
+				27A9232A1CD032CE0020739D /* String+Extensions.swift in Sources */,
 				2750DE0A1CCFDEEE002F9C72 /* AddLocationViewController.swift in Sources */,
 				27CCFB181CCFBF7B00399F35 /* LocationListViewController.swift in Sources */,
 				27235A331CCE78F2006B1475 /* DetailHeaderCell.swift in Sources */,
