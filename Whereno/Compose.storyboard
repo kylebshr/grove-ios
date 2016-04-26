@@ -161,9 +161,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionPlaceholder" destination="Rt1-ag-1RW" id="h0P-vu-BjN"/>
+                        <outlet property="descriptionTextView" destination="Uqz-e3-MFv" id="WTh-Va-HnY"/>
                         <outlet property="imageView" destination="mhq-fu-tgd" id="X5X-hJ-BOE"/>
-                        <outlet property="textField" destination="fQ6-sy-h63" id="rOg-Ob-ufC"/>
-                        <outlet property="textView" destination="Uqz-e3-MFv" id="kPb-Pd-Sg0"/>
+                        <outlet property="titleTextField" destination="fQ6-sy-h63" id="rqa-7V-nkU"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ch-Mn-0nu" userLabel="First Responder" sceneMemberID="firstResponder"/>
