@@ -6,6 +6,14 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Compose-->
+        <scene sceneID="8SP-yw-VUV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Compose" id="I34-Ma-QCZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hWf-ul-KWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1432.5" y="679"/>
+        </scene>
         <!--Locating...-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -47,7 +55,11 @@
                                 <action selector="locationButtonTapped:" destination="BYZ-38-t0r" id="yle-HT-for"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7rb-kp-ENQ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7rb-kp-ENQ">
+                            <connections>
+                                <segue destination="I34-Ma-QCZ" kind="presentation" id="eHY-Bg-2wA"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="tCy-zo-wBY" id="AKL-fc-oOO"/>
@@ -223,7 +235,7 @@ Must be a nice quiet place!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bzp-SC-5nY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2016" y="1047"/>
+            <point key="canvasLocation" x="2028" y="679"/>
         </scene>
         <!--Locations-->
         <scene sceneID="Eon-N1-80A">
@@ -293,7 +305,7 @@ Must be a nice quiet place!</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RyX-93-HRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2016" y="1782"/>
+            <point key="canvasLocation" x="2028" y="1414"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tfi-Fg-D1M">
