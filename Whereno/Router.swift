@@ -14,7 +14,9 @@ enum Router: URLRequestConvertible {
     static let baseURL = NSURL(string: "")!
 
     case comments(Int)
+    case comment(LocationComment)
     case hammockLocations(Double, Double, Double)
+    case hammockLocation(HammockLocation)
 
     var URL: NSURL { return Router.baseURL.URLByAppendingPathComponent(route.path) }
 
@@ -24,6 +26,10 @@ enum Router: URLRequestConvertible {
             return ("/comment", ["id": locationID])
         case .hammockLocations(let lat, let lon, let rad):
             return ("/location", ["latitude": lat, "longitude": lon, "radius": rad])
+        case .hammockLocation(let location):
+            return ("/location", location.toJSON())
+        case .comment(let comment):
+            return ("/comment", comment.toJSON())
         }
     }
 

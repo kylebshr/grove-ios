@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 import Mapper
 
-final class LocationComment: Object, Mappable {
+final class LocationComment: Object, Mappable, JSONEncodable {
 
     dynamic var id = 0
     dynamic var text = ""
@@ -36,5 +36,13 @@ final class LocationComment: Object, Mappable {
 
     var formattedDate: String {
         return "Posted on " + LocationComment.commentFormatter.stringFromDate(date)
+    }
+
+    func toJSON() -> [String : AnyObject] {
+        return [
+            "id": id,
+            "text": text,
+            "date": formattedDate
+        ]
     }
 }
