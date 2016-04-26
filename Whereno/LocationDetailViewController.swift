@@ -28,6 +28,7 @@ class LocationDetailViewController: UIViewController, UITableViewDataSource, UIS
     // Implicitely unwrapped as they will be set before use (much like the outlets above)
     var location: HammockLocation!
     var originalHeaderHeight: CGFloat!
+    var shouldShowTextInputView = true
 
     override var inputAccessoryView: UIView? {
         return textInputView
@@ -94,7 +95,7 @@ class LocationDetailViewController: UIViewController, UITableViewDataSource, UIS
 
     // Allows for the input accessory to work
     override func canBecomeFirstResponder() -> Bool {
-        return true
+        return shouldShowTextInputView
     }
 
 

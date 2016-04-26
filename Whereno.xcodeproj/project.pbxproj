@@ -15,6 +15,7 @@
 		27235A3A1CCE9791006B1475 /* JSONEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A391CCE9791006B1475 /* JSONEncodable.swift */; };
 		27235A3E1CCEA6E5006B1475 /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A3D1CCEA6E5006B1475 /* NSDate+Extensions.swift */; };
 		27251B7A1CCECF3800FD4FC9 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27251B791CCECF3800FD4FC9 /* UIColor+Extensions.swift */; };
+		27251B801CCF216000FD4FC9 /* MapTouchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27251B7F1CCF216000FD4FC9 /* MapTouchDelegate.swift */; };
 		27B345C61CCD669A005BA871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345C51CCD669A005BA871 /* AppDelegate.swift */; };
 		27B345C81CCD669A005BA871 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345C71CCD669A005BA871 /* MapViewController.swift */; };
 		27B345CB1CCD669A005BA871 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B345C91CCD669A005BA871 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		27235A391CCE9791006B1475 /* JSONEncodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodable.swift; sourceTree = "<group>"; };
 		27235A3D1CCEA6E5006B1475 /* NSDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extensions.swift"; sourceTree = "<group>"; };
 		27251B791CCECF3800FD4FC9 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		27251B7F1CCF216000FD4FC9 /* MapTouchDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTouchDelegate.swift; sourceTree = "<group>"; };
 		27B345C21CCD669A005BA871 /* Whereno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B345C51CCD669A005BA871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27B345C71CCD669A005BA871 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				27235A391CCE9791006B1475 /* JSONEncodable.swift */,
+				27251B7F1CCF216000FD4FC9 /* MapTouchDelegate.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27235A3E1CCEA6E5006B1475 /* NSDate+Extensions.swift in Sources */,
+				27251B801CCF216000FD4FC9 /* MapTouchDelegate.swift in Sources */,
 				27B345C81CCD669A005BA871 /* MapViewController.swift in Sources */,
 				27251B7A1CCECF3800FD4FC9 /* UIColor+Extensions.swift in Sources */,
 				27D533A71CCEC516007FC6A1 /* TextInputView.swift in Sources */,
