@@ -165,7 +165,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIViewControllerPr
             }
             else {
                 let vc = R.storyboard.main.locationListViewController()!
-                let size = CGSize(width: view.frame.width, height: CGFloat(locations.count * 140) - 4)
+                let size = CGSize(width: view.frame.width, height: min(CGFloat(locations.count * 140) - 4, mapView.frame.height))
                 vc.preferredContentSize = size
                 vc.locations = locations
                 return vc
