@@ -40,7 +40,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 ]
             ],
 
-            ["id": 1, "title": "Near Neyland", "latitude": 35.9555183, "longitude": -83.932715, "description": "Really fun to watch the crowds on game day!", "image_url": "https://www.eaglesnestoutfittersinc.com/wp-content/uploads/2014/03/indoor-e1363222403948.jpg"],
+            ["id": 1, "title": "Near Neyland", "latitude": 35.9535183, "longitude": -83.912715, "description": "Really fun to watch the crowds on game day!", "image_url": "https://www.eaglesnestoutfittersinc.com/wp-content/uploads/2014/03/indoor-e1363222403948.jpg"],
+            ["id": 3, "title": "Near Neyland", "latitude": 35.9595183, "longitude": -83.939715, "description": "Really fun to watch the crowds on game day!", "image_url": "https://www.eaglesnestoutfittersinc.com/wp-content/uploads/2014/03/indoor-e1363222403948.jpg"],
+            ["id": 4, "title": "Near Neyland", "latitude": 35.9155183, "longitude": -83.942715, "description": "Really fun to watch the crowds on game day!", "image_url": "https://www.eaglesnestoutfittersinc.com/wp-content/uploads/2014/03/indoor-e1363222403948.jpg"],
+            ["id": 5, "title": "Near Neyland", "latitude": 35.9555183, "longitude": -83.932715, "description": "Really fun to watch the crowds on game day!", "image_url": "https://www.eaglesnestoutfittersinc.com/wp-content/uploads/2014/03/indoor-e1363222403948.jpg"],
             [
                 "id": 2,
                 "title": "Nice Shade",

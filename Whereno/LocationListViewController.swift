@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LocationListViewController: UITableViewController {
+class LocationListViewController: UITableViewController, UIViewControllerPreviewingDelegate {
 
     var locations: [HammockLocation]!
 
@@ -16,6 +16,8 @@ class LocationListViewController: UITableViewController {
         super.viewDidLoad()
 
         clearsSelectionOnViewWillAppear = false
+
+        registerForPreviewingWithDelegate(self, sourceView: tableView)
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -48,5 +50,28 @@ class LocationListViewController: UITableViewController {
         vc.location = location
 
         navigationController?.pushViewController(vc, animated: true)
+    }
+
+    func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        if let indexPath = tableView.indexPathForRowAtPoint(location), cell = tableView.cellForRowAtIndexPath(indexPath) as? LocationListCell {
+
+            previewingContext.sourceRect = cell.convertRect(cell.largeImageView.frame, toView: view)
+
+            let vc = R.storyboard.main.locationDetailViewController()!
+            vc.shouldShowTextInputView = false
+            vc.location = locations[indexPath.row]
+            return vc
+        }
+
+        return nil
+    }
+
+    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+
+        if let vc = viewControllerToCommit as? LocationDetailViewController {
+            vc.shouldShowTextInputView = true
+        }
+
+        navigationController?.pushViewController(viewControllerToCommit, animated: true)
     }
 }
