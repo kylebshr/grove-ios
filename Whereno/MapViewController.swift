@@ -137,7 +137,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIViewControllerPr
         if locations.count == 1 {
             let vc = R.storyboard.main.locationDetailViewController()!
             vc.location = locations[0]
-            vc.shouldShowTextInputView = false
             navigationController?.pushViewController(vc, animated: true)
         }
         else {

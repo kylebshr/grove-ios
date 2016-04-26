@@ -62,7 +62,7 @@ class LocationDetailViewController: UIViewController, UITableViewDataSource, UIS
 
         // Listen for keyboard (and input accessory) changes
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardDidShow), name: UIKeyboardDidShowNotification, object: nil)
-    }
+    }   
 
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
