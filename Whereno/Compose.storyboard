@@ -157,6 +157,7 @@
                                 <segue destination="kJL-FK-TLy" kind="unwind" unwindAction="unwindToMap:" id="RuP-hX-TP4"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Post" style="done" id="rK6-ki-VZD"/>
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionPlaceholder" destination="Rt1-ag-1RW" id="h0P-vu-BjN"/>
