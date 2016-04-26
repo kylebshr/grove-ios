@@ -21,13 +21,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIViewControllerPr
     let realm = try! Realm()
 
     var didShowInitialLocation = false
-    var currentTouchPoint = CGPoint(x: -1, y: -1)
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Zooms into random cluster unless we set to false
         mapView.zoomOnFirstRefresh = false
+
         requestLocationPermissionIfNeeded()
     }
 

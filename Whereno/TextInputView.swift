@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TextInputView: UIView {
+class TextInputView: UIView, UITextViewDelegate {
 
     @IBOutlet private var textField: UITextField!
     @IBOutlet private var textView: UITextView!
@@ -54,9 +54,9 @@ class TextInputView: UIView {
     func addTarget(target: AnyObject?, action: Selector) {
         sendButton.addTarget(target, action: action, forControlEvents: .TouchUpInside)
     }
-}
 
-extension TextInputView: UITextViewDelegate {
+
+    // MARK: UITextViewDelegate
 
     func textViewDidChange(textView: UITextView) {
 
