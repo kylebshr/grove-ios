@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27006A8F1CCFF58200790B95 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27006A8E1CCFF58200790B95 /* Router.swift */; };
 		27235A2C1CCE5B96006B1475 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A2B1CCE5B96006B1475 /* R.generated.swift */; };
 		27235A2E1CCE5BAA006B1475 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A2D1CCE5BAA006B1475 /* LocationDetailViewController.swift */; };
 		27235A301CCE67D9006B1475 /* LocationComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A2F1CCE67D9006B1475 /* LocationComment.swift */; };
@@ -57,6 +58,7 @@
 /* Begin PBXFileReference section */
 		0056E4470DD35EA7349FB58D /* Pods-WherenoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WherenoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WherenoTests/Pods-WherenoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		20453D8DF56CC3C266883235 /* Pods-Whereno.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Whereno.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Whereno/Pods-Whereno.debug.xcconfig"; sourceTree = "<group>"; };
+		27006A8E1CCFF58200790B95 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		27235A2B1CCE5B96006B1475 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		27235A2D1CCE5BAA006B1475 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
 		27235A2F1CCE67D9006B1475 /* LocationComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationComment.swift; sourceTree = "<group>"; };
@@ -125,6 +127,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27006A901CCFF58500790B95 /* Other Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				27006A8E1CCFF58200790B95 /* Router.swift */,
+			);
+			name = "Other Helpers";
+			sourceTree = "<group>";
+		};
 		27235A311CCE77E5006B1475 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +183,7 @@
 				27235A311CCE77E5006B1475 /* Views */,
 				27CCFB1B1CCFC0AE00399F35 /* Cells */,
 				27DECBF11CCD68C300A4BCD2 /* Models */,
+				27006A901CCFF58500790B95 /* Other Helpers */,
 				27DECBF81CCD843800A4BCD2 /* Extensions */,
 				27235A381CCE977D006B1475 /* Protocols */,
 				27DECBEE1CCD687C00A4BCD2 /* Assets */,
@@ -568,6 +579,7 @@
 				27235A3E1CCEA6E5006B1475 /* NSDate+Extensions.swift in Sources */,
 				27B345C81CCD669A005BA871 /* MapViewController.swift in Sources */,
 				27251B7A1CCECF3800FD4FC9 /* UIColor+Extensions.swift in Sources */,
+				27006A8F1CCFF58200790B95 /* Router.swift in Sources */,
 				27D533A71CCEC516007FC6A1 /* TextInputView.swift in Sources */,
 				27235A3A1CCE9791006B1475 /* JSONEncodable.swift in Sources */,
 				27DECBFA1CCD901D00A4BCD2 /* UITextField+Extensions.swift in Sources */,
