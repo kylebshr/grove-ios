@@ -29,6 +29,7 @@ class AddLocationViewController: UITableViewController, UINavigationControllerDe
     }
 
     @IBAction func cancelTapped(sender: UIBarButtonItem) {
+        view.endEditing(true)
         dismissViewControllerAnimated(true, completion: nil)
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
