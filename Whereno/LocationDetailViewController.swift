@@ -8,6 +8,8 @@
 
 import UIKit
 import Kingfisher
+import AddressBook
+import MapKit
 
 class LocationDetailViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate {
 
@@ -96,6 +98,18 @@ class LocationDetailViewController: UIViewController, UITableViewDataSource, UIS
     // Allows for the input accessory to work
     override func canBecomeFirstResponder() -> Bool {
         return shouldShowTextInputView
+    }
+
+    @IBAction func openLocationInMaps() {
+
+        // Create the map item with the coordinates of the location
+        let coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+
+        // Set the name to location title, and launch Maps
+        mapItem.name = location.title
+        mapItem.openInMapsWithLaunchOptions([MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking])
     }
 
 

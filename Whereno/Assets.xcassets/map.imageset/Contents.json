@@ -6,12 +6,12 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "_fromuikit_DisclosureArrow@2x.png",
+      "filename" : "map-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "right-chevron.png",
+      "filename" : "map.png",
       "scale" : "3x"
     }
   ],

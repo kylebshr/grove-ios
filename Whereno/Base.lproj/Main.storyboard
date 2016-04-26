@@ -225,6 +225,13 @@ Must be a nice quiet place!</string>
                             <constraint firstItem="wys-kB-zTQ" firstAttribute="bottom" secondItem="icZ-S3-4U1" secondAttribute="bottom" id="zgd-Bs-vZf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wJV-dI-6WC">
+                        <barButtonItem key="rightBarButtonItem" image="map" id="Jg3-eA-IWz">
+                            <connections>
+                                <action selector="openLocationInMaps" destination="92n-4j-syC" id="q4E-AR-fq7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="imageDimmingView" destination="Eo2-4Y-NCz" id="jIs-a3-3My"/>
@@ -328,7 +335,8 @@ Must be a nice quiet place!</string>
         </scene>
     </scenes>
     <resources>
-        <image name="location-arrow" width="23" height="23"/>
+        <image name="location-arrow" width="22" height="22"/>
+        <image name="map" width="22" height="22"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
