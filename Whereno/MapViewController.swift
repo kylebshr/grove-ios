@@ -142,7 +142,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIViewControllerPr
 
         if let tappedView = previewingContext.sourceView as? ABFClusterAnnotationView, hammockLocation = hammockLocationForAnnotationView(tappedView) {
 
-            previewingContext.sourceRect = CGRect(x: 0, y: 0, width: tappedView.frame.width, height: tappedView.frame.height)
+            for subview in tappedView.subviews {
+                if subview.frame.height > tappedView.frame.height {
+                    previewingContext.sourceRect = subview.frame
+                    break
+                }
+            }
 
             let vc = R.storyboard.main.locationDetailViewController()!
             vc.location = hammockLocation
