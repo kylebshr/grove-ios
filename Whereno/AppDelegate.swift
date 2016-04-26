@@ -96,7 +96,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Handle 3D Touch shortcuts
     func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
         if let rootViewController = window?.rootViewController {
-            if shortcutItem.type == "come.kylebashour.Whereno.AddLocation" && !(rootViewController is AddLocationViewController) {
+            if shortcutItem.type == "come.kylebashour.Whereno.AddLocation" {
                 let vc = R.storyboard.compose.initialViewController()!
                 rootViewController.presentViewController(vc, animated: false, completion: nil)
             }
