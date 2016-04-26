@@ -1,7 +1,7 @@
 PODS:
-  - ABFRealmMapView (1.7.3):
+  - ABFRealmMapView (1.8):
     - RBQFetchedResultsController (>= 2.0)
-    - Realm (>= 0.96)
+    - Realm (>= 0.98)
   - Alamofire (3.3.1)
   - AsyncSwift (1.7.2)
   - Kingfisher (2.3.1)
@@ -9,20 +9,20 @@ PODS:
   - R.swift (2.1.0):
     - R.swift.Library (~> 2.0.0)
   - R.swift.Library (2.0.0)
-  - RBQFetchedResultsController (3.0.1):
-    - Realm (>= 0.95)
-  - Realm (0.99.0):
-    - Realm/Headers (= 0.99.0)
-  - Realm/Headers (0.99.0)
-  - RealmMapView (1.7.3):
-    - ABFRealmMapView (>= 1.7.3)
-    - RealmSwift (>= 0.96)
+  - RBQFetchedResultsController (4.0):
+    - Realm (>= 0.99)
+  - Realm (0.99.1):
+    - Realm/Headers (= 0.99.1)
+  - Realm/Headers (0.99.1)
+  - RealmMapView (1.8):
+    - ABFRealmMapView (>= 1.8)
+    - RealmSwift (>= 0.98)
     - SwiftFetchedResultsController (>= 2.4.3)
-  - RealmSwift (0.99.0):
-    - Realm (= 0.99.0)
-  - SwiftFetchedResultsController (3.0.1):
-    - RBQFetchedResultsController (>= 3.0.1)
-    - RealmSwift (>= 0.96)
+  - RealmSwift (0.99.1):
+    - Realm (= 0.99.1)
+  - SwiftFetchedResultsController (4.0):
+    - RBQFetchedResultsController (>= 4.0)
+    - RealmSwift (>= 0.99)
 
 DEPENDENCIES:
   - Alamofire
@@ -34,18 +34,18 @@ DEPENDENCIES:
   - RealmSwift
 
 SPEC CHECKSUMS:
-  ABFRealmMapView: e3d18e6a2df1713c07b4e518504558ecbadc9968
+  ABFRealmMapView: b440d11a5666a4575847a8e02313e57c370a4d38
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
   Kingfisher: 6d3fbada4829cbc7b89e883e8218c28afeb64e42
   ModelMapper: 798850e5b2ca193a830a8ac18a1b5874997cdee8
   R.swift: efff131531b5cf142e28fd94957806ff71ccbcf2
   R.swift.Library: 9f4b2d12040daa1ffe336d8f7e1574f73721fd01
-  RBQFetchedResultsController: 4b8a80647859241abdb3da04b486a6ad02dd5093
-  Realm: cf275f109b94e5399896960c90285a043edb3d56
-  RealmMapView: 2a3de4d3434e8e0778075d1a9cf34e12161a3daf
-  RealmSwift: f40e5634bbc74f063163561d02acc4aa040d40a5
-  SwiftFetchedResultsController: 646da58a5cde2293b692f5c8283d1db001d720bc
+  RBQFetchedResultsController: df4475747231d75422f2dcb959a26a474223a642
+  Realm: 522a0cc8e1f8755ee56d7dc16ca0fc380d045766
+  RealmMapView: e7857bc757f54baf81133b24e91383da292dbf5e
+  RealmSwift: 1d9c4299ef5dbf575c5da09fc706ed726327cfa0
+  SwiftFetchedResultsController: e95f1ecdc0db43bed983c947c07a012021aa374d
 
 PODFILE CHECKSUM: 423edc8b6ffabf87122082ea5038f7417e10365e
 
