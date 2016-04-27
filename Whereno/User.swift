@@ -7,21 +7,29 @@
 //
 
 import Foundation
+import RealmSwift
+import Mapper
 
-class User {
+class User: Object, Mappable {
 
-    private static let userIDKey = "defaults_user_id"
+    dynamic var id = 0
+
+    let favorites = List<HammockLocation>()
+
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+
+    required convenience init(map: Mapper) throws {
+        self.init()
+
+        try id = map.from("id")
+        try User.authToken = map.from("auth_token")
+    }
+
     private static let authTokenKey = "defaults_auth_token"
     private static let defaults = NSUserDefaults.standardUserDefaults()
-
-    static var id: Int? {
-        get {
-            return defaults.objectForKey(userIDKey) as? Int
-        }
-        set {
-            defaults.setObject(newValue, forKey: userIDKey)
-        }
-    }
+    private static let realm = try! Realm()
 
     static var authToken: String? {
         get {
@@ -30,5 +38,10 @@ class User {
         set {
             defaults.setObject(newValue, forKey: authTokenKey)
         }
+    }
+
+    static var authenticatedUser: User? {
+        guard authToken != nil else { return nil }
+        return realm.objects(User).first
     }
 }
