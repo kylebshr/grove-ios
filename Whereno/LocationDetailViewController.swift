@@ -12,7 +12,7 @@ import AddressBook
 import MapKit
 import RealmSwift
 
-class LocationDetailViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate {
+class LocationDetailViewController: UIViewController {
 
 
     // MARK: Outlets
@@ -21,7 +21,6 @@ class LocationDetailViewController: UIViewController, UITableViewDataSource, UIS
     @IBOutlet var imageDimmingView: UIView!
     @IBOutlet var imageHeightConstraint: NSLayoutConstraint!
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var favoritesButton: UIBarButtonItem!
 
 
     // MARK: Properties
@@ -33,6 +32,7 @@ class LocationDetailViewController: UIViewController, UITableViewDataSource, UIS
     // Implicitely unwrapped as they will be set before use (much like the outlets above)
     var location: HammockLocation!
     var originalHeaderHeight: CGFloat!
+
     var shouldShowTextInputView = true
 
     override var inputAccessoryView: UIView? {
@@ -44,8 +44,6 @@ class LocationDetailViewController: UIViewController, UITableViewDataSource, UIS
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        updateStarImage()
 
         // Save this for setting insets even when the constant has changed
         originalHeaderHeight = imageHeightConstraint.constant
@@ -78,6 +76,20 @@ class LocationDetailViewController: UIViewController, UITableViewDataSource, UIS
     }
 
 
+    // MARK: IBActions
+
+    @IBAction func openLocationInMaps() {
+
+        // Create the map item with the coordinates of the location
+        let coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: nil)
+        let mapItem = MKMapItem(placemark: placemark)
+
+        // Set the name to location title, and launch Maps
+        mapItem.name = location.title
+        mapItem.openInMapsWithLaunchOptions([MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking])
+    }
+
     // MARK: Helper functions
 
     /* 
@@ -104,47 +116,9 @@ class LocationDetailViewController: UIViewController, UITableViewDataSource, UIS
     override func canBecomeFirstResponder() -> Bool {
         return shouldShowTextInputView
     }
+}
 
-    @IBAction func openLocationInMaps() {
-
-        // Create the map item with the coordinates of the location
-        let coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
-        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: nil)
-        let mapItem = MKMapItem(placemark: placemark)
-
-        // Set the name to location title, and launch Maps
-        mapItem.name = location.title
-        mapItem.openInMapsWithLaunchOptions([MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking])
-    }
-
-    @IBAction func favoriteTapped(sender: UIBarButtonItem) {
-
-        guard let user = User.authenticatedUser else {
-            return
-        }
-
-        try! realm.write {
-            if let index = user.favorites.indexOf(location) {
-                user.favorites.removeAtIndex(index)
-            }
-            else {
-                user.favorites.append(location)
-            }
-        }
-
-        updateStarImage()
-    }
-
-    func updateStarImage() {
-        if let _ = User.authenticatedUser?.favorites.indexOf(location) {
-            favoritesButton.image = R.image.starFilled()
-        }
-        else {
-            favoritesButton.image = R.image.star()
-        }
-    }
-
-    // MARK: UIScrollViewDelegate
+extension LocationDetailViewController: UIScrollViewDelegate {
 
     func scrollViewDidScroll(scrollView: UIScrollView) {
 
@@ -160,9 +134,9 @@ class LocationDetailViewController: UIViewController, UITableViewDataSource, UIS
         imageDimmingView.alpha = 1 - (offset / originalHeaderHeight)
         imageHeightConstraint.constant = offset
     }
+}
 
-
-    // MARK: UITableViewDataSource
+extension LocationDetailViewController: UITableViewDataSource {
 
     // One section for the description, one for comments
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

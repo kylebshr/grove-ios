@@ -8,16 +8,25 @@
 
 import UIKit
 
-class AddLocationViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextViewDelegate, UITextFieldDelegate {
+class AddLocationViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
+
+
+    // MARK: Outlets
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var descriptionPlaceholder: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
 
+
+    // MARK: Properties
+
     let picker = UIImagePickerController()
 
     var descriptionTextHeight: CGFloat = 0
+
+
+    // MARK: Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +34,19 @@ class AddLocationViewController: UITableViewController, UINavigationControllerDe
         picker.delegate = self
         picker.sourceType = .Camera
 
+        // Line up the text view with the placeholder text field
         descriptionTextView.textContainerInset = UIEdgeInsets(top: 0, left: -4, bottom: 0, right: 0)
     }
 
+
+    // MARK: IBActions
+
     @IBAction func cancelTapped(sender: UIBarButtonItem) {
+
+        // dismiss the keyboard with the vc
         view.endEditing(true)
+
+        // get outta here!
         dismissViewControllerAnimated(true, completion: nil)
     }
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -89,8 +106,13 @@ class AddLocationViewController: UITableViewController, UINavigationControllerDe
 
         return true
     }
+}
+
+extension AddLocationViewController: UITextViewDelegate {
 
     func textViewDidChange(textView: UITextView) {
+
+        // Hide or show the placeholder
         descriptionPlaceholder.placeholder = textView.text == "" ? "Describe this location" : ""
 
         /*
