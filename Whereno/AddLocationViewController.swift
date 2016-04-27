@@ -56,10 +56,15 @@ class AddLocationViewController: UITableViewController {
     @IBAction func postTapped(sender: UIBarButtonItem) {
 
         // Validate all the fields
-        guard let photoData = imageView.image?.encode() else {
+        guard let imageData = imageView.image?.encode() else {
             showAlert("Please add a photo 🖼", message: nil)
             return
         }
+
+        NetworkManager.sharedInstance.uploadImage(imageData) { (result) in
+
+        }
+
         guard let title = titleTextField.text where title.stringByRemovingWhiteSpace() != "" else {
             showAlert("Please add a title 🏷", message: nil)
             return
@@ -73,7 +78,8 @@ class AddLocationViewController: UITableViewController {
             return
         }
 
-        NetworkManager.sharedInstance.postLocation(title, capacity: capacity, description: description, photoData: photoData, latitude: userLocation.latitude, longitude: userLocation.longitude) { [weak self] result in
+
+        NetworkManager.sharedInstance.postLocation(title, capacity: capacity, description: description, imageURL: "", latitude: userLocation.latitude, longitude: userLocation.longitude) { [weak self] result in
 
             switch result {
             case .Success(let location):

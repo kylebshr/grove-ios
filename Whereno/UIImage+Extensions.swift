@@ -16,6 +16,8 @@ extension UIImage {
             return nil
         }
 
-        return imageData.base64EncodedStringWithOptions(.Encoding64CharacterLineLength)
+        let imageString = imageData.base64EncodedStringWithOptions(.EncodingEndLineWithCarriageReturn)
+
+        return "data:image/jpeg;base64,\(imageString)"
     }
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+import AlamofireNetworkActivityIndicator
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         UITabBar.appearance().tintColor = UIColor.dodgerBlue()
+        NetworkActivityIndicatorManager.sharedManager.isEnabled = true
 
         let realm = try! Realm()
 

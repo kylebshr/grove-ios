@@ -3,6 +3,7 @@ use_frameworks!
 
 target 'Whereno' do
     pod 'Alamofire'
+    pod 'AlamofireNetworkActivityIndicator'
     pod 'RealmSwift'
     pod 'RealmMapView'
     pod 'ModelMapper'
