@@ -10,6 +10,14 @@ import UIKit
 
 extension UIColor {
 
+    static func zodiacBlue() -> UIColor {
+        return UIColor(hex: "#10284E")
+    }
+
+    static func dodgerBlue() -> UIColor {
+        return UIColor(hex: "#0D94FC")
+    }
+
     public convenience init(hex hexString: String) {
         var red:   CGFloat = 0.0
         var green: CGFloat = 0.0

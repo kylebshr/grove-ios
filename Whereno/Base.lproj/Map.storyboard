@@ -29,6 +29,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tCy-zo-wBY" customClass="RealmMapView" customModule="RealmMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.96078431372549022" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.050980392159999999" green="0.58039215690000001" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="entityName" value="HammockLocation"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="latitudeKeyPath" value="latitude"/>
@@ -314,17 +315,16 @@ Must be a nice quiet place!</string>
             </objects>
             <point key="canvasLocation" x="2028" y="1414"/>
         </scene>
-        <!--Locations-->
+        <!--Navigation Controller-->
         <scene sceneID="Tfi-Fg-D1M">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h24-by-ugM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Locations" image="map" selectedImage="map-filled" id="yHT-Ku-tVS"/>
                     <toolbarItems/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="2mZ-QF-eIW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.28235294117647058" green="0.54117647058823526" blue="0.086274509803921567" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.062745098039215685" green="0.15686274509803921" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -339,7 +339,6 @@ Must be a nice quiet place!</string>
     <resources>
         <image name="location-arrow" width="22" height="22"/>
         <image name="map" width="22" height="22"/>
-        <image name="map-filled" width="22" height="22"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

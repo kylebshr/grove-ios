@@ -129,13 +129,14 @@ extension MapViewController: MKMapViewDelegate {
 
             // Different tint color than our map, we have to set that
             let disclosureButton = UIButton(type: .DetailDisclosure)
-            disclosureButton.tintColor = UIColor(hex: "#488A16")
+            disclosureButton.tintColor = UIColor.dodgerBlue()
 
             // Configure the view with the annotation info
             annotationView.canShowCallout = true
             annotationView.count = UInt(annotation.safeObjects.count)
             annotationView.annotation = annotation
             annotationView.rightCalloutAccessoryView = disclosureButton
+            annotationView.color = UIColor.dodgerBlue()
 
             // Register for 3D Touch
             registerForPreviewingWithDelegate(self, sourceView: annotationView)
