@@ -45,7 +45,7 @@ class LocationListViewController: UITableViewController, UIViewControllerPreview
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
         let location = locations[indexPath.row]
-        let vc = R.storyboard.main.locationDetailViewController()!
+        let vc = R.storyboard.map.locationDetailViewController()!
 
         vc.location = location
 
@@ -57,7 +57,7 @@ class LocationListViewController: UITableViewController, UIViewControllerPreview
 
             previewingContext.sourceRect = cell.convertRect(cell.largeImageView.frame, toView: view)
 
-            let vc = R.storyboard.main.locationDetailViewController()!
+            let vc = R.storyboard.map.locationDetailViewController()!
             vc.shouldShowTextInputView = false
             vc.location = locations[indexPath.row]
             return vc

@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+        UITabBar.appearance().tintColor = UIColor(hex: "#488A16")
+
         let realm = try! Realm()
 
         let locations: [NSDictionary] = [

@@ -56,11 +56,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIViewControllerPr
             // Placemarks and UI updates should be worked with on main thread
             Async.main {
                 guard let locality = placemarks?.first?.locality else {
-                    self?.title = "Current Location"
+                    self?.navigationItem.title = "Current Location"
                     return
                 }
 
-                self?.title = locality
+                self?.navigationItem.title = locality
             }
         }
     }
@@ -133,12 +133,12 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIViewControllerPr
         }
 
         if locations.count == 1 {
-            let vc = R.storyboard.main.locationDetailViewController()!
+            let vc = R.storyboard.map.locationDetailViewController()!
             vc.location = locations[0]
             navigationController?.pushViewController(vc, animated: true)
         }
         else {
-            let vc = R.storyboard.main.locationListViewController()!
+            let vc = R.storyboard.map.locationListViewController()!
             vc.locations = locations
             navigationController?.pushViewController(vc, animated: true)
         }
@@ -156,13 +156,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIViewControllerPr
             }
 
             if locations.count == 1 {
-                let vc = R.storyboard.main.locationDetailViewController()!
+                let vc = R.storyboard.map.locationDetailViewController()!
                 vc.location = locations[0]
                 vc.shouldShowTextInputView = false
                 return vc
             }
             else {
-                let vc = R.storyboard.main.locationListViewController()!
+                let vc = R.storyboard.map.locationListViewController()!
                 let size = CGSize(width: view.frame.width, height: min(CGFloat(locations.count * 140) - 4, mapView.frame.height))
                 vc.preferredContentSize = size
                 vc.locations = locations

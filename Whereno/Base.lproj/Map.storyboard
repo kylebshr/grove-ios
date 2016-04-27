@@ -12,7 +12,7 @@
                 <viewControllerPlaceholder storyboardName="Compose" id="I34-Ma-QCZ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWf-ul-KWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1432.5" y="679"/>
+            <point key="canvasLocation" x="1629.5" y="1047"/>
         </scene>
         <!--Locating...-->
         <scene sceneID="tne-QT-ifu">
@@ -72,7 +72,7 @@
         <!--Location Detail View Controller-->
         <scene sceneID="HHQ-1c-dOh">
             <objects>
-                <viewController storyboardIdentifier="LocationDetailViewController" id="92n-4j-syC" customClass="LocationDetailViewController" customModule="Whereno" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationDetailViewController" hidesBottomBarWhenPushed="YES" id="92n-4j-syC" customClass="LocationDetailViewController" customModule="Whereno" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bmC-Ju-PSl"/>
                         <viewControllerLayoutGuide type="bottom" id="Ehz-XB-5Pd"/>
@@ -314,11 +314,13 @@ Must be a nice quiet place!</string>
             </objects>
             <point key="canvasLocation" x="2028" y="1414"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Locations-->
         <scene sceneID="Tfi-Fg-D1M">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h24-by-ugM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Locations" image="map" selectedImage="map-filled" id="yHT-Ku-tVS"/>
                     <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="2mZ-QF-eIW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -337,6 +339,7 @@ Must be a nice quiet place!</string>
     <resources>
         <image name="location-arrow" width="22" height="22"/>
         <image name="map" width="22" height="22"/>
+        <image name="map-filled" width="22" height="22"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 import Mapper
 
-class User: Object, Mappable {
+final class User: Object, Mappable {
 
     dynamic var id = 0
 
