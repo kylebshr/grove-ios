@@ -23,6 +23,7 @@
 		27A9232C1CD0378B0020739D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9232B1CD0378B0020739D /* User.swift */; };
 		27A9232E1CD040CD0020739D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A9232D1CD040CD0020739D /* Main.storyboard */; };
 		27A923301CD0415C0020739D /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A9232F1CD0415C0020739D /* Favorites.storyboard */; };
+		27A923321CD0486E0020739D /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A923311CD0486E0020739D /* FavoritesViewController.swift */; };
 		27B345C61CCD669A005BA871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345C51CCD669A005BA871 /* AppDelegate.swift */; };
 		27B345C81CCD669A005BA871 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345C71CCD669A005BA871 /* MapViewController.swift */; };
 		27B345CB1CCD669A005BA871 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B345C91CCD669A005BA871 /* Map.storyboard */; };
@@ -78,6 +79,7 @@
 		27A9232B1CD0378B0020739D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		27A9232D1CD040CD0020739D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		27A9232F1CD0415C0020739D /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		27A923311CD0486E0020739D /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		27B345C21CCD669A005BA871 /* Whereno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B345C51CCD669A005BA871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27B345C71CCD669A005BA871 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				27235A2D1CCE5BAA006B1475 /* LocationDetailViewController.swift */,
 				27CCFB171CCFBF7B00399F35 /* LocationListViewController.swift */,
 				2750DE091CCFDEEE002F9C72 /* AddLocationViewController.swift */,
+				27A923311CD0486E0020739D /* FavoritesViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				27B345C61CCD669A005BA871 /* AppDelegate.swift in Sources */,
 				27A9232A1CD032CE0020739D /* String+Extensions.swift in Sources */,
 				2750DE0A1CCFDEEE002F9C72 /* AddLocationViewController.swift in Sources */,
+				27A923321CD0486E0020739D /* FavoritesViewController.swift in Sources */,
 				27CCFB181CCFBF7B00399F35 /* LocationListViewController.swift in Sources */,
 				27235A331CCE78F2006B1475 /* DetailHeaderCell.swift in Sources */,
 				27235A2E1CCE5BAA006B1475 /* LocationDetailViewController.swift in Sources */,

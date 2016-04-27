@@ -83,7 +83,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             ],
         ]
 
+        let user = User.from(["id": 0, "auth_token": "123"])!
+
         try! realm.write {
+
+            if User.authenticatedUser == nil { realm.add(user, update: true) }
             locations.flatMap {
                 return HammockLocation.from($0)
             }.forEach {

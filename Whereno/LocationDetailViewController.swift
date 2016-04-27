@@ -10,6 +10,7 @@ import UIKit
 import Kingfisher
 import AddressBook
 import MapKit
+import RealmSwift
 
 class LocationDetailViewController: UIViewController, UITableViewDataSource, UIScrollViewDelegate {
 
@@ -20,12 +21,14 @@ class LocationDetailViewController: UIViewController, UITableViewDataSource, UIS
     @IBOutlet var imageDimmingView: UIView!
     @IBOutlet var imageHeightConstraint: NSLayoutConstraint!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var favoritesButton: UIBarButtonItem!
 
 
     // MARK: Properties
 
     // Force unwrapped as R.swift ensures this view exists
     let textInputView = R.nib.textInputView.firstView(owner: nil)!
+    let realm = try! Realm()
 
     // Implicitely unwrapped as they will be set before use (much like the outlets above)
     var location: HammockLocation!
@@ -42,6 +45,8 @@ class LocationDetailViewController: UIViewController, UITableViewDataSource, UIS
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        updateStarImage()
+
         // Save this for setting insets even when the constant has changed
         originalHeaderHeight = imageHeightConstraint.constant
 
@@ -56,7 +61,7 @@ class LocationDetailViewController: UIViewController, UITableViewDataSource, UIS
         // Configure the TextInputView action
         textInputView.addTarget(self, action: #selector(textInputViewSendTapped))
 
-        title = location.title
+        navigationItem.title = location.title
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -112,6 +117,32 @@ class LocationDetailViewController: UIViewController, UITableViewDataSource, UIS
         mapItem.openInMapsWithLaunchOptions([MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking])
     }
 
+    @IBAction func favoriteTapped(sender: UIBarButtonItem) {
+
+        guard let user = User.authenticatedUser else {
+            return
+        }
+
+        try! realm.write {
+            if let index = user.favorites.indexOf(location) {
+                user.favorites.removeAtIndex(index)
+            }
+            else {
+                user.favorites.append(location)
+            }
+        }
+
+        updateStarImage()
+    }
+
+    func updateStarImage() {
+        if let _ = User.authenticatedUser?.favorites.indexOf(location) {
+            favoritesButton.image = R.image.starFilled()
+        }
+        else {
+            favoritesButton.image = R.image.star()
+        }
+    }
 
     // MARK: UIScrollViewDelegate
 

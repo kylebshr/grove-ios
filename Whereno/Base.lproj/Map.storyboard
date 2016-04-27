@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
         <!--Compose-->
@@ -226,14 +227,22 @@ Must be a nice quiet place!</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wJV-dI-6WC">
-                        <barButtonItem key="rightBarButtonItem" image="map" id="Jg3-eA-IWz">
-                            <connections>
-                                <action selector="openLocationInMaps" destination="92n-4j-syC" id="q4E-AR-fq7"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem image="star" id="tFl-81-clg">
+                                <connections>
+                                    <action selector="favoriteTapped:" destination="92n-4j-syC" id="7Pa-Ew-5nh"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="map" id="Jg3-eA-IWz">
+                                <connections>
+                                    <action selector="openLocationInMaps" destination="92n-4j-syC" id="q4E-AR-fq7"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
+                        <outlet property="favoritesButton" destination="tFl-81-clg" id="nSV-Vi-N1x"/>
                         <outlet property="imageDimmingView" destination="Eo2-4Y-NCz" id="jIs-a3-3My"/>
                         <outlet property="imageHeightConstraint" destination="hqO-VC-2oO" id="boZ-3Q-Tnm"/>
                         <outlet property="imageView" destination="icZ-S3-4U1" id="Mwu-0V-Yej"/>
@@ -340,6 +349,7 @@ Must be a nice quiet place!</string>
         <image name="location-arrow" width="22" height="22"/>
         <image name="map" width="22" height="22"/>
         <image name="map-filled" width="22" height="22"/>
+        <image name="star" width="22" height="22"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
