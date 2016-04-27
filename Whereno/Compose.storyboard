@@ -158,7 +158,11 @@
                                 <action selector="cancelTapped:" destination="j14-fp-pKu" id="5Ft-Pm-LDu"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Post" style="done" id="rK6-ki-VZD"/>
+                        <barButtonItem key="rightBarButtonItem" title="Post" style="done" id="rK6-ki-VZD">
+                            <connections>
+                                <action selector="postTapped:" destination="j14-fp-pKu" id="cdr-Mj-QGj"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="descriptionPlaceholder" destination="Rt1-ag-1RW" id="h0P-vu-BjN"/>

@@ -46,7 +46,6 @@ final class HammockLocation: Object, Mappable, JSONEncodable {
 
     func toJSON() -> [String : AnyObject] {
         return [
-            "id": id,
             "title": title,
             "image_url": imageURLString,
             "description": descriptionText,

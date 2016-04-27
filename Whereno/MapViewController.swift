@@ -41,11 +41,28 @@ class MapViewController: UIViewController {
     }
 
 
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        mapView.refreshMapView()
+    }
+
     // MARK: IBActions
 
     // Centers and zooms the map to your current location
     @IBAction func locationButtonTapped(sender: UIBarButtonItem) {
         updateMapRegion(mapView.userLocation.coordinate)
+    }
+
+    @IBAction func addLocationButtonTapped(sender: UIBarButtonItem) {
+        guard let location = mapView.userLocation.location?.coordinate else {
+            return
+        }
+
+        let nav = R.storyboard.compose.initialViewController()!
+        let vc = nav.viewControllers[0] as! AddLocationViewController
+        vc.userLocation = location
+        presentViewController(nav, animated: true, completion: nil)
     }
 
 

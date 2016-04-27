@@ -12,7 +12,7 @@ extension UIImage {
 
     func encode() -> String? {
 
-        guard let imageData = UIImagePNGRepresentation(self) else {
+        guard let imageData = UIImageJPEGRepresentation(self, 0.5) else {
             return nil
         }
 

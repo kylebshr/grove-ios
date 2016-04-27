@@ -6,14 +6,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Compose-->
-        <scene sceneID="8SP-yw-VUV">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Compose" id="I34-Ma-QCZ" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hWf-ul-KWU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1629.5" y="1047"/>
-        </scene>
         <!--Locating...-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -58,7 +50,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7rb-kp-ENQ">
                             <connections>
-                                <segue destination="I34-Ma-QCZ" kind="presentation" id="eHY-Bg-2wA"/>
+                                <action selector="addLocationButtonTapped:" destination="BYZ-38-t0r" id="XwZ-yK-Js0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

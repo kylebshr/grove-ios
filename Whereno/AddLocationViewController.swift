@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreLocation
+import RealmSwift
 
 class AddLocationViewController: UITableViewController {
 
@@ -22,9 +24,10 @@ class AddLocationViewController: UITableViewController {
     // MARK: Properties
 
     let picker = UIImagePickerController()
+    let realm = try! Realm()
 
     var descriptionTextHeight: CGFloat = 0
-
+    var userLocation: CLLocationCoordinate2D!
 
     // MARK: Lifecycle
 
@@ -47,6 +50,39 @@ class AddLocationViewController: UITableViewController {
 
         // get outta here!
         dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    @IBAction func postTapped(sender: UIBarButtonItem) {
+
+        guard let title = titleTextField.text where title.stringByRemovingWhiteSpace() != "" else {
+            print("Bad title")
+            return
+        }
+        guard let description = descriptionTextView.text where description.stringByRemovingWhiteSpace() != "" else {
+            print("Bad desc")
+            return
+        }
+        guard let photoData = imageView.image?.encode() else {
+            print("Bad photo")
+            return
+        }
+
+        NetworkManager.sharedInstance.postLocation(title, description: description, photoData: photoData, latitude: userLocation.latitude, longitude: userLocation.longitude) { [weak self] result in
+
+            switch result {
+            case .Success(let location):
+
+                try! self?.realm.write {
+                    self?.realm.add(location)
+                }
+
+                self?.dismissViewControllerAnimated(true, completion: nil)
+
+            case .Failure(let error):
+                print(error)
+                self?.showAlert("Oh No!", message: "We're having issues posting this location right now. Please try again later!")
+            }
+        }
     }
 
 
