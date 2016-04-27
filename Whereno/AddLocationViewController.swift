@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddLocationViewController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
+class AddLocationViewController: UITableViewController {
 
 
     // MARK: Outlets
@@ -32,7 +32,6 @@ class AddLocationViewController: UITableViewController, UINavigationControllerDe
         super.viewDidLoad()
 
         picker.delegate = self
-        picker.sourceType = .Camera
 
         // Line up the text view with the placeholder text field
         descriptionTextView.textContainerInset = UIEdgeInsets(top: 0, left: -4, bottom: 0, right: 0)
@@ -49,10 +48,16 @@ class AddLocationViewController: UITableViewController, UINavigationControllerDe
         // get outta here!
         dismissViewControllerAnimated(true, completion: nil)
     }
+
+
+    // MARK: UITableViewDataSource/Delegate
+
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
+        // Deselect the row
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
 
+        // Show camera or make the appropiate field become first responder
         if indexPath.row == 0 {
             imageView.image == nil ? showCamera() : showPhotoOptions()
         }
@@ -64,6 +69,7 @@ class AddLocationViewController: UITableViewController, UINavigationControllerDe
         }
     }
 
+    // Lets us use Auto Layout with static table view
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
@@ -72,10 +78,22 @@ class AddLocationViewController: UITableViewController, UINavigationControllerDe
         return 100
     }
 
+
+    // MARK: Helpers
+
     func showCamera() {
-        presentViewController(picker, animated: true, completion: nil)
+
+        // We'll check if they have a camera, and if not, let them pick from the gallery
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            picker.sourceType = .Camera
+            presentViewController(picker, animated: true, completion: nil)
+        } else {
+            picker.sourceType = .SavedPhotosAlbum
+            presentViewController(picker, animated: true, completion: nil)
+        }
     }
 
+    // Shows an action sheet when the photo is tapped to delete or add a new photo
     func showPhotoOptions() {
 
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
@@ -87,17 +105,31 @@ class AddLocationViewController: UITableViewController, UINavigationControllerDe
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
 
-        actionSheet.addAction(newPhotoAction)
         actionSheet.addAction(deleteAction)
+        actionSheet.addAction(newPhotoAction)
         actionSheet.addAction(cancelAction)
 
         presentViewController(actionSheet, animated: true, completion: nil)
     }
+}
+
+extension AddLocationViewController: UIImagePickerControllerDelegate {
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+
+        // Set the image
         imageView.image = image
+
+        // Dismiss the camera
         dismissViewControllerAnimated(true, completion: nil)
+
+        titleTextField.becomeFirstResponder()
     }
+}
+
+extension AddLocationViewController: UINavigationControllerDelegate { }
+
+extension AddLocationViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if textField === titleTextField {
