@@ -20,6 +20,7 @@ class NetworkManager {
     let baseURL = "https://kylebashour.com/"
 
     func postLocation(title: String,
+                      capacity: Int,
                       description: String,
                       photoData: String,
                       latitude: Double,

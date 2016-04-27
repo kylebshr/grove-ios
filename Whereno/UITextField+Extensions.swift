@@ -12,9 +12,9 @@ private var kAssociationKeyNextField: UInt8 = 0
 
 extension UITextField {
 
-    @IBOutlet var nextField: UITextField? {
+    @IBOutlet var nextField: UIView? {
         get {
-            return objc_getAssociatedObject(self, &kAssociationKeyNextField) as? UITextField
+            return objc_getAssociatedObject(self, &kAssociationKeyNextField) as? UIView
         }
         set(newField) {
             objc_setAssociatedObject(self, &kAssociationKeyNextField, newField, .OBJC_ASSOCIATION_RETAIN)

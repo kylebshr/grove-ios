@@ -17,6 +17,7 @@ class AddLocationViewController: UITableViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var capacityTextField: UITextField!
     @IBOutlet weak var descriptionPlaceholder: UITextField!
     @IBOutlet weak var descriptionTextView: UITextView!
 
@@ -54,20 +55,25 @@ class AddLocationViewController: UITableViewController {
 
     @IBAction func postTapped(sender: UIBarButtonItem) {
 
+        // Validate all the fields
         guard let photoData = imageView.image?.encode() else {
-            showAlert("Please add a photo!", message: nil)
+            showAlert("Please add a photo 🖼", message: nil)
             return
         }
         guard let title = titleTextField.text where title.stringByRemovingWhiteSpace() != "" else {
-            showAlert("Please add a title!", message: nil)
+            showAlert("Please add a title 🏷", message: nil)
+            return
+        }
+        guard let capacity = Int(capacityTextField.text ?? "") else {
+            showAlert("Please enter how many people you think can nest here 🔢", message: nil)
             return
         }
         guard let description = descriptionTextView.text where description.stringByRemovingWhiteSpace() != "" else {
-            showAlert("Please add a description!", message: nil)
+            showAlert("Please add a description 📝", message: nil)
             return
         }
 
-        NetworkManager.sharedInstance.postLocation(title, description: description, photoData: photoData, latitude: userLocation.latitude, longitude: userLocation.longitude) { [weak self] result in
+        NetworkManager.sharedInstance.postLocation(title, capacity: capacity, description: description, photoData: photoData, latitude: userLocation.latitude, longitude: userLocation.longitude) { [weak self] result in
 
             switch result {
             case .Success(let location):
@@ -101,6 +107,9 @@ class AddLocationViewController: UITableViewController {
             titleTextField.becomeFirstResponder()
         }
         else if indexPath.row == 2 {
+            capacityTextField.becomeFirstResponder()
+        }
+        else if indexPath.row == 3 {
             descriptionTextView.becomeFirstResponder()
         }
     }
@@ -168,9 +177,8 @@ extension AddLocationViewController: UINavigationControllerDelegate { }
 extension AddLocationViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if textField === titleTextField {
-            descriptionTextView.becomeFirstResponder()
-        }
+
+        textField.nextField?.becomeFirstResponder()
 
         return true
     }

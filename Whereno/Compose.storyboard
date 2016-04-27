@@ -15,7 +15,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="bh9-2E-Ran">
-                            <rect key="frame" x="0.0" y="304" width="600" height="0.0"/>
+                            <rect key="frame" x="0.0" y="366" width="600" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
@@ -76,6 +76,7 @@
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="j14-fp-pKu" id="OGd-X4-E4X"/>
+                                                        <outlet property="nextField" destination="7hK-pY-jjU" id="dTh-Ca-Csw"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -89,8 +90,42 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="62" id="vTe-FY-UCv">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="62" id="vZq-xP-1qk">
                                         <rect key="frame" x="0.0" y="242" width="600" height="62"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="vZq-xP-1qk" id="cE5-0G-hhO">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="61.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="How many people can nest here?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dA-ti-ZoZ">
+                                                    <rect key="frame" x="15" y="10" width="177" height="14"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Number of people" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7hK-pY-jjU">
+                                                    <rect key="frame" x="15" y="32" width="570" height="20"/>
+                                                    <color key="tintColor" red="0.050980392159999999" green="0.58039215690000001" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="j14-fp-pKu" id="z7o-rF-yDD"/>
+                                                        <outlet property="nextField" destination="Uqz-e3-MFv" id="1G1-ab-fvN"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="0dA-ti-ZoZ" firstAttribute="leading" secondItem="cE5-0G-hhO" secondAttribute="leadingMargin" id="8yw-pF-vpV"/>
+                                                <constraint firstItem="7hK-pY-jjU" firstAttribute="leading" secondItem="cE5-0G-hhO" secondAttribute="leadingMargin" id="J6N-L5-wZ9"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="7hK-pY-jjU" secondAttribute="bottom" id="VuW-aN-Zb5"/>
+                                                <constraint firstItem="0dA-ti-ZoZ" firstAttribute="top" secondItem="cE5-0G-hhO" secondAttribute="topMargin" id="bPE-4Y-hAh"/>
+                                                <constraint firstItem="7hK-pY-jjU" firstAttribute="top" secondItem="0dA-ti-ZoZ" secondAttribute="bottom" constant="8" id="rym-gN-VIS"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="7hK-pY-jjU" secondAttribute="trailing" id="sJz-XY-01Y"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="62" id="vTe-FY-UCv">
+                                        <rect key="frame" x="0.0" y="304" width="600" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" tableViewCell="vTe-FY-UCv" id="uRR-mj-5ow">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="61.5"/>
@@ -165,6 +200,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="capacityTextField" destination="7hK-pY-jjU" id="078-is-wdM"/>
                         <outlet property="descriptionPlaceholder" destination="Rt1-ag-1RW" id="h0P-vu-BjN"/>
                         <outlet property="descriptionTextView" destination="Uqz-e3-MFv" id="WTh-Va-HnY"/>
                         <outlet property="imageView" destination="mhq-fu-tgd" id="X5X-hJ-BOE"/>
