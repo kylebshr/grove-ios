@@ -54,16 +54,16 @@ class AddLocationViewController: UITableViewController {
 
     @IBAction func postTapped(sender: UIBarButtonItem) {
 
+        guard let photoData = imageView.image?.encode() else {
+            showAlert("Please add a photo!", message: nil)
+            return
+        }
         guard let title = titleTextField.text where title.stringByRemovingWhiteSpace() != "" else {
-            print("Bad title")
+            showAlert("Please add a title!", message: nil)
             return
         }
         guard let description = descriptionTextView.text where description.stringByRemovingWhiteSpace() != "" else {
-            print("Bad desc")
-            return
-        }
-        guard let photoData = imageView.image?.encode() else {
-            print("Bad photo")
+            showAlert("Please add a description!", message: nil)
             return
         }
 
