@@ -47,9 +47,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
-
-        print(url)
-
         return JLRoutes.routeURL(url)
     }
 
