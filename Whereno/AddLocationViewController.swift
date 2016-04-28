@@ -83,8 +83,7 @@ class AddLocationViewController: UITableViewController {
 
                     self?.dismissViewControllerAnimated(true, completion: nil)
 
-                case .Failure(let error):
-                    print(error)
+                case .Failure:
                     self?.showErrorAlert()
                 }
             }
@@ -105,7 +104,9 @@ class AddLocationViewController: UITableViewController {
             // Upload and post the location
             NetworkManager.sharedInstance.uploadImage(imageData) { [weak self] result in
                 switch result {
-                case .Success(let url): postLocation(url)
+                case .Success(let url):
+                    self?.uploadedImageURL = url
+                    postLocation(url)
                 case .Failure: self?.showErrorAlert()
                 }
             }
@@ -113,7 +114,7 @@ class AddLocationViewController: UITableViewController {
     }
 
     func showErrorAlert() {
-        showAlert("Oh No!", message: "We're having issues posting this location right now. Please try again later!")
+        showAlert("Communication Breakdown!", message: "We're having issues talking to our server right now 😁\n\nPlease check your network and try again later")
     }
 
 
