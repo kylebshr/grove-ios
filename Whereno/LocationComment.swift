@@ -26,7 +26,7 @@ final class LocationComment: Object, Mappable, JSONEncodable {
 
         try id = map.from("id")
         try text = map.from("text")
-        try date = map.from("date")
+        try date = map.from("date_created")
         try ownerID = map.from("user_id")
     }
 
