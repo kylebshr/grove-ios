@@ -144,8 +144,6 @@ extension MapViewController: MKMapViewDelegate {
             updateMapRegion(userLocation.coordinate)
             didShowInitialLocation = true
         }
-
-        getLocationsForCurrentRegion()
     }
 
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
