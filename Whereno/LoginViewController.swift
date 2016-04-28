@@ -30,9 +30,13 @@ class LoginViewController: UIViewController {
         setUpNotificationCenter()
         setUpCycleImage()
 
-        doKenBurnsEffect()
-
         timer = NSTimer.scheduledTimerWithTimeInterval(imageTime, target: self, selector: #selector(cycleImage), userInfo: nil, repeats: true)
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        doKenBurnsEffect()
     }
 
     func setUpNotificationCenter() {
