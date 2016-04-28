@@ -18,6 +18,7 @@ class TextInputView: UIView, UITextViewDelegate {
 
     private let separator = UIView()
     private let numberOfCharactersAllowed = 180
+    private var loading = false
 
     var text: String {
         get {
@@ -58,6 +59,12 @@ class TextInputView: UIView, UITextViewDelegate {
         sendButton.addTarget(target, action: action, forControlEvents: .TouchUpInside)
     }
 
+    func setLoading(loading: Bool) {
+        self.loading = loading
+        sendButton.hidden = loading
+        loading ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
+    }
+
 
     // MARK: UITextViewDelegate
 
@@ -75,6 +82,9 @@ class TextInputView: UIView, UITextViewDelegate {
     }
 
     func textView(textView: UITextView, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        if loading {
+            return false
+        }
         if (textView.text.characters.count + text.characters.count) > numberOfCharactersAllowed {
             return false
         }

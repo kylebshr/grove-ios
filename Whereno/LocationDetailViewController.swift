@@ -115,7 +115,12 @@ class LocationDetailViewController: UIViewController {
             return
         }
 
+        textInputView.setLoading(true)
+
         ObjectFetcher.sharedInstance.postComment(textInputView.text, locationID: location.id) { [weak self] result in
+
+            self?.textInputView.setLoading(false)
+
             switch result {
             case .Success:
                 self?.textInputView.text = ""
