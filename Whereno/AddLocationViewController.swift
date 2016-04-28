@@ -28,7 +28,7 @@ class AddLocationViewController: UITableViewController {
     let realm = try! Realm()
 
     var descriptionTextHeight: CGFloat = 0
-    var userLocation: CLLocationCoordinate2D!
+    var coordinates: CLLocationCoordinate2D!
 
     var uploadedImageURL: String?
 
@@ -72,7 +72,7 @@ class AddLocationViewController: UITableViewController {
         }
 
         let postLocation = { (imageURL: String) in
-            NetworkManager.sharedInstance.postLocation(title, capacity: capacity, description: description, imageURL: "", latitude: self.userLocation.latitude, longitude: self.userLocation.longitude) { [weak self] result in
+            NetworkManager.sharedInstance.postLocation(title, capacity: capacity, description: description, imageURL: "", latitude: self.coordinates.latitude, longitude: self.coordinates.longitude) { [weak self] result in
 
                 switch result {
                 case .Success(let location):
