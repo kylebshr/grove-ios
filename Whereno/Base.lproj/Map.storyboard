@@ -48,7 +48,7 @@
                                 <action selector="locationButtonTapped:" destination="BYZ-38-t0r" id="yle-HT-for"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7rb-kp-ENQ">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="add" id="7rb-kp-ENQ">
                             <connections>
                                 <action selector="addLocationButtonTapped:" destination="BYZ-38-t0r" id="XwZ-yK-Js0"/>
                             </connections>
