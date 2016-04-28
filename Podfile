@@ -10,6 +10,7 @@ target 'Whereno' do
     pod 'AsyncSwift'
     pod 'R.swift'
     pod 'Kingfisher'
+    pod 'JLRoutes'
 end
 
 target 'WherenoTests' do

@@ -6,6 +6,7 @@ PODS:
   - AlamofireNetworkActivityIndicator (1.0.1):
     - Alamofire (~> 3.3)
   - AsyncSwift (1.7.2)
+  - JLRoutes (1.6)
   - Kingfisher (2.3.1)
   - ModelMapper (2.0.1)
   - R.swift (2.1.0):
@@ -30,6 +31,7 @@ DEPENDENCIES:
   - Alamofire
   - AlamofireNetworkActivityIndicator
   - AsyncSwift
+  - JLRoutes
   - Kingfisher
   - ModelMapper
   - R.swift
@@ -41,6 +43,7 @@ SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   AlamofireNetworkActivityIndicator: 49a6e39afb947136f7b1872bae2d684957c26697
   AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
+  JLRoutes: 435d791422e96c9b9b5e1c4db1aedb3ae1b1a08f
   Kingfisher: 6d3fbada4829cbc7b89e883e8218c28afeb64e42
   ModelMapper: 798850e5b2ca193a830a8ac18a1b5874997cdee8
   R.swift: efff131531b5cf142e28fd94957806ff71ccbcf2
@@ -51,6 +54,6 @@ SPEC CHECKSUMS:
   RealmSwift: 1d9c4299ef5dbf575c5da09fc706ed726327cfa0
   SwiftFetchedResultsController: e95f1ecdc0db43bed983c947c07a012021aa374d
 
-PODFILE CHECKSUM: 6184456bfbc5a6ca53d52e0c6b7c654c82b275c8
+PODFILE CHECKSUM: bbe3caa8111671c4168b4c562ecf2e8e28239af2
 
 COCOAPODS: 1.0.0.beta.8
