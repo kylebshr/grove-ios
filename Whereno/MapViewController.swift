@@ -39,15 +39,15 @@ class MapViewController: UIViewController {
 
         // Zooms into random cluster unless we set to false
         mapView.zoomOnFirstRefresh = false
-
-        if User.authenticatedUser == nil {
-            presentViewController(R.storyboard.login.loginViewController()!, animated: true, completion: nil)
-        }
     }
 
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
+
+        if User.authenticatedUser == nil {
+            presentViewController(R.storyboard.login.loginViewController()!, animated: true, completion: nil)
+        }
 
         mapView.refreshMapView()
     }

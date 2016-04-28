@@ -22,6 +22,7 @@
 		27742DC01CD1CC6C0039A54C /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27742DBF1CD1CC6C0039A54C /* Double+Extensions.swift */; };
 		27742DC21CD267740039A54C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27742DC11CD267740039A54C /* Login.storyboard */; };
 		27742DC41CD272F00039A54C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27742DC31CD272F00039A54C /* LoginViewController.swift */; };
+		279744381CD2C739001A36BF /* GroveNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279744371CD2C739001A36BF /* GroveNavigationController.swift */; };
 		27A9232A1CD032CE0020739D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A923291CD032CE0020739D /* String+Extensions.swift */; };
 		27A9232C1CD0378B0020739D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9232B1CD0378B0020739D /* User.swift */; };
 		27A923341CD127F80020739D /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A923331CD127F80020739D /* UIImage+Extensions.swift */; };
@@ -81,6 +82,7 @@
 		27742DBF1CD1CC6C0039A54C /* Double+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		27742DC11CD267740039A54C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		27742DC31CD272F00039A54C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		279744371CD2C739001A36BF /* GroveNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroveNavigationController.swift; sourceTree = "<group>"; };
 		27A923291CD032CE0020739D /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		27A9232B1CD0378B0020739D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		27A923331CD127F80020739D /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				27CCFB171CCFBF7B00399F35 /* LocationListViewController.swift */,
 				2750DE091CCFDEEE002F9C72 /* AddLocationViewController.swift */,
 				27742DC31CD272F00039A54C /* LoginViewController.swift */,
+				279744371CD2C739001A36BF /* GroveNavigationController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27742DC01CD1CC6C0039A54C /* Double+Extensions.swift in Sources */,
+				279744381CD2C739001A36BF /* GroveNavigationController.swift in Sources */,
 				27A923381CD135750020739D /* UIViewController+Extensions.swift in Sources */,
 				2750DE0C1CCFEF8C002F9C72 /* Alamofire+Extensions.swift in Sources */,
 				27235A3E1CCEA6E5006B1475 /* NSDate+Extensions.swift in Sources */,

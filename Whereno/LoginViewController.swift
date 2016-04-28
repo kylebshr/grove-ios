@@ -18,6 +18,7 @@ class LoginViewController: UIViewController {
     let locationManager = CLLocationManager()
     let imageTime = 6.0
     let fadeTime = 1.0
+    let constraintVariance: Int32 = 50
     let images = [R.image.login1(), R.image.login2(), R.image.login3(), R.image.login4(), R.image.login5()]
 
     var currentImage = 0
@@ -101,7 +102,7 @@ class LoginViewController: UIViewController {
 
     func changeCycleImageConstraints() {
         imageConstraints.forEach {
-            $0.constant = CGFloat((rand() % 40) + 20)
+            $0.constant = CGFloat(rand() % constraintVariance)
         }
     }
 

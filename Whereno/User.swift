@@ -58,4 +58,13 @@ final class User: Object, Mappable {
         guard user?.authToken != nil else { return nil }
         return user
     }
+
+    func logOut() {
+
+        authToken = nil
+
+        try! User.realm.write {
+            User.realm.delete(User.realm.objects(User))
+        }
+    }
 }

@@ -318,10 +318,10 @@ Must be a nice quiet place!</string>
             </objects>
             <point key="canvasLocation" x="2028" y="1414"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Grove Navigation Controller-->
         <scene sceneID="Tfi-Fg-D1M">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h24-by-ugM" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h24-by-ugM" customClass="GroveNavigationController" customModule="Whereno" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="2mZ-QF-eIW">
