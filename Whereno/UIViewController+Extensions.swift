@@ -23,7 +23,7 @@ extension UIViewController {
         }
     }
 
-    func showNetworkErrorAlert() {
-        showAlert("Communication Breakdown!", message: "We're having issues talking to our server right now 😁\n\nPlease check your network and try again later")
+    func showNetworkErrorAlert(handler: (UIAlertAction -> Void)? = nil) {
+        showAlert("Communication Breakdown!", message: "We're having issues talking to our server right now 😁\n\nPlease check your network and try again later", handler: handler)
     }
 }

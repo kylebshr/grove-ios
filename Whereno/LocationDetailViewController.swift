@@ -126,7 +126,10 @@ class LocationDetailViewController: UIViewController {
                 self?.textInputView.text = ""
                 self?.tableView.reloadData()
                 self?.scrollToBottomComment()
-            case .Failure: self?.showNetworkErrorAlert()
+            case .Failure:
+                self?.showNetworkErrorAlert() { _ in
+                    self?.becomeFirstResponder()
+                }
             }
         }
     }

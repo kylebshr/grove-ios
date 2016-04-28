@@ -88,11 +88,12 @@ class AddLocationViewController: UITableViewController {
 
                 switch result {
                 case .Success:
-                    HUD.flash(.LabeledSuccess(title: nil, subtitle: "Location Posted!"), delay: 1)
+                    HUD.flash(.LabeledSuccess(title: nil, subtitle: "Location Posted!"), delay: 1.5)
                     self?.dismissViewControllerAnimated(true, completion: nil)
                 case .Failure:
-                    HUD.hide()
-                    self?.showNetworkErrorAlert()
+                    HUD.hide() { _ in
+                        self?.showNetworkErrorAlert()
+                    }
                 }
             }
         }
@@ -117,7 +118,10 @@ class AddLocationViewController: UITableViewController {
                 case .Success(let url):
                     self?.uploadedImageURL = url
                     postLocation(url)
-                case .Failure: self?.showNetworkErrorAlert()
+                case .Failure:
+                    HUD.hide() { _ in
+                        self?.showNetworkErrorAlert()
+                    }
                 }
             }
         }
