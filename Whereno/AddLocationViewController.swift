@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 import RealmSwift
 import PKHUD
+import INTULocationManager
 
 class AddLocationViewController: UITableViewController {
 
@@ -29,7 +30,7 @@ class AddLocationViewController: UITableViewController {
     let realm = try! Realm()
 
     var descriptionTextHeight: CGFloat = 0
-    var coordinates: CLLocationCoordinate2D!
+    var coordinates: CLLocationCoordinate2D?
 
     var uploadedImageURL: String?
 
@@ -42,6 +43,10 @@ class AddLocationViewController: UITableViewController {
 
         // Line up the text view with the placeholder text field
         descriptionTextView.textContainerInset = UIEdgeInsets(top: 0, left: -4, bottom: 0, right: 0)
+
+        INTULocationManager.sharedInstance().requestLocationWithDesiredAccuracy(.Room, timeout: 10) { location, _, _ in
+            self.coordinates = location.coordinate
+        }
     }
 
 
@@ -80,11 +85,11 @@ class AddLocationViewController: UITableViewController {
             return
         }
 
-        let postLocation = { (imageURL: String) in
+        let postLocation = { (imageURL: String, coordinates: CLLocationCoordinate2D) in
 
             HUD.show(.LabeledProgress(title: nil, subtitle: "Adding Location"))
 
-            ObjectFetcher.sharedInstance.postLocation(title, capacity: capacity, description: description, imageURL: imageURL, latitude: self.coordinates.latitude, longitude: self.coordinates.longitude) { [weak self] result in
+            ObjectFetcher.sharedInstance.postLocation(title, capacity: capacity, description: description, imageURL: imageURL, coordinates: coordinates) { [weak self] result in
 
                 switch result {
                 case .Success:
@@ -98,31 +103,43 @@ class AddLocationViewController: UITableViewController {
             }
         }
 
-        // See if we already uploaded the photo in the background
-        if let imageURL = uploadedImageURL {
-            postLocation(imageURL)
-        }
-        else {
+        let postImage = { (coordinates: CLLocationCoordinate2D) in
 
-            // We didn't upload it yet, so encode
-            guard let imageData = imageView.image?.encode() else {
-                showAlert("Please add a photo 🖼", message: nil, handler: nil)
-                return
+            // See if we already uploaded the photo in the background
+            if let imageURL = self.uploadedImageURL {
+                postLocation(imageURL, coordinates)
             }
+            else {
 
-            HUD.show(.LabeledProgress(title: nil, subtitle: "Adding Location"))
+                // We didn't upload it yet, so encode
+                guard let imageData = self.imageView.image?.encode() else {
+                    self.showAlert("Please add a photo 🖼", message: nil, handler: nil)
+                    return
+                }
 
-            // Upload and post the location
-            ObjectFetcher.sharedInstance.uploadImage(imageData) { [weak self] result in
-                switch result {
-                case .Success(let url):
-                    self?.uploadedImageURL = url
-                    postLocation(url)
-                case .Failure:
-                    HUD.hide() { _ in
-                        self?.showNetworkErrorAlert()
+                HUD.show(.LabeledProgress(title: nil, subtitle: "Adding Location"))
+
+                // Upload and post the location
+                ObjectFetcher.sharedInstance.uploadImage(imageData) { [weak self] result in
+                    switch result {
+                    case .Success(let url):
+                        self?.uploadedImageURL = url
+                        postLocation(url, coordinates)
+                    case .Failure:
+                        HUD.hide() { _ in
+                            self?.showNetworkErrorAlert()
+                        }
                     }
                 }
+            }
+        }
+
+        if let coordinates = coordinates {
+            postImage(coordinates)
+        }
+        else {
+            INTULocationManager.sharedInstance().requestLocationWithDesiredAccuracy(.Room, timeout: 5) { location, _, _ in
+                postImage(location.coordinate)
             }
         }
     }

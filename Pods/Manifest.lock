@@ -6,6 +6,7 @@ PODS:
   - AlamofireNetworkActivityIndicator (1.0.1):
     - Alamofire (~> 3.3)
   - AsyncSwift (1.7.2)
+  - INTULocationManager (4.2.0)
   - JLRoutes (1.6)
   - Kingfisher (2.3.1)
   - ModelMapper (2.0.1)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - Alamofire
   - AlamofireNetworkActivityIndicator
   - AsyncSwift
+  - INTULocationManager
   - JLRoutes
   - Kingfisher
   - ModelMapper
@@ -47,6 +49,7 @@ SPEC CHECKSUMS:
   Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
   AlamofireNetworkActivityIndicator: 49a6e39afb947136f7b1872bae2d684957c26697
   AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
+  INTULocationManager: 73f8254b3d05c897c56bb13c190e5b7c648c0998
   JLRoutes: 435d791422e96c9b9b5e1c4db1aedb3ae1b1a08f
   Kingfisher: 6d3fbada4829cbc7b89e883e8218c28afeb64e42
   ModelMapper: 798850e5b2ca193a830a8ac18a1b5874997cdee8
@@ -60,6 +63,6 @@ SPEC CHECKSUMS:
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   SwiftFetchedResultsController: e95f1ecdc0db43bed983c947c07a012021aa374d
 
-PODFILE CHECKSUM: 6a36bcaeda27552ce4a198d7a6fa6f20ff41c8e4
+PODFILE CHECKSUM: 9a06bf9573bf4a6419c69d910ad85e0e69a2e163
 
 COCOAPODS: 1.0.0.beta.8

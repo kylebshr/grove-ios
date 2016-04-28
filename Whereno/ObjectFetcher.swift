@@ -27,16 +27,15 @@ class ObjectFetcher {
 
     var currentLocationsRequest: Request?
 
-    func postLocation(title: String, capacity: Int, description: String, imageURL: String, latitude: Double,
-                      longitude: Double, completion: Result<HammockLocation, NSError> -> Void) {
+    func postLocation(title: String, capacity: Int, description: String, imageURL: String, coordinates: CLLocationCoordinate2D, completion: Result<HammockLocation, NSError> -> Void) {
 
         let params: [String: AnyObject] = [
             "title": title,
             "capacity": capacity,
             "description": description,
             "photo": imageURL,
-            "latitude": latitude.roundToPlaces(6),
-            "longitude": longitude.roundToPlaces(6),
+            "latitude": coordinates.latitude.roundToPlaces(6),
+            "longitude": coordinates.longitude.roundToPlaces(6),
             "user_id": User.authenticatedUser?.authToken ?? "unknown"
         ]
 

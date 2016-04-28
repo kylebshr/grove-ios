@@ -13,6 +13,7 @@ target 'Whereno' do
     pod 'JLRoutes'
     pod 'SSKeychain'
     pod 'PKHUD'
+    pod 'INTULocationManager'
 end
 
 target 'WherenoTests' do
