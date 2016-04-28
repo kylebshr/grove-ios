@@ -11,9 +11,9 @@ import Alamofire
 import MapKit
 import RealmSwift
 
-class NetworkManager {
+class ObjectFetcher {
 
-    static let sharedInstance = NetworkManager()
+    static let sharedInstance = ObjectFetcher()
 
     let realm = try! Realm()
 
@@ -42,6 +42,13 @@ class NetworkManager {
 
         Alamofire.request(.POST, baseURL.URLByAppendingPathComponent("/location"), parameters: params, encoding: .JSON)
             .responseObject { (response: Response<HammockLocation, NSError>) in
+
+                if let location = response.result.value {
+                    try! self.realm.write {
+                        self.realm.add(location)
+                    }
+                }
+
                 completion(response.result)
         }
     }
@@ -58,7 +65,7 @@ class NetworkManager {
         }
     }
 
-    func postComment(text: String, locationID: Int, completion: Result<HammockLocation, NSError> -> Void) {
+    func postComment(text: String, locationID: Int, completion: Result<LocationComment, NSError> -> Void) {
 
         let params: [String: AnyObject] = [
             "text": text,
@@ -67,7 +74,14 @@ class NetworkManager {
         ]
 
         Alamofire.request(.POST, baseURL.URLByAppendingPathComponent("/comment"), parameters: params, encoding: .JSON)
-            .responseObject { (response) in
+            .responseObject { (response: Response<LocationComment, NSError>) in
+
+                if let comment = response.result.value {
+                    try! self.realm.write {
+                        self.realm.add(comment, update: true)
+                    }
+                }
+
                 completion(response.result)
         }
     }

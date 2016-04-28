@@ -123,7 +123,7 @@ class MapViewController: UIViewController {
     }
 
     func getLocationsForCurrentRegion() {
-        NetworkManager.sharedInstance.getLocationsForRegion(mapView.region) { [weak self] _ in
+        ObjectFetcher.sharedInstance.getLocationsForRegion(mapView.region) { [weak self] _ in
             self?.mapView.refreshMapView()
         }
     }

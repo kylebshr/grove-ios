@@ -72,15 +72,10 @@ class AddLocationViewController: UITableViewController {
         }
 
         let postLocation = { (imageURL: String) in
-            NetworkManager.sharedInstance.postLocation(title, capacity: capacity, description: description, imageURL: imageURL, latitude: self.coordinates.latitude, longitude: self.coordinates.longitude) { [weak self] result in
+            ObjectFetcher.sharedInstance.postLocation(title, capacity: capacity, description: description, imageURL: imageURL, latitude: self.coordinates.latitude, longitude: self.coordinates.longitude) { [weak self] result in
 
                 switch result {
-                case .Success(let location):
-
-                    try! self?.realm.write {
-                        self?.realm.add(location)
-                    }
-
+                case .Success:
                     self?.view.endEditing(true)
                     self?.dismissViewControllerAnimated(true, completion: nil)
 
@@ -103,7 +98,7 @@ class AddLocationViewController: UITableViewController {
             }
 
             // Upload and post the location
-            NetworkManager.sharedInstance.uploadImage(imageData) { [weak self] result in
+            ObjectFetcher.sharedInstance.uploadImage(imageData) { [weak self] result in
                 switch result {
                 case .Success(let url):
                     self?.uploadedImageURL = url
@@ -195,7 +190,7 @@ extension AddLocationViewController: UIImagePickerControllerDelegate {
         imageView.image = image
 
         if let image = image.encode() {
-            NetworkManager.sharedInstance.uploadImage(image) { [weak self] result in
+            ObjectFetcher.sharedInstance.uploadImage(image) { [weak self] result in
                 switch result {
                 case .Success(let url): self?.uploadedImageURL = url
                 case .Failure: break

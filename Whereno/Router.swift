@@ -15,7 +15,7 @@ enum Router: URLRequestConvertible {
     case comments(Int)
     case hammockLocations(MKCoordinateRegion)
 
-    var URL: NSURL { return NetworkManager.sharedInstance.baseURL.URLByAppendingPathComponent(route.path) }
+    var URL: NSURL { return ObjectFetcher.sharedInstance.baseURL.URLByAppendingPathComponent(route.path) }
 
     var route: (path: String, parameters: [String: AnyObject]) {
         switch self {

@@ -23,7 +23,7 @@
 		27A9232A1CD032CE0020739D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A923291CD032CE0020739D /* String+Extensions.swift */; };
 		27A9232C1CD0378B0020739D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9232B1CD0378B0020739D /* User.swift */; };
 		27A923341CD127F80020739D /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A923331CD127F80020739D /* UIImage+Extensions.swift */; };
-		27A923361CD129510020739D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A923351CD129510020739D /* NetworkManager.swift */; };
+		27A923361CD129510020739D /* ObjectFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A923351CD129510020739D /* ObjectFetcher.swift */; };
 		27A923381CD135750020739D /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A923371CD135750020739D /* UIViewController+Extensions.swift */; };
 		27B345C61CCD669A005BA871 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345C51CCD669A005BA871 /* AppDelegate.swift */; };
 		27B345C81CCD669A005BA871 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345C71CCD669A005BA871 /* MapViewController.swift */; };
@@ -80,7 +80,7 @@
 		27A923291CD032CE0020739D /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		27A9232B1CD0378B0020739D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		27A923331CD127F80020739D /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
-		27A923351CD129510020739D /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		27A923351CD129510020739D /* ObjectFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectFetcher.swift; sourceTree = "<group>"; };
 		27A923371CD135750020739D /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		27B345C21CCD669A005BA871 /* Whereno.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Whereno.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B345C51CCD669A005BA871 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				27006A8E1CCFF58200790B95 /* Router.swift */,
-				27A923351CD129510020739D /* NetworkManager.swift */,
+				27A923351CD129510020739D /* ObjectFetcher.swift */,
 			);
 			name = "Other Helpers";
 			sourceTree = "<group>";
@@ -599,7 +599,7 @@
 				27235A3E1CCEA6E5006B1475 /* NSDate+Extensions.swift in Sources */,
 				27B345C81CCD669A005BA871 /* MapViewController.swift in Sources */,
 				27A923341CD127F80020739D /* UIImage+Extensions.swift in Sources */,
-				27A923361CD129510020739D /* NetworkManager.swift in Sources */,
+				27A923361CD129510020739D /* ObjectFetcher.swift in Sources */,
 				27251B7A1CCECF3800FD4FC9 /* UIColor+Extensions.swift in Sources */,
 				27006A8F1CCFF58200790B95 /* Router.swift in Sources */,
 				27D533A71CCEC516007FC6A1 /* TextInputView.swift in Sources */,
