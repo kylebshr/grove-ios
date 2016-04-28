@@ -6,6 +6,9 @@
 //  Copyright © 2016 Kyle Bashour. All rights reserved.
 //
 
+// TODO: Add network indicators
+// TODO: Get more accurate location when adding
+
 import UIKit
 import RealmSwift
 import AlamofireNetworkActivityIndicator

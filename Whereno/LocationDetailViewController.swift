@@ -108,8 +108,18 @@ class LocationDetailViewController: UIViewController {
 
     // The user tapped "Send" on the input text view
     @objc func textInputViewSendTapped() {
-        print("Sending text to server!\n\(textInputView.text)")
-        textInputView.text = ""
+
+        guard textInputView.text.stringByRemovingWhiteSpace() != "" else {
+            showAlert("You need to add a comment, silly!", message: nil)
+            return
+        }
+
+        ObjectFetcher.sharedInstance.postComment(textInputView.text, locationID: location.id) { [weak self] result in
+            switch result {
+            case .Success: self?.textInputView.text = ""
+            case .Failure: self?.showNetworkErrorAlert()
+            }
+        }
     }
 
     // Allows for the input accessory to work

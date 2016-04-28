@@ -80,7 +80,7 @@ class AddLocationViewController: UITableViewController {
                     self?.dismissViewControllerAnimated(true, completion: nil)
 
                 case .Failure:
-                    self?.showErrorAlert()
+                    self?.showNetworkErrorAlert()
                 }
             }
         }
@@ -103,14 +103,10 @@ class AddLocationViewController: UITableViewController {
                 case .Success(let url):
                     self?.uploadedImageURL = url
                     postLocation(url)
-                case .Failure: self?.showErrorAlert()
+                case .Failure: self?.showNetworkErrorAlert()
                 }
             }
         }
-    }
-
-    func showErrorAlert() {
-        showAlert("Communication Breakdown!", message: "We're having issues talking to our server right now 😁\n\nPlease check your network and try again later")
     }
 
 

@@ -65,7 +65,7 @@ class ObjectFetcher {
         }
     }
 
-    func postComment(text: String, locationID: Int, completion: Result<LocationComment, NSError> -> Void) {
+    func postComment(text: String, locationID: String, completion: Result<LocationComment, NSError> -> Void) {
 
         let params: [String: AnyObject] = [
             "text": text,

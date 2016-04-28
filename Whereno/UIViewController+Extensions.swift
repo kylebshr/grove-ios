@@ -22,4 +22,8 @@ extension UIViewController {
             alert.view.tintColor = UIColor.dodgerBlue()
         }
     }
+
+    func showNetworkErrorAlert() {
+        showAlert("Communication Breakdown!", message: "We're having issues talking to our server right now 😁\n\nPlease check your network and try again later")
+    }
 }
