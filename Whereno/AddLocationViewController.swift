@@ -72,7 +72,7 @@ class AddLocationViewController: UITableViewController {
         }
 
         let postLocation = { (imageURL: String) in
-            NetworkManager.sharedInstance.postLocation(title, capacity: capacity, description: description, imageURL: "", latitude: self.coordinates.latitude, longitude: self.coordinates.longitude) { [weak self] result in
+            NetworkManager.sharedInstance.postLocation(title, capacity: capacity, description: description, imageURL: imageURL, latitude: self.coordinates.latitude, longitude: self.coordinates.longitude) { [weak self] result in
 
                 switch result {
                 case .Success(let location):
@@ -81,6 +81,7 @@ class AddLocationViewController: UITableViewController {
                         self?.realm.add(location)
                     }
 
+                    self?.view.endEditing(true)
                     self?.dismissViewControllerAnimated(true, completion: nil)
 
                 case .Failure:

@@ -35,8 +35,8 @@ class NetworkManager {
             "capacity": capacity,
             "description": description,
             "photo": imageURL,
-            "latitude": latitude,
-            "longitude": longitude,
+            "latitude": latitude.roundToPlaces(6),
+            "longitude": longitude.roundToPlaces(6),
             "user_id": "kylebashour"
         ]
 

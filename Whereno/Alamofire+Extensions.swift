@@ -69,7 +69,7 @@ extension Alamofire.Request {
 
             switch result {
             case .Success(let value):
-                guard let dictValue = value as? NSDictionary, url = dictValue.objectForKey("url") as? String else {
+                guard let dictValue = value as? [String: AnyObject], url = dictValue["secure_url"] as? String else {
                     return .Failure(Error.errorWithCode(.JSONSerializationFailed,
                         failureReason: "JSON parsing error, JSON: \(value)"))
                 }

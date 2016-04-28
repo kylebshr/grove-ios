@@ -28,12 +28,12 @@ enum Router: URLRequestConvertible {
             let latDelt = region.span.latitudeDelta
             let lonDelt = region.span.longitudeDelta
 
-            return ("/location", ["latitude": lat, "longitude": lon, "latitude_delta": latDelt, "longitude_delta": lonDelt])
+            return ("/feed", ["latitude": lat, "longitude": lon, "latitude_delta": latDelt, "longitude_delta": lonDelt])
         }
     }
 
     var URLRequest: NSMutableURLRequest {
-        return Alamofire.ParameterEncoding.JSON
+        return Alamofire.ParameterEncoding.URLEncodedInURL
             .encode(NSURLRequest(URL: URL), parameters: route.parameters).0
     }
 }
