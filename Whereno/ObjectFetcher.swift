@@ -70,7 +70,7 @@ class ObjectFetcher {
         let params: [String: AnyObject] = [
             "text": text,
             "location_id": locationID,
-            "user_id": "kylebashour"
+            "user_id": User.authenticatedUser?.id ?? "unknown"
         ]
 
         Alamofire.request(.POST, baseURL.URLByAppendingPathComponent("/comment"), parameters: params, encoding: .JSON)
@@ -78,7 +78,9 @@ class ObjectFetcher {
 
                 if let comment = response.result.value {
                     try! self.realm.write {
-                        self.realm.add(comment, update: true)
+                        self.realm.objects(HammockLocation)
+                            .filter("id == '\(locationID)'")
+                            .first?.comments.append(comment)
                     }
                 }
 

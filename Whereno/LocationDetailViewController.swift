@@ -116,10 +116,18 @@ class LocationDetailViewController: UIViewController {
 
         ObjectFetcher.sharedInstance.postComment(textInputView.text, locationID: location.id) { [weak self] result in
             switch result {
-            case .Success: self?.textInputView.text = ""
+            case .Success:
+                self?.textInputView.text = ""
+                self?.tableView.reloadData()
+                self?.scrollToBottomComment()
             case .Failure: self?.showNetworkErrorAlert()
             }
         }
+    }
+
+    func scrollToBottomComment() {
+        let index = NSIndexPath(forRow: tableView.numberOfRowsInSection(1) - 1, inSection: 1)
+        tableView.scrollToRowAtIndexPath(index, atScrollPosition: .None, animated: true)
     }
 
     // Allows for the input accessory to work
