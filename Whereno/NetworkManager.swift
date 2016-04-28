@@ -34,13 +34,13 @@ class NetworkManager {
             "title": title,
             "capacity": capacity,
             "description": description,
-            "image_url": imageURL,
             "photo": imageURL,
             "latitude": latitude,
-            "longitude": longitude
+            "longitude": longitude,
+            "user_id": "kylebashour"
         ]
 
-        Alamofire.request(.POST, baseURL, parameters: params, encoding: .JSON)
+        Alamofire.request(.POST, baseURL.URLByAppendingPathComponent("/location"), parameters: params, encoding: .JSON)
             .responseObject { (response: Response<HammockLocation, NSError>) in
                 completion(response.result)
         }
@@ -62,10 +62,11 @@ class NetworkManager {
 
         let params: [String: AnyObject] = [
             "text": text,
-            "location_id": locationID
+            "location_id": locationID,
+            "user_id": "kylebashour"
         ]
 
-        Alamofire.request(.POST, baseURL, parameters: params, encoding: .JSON)
+        Alamofire.request(.POST, baseURL.URLByAppendingPathComponent("/comment"), parameters: params, encoding: .JSON)
             .responseObject { (response) in
                 completion(response.result)
         }
