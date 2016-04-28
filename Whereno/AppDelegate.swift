@@ -13,6 +13,7 @@ import UIKit
 import RealmSwift
 import AlamofireNetworkActivityIndicator
 import JLRoutes
+import PKHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -28,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         UITabBar.appearance().tintColor = UIColor.dodgerBlue()
         NetworkActivityIndicatorManager.sharedManager.isEnabled = true
+        PKHUD.sharedHUD.userInteractionOnUnderlyingViewsEnabled = false
+        PKHUD.sharedHUD.dimsBackground = false
         setUpRoutes()
 
         return true

@@ -9,6 +9,7 @@ PODS:
   - JLRoutes (1.6)
   - Kingfisher (2.3.1)
   - ModelMapper (2.0.1)
+  - PKHUD (3.1.0)
   - R.swift (2.1.0):
     - R.swift.Library (~> 2.0.0)
   - R.swift.Library (2.0.0)
@@ -35,6 +36,7 @@ DEPENDENCIES:
   - JLRoutes
   - Kingfisher
   - ModelMapper
+  - PKHUD
   - R.swift
   - RealmMapView
   - RealmSwift
@@ -48,6 +50,7 @@ SPEC CHECKSUMS:
   JLRoutes: 435d791422e96c9b9b5e1c4db1aedb3ae1b1a08f
   Kingfisher: 6d3fbada4829cbc7b89e883e8218c28afeb64e42
   ModelMapper: 798850e5b2ca193a830a8ac18a1b5874997cdee8
+  PKHUD: 4167eccdb1b3a892fd80ce2b51cb6ba412a889ab
   R.swift: efff131531b5cf142e28fd94957806ff71ccbcf2
   R.swift.Library: 9f4b2d12040daa1ffe336d8f7e1574f73721fd01
   RBQFetchedResultsController: df4475747231d75422f2dcb959a26a474223a642
@@ -57,6 +60,6 @@ SPEC CHECKSUMS:
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   SwiftFetchedResultsController: e95f1ecdc0db43bed983c947c07a012021aa374d
 
-PODFILE CHECKSUM: 71f09f6d229a3764c4676ee873f0cf7ad31d3412
+PODFILE CHECKSUM: 6a36bcaeda27552ce4a198d7a6fa6f20ff41c8e4
 
 COCOAPODS: 1.0.0.beta.8

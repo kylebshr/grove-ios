@@ -12,6 +12,7 @@ target 'Whereno' do
     pod 'Kingfisher'
     pod 'JLRoutes'
     pod 'SSKeychain'
+    pod 'PKHUD'
 end
 
 target 'WherenoTests' do

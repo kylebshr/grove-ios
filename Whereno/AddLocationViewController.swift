@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import RealmSwift
+import PKHUD
 
 class AddLocationViewController: UITableViewController {
 
@@ -57,6 +58,8 @@ class AddLocationViewController: UITableViewController {
 
     @IBAction func postTapped(sender: UIBarButtonItem) {
 
+        view.endEditing(true)
+
         // Validate all the fields
         guard let title = titleTextField.text where title.stringByRemovingWhiteSpace() != "" else {
             showAlert("Please add a title 🏷", message: nil)
@@ -76,14 +79,16 @@ class AddLocationViewController: UITableViewController {
 
                 switch result {
                 case .Success:
-                    self?.view.endEditing(true)
+                    HUD.flash(.Success, delay: 1)
                     self?.dismissViewControllerAnimated(true, completion: nil)
-
                 case .Failure:
+                    HUD.hide()
                     self?.showNetworkErrorAlert()
                 }
             }
         }
+
+        HUD.show(.Progress)
 
         // See if we already uploaded the photo in the background
         if let imageURL = uploadedImageURL {
