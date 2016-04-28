@@ -23,11 +23,11 @@ extension Alamofire.Request {
 
             switch result {
             case .Success(let value):
-                guard let arrayValue = value as? NSArray, objects = T.from(arrayValue) else {
+                guard let jsonArray = value as? [[String: AnyObject]] else {
                     return .Failure(Error.errorWithCode(.JSONSerializationFailed,
                         failureReason: "JSON parsing error, JSON: \(value)"))
                 }
-                return .Success(objects)
+                return .Success(jsonArray.flatMap { return T.from($0) })
             case .Failure(let error): return .Failure(error)
             }
         }
