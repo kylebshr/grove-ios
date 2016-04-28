@@ -10,10 +10,10 @@ import UIKit
 
 extension UIViewController {
 
-    func showAlert(title: String?, message: String?, buttonTitle: String = "OK") {
+    func showAlert(title: String?, message: String?, buttonTitle: String = "OK", handler: (UIAlertAction -> Void)? = nil) {
 
         let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        let okButton = UIAlertAction(title: buttonTitle, style: .Cancel, handler: nil)
+        let okButton = UIAlertAction(title: buttonTitle, style: .Cancel, handler: handler)
 
         alert.addAction(okButton)
         alert.view.tintColor = UIColor.dodgerBlue()

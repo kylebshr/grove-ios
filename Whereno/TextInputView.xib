@@ -51,6 +51,9 @@
                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6ce-jL-v4c">
+                    <rect key="frame" x="336" y="13" width="20" height="20"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
             <constraints>
@@ -61,6 +64,7 @@
                 <constraint firstItem="rWO-Vi-jh7" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WnZ-Yc-8g7" secondAttribute="bottom" id="GPY-d4-Nwp"/>
                 <constraint firstAttribute="trailing" secondItem="WnZ-Yc-8g7" secondAttribute="trailing" constant="8" id="Sad-rG-0Ib"/>
                 <constraint firstAttribute="bottom" secondItem="n55-vn-Bb2" secondAttribute="bottom" id="XHh-aS-oAo"/>
+                <constraint firstItem="6ce-jL-v4c" firstAttribute="centerY" secondItem="rWO-Vi-jh7" secondAttribute="centerY" id="ac9-gc-F3u"/>
                 <constraint firstItem="rWO-Vi-jh7" firstAttribute="leading" secondItem="Iiy-Qy-TrL" secondAttribute="trailing" constant="8" id="dFa-0f-DTr"/>
                 <constraint firstItem="4wo-ss-hej" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="e2c-Xc-d5E"/>
                 <constraint firstItem="rWO-Vi-jh7" firstAttribute="leading" secondItem="4wo-ss-hej" secondAttribute="trailing" constant="8" id="gS2-if-WWq"/>
@@ -68,6 +72,7 @@
                 <constraint firstItem="WnZ-Yc-8g7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" priority="500" constant="8" id="hfq-CQ-MMn"/>
                 <constraint firstAttribute="trailing" secondItem="rWO-Vi-jh7" secondAttribute="trailing" constant="8" id="ivX-N1-jpV"/>
                 <constraint firstAttribute="bottom" secondItem="Iiy-Qy-TrL" secondAttribute="bottom" constant="4" id="jUV-6c-mdv"/>
+                <constraint firstItem="6ce-jL-v4c" firstAttribute="centerX" secondItem="rWO-Vi-jh7" secondAttribute="centerX" id="kIa-ir-ZQR"/>
                 <constraint firstAttribute="trailing" secondItem="n55-vn-Bb2" secondAttribute="trailing" id="oxA-os-5r2"/>
                 <constraint firstAttribute="bottom" secondItem="rWO-Vi-jh7" secondAttribute="bottom" id="q2T-no-WA2"/>
                 <constraint firstItem="WnZ-Yc-8g7" firstAttribute="leading" secondItem="4wo-ss-hej" secondAttribute="trailing" constant="8" id="uHl-1f-a98"/>
@@ -77,6 +82,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="activityIndicator" destination="6ce-jL-v4c" id="7La-7v-Sct"/>
                 <outlet property="countLabel" destination="WnZ-Yc-8g7" id="IZl-lJ-Ud7"/>
                 <outlet property="sendButton" destination="rWO-Vi-jh7" id="7yt-S5-JrX"/>
                 <outlet property="textField" destination="4wo-ss-hej" id="MaT-WJ-iIX"/>

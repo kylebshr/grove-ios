@@ -62,24 +62,33 @@ class AddLocationViewController: UITableViewController {
 
         // Validate all the fields
         guard let title = titleTextField.text where title.stringByRemovingWhiteSpace() != "" else {
-            showAlert("Please add a title 🏷", message: nil)
+            showAlert("Please add a title 🏷", message: nil) { _ in
+                self.titleTextField.becomeFirstResponder()
+            }
             return
         }
         guard let capacity = Int(capacityTextField.text ?? "") else {
-            showAlert("Please enter how many people you think can nest here 🔢", message: nil)
+            showAlert("Please enter how many people you think can nest here 🔢", message: nil) { _ in
+                self.capacityTextField.becomeFirstResponder()
+            }
             return
         }
         guard let description = descriptionTextView.text where description.stringByRemovingWhiteSpace() != "" else {
-            showAlert("Please add a description 📝", message: nil)
+            showAlert("Please add a description 📝", message: nil) { _ in
+                self.descriptionTextView.becomeFirstResponder()
+            }
             return
         }
 
         let postLocation = { (imageURL: String) in
+
+            HUD.show(.LabeledProgress(title: nil, subtitle: "Adding Location"))
+
             ObjectFetcher.sharedInstance.postLocation(title, capacity: capacity, description: description, imageURL: imageURL, latitude: self.coordinates.latitude, longitude: self.coordinates.longitude) { [weak self] result in
 
                 switch result {
                 case .Success:
-                    HUD.flash(.Success, delay: 1)
+                    HUD.flash(.LabeledSuccess(title: nil, subtitle: "Location Posted!"), delay: 1)
                     self?.dismissViewControllerAnimated(true, completion: nil)
                 case .Failure:
                     HUD.hide()
@@ -87,8 +96,6 @@ class AddLocationViewController: UITableViewController {
                 }
             }
         }
-
-        HUD.show(.Progress)
 
         // See if we already uploaded the photo in the background
         if let imageURL = uploadedImageURL {
@@ -98,9 +105,11 @@ class AddLocationViewController: UITableViewController {
 
             // We didn't upload it yet, so encode
             guard let imageData = imageView.image?.encode() else {
-                showAlert("Please add a photo 🖼", message: nil)
+                showAlert("Please add a photo 🖼", message: nil, handler: nil)
                 return
             }
+
+            HUD.show(.LabeledProgress(title: nil, subtitle: "Adding Location"))
 
             // Upload and post the location
             ObjectFetcher.sharedInstance.uploadImage(imageData) { [weak self] result in

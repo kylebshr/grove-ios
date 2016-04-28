@@ -14,6 +14,7 @@ class TextInputView: UIView, UITextViewDelegate {
     @IBOutlet private var textView: UITextView!
     @IBOutlet private var countLabel: UILabel!
     @IBOutlet private var sendButton: UIButton!
+    @IBOutlet private var activityIndicator: UIActivityIndicatorView!
 
     private let separator = UIView()
     private let numberOfCharactersAllowed = 180
