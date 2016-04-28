@@ -8,13 +8,14 @@
 
 import Foundation
 import Alamofire
+import MapKit
 
 enum Router: URLRequestConvertible {
 
     static let baseURL = NSURL(string: "")!
 
     case comments(Int)
-    case hammockLocations(Double, Double, Double)
+    case hammockLocations(MKCoordinateRegion)
 
     var URL: NSURL { return Router.baseURL.URLByAppendingPathComponent(route.path) }
 
@@ -22,13 +23,19 @@ enum Router: URLRequestConvertible {
         switch self {
         case .comments(let locationID):
             return ("/comment", ["id": locationID])
-        case .hammockLocations(let lat, let lon, let rad):
-            return ("/location", ["latitude": lat, "longitude": lon, "radius": rad])
+        case .hammockLocations(let region):
+
+            let lat = region.center.latitude
+            let lon = region.center.longitude
+            let latDelt = region.span.latitudeDelta
+            let lonDelt = region.span.longitudeDelta
+
+            return ("/location", ["latitude": lat, "longitude": lon, "latitude_delta": latDelt, "longitude_delta": lonDelt])
         }
     }
 
     var URLRequest: NSMutableURLRequest {
-        return Alamofire.ParameterEncoding.URL
+        return Alamofire.ParameterEncoding.JSON
             .encode(NSURLRequest(URL: URL), parameters: route.parameters).0
     }
 }

@@ -10,12 +10,13 @@ import Foundation
 import RealmSwift
 import Mapper
 
-final class HammockLocation: Object, Mappable, JSONEncodable {
+final class HammockLocation: Object, Mappable {
 
-    dynamic var id = 0
+    dynamic var id = ""
     dynamic var title = ""
     dynamic var descriptionText = ""
     dynamic var imageURLString = ""
+    dynamic var ownerID = ""
     dynamic var latitude = 0.0
     dynamic var longitude = 0.0
 
@@ -30,6 +31,7 @@ final class HammockLocation: Object, Mappable, JSONEncodable {
         try descriptionText = map.from("description")
         try latitude = map.from("latitude")
         try longitude = map.from("longitude")
+        try ownerID = map.from("user_id")
 
         let comments: [LocationComment] = (try? map.from("comments")) ?? []
 
@@ -42,15 +44,5 @@ final class HammockLocation: Object, Mappable, JSONEncodable {
 
     var imageURL: NSURL {
         return NSURL(string: imageURLString)!
-    }
-
-    func toJSON() -> [String : AnyObject] {
-        return [
-            "title": title,
-            "image_url": imageURLString,
-            "description": descriptionText,
-            "latitude": latitude,
-            "longitude": longitude,
-        ]
     }
 }

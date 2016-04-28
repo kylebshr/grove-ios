@@ -12,8 +12,9 @@ import Mapper
 
 final class LocationComment: Object, Mappable, JSONEncodable {
 
-    dynamic var id = 0
+    dynamic var id = ""
     dynamic var text = ""
+    dynamic var ownerID = ""
     dynamic var date = NSDate()
 
     override static func primaryKey() -> String? {
@@ -26,6 +27,7 @@ final class LocationComment: Object, Mappable, JSONEncodable {
         try id = map.from("id")
         try text = map.from("text")
         try date = map.from("date")
+        try ownerID = map.from("user_id")
     }
 
     private static let commentFormatter: NSDateFormatter = {

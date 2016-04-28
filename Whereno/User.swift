@@ -12,7 +12,7 @@ import Mapper
 
 final class User: Object, Mappable {
 
-    dynamic var id = 0
+    dynamic var id = ""
 
     let favorites = List<HammockLocation>()
 

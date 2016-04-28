@@ -117,6 +117,12 @@ class MapViewController: UIViewController {
 
         return locations.count > 0 ? locations : nil
     }
+
+    func getLocationsForCurrentRegion() {
+        NetworkManager.sharedInstance.getLocationsForRegion(mapView.region) { [weak self] _ in
+            self?.mapView.refreshMapView()
+        }
+    }
 }
 
 extension MapViewController: MKMapViewDelegate {
@@ -133,6 +139,8 @@ extension MapViewController: MKMapViewDelegate {
             updateMapRegion(userLocation.coordinate)
             didShowInitialLocation = true
         }
+
+        getLocationsForCurrentRegion()
     }
 
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
@@ -182,6 +190,10 @@ extension MapViewController: MKMapViewDelegate {
             vc.locations = locations
             navigationController?.pushViewController(vc, animated: true)
         }
+    }
+
+    func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+        getLocationsForCurrentRegion()
     }
 }
 

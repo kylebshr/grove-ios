@@ -30,6 +30,8 @@ class AddLocationViewController: UITableViewController {
     var descriptionTextHeight: CGFloat = 0
     var userLocation: CLLocationCoordinate2D!
 
+    var uploadedImageURL: String?
+
     // MARK: Lifecycle
 
     override func viewDidLoad() {
@@ -56,15 +58,6 @@ class AddLocationViewController: UITableViewController {
     @IBAction func postTapped(sender: UIBarButtonItem) {
 
         // Validate all the fields
-        guard let imageData = imageView.image?.encode() else {
-            showAlert("Please add a photo 🖼", message: nil)
-            return
-        }
-
-        NetworkManager.sharedInstance.uploadImage(imageData) { (result) in
-
-        }
-
         guard let title = titleTextField.text where title.stringByRemovingWhiteSpace() != "" else {
             showAlert("Please add a title 🏷", message: nil)
             return
@@ -78,23 +71,49 @@ class AddLocationViewController: UITableViewController {
             return
         }
 
+        let postLocation = { (imageURL: String) in
+            NetworkManager.sharedInstance.postLocation(title, capacity: capacity, description: description, imageURL: "", latitude: self.userLocation.latitude, longitude: self.userLocation.longitude) { [weak self] result in
 
-        NetworkManager.sharedInstance.postLocation(title, capacity: capacity, description: description, imageURL: "", latitude: userLocation.latitude, longitude: userLocation.longitude) { [weak self] result in
+                switch result {
+                case .Success(let location):
 
-            switch result {
-            case .Success(let location):
+                    try! self?.realm.write {
+                        self?.realm.add(location)
+                    }
 
-                try! self?.realm.write {
-                    self?.realm.add(location)
+                    self?.dismissViewControllerAnimated(true, completion: nil)
+
+                case .Failure(let error):
+                    print(error)
+                    self?.showErrorAlert()
                 }
-
-                self?.dismissViewControllerAnimated(true, completion: nil)
-
-            case .Failure(let error):
-                print(error)
-                self?.showAlert("Oh No!", message: "We're having issues posting this location right now. Please try again later!")
             }
         }
+
+        // See if we already uploaded the photo in the background
+        if let imageURL = uploadedImageURL {
+            postLocation(imageURL)
+        }
+        else {
+
+            // We didn't upload it yet, so encode
+            guard let imageData = imageView.image?.encode() else {
+                showAlert("Please add a photo 🖼", message: nil)
+                return
+            }
+
+            // Upload and post the location
+            NetworkManager.sharedInstance.uploadImage(imageData) { [weak self] result in
+                switch result {
+                case .Success(let url): postLocation(url)
+                case .Failure: self?.showErrorAlert()
+                }
+            }
+        }
+    }
+
+    func showErrorAlert() {
+        showAlert("Oh No!", message: "We're having issues posting this location right now. Please try again later!")
     }
 
 
@@ -168,8 +187,19 @@ extension AddLocationViewController: UIImagePickerControllerDelegate {
 
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
 
+        uploadedImageURL = nil
+
         // Set the image
         imageView.image = image
+
+        if let image = image.encode() {
+            NetworkManager.sharedInstance.uploadImage(image) { [weak self] result in
+                switch result {
+                case .Success(let url): self?.uploadedImageURL = url
+                case .Failure: break
+                }
+            }
+        }
 
         // Dismiss the camera
         dismissViewControllerAnimated(true, completion: nil)
