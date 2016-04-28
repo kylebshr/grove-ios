@@ -17,6 +17,7 @@ class LocationDetailViewController: UIViewController {
 
     // MARK: Outlets
 
+    @IBOutlet weak var capacityLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var imageDimmingView: UIView!
     @IBOutlet var imageHeightConstraint: NSLayoutConstraint!
@@ -177,7 +178,7 @@ extension LocationDetailViewController: UITableViewDataSource {
         // Section 0 is for the single description cell
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.detailHeaderCell)!
-            cell.descriptionLabel.text = location.descriptionText
+            cell.configureForLocation(location)
             return cell
         }
 

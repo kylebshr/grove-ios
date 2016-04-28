@@ -108,7 +108,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="61.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ht-Nz-tfN">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" verticalCompressionResistancePriority="751" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ht-Nz-tfN">
                                                     <rect key="frame" x="15" y="10" width="62" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -120,17 +120,27 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="About one person can nest here" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vu-4P-f9b">
+                                                    <rect key="frame" x="93" y="10" width="492" height="14"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="1ht-Nz-tfN" firstAttribute="top" secondItem="fql-hd-C8l" secondAttribute="topMargin" id="1Nk-Qd-ywj"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="krf-7Y-Xxy" secondAttribute="bottom" id="4vi-MD-sOB"/>
+                                                <constraint firstItem="1vu-4P-f9b" firstAttribute="top" secondItem="fql-hd-C8l" secondAttribute="topMargin" id="KQ1-Yp-O5s"/>
                                                 <constraint firstItem="krf-7Y-Xxy" firstAttribute="leading" secondItem="fql-hd-C8l" secondAttribute="leadingMargin" id="NGJ-KS-sg5"/>
                                                 <constraint firstItem="krf-7Y-Xxy" firstAttribute="trailing" secondItem="fql-hd-C8l" secondAttribute="trailingMargin" id="TlI-8Z-lxl"/>
                                                 <constraint firstItem="1ht-Nz-tfN" firstAttribute="leading" secondItem="fql-hd-C8l" secondAttribute="leadingMargin" id="Wv3-bM-fEz"/>
+                                                <constraint firstItem="1vu-4P-f9b" firstAttribute="trailing" secondItem="fql-hd-C8l" secondAttribute="trailingMargin" id="fXc-7s-PMW"/>
                                                 <constraint firstItem="krf-7Y-Xxy" firstAttribute="top" secondItem="1ht-Nz-tfN" secondAttribute="bottom" constant="8" id="iRw-K2-SxP"/>
+                                                <constraint firstItem="1vu-4P-f9b" firstAttribute="leading" secondItem="1ht-Nz-tfN" secondAttribute="trailing" constant="16" id="mYE-Ap-M1f"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="capacityLabel" destination="1vu-4P-f9b" id="TkF-HP-Bir"/>
                                             <outlet property="descriptionLabel" destination="krf-7Y-Xxy" id="VB6-zg-ori"/>
                                         </connections>
                                     </tableViewCell>
