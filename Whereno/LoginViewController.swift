@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
         NSNotificationCenter.defaultCenter()
             .addObserver(self, selector: #selector(login), name: AppDelegate.loginNotification, object: nil)
         NSNotificationCenter.defaultCenter()
-            .addObserver(self, selector: #selector(loginFailed), name: AppDelegate.loginNotification, object: nil)
+            .addObserver(self, selector: #selector(loginFailed), name: AppDelegate.loginFailedNotification, object: nil)
     }
 
     @IBAction func facebookButtonTapped(sender: UIButton) {
@@ -58,8 +58,9 @@ class LoginViewController: UIViewController {
     }
 
     @objc func loginFailed() {
-        dismissViewControllerAnimated(true, completion: nil)
-        showNetworkErrorAlert()
+        dismissViewControllerAnimated(true) { [weak self] _ in
+            self?.showNetworkErrorAlert()
+        }
     }
 
     // Ask for location use permission if not granted

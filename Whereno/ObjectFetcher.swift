@@ -37,7 +37,7 @@ class ObjectFetcher {
             "photo": imageURL,
             "latitude": latitude.roundToPlaces(6),
             "longitude": longitude.roundToPlaces(6),
-            "user_id": "kylebashour"
+            "user_id": User.authToken ?? "unknown"
         ]
 
         Alamofire.request(.POST, baseURL.URLByAppendingPathComponent("/location"), parameters: params, encoding: .JSON)

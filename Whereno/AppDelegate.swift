@@ -52,13 +52,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func setUpRoutes() {
 
-        let signupPattern = "/signup"
-        let loginPattern = "/login"
+        let signupPattern = "/signup/:id/:auth_token"
+        let loginPattern = "/login/:id/:auth_token"
 
         JLRoutes.addRoutes([signupPattern, loginPattern]) { parameters -> Bool in
 
             if let user = User.from(parameters) {
-
 
                 try! self.realm.write {
                     self.realm.delete(self.realm.objects(User))
