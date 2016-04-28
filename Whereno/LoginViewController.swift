@@ -53,8 +53,9 @@ class LoginViewController: UIViewController {
     }
 
     @objc func login() {
-        dismissViewControllerAnimated(true, completion: nil)
-        dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true) { [weak self] _ in
+            self?.dismissViewControllerAnimated(true, completion: nil)
+        }
     }
 
     @objc func loginFailed() {
