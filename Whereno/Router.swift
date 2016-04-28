@@ -12,12 +12,10 @@ import MapKit
 
 enum Router: URLRequestConvertible {
 
-    static let baseURL = NSURL(string: "")!
-
     case comments(Int)
     case hammockLocations(MKCoordinateRegion)
 
-    var URL: NSURL { return Router.baseURL.URLByAppendingPathComponent(route.path) }
+    var URL: NSURL { return NetworkManager.sharedInstance.baseURL.URLByAppendingPathComponent(route.path) }
 
     var route: (path: String, parameters: [String: AnyObject]) {
         switch self {

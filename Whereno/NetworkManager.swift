@@ -21,8 +21,8 @@ class NetworkManager {
         "Authorization": User.authToken ?? ""
     ]
 
-    let baseURL = "https://kylebashour.com/"
-    let imageURL = "https://api.cloudinary.com/v1_1/whereno/image/upload"
+    let baseURL = NSURL(string: "https://grove-api.herokuapp.com")!
+    let imageURL = NSURL(string: "https://api.cloudinary.com/v1_1/whereno/image/upload")!
     let uploadPreset = "a5txdosc"
 
     var currentLocationsRequest: Request?
