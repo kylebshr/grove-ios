@@ -9,10 +9,18 @@
 import Foundation
 import RealmSwift
 import Mapper
+import SSKeychain
 
 final class User: Object, Mappable {
 
+    private static let serviceName = "grove_service"
+    private static let account = "user_token"
+    private static let realm = try! Realm()
+
     dynamic var id = ""
+    dynamic var firstName = ""
+    dynamic var lastName = ""
+    dynamic var profileImageURLString = ""
 
     let favorites = List<HammockLocation>()
 
@@ -23,25 +31,31 @@ final class User: Object, Mappable {
     required convenience init(map: Mapper) throws {
         self.init()
 
+        authToken = nil
+
         try id = map.from("id")
-        try User.authToken = map.from("auth_token")
+        try authToken = map.from("auth_token")
+        try firstName = map.from("first_name")
+        try lastName = map.from("last_name")
+        try profileImageURLString = map.from("photo")
     }
 
-    private static let authTokenKey = "defaults_auth_token"
-    private static let defaults = NSUserDefaults.standardUserDefaults()
-    private static let realm = try! Realm()
-
-    static var authToken: String? {
+    var authToken: String? {
         get {
-            return defaults.stringForKey(authTokenKey)
+            return SSKeychain.passwordForService(User.serviceName, account: User.account)
         }
         set {
-            defaults.setObject(newValue, forKey: authTokenKey)
+            SSKeychain.setPassword(newValue, forService: User.serviceName, account: User.account)
         }
+    }
+
+    var profileImageURL: NSURL {
+        return NSURL(string: profileImageURLString)!
     }
 
     static var authenticatedUser: User? {
-        guard authToken != nil else { return nil }
-        return realm.objects(User).first
+        let user = realm.objects(User).first
+        guard user?.authToken != nil else { return nil }
+        return user
     }
 }

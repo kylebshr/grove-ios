@@ -18,7 +18,7 @@ class ObjectFetcher {
     let realm = try! Realm()
 
     let headers = [
-        "Authorization": User.authToken ?? ""
+        "Authorization": User.authenticatedUser?.authToken ?? ""
     ]
 
     let baseURL = NSURL(string: "https://grove-api.herokuapp.com")!
@@ -37,7 +37,7 @@ class ObjectFetcher {
             "photo": imageURL,
             "latitude": latitude.roundToPlaces(6),
             "longitude": longitude.roundToPlaces(6),
-            "user_id": User.authToken ?? "unknown"
+            "user_id": User.authenticatedUser?.authToken ?? "unknown"
         ]
 
         Alamofire.request(.POST, baseURL.URLByAppendingPathComponent("/location"), parameters: params, encoding: .JSON)

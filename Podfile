@@ -11,6 +11,7 @@ target 'Whereno' do
     pod 'R.swift'
     pod 'Kingfisher'
     pod 'JLRoutes'
+    pod 'SSKeychain'
 end
 
 target 'WherenoTests' do

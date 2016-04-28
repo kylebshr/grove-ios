@@ -96,6 +96,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Realm/Realm.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RealmMapView/RealmMapView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RealmSwift/RealmSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SSKeychain/SSKeychain.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftFetchedResultsController/SwiftFetchedResultsController.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -111,5 +112,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Realm/Realm.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RealmMapView/RealmMapView.framework"
   install_framework "$BUILT_PRODUCTS_DIR/RealmSwift/RealmSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SSKeychain/SSKeychain.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SwiftFetchedResultsController/SwiftFetchedResultsController.framework"
 fi
