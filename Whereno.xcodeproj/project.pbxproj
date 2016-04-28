@@ -20,6 +20,8 @@
 		2750DE0A1CCFDEEE002F9C72 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2750DE091CCFDEEE002F9C72 /* AddLocationViewController.swift */; };
 		2750DE0C1CCFEF8C002F9C72 /* Alamofire+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2750DE0B1CCFEF8C002F9C72 /* Alamofire+Extensions.swift */; };
 		27742DC01CD1CC6C0039A54C /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27742DBF1CD1CC6C0039A54C /* Double+Extensions.swift */; };
+		27742DC21CD267740039A54C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27742DC11CD267740039A54C /* Login.storyboard */; };
+		27742DC41CD272F00039A54C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27742DC31CD272F00039A54C /* LoginViewController.swift */; };
 		27A9232A1CD032CE0020739D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A923291CD032CE0020739D /* String+Extensions.swift */; };
 		27A9232C1CD0378B0020739D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9232B1CD0378B0020739D /* User.swift */; };
 		27A923341CD127F80020739D /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A923331CD127F80020739D /* UIImage+Extensions.swift */; };
@@ -77,6 +79,8 @@
 		2750DE091CCFDEEE002F9C72 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLocationViewController.swift; sourceTree = "<group>"; };
 		2750DE0B1CCFEF8C002F9C72 /* Alamofire+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+Extensions.swift"; sourceTree = "<group>"; };
 		27742DBF1CD1CC6C0039A54C /* Double+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		27742DC11CD267740039A54C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		27742DC31CD272F00039A54C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		27A923291CD032CE0020739D /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		27A9232B1CD0378B0020739D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		27A923331CD127F80020739D /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 				27235A2D1CCE5BAA006B1475 /* LocationDetailViewController.swift */,
 				27CCFB171CCFBF7B00399F35 /* LocationListViewController.swift */,
 				2750DE091CCFDEEE002F9C72 /* AddLocationViewController.swift */,
+				27742DC31CD272F00039A54C /* LoginViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -246,6 +251,7 @@
 		27DECBED1CCD687600A4BCD2 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				27742DC11CD267740039A54C /* Login.storyboard */,
 				27B345C91CCD669A005BA871 /* Map.storyboard */,
 				2750DE071CCFDC44002F9C72 /* Compose.storyboard */,
 			);
@@ -428,6 +434,7 @@
 			files = (
 				27B345D01CCD669A005BA871 /* LaunchScreen.storyboard in Resources */,
 				27B345CD1CCD669A005BA871 /* Assets.xcassets in Resources */,
+				27742DC21CD267740039A54C /* Login.storyboard in Resources */,
 				27D533A51CCEC50B007FC6A1 /* TextInputView.xib in Resources */,
 				27DECBF51CCD7DDA00A4BCD2 /* Knoxville.gpx in Resources */,
 				27B345CB1CCD669A005BA871 /* Map.storyboard in Resources */,
@@ -606,6 +613,7 @@
 				27235A3A1CCE9791006B1475 /* JSONEncodable.swift in Sources */,
 				27DECBFA1CCD901D00A4BCD2 /* UITextField+Extensions.swift in Sources */,
 				27A9232C1CD0378B0020739D /* User.swift in Sources */,
+				27742DC41CD272F00039A54C /* LoginViewController.swift in Sources */,
 				27CCFB1A1CCFC0A800399F35 /* LocationListCell.swift in Sources */,
 				27235A351CCE78FD006B1475 /* DetailCommentCell.swift in Sources */,
 				27235A301CCE67D9006B1475 /* LocationComment.swift in Sources */,

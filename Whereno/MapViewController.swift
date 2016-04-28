@@ -22,7 +22,6 @@ class MapViewController: UIViewController {
     // MARK: Properties
 
     let geocoder = CLGeocoder()
-    let locationManager = CLLocationManager()
     let annotationViewReuseId = "AnnotationViewReuseId"
     let realm = try! Realm()
 
@@ -41,7 +40,9 @@ class MapViewController: UIViewController {
         // Zooms into random cluster unless we set to false
         mapView.zoomOnFirstRefresh = false
 
-        requestLocationPermissionIfNeeded()
+        if User.authenticatedUser == nil {
+            presentViewController(R.storyboard.login.loginViewController()!, animated: true, completion: nil)
+        }
     }
 
 
@@ -71,13 +72,6 @@ class MapViewController: UIViewController {
 
 
     // MARK: Helpers
-
-    // Ask for location use permission if not granted
-    func requestLocationPermissionIfNeeded() {
-        if CLLocationManager.authorizationStatus() == .NotDetermined {
-            locationManager.requestWhenInUseAuthorization()
-        }
-    }
 
     // Create a region from coordinates and animate to that region
     func updateMapRegion(coordinate: CLLocationCoordinate2D) {
