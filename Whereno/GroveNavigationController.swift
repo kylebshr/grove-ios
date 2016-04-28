@@ -22,22 +22,24 @@ class GroveNavigationController: UINavigationController {
 
     @objc func longPressed(sender: UILongPressGestureRecognizer) {
 
-        let alert = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
+        if sender.state == .Began {
+            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
 
-        let logOut = UIAlertAction(title: "Log Out", style: .Destructive) { [weak self] _ in
-            User.authenticatedUser?.logOut()
-            self?.presentViewController(R.storyboard.login.loginViewController()!, animated: true, completion: nil)
-        }
-        let feedback = UIAlertAction(title: "Send Feedback", style: .Default) { [weak self] _ in
-            self?.presentFeedback()
-        }
-        let cancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+            let logOut = UIAlertAction(title: "Log Out", style: .Destructive) { [weak self] _ in
+                User.authenticatedUser?.logOut()
+                self?.presentViewController(R.storyboard.login.loginViewController()!, animated: true, completion: nil)
+            }
+            let feedback = UIAlertAction(title: "Send Feedback", style: .Default) { [weak self] _ in
+                self?.presentFeedback()
+            }
+            let cancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
 
-        alert.addAction(logOut)
-        alert.addAction(feedback)
-        alert.addAction(cancel)
+            alert.addAction(logOut)
+            alert.addAction(feedback)
+            alert.addAction(cancel)
 
-        presentViewController(alert, animated: true, completion: nil)
+            presentViewController(alert, animated: true, completion: nil)
+            }
     }
 
     func presentFeedback() {

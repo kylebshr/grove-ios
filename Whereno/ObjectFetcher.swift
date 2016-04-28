@@ -17,10 +17,6 @@ class ObjectFetcher {
 
     let realm = try! Realm()
 
-    let headers = [
-        "Authorization": User.authenticatedUser?.authToken ?? ""
-    ]
-
     let baseURL = NSURL(string: "https://grove-api.herokuapp.com")!
     let imageURL = NSURL(string: "https://api.cloudinary.com/v1_1/whereno/image/upload")!
     let uploadPreset = "a5txdosc"

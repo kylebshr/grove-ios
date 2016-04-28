@@ -11,6 +11,7 @@
 
 import UIKit
 import RealmSwift
+import Alamofire
 import AlamofireNetworkActivityIndicator
 import JLRoutes
 import PKHUD
@@ -31,7 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NetworkActivityIndicatorManager.sharedManager.isEnabled = true
         PKHUD.sharedHUD.userInteractionOnUnderlyingViewsEnabled = false
         PKHUD.sharedHUD.dimsBackground = false
+
         setUpRoutes()
+        updateAuthorizationHeader()
 
         return true
     }
@@ -64,6 +67,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     self.realm.add(user)
                 }
 
+                self.updateAuthorizationHeader()
+
                 let notification = NSNotification(name: AppDelegate.loginNotification, object: user)
                 NSNotificationCenter.defaultCenter().postNotification(notification)
             }
@@ -74,5 +79,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
             return true
         }
+    }
+
+    func updateAuthorizationHeader() {
+        let authHeader = ["Authorization": "Token token=\"\(User.authenticatedUser?.authToken ?? "")\""]
+        Manager.sharedInstance.session.configuration.HTTPAdditionalHeaders = authHeader
     }
 }
