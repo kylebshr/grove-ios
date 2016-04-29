@@ -19,6 +19,7 @@ class ObjectFetcher {
     let baseURL = NSURL(string: "https://grove-api.herokuapp.com")!
     let imageURL = NSURL(string: "https://api.cloudinary.com/v1_1/whereno/image/upload")!
     let uploadPreset = "a5txdosc"
+    let locationDecimalAccuracy = 7
 
     // We want to cancel this when we make a new one
     var currentLocationsRequest: Request?
@@ -34,8 +35,8 @@ class ObjectFetcher {
             "capacity": capacity,
             "description": description,
             "photo": imageURL,
-            "latitude": coordinates.latitude.roundToPlaces(6),
-            "longitude": coordinates.longitude.roundToPlaces(6),
+            "latitude": coordinates.latitude.roundToPlaces(locationDecimalAccuracy),
+            "longitude": coordinates.longitude.roundToPlaces(locationDecimalAccuracy),
         ]
 
         Alamofire.request(.POST, baseURL.URLByAppendingPathComponent("/location"), parameters: params, headers: authHeader, encoding: .JSON)
