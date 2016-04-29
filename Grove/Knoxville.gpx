@@ -5,8 +5,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd"
 version="1.1" 
 creator="gpx-poi.com">
-   <wpt lat="35.953819" lon="-83.9327127">
+   <wpt lat="37.381394" lon="-122.059670">
       <time>2016-02-09T17:41:47Z</time>
-      <name>Knoxville</name>
+      <name>Cupertino</name>
    </wpt>
 </gpx>
