@@ -202,11 +202,7 @@ extension LocationDetailViewController: UITableViewDataSource {
 
         // By now, we know we're loading comments
         let cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.detailCommentCell)!
-        let comment = location.comments[indexPath.row]
-
-        cell.commentLabel.text = comment.text
-        cell.dateLabel.text = comment.formattedDate
-
+        cell.configureForComment(location.comments[indexPath.row])
         return cell
     }
 }

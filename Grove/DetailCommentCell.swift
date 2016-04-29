@@ -10,7 +10,15 @@ import UIKit
 
 class DetailCommentCell: UITableViewCell {
 
+
+    // MARK: Outlets
+
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var commentLabel: UILabel!
 
+
+    func configureForComment(comment: LocationComment) {
+        dateLabel.text = comment.formattedDate
+        commentLabel.text = comment.text
+    }
 }

@@ -11,11 +11,17 @@ import Kingfisher
 
 class LocationListCell: UITableViewCell {
 
+
+    // MARK: Outlets
+
     @IBOutlet weak var largeImageView: UIImageView!
     @IBOutlet weak var dimmingView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
 
-    func configureWithLocation(location: HammockLocation) {
+
+    // MARK: Helpers
+
+    func configureForLocation(location: HammockLocation) {
         largeImageView.kf_setImageWithURL(location.imageURL, placeholderImage: nil)
         titleLabel.text = location.title
     }
@@ -28,6 +34,7 @@ class LocationListCell: UITableViewCell {
         setTapped(highlighted, animated: animated)
     }
 
+    // Set the dimming view darker to show selection/highlight
     func setTapped(tapped: Bool, animated: Bool) {
 
         let duration = animated ? 0.33 : 0

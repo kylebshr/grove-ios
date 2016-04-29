@@ -58,9 +58,7 @@ class LocationListViewController: UITableViewController {
         // Deque a cell and configure with a location
         let cell = tableView.dequeueReusableCellWithIdentifier(R.reuseIdentifier.locationListCell)!
         let location = locations[indexPath.row]
-
-        cell.configureWithLocation(location)
-
+        cell.configureForLocation(location)
         return cell
     }
 
