@@ -12,6 +12,9 @@ import Mapper
 
 final class HammockLocation: Object, Mappable {
 
+
+    // MARK: Realm properties
+
     dynamic var id = ""
     dynamic var title = ""
     dynamic var descriptionText = ""
@@ -21,9 +24,16 @@ final class HammockLocation: Object, Mappable {
     dynamic var capacity = 0
     dynamic var latitude = 0.0
     dynamic var longitude = 0.0
-
     let comments = List<LocationComment>()
 
+
+    // MARK: Computed properties
+
+    var imageURL: NSURL {
+        return NSURL(string: imageURLString)!
+    }
+
+    // Mapper initializer
     required convenience init(map: Mapper) throws {
         self.init()
 
@@ -44,9 +54,5 @@ final class HammockLocation: Object, Mappable {
 
     override static func primaryKey() -> String? {
         return "id"
-    }
-
-    var imageURL: NSURL {
-        return NSURL(string: imageURLString)!
     }
 }

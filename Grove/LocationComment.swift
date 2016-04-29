@@ -12,15 +12,31 @@ import Mapper
 
 final class LocationComment: Object, Mappable {
 
+
+    // MARK: Static properties
+
+    private static let commentFormatter: NSDateFormatter = {
+        let formatter =  NSDateFormatter()
+        formatter.dateFormat = "MMMM d, yyyy"
+        return formatter
+    }()
+
+
+    // MARK: Realm properties
+
     dynamic var id = ""
     dynamic var text = ""
     dynamic var ownerID = ""
     dynamic var date = NSDate()
 
-    override static func primaryKey() -> String? {
-        return "id"
+
+    // MARK: Computed properties
+
+    var formattedDate: String {
+        return "Posted on " + LocationComment.commentFormatter.stringFromDate(date)
     }
 
+    // Mapper initializer
     required convenience init(map: Mapper) throws {
         self.init()
 
@@ -30,13 +46,7 @@ final class LocationComment: Object, Mappable {
         try ownerID = map.from("user_id")
     }
 
-    private static let commentFormatter: NSDateFormatter = {
-        let formatter =  NSDateFormatter()
-        formatter.dateFormat = "MMMM d, yyyy"
-        return formatter
-    }()
-
-    var formattedDate: String {
-        return "Posted on " + LocationComment.commentFormatter.stringFromDate(date)
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }
