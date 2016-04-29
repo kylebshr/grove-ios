@@ -134,6 +134,7 @@ class AddLocationViewController: UITableViewController {
             }
         }
 
+        // See if we have coordinates, if not grab them first, then post the image
         if let coordinates = coordinates {
             postImage(coordinates)
         }

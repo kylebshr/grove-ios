@@ -12,19 +12,27 @@ import MessageUI
 
 class GroveNavigationController: UINavigationController {
 
-    lazy var longPressRecognizer: UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressed))
+
+    // MARK: Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(longPressed))
         navigationBar.addGestureRecognizer(longPressRecognizer)
     }
 
+
+    // MARK: Helpers
+
+    // Listen for the long press
     @objc func longPressed(sender: UILongPressGestureRecognizer) {
 
+        // We only want the beginning state!
         if sender.state == .Began {
-            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
 
+            // Show alert with log out and feeback buttons
+            let alert = UIAlertController(title: nil, message: nil, preferredStyle: .ActionSheet)
             let logOut = UIAlertAction(title: "Log Out", style: .Destructive) { [weak self] _ in
                 User.authenticatedUser?.logOut()
                 self?.presentViewController(R.storyboard.login.loginViewController()!, animated: true, completion: nil)
@@ -39,9 +47,10 @@ class GroveNavigationController: UINavigationController {
             alert.addAction(cancel)
 
             presentViewController(alert, animated: true, completion: nil)
-            }
+        }
     }
 
+    // Presents an email sheet for feedback
     func presentFeedback() {
 
         let mailComposeViewController = MFMailComposeViewController()

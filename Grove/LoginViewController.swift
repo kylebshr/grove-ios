@@ -12,8 +12,14 @@ import SafariServices
 
 class LoginViewController: UIViewController {
 
+
+    // MARK: Outlets
+
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet var imageConstraints: [NSLayoutConstraint]!
+
+
+    // MARK: Properties
 
     let locationManager = CLLocationManager()
     let imageTime = 6.0
@@ -24,41 +30,55 @@ class LoginViewController: UIViewController {
     var currentImage = 0
     var timer: NSTimer?
 
+
+    // MARK: Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Set up a few things
         requestLocationPermissionIfNeeded()
         setUpNotificationCenter()
         setUpCycleImage()
-
-        timer = NSTimer.scheduledTimerWithTimeInterval(imageTime, target: self, selector: #selector(cycleImage), userInfo: nil, repeats: true)
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
+        // Cycle the
+        timer = NSTimer.scheduledTimerWithTimeInterval(imageTime, target: self, selector: #selector(cycleImage), userInfo: nil, repeats: true)
+
+        // Call this for the first image
         doKenBurnsEffect()
     }
 
-    func setUpNotificationCenter() {
 
-        NSNotificationCenter.defaultCenter()
-            .addObserver(self, selector: #selector(login), name: AppDelegate.loginNotification, object: nil)
-        NSNotificationCenter.defaultCenter()
-            .addObserver(self, selector: #selector(loginFailed), name: AppDelegate.loginFailedNotification, object: nil)
-    }
+    // MARK: IBActions
 
     @IBAction func facebookButtonTapped(sender: UIButton) {
         let vc = SFSafariViewController(URL: NSURL(string: "https://grove-api.herokuapp.com/login/facebook")!)
         presentViewController(vc, animated: true, completion: nil)
     }
 
+
+    // MARK: Helpers
+
+    // Listen for login or login failed notifications
+    func setUpNotificationCenter() {
+        NSNotificationCenter.defaultCenter()
+            .addObserver(self, selector: #selector(login), name: AppDelegate.loginNotification, object: nil)
+        NSNotificationCenter.defaultCenter()
+            .addObserver(self, selector: #selector(loginFailed), name: AppDelegate.loginFailedNotification, object: nil)
+    }
+
+    // Called by the login notification
     @objc func login() {
         dismissViewControllerAnimated(true) { [weak self] _ in
             self?.dismissViewControllerAnimated(true, completion: nil)
         }
     }
 
+    // Called by login failed notification
     @objc func loginFailed() {
         dismissViewControllerAnimated(true) { [weak self] _ in
             self?.showNetworkErrorAlert()
@@ -72,11 +92,13 @@ class LoginViewController: UIViewController {
         }
     }
 
+    // For the initial set up of the first image
     func setUpCycleImage() {
         changeCycleImageConstraints()
         view.layoutIfNeeded()
     }
 
+    // Animates the image changes
     func cycleImage() {
 
         doKenBurnsEffect()
@@ -90,8 +112,8 @@ class LoginViewController: UIViewController {
         )
     }
 
+    // Approximates kens burns by animating edge constraints
     func doKenBurnsEffect() {
-
         UIView.animateWithDuration(imageTime + fadeTime, delay: 0, options: [.BeginFromCurrentState, .CurveEaseInOut],
             animations: { _ in
                 self.changeCycleImageConstraints()
@@ -100,6 +122,7 @@ class LoginViewController: UIViewController {
         )
     }
 
+    // Set all the constraints to random new ones
     func changeCycleImageConstraints() {
         imageConstraints.forEach {
             $0.constant = CGFloat(rand() % constraintVariance)
