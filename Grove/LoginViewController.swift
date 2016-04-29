@@ -25,9 +25,10 @@ class LoginViewController: UIViewController {
     let imageTime = 6.0
     let fadeTime = 1.0
     let constraintVariance: Int32 = 50
-    let images = [R.image.login1(), R.image.login2(), R.image.login3(), R.image.login4(), R.image.login5()]
+    let imageNames: [String] = {
+        return (1...10).map { "login\($0)" }
+    }()
 
-    var currentImage = 0
     var timer: NSTimer?
 
 
@@ -103,11 +104,9 @@ class LoginViewController: UIViewController {
 
         doKenBurnsEffect()
 
-        currentImage += 1
-
         UIView.transitionWithView(imageView, duration: fadeTime, options: .TransitionCrossDissolve,
             animations: { _ in
-                self.imageView.image = self.images[self.currentImage % self.images.count]
+                self.imageView.image = UIImage(named: self.imageNames[Int(rand()) % self.imageNames.count])
             }, completion: nil
         )
     }
