@@ -26,13 +26,13 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="t9w-ec-RPt">
-                                <rect key="frame" x="20" y="20" width="560" height="540"/>
+                                <rect key="frame" x="20" y="20" width="560" height="530"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" image="grove-icon" translatesAutoresizingMaskIntoConstraints="NO" id="1Eo-OM-wh6">
-                                        <rect key="frame" x="159" y="0.0" width="243" height="435"/>
+                                        <rect key="frame" x="159" y="0.0" width="243" height="425"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0R-gM-vns">
-                                        <rect key="frame" x="148" y="495" width="263" height="45"/>
+                                        <rect key="frame" x="149" y="485" width="263" height="45"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="facebook-login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,7 +51,7 @@
                             <constraint firstItem="qcL-Te-g8m" firstAttribute="trailing" secondItem="ePz-ww-pkf" secondAttribute="trailing" id="IWp-th-M6o"/>
                             <constraint firstItem="QlR-ER-AxJ" firstAttribute="top" secondItem="UG0-zA-afe" secondAttribute="bottom" id="JBk-6C-HRG"/>
                             <constraint firstItem="qcL-Te-g8m" firstAttribute="bottom" secondItem="QlR-ER-AxJ" secondAttribute="top" id="JQ1-F8-bTr"/>
-                            <constraint firstItem="QlR-ER-AxJ" firstAttribute="top" secondItem="t9w-ec-RPt" secondAttribute="bottom" constant="40" id="Oxo-lg-xUg"/>
+                            <constraint firstItem="QlR-ER-AxJ" firstAttribute="top" secondItem="t9w-ec-RPt" secondAttribute="bottom" constant="50" id="Oxo-lg-xUg"/>
                             <constraint firstItem="UG0-zA-afe" firstAttribute="leading" secondItem="ePz-ww-pkf" secondAttribute="leading" id="Rnm-Kf-dku"/>
                             <constraint firstAttribute="top" secondItem="qcL-Te-g8m" secondAttribute="top" id="SBT-zd-i2z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="t9w-ec-RPt" secondAttribute="trailing" id="WuX-qb-DLD"/>

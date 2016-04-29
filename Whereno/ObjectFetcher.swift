@@ -23,6 +23,10 @@ class ObjectFetcher {
 
     var currentLocationsRequest: Request?
 
+    var authHeader: [String: String] {
+        return ["Authorization": "Token token=\"\(User.authenticatedUser?.authToken ?? "")\""]
+    }
+
     func postLocation(title: String, capacity: Int, description: String, imageURL: String, coordinates: CLLocationCoordinate2D, completion: Result<HammockLocation, NSError> -> Void) {
 
         let params: [String: AnyObject] = [
@@ -32,10 +36,9 @@ class ObjectFetcher {
             "photo": imageURL,
             "latitude": coordinates.latitude.roundToPlaces(6),
             "longitude": coordinates.longitude.roundToPlaces(6),
-            "user_id": User.authenticatedUser?.authToken ?? "unknown"
         ]
 
-        Alamofire.request(.POST, baseURL.URLByAppendingPathComponent("/location"), parameters: params, encoding: .JSON)
+        Alamofire.request(.POST, baseURL.URLByAppendingPathComponent("/location"), parameters: params, headers: authHeader, encoding: .JSON)
             .responseObject { (response: Response<HammockLocation, NSError>) in
 
                 if let location = response.result.value {
@@ -65,10 +68,9 @@ class ObjectFetcher {
         let params: [String: AnyObject] = [
             "text": text,
             "location_id": locationID,
-            "user_id": User.authenticatedUser?.id ?? "unknown"
         ]
 
-        Alamofire.request(.POST, baseURL.URLByAppendingPathComponent("/comment"), parameters: params, encoding: .JSON)
+        Alamofire.request(.POST, baseURL.URLByAppendingPathComponent("/comment"), parameters: params, headers: authHeader, encoding: .JSON)
             .responseObject { (response: Response<LocationComment, NSError>) in
 
                 if let comment = response.result.value {
