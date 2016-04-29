@@ -26,11 +26,7 @@ class MapViewController: UIViewController {
     let realm = try! Realm()
 
     var didShowInitialLocation = false
-    var userCoordinates: CLLocationCoordinate2D? {
-        didSet {
-            addLocationButton.enabled = userCoordinates != nil
-        }
-    }
+
 
     // MARK: Lifecycle
 
@@ -60,13 +56,7 @@ class MapViewController: UIViewController {
     }
 
     @IBAction func addLocationButtonTapped(sender: UIBarButtonItem) {
-        guard let coordinates = userCoordinates else {
-            return
-        }
-
         let nav = R.storyboard.compose.initialViewController()!
-        let vc = nav.viewControllers[0] as! AddLocationViewController
-        vc.coordinates = coordinates
         presentViewController(nav, animated: true, completion: nil)
     }
 
@@ -130,7 +120,6 @@ extension MapViewController: MKMapViewDelegate {
         // If we have a location, update the title to show the users city
         if let location = userLocation.location {
             updateLocationTitle(location)
-            userCoordinates = location.coordinate
         }
 
         // If it's the first time we found them, zoom into their location
