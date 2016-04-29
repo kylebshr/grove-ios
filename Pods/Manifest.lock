@@ -9,13 +9,13 @@ PODS:
   - INTULocationManager (4.2.0)
   - JLRoutes (1.6)
   - Kingfisher (2.3.1)
-  - ModelMapper (2.0.1)
+  - ModelMapper (2.1.0)
   - PKHUD (3.1.0)
   - R.swift (2.1.0):
     - R.swift.Library (~> 2.0.0)
   - R.swift.Library (2.0.0)
-  - RBQFetchedResultsController (4.0):
-    - Realm (>= 0.99)
+  - RBQFetchedResultsController (4.0.2):
+    - Realm (>= 0.99.1)
   - Realm (0.99.1):
     - Realm/Headers (= 0.99.1)
   - Realm/Headers (0.99.1)
@@ -26,9 +26,9 @@ PODS:
   - RealmSwift (0.99.1):
     - Realm (= 0.99.1)
   - SSKeychain (1.4.0)
-  - SwiftFetchedResultsController (4.0):
-    - RBQFetchedResultsController (>= 4.0)
-    - RealmSwift (>= 0.99)
+  - SwiftFetchedResultsController (4.0.2):
+    - RBQFetchedResultsController (>= 4.0.2)
+    - RealmSwift (>= 0.99.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -52,17 +52,17 @@ SPEC CHECKSUMS:
   INTULocationManager: 73f8254b3d05c897c56bb13c190e5b7c648c0998
   JLRoutes: 435d791422e96c9b9b5e1c4db1aedb3ae1b1a08f
   Kingfisher: 6d3fbada4829cbc7b89e883e8218c28afeb64e42
-  ModelMapper: 798850e5b2ca193a830a8ac18a1b5874997cdee8
+  ModelMapper: e599744bc1e869bdb87b453b7ce16981028b8513
   PKHUD: 4167eccdb1b3a892fd80ce2b51cb6ba412a889ab
   R.swift: efff131531b5cf142e28fd94957806ff71ccbcf2
   R.swift.Library: 9f4b2d12040daa1ffe336d8f7e1574f73721fd01
-  RBQFetchedResultsController: df4475747231d75422f2dcb959a26a474223a642
+  RBQFetchedResultsController: 4e1066e12cb4d4a87ed1f86569a88ff80cfb288a
   Realm: 522a0cc8e1f8755ee56d7dc16ca0fc380d045766
   RealmMapView: e7857bc757f54baf81133b24e91383da292dbf5e
   RealmSwift: 1d9c4299ef5dbf575c5da09fc706ed726327cfa0
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
-  SwiftFetchedResultsController: e95f1ecdc0db43bed983c947c07a012021aa374d
+  SwiftFetchedResultsController: 7f9edc93250e6c803f0fa7bfedb8f3111155d4f5
 
-PODFILE CHECKSUM: 9a06bf9573bf4a6419c69d910ad85e0e69a2e163
+PODFILE CHECKSUM: c9684a3adbb04a2b3eb57ad33ffbf341fae2662d
 
 COCOAPODS: 1.0.0.beta.8

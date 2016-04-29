@@ -1,7 +1,7 @@
 platform :ios, '9.0'
 use_frameworks!
 
-target 'Whereno' do
+target 'Grove' do
     pod 'Alamofire'
     pod 'AlamofireNetworkActivityIndicator'
     pod 'RealmSwift'
@@ -16,11 +16,11 @@ target 'Whereno' do
     pod 'INTULocationManager'
 end
 
-target 'WherenoTests' do
+target 'GroveTests' do
 
 end
 
-target 'WherenoUITests' do
+target 'GroveUITests' do
 
 end
 

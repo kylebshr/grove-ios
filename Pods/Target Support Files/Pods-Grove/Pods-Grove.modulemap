@@ -1,0 +1,6 @@
+framework module Pods_Grove {
+  umbrella header "Pods-Grove-umbrella.h"
+
+  export *
+  module * { export * }
+}

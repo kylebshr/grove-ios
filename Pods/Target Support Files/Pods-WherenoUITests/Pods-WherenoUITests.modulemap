@@ -1,6 +1,0 @@
-framework module Pods_WherenoUITests {
-  umbrella header "Pods-WherenoUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
