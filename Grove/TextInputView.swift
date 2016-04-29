@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Async
 
 class TextInputView: UIView, UITextViewDelegate {
 
@@ -25,6 +26,7 @@ class TextInputView: UIView, UITextViewDelegate {
     private let separator = UIView()
     private let numberOfCharactersAllowed = 180
     private var loading = false
+    private var loadingIndicatorBlock: Async?
 
     var text: String {
         get {
@@ -79,9 +81,16 @@ class TextInputView: UIView, UITextViewDelegate {
 
     // Show the loading indicator
     func setLoading(loading: Bool) {
+
+        loadingIndicatorBlock?.cancel()
+
         self.loading = loading
-        sendButton.hidden = loading
-        loading ? activityIndicator.startAnimating() : activityIndicator.stopAnimating()
+
+        // Show with a delay - if we're done loading after .3 seconds, the spinner won't flicker on and off
+        loadingIndicatorBlock = Async.main(after: 0.3) { [weak self] in
+            self?.sendButton.hidden = loading
+            loading ? self?.activityIndicator.startAnimating() : self?.activityIndicator.stopAnimating()
+        }
     }
 
 
