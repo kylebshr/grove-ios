@@ -16,17 +16,10 @@ class ObjectFetcher {
     static let sharedInstance = ObjectFetcher()
 
     let realm = try! Realm()
-    let baseURL = NSURL(string: "https://grove-api.herokuapp.com")!
-    let imageURL = NSURL(string: "https://api.cloudinary.com/v1_1/whereno/image/upload")!
-    let uploadPreset = "a5txdosc"
     let locationDecimalAccuracy = 7
 
     // We want to cancel this when we make a new one
     var currentLocationsRequest: Request?
-
-    var authHeader: [String: String] {
-        return ["Authorization": "Token token=\"\(User.authenticatedUser?.authToken ?? "")\""]
-    }
 
     func postLocation(title: String, capacity: Int, description: String, imageURL: String, coordinates: CLLocationCoordinate2D, completion: Result<HammockLocation, NSError> -> Void) {
 
@@ -39,7 +32,7 @@ class ObjectFetcher {
             "longitude": coordinates.longitude.roundToPlaces(locationDecimalAccuracy),
         ]
 
-        Alamofire.request(.POST, baseURL.URLByAppendingPathComponent("/location"), parameters: params, headers: authHeader, encoding: .JSON)
+        Alamofire.request(Router.locationPost(params))
             .responseObject { (response: Response<HammockLocation, NSError>) in
 
                 if let location = response.result.value {
@@ -53,13 +46,7 @@ class ObjectFetcher {
     }
 
     func uploadImage(image: String, completion: Result<String, NSError> -> Void) {
-
-        let params: [String: AnyObject] = [
-            "upload_preset": uploadPreset,
-            "file": image
-        ]
-
-        Alamofire.request(.POST, imageURL, parameters: params, encoding: .JSON).cloudinaryURL { (response) in
+        Alamofire.request(Router.imagePost(image)).cloudinaryURL { (response) in
             completion(response.result)
         }
     }
@@ -71,7 +58,7 @@ class ObjectFetcher {
             "location_id": locationID,
         ]
 
-        Alamofire.request(.POST, baseURL.URLByAppendingPathComponent("/comment"), parameters: params, headers: authHeader, encoding: .JSON)
+        Alamofire.request(Router.commentPost(params))
             .responseObject { (response: Response<LocationComment, NSError>) in
 
                 if let comment = response.result.value {
@@ -91,7 +78,7 @@ class ObjectFetcher {
         // Cancel this, as it could be called a whole lot as we pan
         currentLocationsRequest?.cancel()
 
-        currentLocationsRequest = Alamofire.request(Router.hammockLocations(region))
+        currentLocationsRequest = Alamofire.request(Router.locationFeed(region))
             .responseCollection { (response: Response<[HammockLocation], NSError>) in
 
                 switch response.result {
