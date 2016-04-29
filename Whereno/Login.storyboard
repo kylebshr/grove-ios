@@ -29,7 +29,7 @@
                                 <rect key="frame" x="20" y="20" width="560" height="540"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="751" image="grove-icon" translatesAutoresizingMaskIntoConstraints="NO" id="1Eo-OM-wh6">
-                                        <rect key="frame" x="158.5" y="0.0" width="243" height="435"/>
+                                        <rect key="frame" x="159" y="0.0" width="243" height="435"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0R-gM-vns">
                                         <rect key="frame" x="148" y="495" width="263" height="45"/>
