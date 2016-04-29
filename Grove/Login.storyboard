@@ -9,7 +9,7 @@
         <!--Login View Controller-->
         <scene sceneID="Ano-x9-pb5">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="cYL-GU-1dL" customClass="LoginViewController" customModule="Whereno" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="cYL-GU-1dL" customClass="LoginViewController" customModule="Grove" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fG7-Fh-O0H"/>
                         <viewControllerLayoutGuide type="bottom" id="QlR-ER-AxJ"/>
@@ -33,6 +33,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0R-gM-vns">
                                         <rect key="frame" x="149" y="485" width="263" height="45"/>
+                                        <accessibility key="accessibilityConfiguration" label="Login with Facebook"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="facebook-login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

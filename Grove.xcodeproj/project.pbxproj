@@ -13,7 +13,6 @@
 		27235A301CCE67D9006B1475 /* LocationComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A2F1CCE67D9006B1475 /* LocationComment.swift */; };
 		27235A331CCE78F2006B1475 /* DetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A321CCE78F2006B1475 /* DetailHeaderCell.swift */; };
 		27235A351CCE78FD006B1475 /* DetailCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A341CCE78FD006B1475 /* DetailCommentCell.swift */; };
-		27235A3A1CCE9791006B1475 /* JSONEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A391CCE9791006B1475 /* JSONEncodable.swift */; };
 		27235A3E1CCEA6E5006B1475 /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A3D1CCEA6E5006B1475 /* NSDate+Extensions.swift */; };
 		27251B7A1CCECF3800FD4FC9 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27251B791CCECF3800FD4FC9 /* UIColor+Extensions.swift */; };
 		273000711CD3040E00DA6DB5 /* GroveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345DA1CCD669A005BA871 /* GroveTests.swift */; };
@@ -73,7 +72,6 @@
 		27235A2F1CCE67D9006B1475 /* LocationComment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationComment.swift; sourceTree = "<group>"; };
 		27235A321CCE78F2006B1475 /* DetailHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHeaderCell.swift; sourceTree = "<group>"; };
 		27235A341CCE78FD006B1475 /* DetailCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCommentCell.swift; sourceTree = "<group>"; };
-		27235A391CCE9791006B1475 /* JSONEncodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONEncodable.swift; sourceTree = "<group>"; };
 		27235A3D1CCEA6E5006B1475 /* NSDate+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extensions.swift"; sourceTree = "<group>"; };
 		27251B791CCECF3800FD4FC9 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		273000721CD3046100DA6DB5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Grove/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
@@ -163,14 +161,6 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		27235A381CCE977D006B1475 /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				27235A391CCE9791006B1475 /* JSONEncodable.swift */,
-			);
-			name = Protocols;
-			sourceTree = "<group>";
-		};
 		27B345B91CCD669A005BA871 = {
 			isa = PBXGroup;
 			children = (
@@ -204,7 +194,6 @@
 				27DECBF11CCD68C300A4BCD2 /* Models */,
 				27006A901CCFF58500790B95 /* Other Helpers */,
 				27DECBF81CCD843800A4BCD2 /* Extensions */,
-				27235A381CCE977D006B1475 /* Protocols */,
 				27DECBEE1CCD687C00A4BCD2 /* Assets */,
 			);
 			path = Grove;
@@ -614,7 +603,6 @@
 				27251B7A1CCECF3800FD4FC9 /* UIColor+Extensions.swift in Sources */,
 				27006A8F1CCFF58200790B95 /* Router.swift in Sources */,
 				27D533A71CCEC516007FC6A1 /* TextInputView.swift in Sources */,
-				27235A3A1CCE9791006B1475 /* JSONEncodable.swift in Sources */,
 				27DECBFA1CCD901D00A4BCD2 /* UITextField+Extensions.swift in Sources */,
 				27A9232C1CD0378B0020739D /* User.swift in Sources */,
 				27742DC41CD272F00039A54C /* LoginViewController.swift in Sources */,
@@ -774,7 +762,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				INFOPLIST_FILE = Grove/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kylebashour.Whereno;
@@ -790,7 +778,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 4;
 				INFOPLIST_FILE = Grove/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kylebashour.Whereno;
