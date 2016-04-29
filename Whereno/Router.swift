@@ -33,7 +33,9 @@ enum Router: URLRequestConvertible {
     }
 
     var URLRequest: NSMutableURLRequest {
-        return Alamofire.ParameterEncoding.URLEncodedInURL
+        let request = Alamofire.ParameterEncoding.URLEncodedInURL
             .encode(NSURLRequest(URL: URL), parameters: route.parameters).0
+        request.setValue("Token token=\"\(User.authenticatedUser?.authToken ?? "")\"", forHTTPHeaderField: "Authorization")
+        return request
     }
 }
