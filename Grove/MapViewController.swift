@@ -41,10 +41,12 @@ class MapViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
+        // If we're not logged in, present the login!
         if User.authenticatedUser == nil {
             presentViewController(R.storyboard.login.loginViewController()!, animated: true, completion: nil)
         }
 
+        // Make sure we load any locations that have been added to realm
         mapView.refreshMapView()
     }
 
@@ -55,6 +57,7 @@ class MapViewController: UIViewController {
         updateMapRegion(mapView.userLocation.coordinate)
     }
 
+    // Present the creation UI
     @IBAction func addLocationButtonTapped(sender: UIBarButtonItem) {
         let nav = R.storyboard.compose.initialViewController()!
         presentViewController(nav, animated: true, completion: nil)
@@ -107,6 +110,8 @@ class MapViewController: UIViewController {
     }
 
     func getLocationsForCurrentRegion() {
+
+        // Perform the fetch call, then simply refresh (the objects are added to realm)
         ObjectFetcher.sharedInstance.getLocationsForRegion(mapView.region) { [weak self] _ in
             self?.mapView.refreshMapView()
         }

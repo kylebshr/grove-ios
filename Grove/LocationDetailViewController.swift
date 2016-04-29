@@ -33,7 +33,6 @@ class LocationDetailViewController: UIViewController {
     // Implicitely unwrapped as they will be set before use (much like the outlets above)
     var location: HammockLocation!
     var originalHeaderHeight: CGFloat!
-
     var shouldShowTextInputView = true
 
     override var inputAccessoryView: UIView? {
@@ -91,6 +90,7 @@ class LocationDetailViewController: UIViewController {
         mapItem.openInMapsWithLaunchOptions([MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking])
     }
 
+
     // MARK: Helper functions
 
     /* 
@@ -110,15 +110,19 @@ class LocationDetailViewController: UIViewController {
     // The user tapped "Send" on the input text view
     @objc func textInputViewSendTapped() {
 
+        // Double check that we have valid text
         guard textInputView.text.stringByRemovingWhiteSpace() != "" else {
             showAlert("You need to add a comment, silly!", message: nil)
             return
         }
 
+        // Start the loading UI
         textInputView.setLoading(true)
 
+        // Post the comment
         ObjectFetcher.sharedInstance.postComment(textInputView.text, locationID: location.id) { [weak self] result in
 
+            // Stop the loading UI
             self?.textInputView.setLoading(false)
 
             switch result {
@@ -134,6 +138,7 @@ class LocationDetailViewController: UIViewController {
         }
     }
 
+    // For scrolling to comment after being posted
     func scrollToBottomComment() {
         let index = NSIndexPath(forRow: tableView.numberOfRowsInSection(1) - 1, inSection: 1)
         tableView.scrollToRowAtIndexPath(index, atScrollPosition: .None, animated: true)
