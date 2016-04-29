@@ -9,7 +9,7 @@
 import Foundation
 import Mapper
 
-private let iso8601Formatter: NSDateFormatter = {
+private let formatter: NSDateFormatter = {
     let formatter = NSDateFormatter()
     let locale = NSLocale(localeIdentifier: "en_US_POSIX")
     formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
@@ -20,7 +20,7 @@ private let iso8601Formatter: NSDateFormatter = {
 extension NSDate: Convertible {
 
     public static func fromMap(value: AnyObject?) throws -> NSDate {
-        guard let string = value as? String, date = iso8601Formatter.dateFromString(string) else {
+        guard let string = value as? String, date = formatter.dateFromString(string) else {
             throw MapperError.CustomError(field: nil, message: "Improperly formatter date")
         }
 

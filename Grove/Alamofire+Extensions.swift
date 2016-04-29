@@ -12,6 +12,7 @@ import Mapper
 
 extension Alamofire.Request {
 
+    // Lets us serialize any array of mappable objects
     public func responseCollection<T: Mappable>(completionHandler: Response<[T], NSError> -> Void) -> Self {
         let responseSerializer = ResponseSerializer<[T], NSError> { request, response, data, error in
 
@@ -35,6 +36,7 @@ extension Alamofire.Request {
         return response(responseSerializer: responseSerializer, completionHandler: completionHandler)
     }
 
+    // Lets us serialize any of mappable object
     public func responseObject<T: Mappable>(completionHandler: Response<T, NSError> -> Void) -> Self {
         let responseSerializer = ResponseSerializer<T, NSError> { request, response, data, error in
 
@@ -58,6 +60,7 @@ extension Alamofire.Request {
         return response(responseSerializer: responseSerializer, completionHandler: completionHandler)
     }
 
+    // Lets us easily serialize a url when posting cloudinary images
     public func cloudinaryURL(completionHandler: Response<String, NSError> -> Void) -> Self {
         let responseSerializer = ResponseSerializer<String, NSError> { request, response, data, error in
 
@@ -80,5 +83,4 @@ extension Alamofire.Request {
 
         return response(responseSerializer: responseSerializer, completionHandler: completionHandler)
     }
-
 }

@@ -143,13 +143,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		27006A901CCFF58500790B95 /* Other Helpers */ = {
+		27006A901CCFF58500790B95 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				27006A8E1CCFF58200790B95 /* Router.swift */,
 				27A923351CD129510020739D /* ObjectFetcher.swift */,
 			);
-			name = "Other Helpers";
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		27235A311CCE77E5006B1475 /* Views */ = {
@@ -192,7 +192,7 @@
 				27235A311CCE77E5006B1475 /* Views */,
 				27CCFB1B1CCFC0AE00399F35 /* Cells */,
 				27DECBF11CCD68C300A4BCD2 /* Models */,
-				27006A901CCFF58500790B95 /* Other Helpers */,
+				27006A901CCFF58500790B95 /* Networking */,
 				27DECBF81CCD843800A4BCD2 /* Extensions */,
 				27DECBEE1CCD687C00A4BCD2 /* Assets */,
 			);

@@ -10,6 +10,7 @@ import UIKit
 
 extension UIViewController {
 
+    // Show an alert easily with an "OK" button
     func showAlert(title: String?, message: String?, buttonTitle: String = "OK", handler: (UIAlertAction -> Void)? = nil) {
 
         let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert)
@@ -23,6 +24,7 @@ extension UIViewController {
         }
     }
 
+    // Show a network alert (used in several places)
     func showNetworkErrorAlert(handler: (UIAlertAction -> Void)? = nil) {
         showAlert("Communication Breakdown!", message: "We're having issues talking to our server right now 😁\n\nPlease check your network and try again later", handler: handler)
     }

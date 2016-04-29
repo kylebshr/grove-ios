@@ -10,6 +10,7 @@ import UIKit
 
 extension UIImage {
 
+    // Encode in base64 for posting to cloudinary
     func encode() -> String? {
 
         guard let imageData = UIImageJPEGRepresentation(self, 0.5) else {

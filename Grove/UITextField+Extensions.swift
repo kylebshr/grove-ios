@@ -12,6 +12,7 @@ private var kAssociationKeyNextField: UInt8 = 0
 
 extension UITextField {
 
+    // Allows us to easily make the next field the first responder in a long form (with shouldReturn)
     @IBOutlet var nextField: UIView? {
         get {
             return objc_getAssociatedObject(self, &kAssociationKeyNextField) as? UIView

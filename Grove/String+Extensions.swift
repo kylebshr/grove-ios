@@ -10,6 +10,7 @@ import Foundation
 
 extension String {
 
+    // Separate based on white space, then join with no whitespace
     func stringByRemovingWhiteSpace() -> String {
         let components = self.componentsSeparatedByCharactersInSet(.whitespaceAndNewlineCharacterSet())
         return components.joinWithSeparator("")

@@ -16,11 +16,11 @@ class ObjectFetcher {
     static let sharedInstance = ObjectFetcher()
 
     let realm = try! Realm()
-
     let baseURL = NSURL(string: "https://grove-api.herokuapp.com")!
     let imageURL = NSURL(string: "https://api.cloudinary.com/v1_1/whereno/image/upload")!
     let uploadPreset = "a5txdosc"
 
+    // We want to cancel this when we make a new one
     var currentLocationsRequest: Request?
 
     var authHeader: [String: String] {
@@ -87,6 +87,7 @@ class ObjectFetcher {
 
     func getLocationsForRegion(region: MKCoordinateRegion, completion: Result<[HammockLocation], NSError> -> Void) {
 
+        // Cancel this, as it could be called a whole lot as we pan
         currentLocationsRequest?.cancel()
 
         currentLocationsRequest = Alamofire.request(Router.hammockLocations(region))
