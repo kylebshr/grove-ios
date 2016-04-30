@@ -36,6 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PKHUD.sharedHUD.dimsBackground = false
 
         setUpRoutes()
+
+        // Temporary (maybe) until I figure out a better way to delete deleted locations
+        deleteOutDatedLocations()
         
         return true
     }
@@ -84,6 +87,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
 
             return true
+        }
+    }
+
+    func deleteOutDatedLocations() {
+        try! realm.write {
+            self.realm.delete(self.realm.objects(HammockLocation))
+            self.realm.delete(self.realm.objects(LocationComment))
         }
     }
 }
