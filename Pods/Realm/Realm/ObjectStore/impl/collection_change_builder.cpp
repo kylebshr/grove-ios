@@ -249,8 +249,13 @@ void CollectionChangeBuilder::move_over(size_t row_ndx, size_t last_row, bool tr
     REALM_ASSERT(row_ndx <= last_row);
     REALM_ASSERT(insertions.empty() || prev(insertions.end())->second - 1 <= last_row);
     REALM_ASSERT(modifications.empty() || prev(modifications.end())->second - 1 <= last_row);
-    if (track_moves && row_ndx == last_row) {
-        erase(row_ndx);
+
+    if (row_ndx == last_row) {
+        auto shifted_from = insertions.erase_or_unshift(row_ndx);
+        if (shifted_from != IndexSet::npos)
+            deletions.add_shifted(shifted_from);
+        modifications.remove(row_ndx);
+        m_move_mapping.erase(row_ndx);
         return;
     }
 
@@ -545,9 +550,9 @@ void calculate_moves_sorted(std::vector<RowInfo>& rows, CollectionChangeSet& cha
 CollectionChangeBuilder CollectionChangeBuilder::calculate(std::vector<size_t> const& prev_rows,
                                                            std::vector<size_t> const& next_rows,
                                                            std::function<bool (size_t)> row_did_change,
-                                                           bool sort)
+                                                           bool rows_are_in_table_order)
 {
-    REALM_ASSERT_DEBUG(sort || std::is_sorted(begin(next_rows), end(next_rows)));
+    REALM_ASSERT_DEBUG(!rows_are_in_table_order || std::is_sorted(begin(next_rows), end(next_rows)));
 
     CollectionChangeBuilder ret;
 
@@ -622,7 +627,7 @@ CollectionChangeBuilder CollectionChangeBuilder::calculate(std::vector<size_t> c
         }
     }
 
-    if (sort) {
+    if (!rows_are_in_table_order) {
         calculate_moves_sorted(new_rows, ret);
     }
     else {

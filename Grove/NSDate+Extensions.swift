@@ -11,7 +11,7 @@ import Mapper
 
 private let formatter: NSDateFormatter = {
     let formatter = NSDateFormatter()
-    let locale = NSLocale(localeIdentifier: "en_US_POSIX")
+    let locale = NSLocale(localeIdentifier: "en_US")
     formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
     formatter.locale = locale
     return formatter

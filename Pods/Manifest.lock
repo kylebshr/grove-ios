@@ -16,15 +16,15 @@ PODS:
   - R.swift.Library (2.0.0)
   - RBQFetchedResultsController (4.0.2):
     - Realm (>= 0.99.1)
-  - Realm (0.99.1):
-    - Realm/Headers (= 0.99.1)
-  - Realm/Headers (0.99.1)
+  - Realm (0.100.0):
+    - Realm/Headers (= 0.100.0)
+  - Realm/Headers (0.100.0)
   - RealmMapView (1.8):
     - ABFRealmMapView (>= 1.8)
     - RealmSwift (>= 0.98)
     - SwiftFetchedResultsController (>= 2.4.3)
-  - RealmSwift (0.99.1):
-    - Realm (= 0.99.1)
+  - RealmSwift (0.100.0):
+    - Realm (= 0.100.0)
   - SSKeychain (1.4.0)
   - SwiftFetchedResultsController (4.0.2):
     - RBQFetchedResultsController (>= 4.0.2)
@@ -57,9 +57,9 @@ SPEC CHECKSUMS:
   R.swift: efff131531b5cf142e28fd94957806ff71ccbcf2
   R.swift.Library: 9f4b2d12040daa1ffe336d8f7e1574f73721fd01
   RBQFetchedResultsController: 4e1066e12cb4d4a87ed1f86569a88ff80cfb288a
-  Realm: 522a0cc8e1f8755ee56d7dc16ca0fc380d045766
+  Realm: b13b548e712d28a66678970c45cd245ebb94ba3b
   RealmMapView: e7857bc757f54baf81133b24e91383da292dbf5e
-  RealmSwift: 1d9c4299ef5dbf575c5da09fc706ed726327cfa0
+  RealmSwift: 1bb0ba2ceaa06b65d740b4f91bfa06e3fd1b805c
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   SwiftFetchedResultsController: 7f9edc93250e6c803f0fa7bfedb8f3111155d4f5
 
