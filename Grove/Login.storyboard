@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="top" id="fG7-Fh-O0H"/>
                         <viewControllerLayoutGuide type="bottom" id="QlR-ER-AxJ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ePz-ww-pkf">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="ePz-ww-pkf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
