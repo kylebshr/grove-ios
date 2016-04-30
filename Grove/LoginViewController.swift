@@ -29,6 +29,8 @@ class LoginViewController: UIViewController {
         return (1...10).map { "login\($0)" }
     }()
 
+    var currentImageName: String = "login4"
+
     var timer: NSTimer?
 
 
@@ -106,7 +108,7 @@ class LoginViewController: UIViewController {
 
         UIView.transitionWithView(imageView, duration: fadeTime, options: .TransitionCrossDissolve,
             animations: { _ in
-                self.imageView.image = UIImage(named: self.imageNames[Int(rand()) % self.imageNames.count])
+                self.imageView.image = self.nextRandomImage()
             }, completion: nil
         )
     }
@@ -126,6 +128,12 @@ class LoginViewController: UIViewController {
         imageConstraints.forEach {
             $0.constant = CGFloat(rand() % constraintVariance)
         }
+    }
+
+    func nextRandomImage() -> UIImage? {
+        let filteredNames = imageNames.filter { $0 != currentImageName }
+        currentImageName = filteredNames[Int(rand()) % filteredNames.count]
+        return UIImage(named: currentImageName)
     }
 
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
