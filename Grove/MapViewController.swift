@@ -68,7 +68,7 @@ class MapViewController: UIViewController {
 
     // Create a region from coordinates and animate to that region
     func updateMapRegion(coordinate: CLLocationCoordinate2D) {
-        let region = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        let region = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.12, longitudeDelta: 0.12))
         mapView.setRegion(region, animated: true)
     }
 
