@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
     // MARK: Properties
 
     let locationManager = CLLocationManager()
-    let imageTime = 6.0
+    let imageTime = 4.5
     let fadeTime = 1.0
     let constraintVariance: Int32 = 50
     let imageNames: [String] = {
