@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>FooterText</key>
+			<string>This application uses artwork from the following parties:</string>
+			<key>Title</key>
+			<string>Acknowledgements</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>Various icons from http://icons8.com</string>
+			<key>Title</key>
+			<string>Icons 8</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
+			<string>By Виталий Плут from the Noun Project</string>
+			<key>Title</key>
+			<string>&quot;the rest&quot;</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+	</array>
+	<key>StringsTable</key>
+	<string>Other Credits</string>
+	<key>Title</key>
+	<string>Other Credits</string>
+</dict>
+</plist>
