@@ -203,9 +203,11 @@ extension MapViewController: UIViewControllerPreviewingDelegate {
         // We only respond if the sourceView is an annotation view, and has underlying HammockLocations
         if let tappedView = previewingContext.sourceView as? ABFClusterAnnotationView, locations = hammockLocationsForAnnotationView(tappedView) {
 
+            let calloutHeight: CGFloat = 64
+
             // Set a source rect that includes the callout view
             let viewWidth = view.frame.width
-            let frame = CGRect(x: -viewWidth / 2, y: -63, width: viewWidth, height: 88)
+            let frame = CGRect(x: -viewWidth / 2, y: -calloutHeight, width: viewWidth, height: calloutHeight + tappedView.frame.height)
             previewingContext.sourceRect = frame
 
             // Return either a detail or list view
