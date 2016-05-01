@@ -15,35 +15,53 @@
                         <viewControllerLayoutGuide type="bottom" id="QlR-ER-AxJ"/>
                     </layoutGuides>
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="ePz-ww-pkf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login4" translatesAutoresizingMaskIntoConstraints="NO" id="qcL-Te-g8m">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UG0-zA-afe">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="t9w-ec-RPt">
-                                <rect key="frame" x="20" y="100" width="374" height="586"/>
+                                <rect key="frame" x="20" y="80" width="560" height="470"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" image="grove-icon" translatesAutoresizingMaskIntoConstraints="NO" id="1Eo-OM-wh6">
-                                        <rect key="frame" x="66" y="0.0" width="243" height="155"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="grove-icon" translatesAutoresizingMaskIntoConstraints="NO" id="1Eo-OM-wh6">
+                                        <rect key="frame" x="159" y="0.0" width="243" height="155"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="Great Hammock Locations Nearby" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9lt-B7-r5m">
-                                        <rect key="frame" x="51" y="175" width="272" height="86"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="NO" text="Great Hammock Locations Nearby" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="9lt-B7-r5m">
+                                        <rect key="frame" x="14" y="175" width="533" height="43"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <rect key="frame" x="14" y="175" width="533" height="43"/>
+                                        </variation>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="45" y="175" width="272" height="86"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="9" y="175" width="272" height="86"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
+                                            <rect key="frame" x="114" y="175" width="533" height="43"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="9" y="175" width="272" height="86"/>
+                                        </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0R-gM-vns">
-                                        <rect key="frame" x="56" y="541" width="263" height="45"/>
+                                        <rect key="frame" x="149" y="425" width="263" height="45"/>
                                         <accessibility key="accessibilityConfiguration" label="Login with Facebook"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="facebook-login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="widthClass=compact" misplaced="YES">
+                                            <rect key="frame" x="49" y="445" width="263" height="45"/>
+                                        </variation>
                                         <connections>
                                             <action selector="facebookButtonTapped:" destination="cYL-GU-1dL" eventType="touchUpInside" id="fPO-Qv-879"/>
                                         </connections>
@@ -52,6 +70,9 @@
                                 <constraints>
                                     <constraint firstItem="9lt-B7-r5m" firstAttribute="top" secondItem="1Eo-OM-wh6" secondAttribute="bottom" constant="20" id="S4D-Sw-I63"/>
                                 </constraints>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="80" width="360" height="490"/>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -63,7 +84,9 @@
                             <constraint firstItem="qcL-Te-g8m" firstAttribute="trailing" secondItem="ePz-ww-pkf" secondAttribute="trailing" id="IWp-th-M6o"/>
                             <constraint firstItem="QlR-ER-AxJ" firstAttribute="top" secondItem="UG0-zA-afe" secondAttribute="bottom" id="JBk-6C-HRG"/>
                             <constraint firstItem="qcL-Te-g8m" firstAttribute="bottom" secondItem="QlR-ER-AxJ" secondAttribute="top" id="JQ1-F8-bTr"/>
-                            <constraint firstItem="QlR-ER-AxJ" firstAttribute="top" secondItem="t9w-ec-RPt" secondAttribute="bottom" constant="50" id="Oxo-lg-xUg"/>
+                            <constraint firstItem="QlR-ER-AxJ" firstAttribute="top" secondItem="t9w-ec-RPt" secondAttribute="bottom" constant="50" id="Oxo-lg-xUg">
+                                <variation key="heightClass=compact" constant="30"/>
+                            </constraint>
                             <constraint firstItem="UG0-zA-afe" firstAttribute="leading" secondItem="ePz-ww-pkf" secondAttribute="leading" id="Rnm-Kf-dku"/>
                             <constraint firstAttribute="top" secondItem="qcL-Te-g8m" secondAttribute="top" id="SBT-zd-i2z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="t9w-ec-RPt" secondAttribute="trailing" id="WuX-qb-DLD"/>
@@ -72,7 +95,6 @@
                             <constraint firstItem="t9w-ec-RPt" firstAttribute="leading" secondItem="ePz-ww-pkf" secondAttribute="leadingMargin" id="scW-gp-7Lk"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="imageView" destination="qcL-Te-g8m" id="gMf-rW-R3e"/>
                         <outletCollection property="imageConstraints" destination="ngi-Zb-Fxo" collectionClass="NSMutableArray" id="MI9-9j-8Ip"/>
