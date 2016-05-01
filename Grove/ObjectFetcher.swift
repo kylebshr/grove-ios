@@ -45,8 +45,19 @@ class ObjectFetcher {
         }
     }
 
-    func uploadImage(image: String, completion: Result<String, NSError> -> Void) {
-        Alamofire.request(Router.imagePost(image)).cloudinaryURL { (response) in
+    func uploadImage(image: UIImage, completion: Result<String, NSError> -> Void) {
+
+        guard let imageData = image.encode() else {
+            let error = NSError(
+                domain: "com.kylebashour.Whereno",
+                code: -1,
+                userInfo: [NSLocalizedFailureReasonErrorKey: "Failed to encode image to string"]
+            )
+            completion(.Failure(error))
+            return
+        }
+
+        Alamofire.request(Router.imagePost(imageData)).cloudinaryURL { (response) in
             completion(response.result)
         }
     }

@@ -112,7 +112,7 @@ class AddLocationViewController: UITableViewController {
             else {
 
                 // We didn't upload it yet, so encode
-                guard let imageData = self.imageView.image?.encode() else {
+                guard let image = self.imageView.image else {
                     self.showAlert("Please add a photo 🖼", message: nil, handler: nil)
                     return
                 }
@@ -120,7 +120,7 @@ class AddLocationViewController: UITableViewController {
                 HUD.show(.LabeledProgress(title: nil, subtitle: "Adding Location"))
 
                 // Upload and post the location
-                ObjectFetcher.sharedInstance.uploadImage(imageData) { [weak self] result in
+                ObjectFetcher.sharedInstance.uploadImage(image) { [weak self] result in
                     switch result {
                     case .Success(let url):
                         self?.uploadedImageURL = url
@@ -221,12 +221,11 @@ extension AddLocationViewController: UIImagePickerControllerDelegate {
         // Set the image
         imageView.image = image
 
-        if let image = image.encode() {
-            ObjectFetcher.sharedInstance.uploadImage(image) { [weak self] result in
-                switch result {
-                case .Success(let url): self?.uploadedImageURL = url
-                case .Failure: break
-                }
+        // Upload while they write the post
+        ObjectFetcher.sharedInstance.uploadImage(image) { [weak self] result in
+            switch result {
+            case .Success(let url): self?.uploadedImageURL = url
+            case .Failure: break
             }
         }
 
