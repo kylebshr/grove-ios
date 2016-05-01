@@ -16,6 +16,8 @@ class MapTitleView: UIView {
     @IBOutlet private var titleHeightConstraint: NSLayoutConstraint!
     @IBOutlet private var compactTitleHeightConstraint: NSLayoutConstraint!
 
+    private var hideBlock: Async?
+
     override var tintColor: UIColor! {
         get {
             return titleLabel.textColor
@@ -43,16 +45,12 @@ class MapTitleView: UIView {
 
     func showSubTitleWithText(text: String) {
 
+        self.hideBlock?.cancel()
+
         self.subTitleLabel.text = text
 
-        UIView.animateWithDuration(0.33, delay: 0.1, options: [],
-            animations: {
-                self.subTitleLabel.alpha = 1
-            },
-            completion: nil
-        )
-
         UIView.animateWithDuration(0.33) {
+            self.subTitleLabel.alpha = 1
             self.titleHeightConstraint.active = false
             self.compactTitleHeightConstraint.active = true
             self.layoutIfNeeded()
@@ -61,16 +59,16 @@ class MapTitleView: UIView {
 
     func hideSubTitle() {
 
-        Async.main(after: 0.5) {
+        hideBlock = Async.main(after: 0.6) {
 
-            UIView.animateWithDuration(0.33, delay: 0.1, options: [],
+            UIView.animateWithDuration(0.33,
                 animations: {
                     self.subTitleLabel.alpha = 0
                     self.compactTitleHeightConstraint.active = false
                     self.titleHeightConstraint.active = true
                     self.layoutIfNeeded()
                 },
-                completion: { _ in
+                completion: { finished in
                     self.subTitleLabel.text = ""
                 }
             )
