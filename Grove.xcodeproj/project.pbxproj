@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		27006A8F1CCFF58200790B95 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27006A8E1CCFF58200790B95 /* Router.swift */; };
+		270327991CD597F900F3BA0B /* MapTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270327981CD597F900F3BA0B /* MapTitleView.xib */; };
+		2703279B1CD5980500F3BA0B /* MapTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2703279A1CD5980500F3BA0B /* MapTitleView.swift */; };
 		2722FB6D1CD3F7B700F4708F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2722FB6C1CD3F7B700F4708F /* Settings.bundle */; };
 		27235A2C1CCE5B96006B1475 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A2B1CCE5B96006B1475 /* R.generated.swift */; };
 		27235A2E1CCE5BAA006B1475 /* LocationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A2D1CCE5BAA006B1475 /* LocationDetailViewController.swift */; };
@@ -68,6 +70,8 @@
 		0056E4470DD35EA7349FB58D /* Pods-GroveTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroveTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GroveTests/Pods-GroveTests.debug.xcconfig"; sourceTree = "<group>"; };
 		20453D8DF56CC3C266883235 /* Pods-Grove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Grove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Grove/Pods-Grove.debug.xcconfig"; sourceTree = "<group>"; };
 		27006A8E1CCFF58200790B95 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		270327981CD597F900F3BA0B /* MapTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapTitleView.xib; sourceTree = "<group>"; };
+		2703279A1CD5980500F3BA0B /* MapTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTitleView.swift; sourceTree = "<group>"; };
 		2722FB6C1CD3F7B700F4708F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		27235A2B1CCE5B96006B1475 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		27235A2D1CCE5BAA006B1475 /* LocationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDetailViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 			children = (
 				27D533A41CCEC50B007FC6A1 /* TextInputView.xib */,
 				27D533A61CCEC516007FC6A1 /* TextInputView.swift */,
+				270327981CD597F900F3BA0B /* MapTitleView.xib */,
+				2703279A1CD5980500F3BA0B /* MapTitleView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -427,6 +433,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				270327991CD597F900F3BA0B /* MapTitleView.xib in Resources */,
 				2722FB6D1CD3F7B700F4708F /* Settings.bundle in Resources */,
 				27B345D01CCD669A005BA871 /* LaunchScreen.storyboard in Resources */,
 				27B345CD1CCD669A005BA871 /* Assets.xcassets in Resources */,
@@ -618,6 +625,7 @@
 				273000731CD3046100DA6DB5 /* AppDelegate.swift in Sources */,
 				2750DE0A1CCFDEEE002F9C72 /* AddLocationViewController.swift in Sources */,
 				27CCFB181CCFBF7B00399F35 /* LocationListViewController.swift in Sources */,
+				2703279B1CD5980500F3BA0B /* MapTitleView.swift in Sources */,
 				27235A331CCE78F2006B1475 /* DetailHeaderCell.swift in Sources */,
 				27235A2E1CCE5BAA006B1475 /* LocationDetailViewController.swift in Sources */,
 				27DECBF01CCD68B500A4BCD2 /* HammockLocation.swift in Sources */,

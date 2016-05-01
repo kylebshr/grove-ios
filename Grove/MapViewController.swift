@@ -24,6 +24,7 @@ class MapViewController: UIViewController {
     let geocoder = CLGeocoder()
     let annotationViewReuseId = "AnnotationViewReuseId"
     let realm = try! Realm()
+    let titleView = R.nib.mapTitleView.firstView(owner: nil)!
 
     var didShowInitialLocation = false
 
@@ -32,6 +33,10 @@ class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        navigationItem.titleView = titleView
+        titleView.title = "Locating..."
+        titleView.tintColor = .whiteColor()
 
         // Zooms into random cluster unless we set to false
         mapView.zoomOnFirstRefresh = false
@@ -79,11 +84,11 @@ class MapViewController: UIViewController {
             // Placemarks and UI updates should be worked with on main thread
             Async.main {
                 guard let locality = placemarks?.first?.locality else {
-                    self?.navigationItem.title = "Current Location"
+                    self?.titleView.title = "Current Location"
                     return
                 }
 
-                self?.navigationItem.title = locality
+                self?.titleView.title = locality
             }
         }
     }
@@ -111,9 +116,12 @@ class MapViewController: UIViewController {
 
     func getLocationsForCurrentRegion() {
 
+        titleView.showSubTitleWithText("Updating")
+
         // Perform the fetch call, then simply refresh (the objects are added to realm)
         ObjectFetcher.sharedInstance.getLocationsForRegion(mapView.region) { [weak self] _ in
             self?.mapView.refreshMapView()
+            self?.titleView.hideSubTitle()
         }
     }
 }
