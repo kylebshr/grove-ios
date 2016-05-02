@@ -19,10 +19,10 @@
                     </view>
                     <blurEffect style="extraLight"/>
                 </visualEffectView>
-                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4wo-ss-hej">
+                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4wo-ss-hej" customClass="BNRDynamicTypeManagedTextField">
                     <rect key="frame" x="8" y="8" width="310" height="30"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWO-Vi-jh7">
@@ -38,11 +38,11 @@
                         <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Iiy-Qy-TrL">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Iiy-Qy-TrL" customClass="BNRDynamicTypeManagedTextView">
                     <rect key="frame" x="8" y="4" width="310" height="38"/>
                     <color key="tintColor" red="0.050980392159999999" green="0.58039215690000001" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200/200" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnZ-Yc-8g7">
@@ -85,6 +85,7 @@
                 <outlet property="activityIndicator" destination="6ce-jL-v4c" id="7La-7v-Sct"/>
                 <outlet property="countLabel" destination="WnZ-Yc-8g7" id="IZl-lJ-Ud7"/>
                 <outlet property="sendButton" destination="rWO-Vi-jh7" id="7yt-S5-JrX"/>
+                <outlet property="sendButtonHeightConstraint" destination="Tpw-Tn-Dru" id="7pe-hL-MGe"/>
                 <outlet property="textField" destination="4wo-ss-hej" id="MaT-WJ-iIX"/>
                 <outlet property="textView" destination="Iiy-Qy-TrL" id="cTU-4b-BHM"/>
             </connections>

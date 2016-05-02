@@ -14,6 +14,7 @@ target 'Grove' do
     pod 'SSKeychain'
     pod 'PKHUD'
     pod 'INTULocationManager'
+    pod 'BNRDynamicTypeManager'
 end
 
 target 'GroveTests' do

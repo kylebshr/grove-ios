@@ -18,6 +18,7 @@ class TextInputView: UIView, UITextViewDelegate {
     @IBOutlet private var textView: UITextView!
     @IBOutlet private var countLabel: UILabel!
     @IBOutlet private var sendButton: UIButton!
+    @IBOutlet weak var sendButtonHeightConstraint: NSLayoutConstraint!
     @IBOutlet private var activityIndicator: UIActivityIndicatorView!
 
 
@@ -27,6 +28,7 @@ class TextInputView: UIView, UITextViewDelegate {
     private let numberOfCharactersAllowed = 180
     private var loading = false
     private var loadingIndicatorBlock: Async?
+    private let autoLayoutEdgeHeight: CGFloat = 8
 
     var text: String {
         get {
@@ -65,13 +67,23 @@ class TextInputView: UIView, UITextViewDelegate {
         separator.backgroundColor = UIColor(hex: "#D0D0D0")
     }
 
+    override func updateConstraints() {
+
+        let oldText = textView.text
+
+        textView.text = "Aa"
+        sendButtonHeightConstraint.constant = textViewHeight()
+        textView.text = oldText
+
+        super.updateConstraints()
+    }
+
 
     // MARK: Helpers
 
     // Calculate a size based on the textview
     override func intrinsicContentSize() -> CGSize {
-        let textSize = self.textView.sizeThatFits(CGSize(width: textView.bounds.width, height: CGFloat.max))
-        return CGSize(width: self.bounds.width, height: textSize.height + 8)
+        return CGSize(width: self.bounds.width, height: textViewHeight())
     }
 
     // Pass forward a target for the send button
@@ -93,6 +105,9 @@ class TextInputView: UIView, UITextViewDelegate {
         }
     }
 
+    func textViewHeight() -> CGFloat {
+        return textView.sizeThatFits(CGSize(width: textView.bounds.width, height: CGFloat.max)).height + autoLayoutEdgeHeight
+    }
 
     // MARK: UITextViewDelegate
 
