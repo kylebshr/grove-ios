@@ -15,6 +15,7 @@ target 'Grove' do
     pod 'PKHUD'
     pod 'INTULocationManager'
     pod 'BNRDynamicTypeManager'
+    pod 'SwiftyBeaver'
 end
 
 target 'GroveTests' do

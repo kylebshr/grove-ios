@@ -15,6 +15,9 @@ import Alamofire
 import AlamofireNetworkActivityIndicator
 import JLRoutes
 import PKHUD
+import SwiftyBeaver
+
+let log = SwiftyBeaver.self
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -36,6 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PKHUD.sharedHUD.dimsBackground = false
 
         setUpRoutes()
+        setUpLogger()
 
         // Temporary (maybe) until I figure out a better way to delete deleted locations
         deleteOutDatedLocations()
@@ -49,14 +53,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // We only want to present if there's a user and a view controller to present on
         if let rootViewController = window?.rootViewController where User.authenticatedUser != nil {
             if shortcutItem.type == "come.kylebashour.Whereno.AddLocation" {
+
+                log.debug("Presenting compose from 3D Touch action")
+
                 let vc = R.storyboard.compose.initialViewController()!
                 rootViewController.presentViewController(vc, animated: false, completion: nil)
             }
         }
     }
 
+    func setUpLogger() {
+        log.addDestination(ConsoleDestination())
+        log.debug("Logging to console enabled")
+    }
+
     // Handle routing (login)
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
+
+        log.debug("Handling openURL with JLRoutes")
+
         return JLRoutes.routeURL(url)
     }
 
@@ -80,10 +95,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
                 let notification = NSNotification(name: AppDelegate.loginNotification, object: user)
                 NSNotificationCenter.defaultCenter().postNotification(notification)
+
+                log.debug("Signed up or logged in a user")
             }
             else {
                 let notification = NSNotification(name: AppDelegate.loginFailedNotification, object: nil)
                 NSNotificationCenter.defaultCenter().postNotification(notification)
+
+                log.error("Received signup or login route, but failed to parse a valid user")
             }
 
             return true

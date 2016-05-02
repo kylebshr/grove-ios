@@ -35,6 +35,7 @@ PODS:
   - SwiftFetchedResultsController (4.0.2):
     - RBQFetchedResultsController (>= 4.0.2)
     - RealmSwift (>= 0.99.1)
+  - SwiftyBeaver (0.5.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -50,6 +51,7 @@ DEPENDENCIES:
   - RealmMapView
   - RealmSwift
   - SSKeychain
+  - SwiftyBeaver
 
 SPEC CHECKSUMS:
   ABFRealmMapView: b440d11a5666a4575847a8e02313e57c370a4d38
@@ -70,7 +72,8 @@ SPEC CHECKSUMS:
   RealmSwift: 1bb0ba2ceaa06b65d740b4f91bfa06e3fd1b805c
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   SwiftFetchedResultsController: 7f9edc93250e6c803f0fa7bfedb8f3111155d4f5
+  SwiftyBeaver: 35438d71982a8d569be3d8b79332e2fd17991cbf
 
-PODFILE CHECKSUM: 8bdf3c02f40222604b577a3f6e4e9422a9dc75a2
+PODFILE CHECKSUM: aa9eb5e7f028b75c9f0ca4dbf7f46ae6353d02b1
 
 COCOAPODS: 1.0.0.beta.8
