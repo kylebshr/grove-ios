@@ -39,7 +39,7 @@
                     </state>
                 </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Iiy-Qy-TrL" customClass="BNRDynamicTypeManagedTextView">
-                    <rect key="frame" x="8" y="4" width="310" height="38"/>
+                    <rect key="frame" x="10" y="4" width="306" height="38"/>
                     <color key="tintColor" red="0.050980392159999999" green="0.58039215690000001" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -65,7 +65,7 @@
                 <constraint firstAttribute="trailing" secondItem="WnZ-Yc-8g7" secondAttribute="trailing" constant="8" id="Sad-rG-0Ib"/>
                 <constraint firstAttribute="bottom" secondItem="n55-vn-Bb2" secondAttribute="bottom" id="XHh-aS-oAo"/>
                 <constraint firstItem="6ce-jL-v4c" firstAttribute="centerY" secondItem="rWO-Vi-jh7" secondAttribute="centerY" id="ac9-gc-F3u"/>
-                <constraint firstItem="rWO-Vi-jh7" firstAttribute="leading" secondItem="Iiy-Qy-TrL" secondAttribute="trailing" constant="8" id="dFa-0f-DTr"/>
+                <constraint firstItem="rWO-Vi-jh7" firstAttribute="leading" secondItem="Iiy-Qy-TrL" secondAttribute="trailing" constant="10" id="dFa-0f-DTr"/>
                 <constraint firstItem="4wo-ss-hej" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="e2c-Xc-d5E"/>
                 <constraint firstItem="rWO-Vi-jh7" firstAttribute="leading" secondItem="4wo-ss-hej" secondAttribute="trailing" constant="8" id="gS2-if-WWq"/>
                 <constraint firstItem="n55-vn-Bb2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hFi-8K-k0g"/>
@@ -76,7 +76,7 @@
                 <constraint firstAttribute="trailing" secondItem="n55-vn-Bb2" secondAttribute="trailing" id="oxA-os-5r2"/>
                 <constraint firstAttribute="bottom" secondItem="rWO-Vi-jh7" secondAttribute="bottom" id="q2T-no-WA2"/>
                 <constraint firstItem="WnZ-Yc-8g7" firstAttribute="leading" secondItem="4wo-ss-hej" secondAttribute="trailing" constant="8" id="uHl-1f-a98"/>
-                <constraint firstItem="Iiy-Qy-TrL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="z6T-Go-Ifn"/>
+                <constraint firstItem="Iiy-Qy-TrL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="z6T-Go-Ifn"/>
                 <constraint firstItem="rWO-Vi-jh7" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" priority="510" id="zXi-K0-BQt"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
