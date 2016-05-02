@@ -203,12 +203,26 @@ extension MapViewController: UIViewControllerPreviewingDelegate {
         // We only respond if the sourceView is an annotation view, and has underlying HammockLocations
         if let tappedView = previewingContext.sourceView as? ABFClusterAnnotationView, locations = hammockLocationsForAnnotationView(tappedView) {
 
-            let calloutHeight: CGFloat = 64
 
-            // Set a source rect that includes the callout view
-            let viewWidth = view.frame.width
-            let frame = CGRect(x: -viewWidth / 2, y: -calloutHeight, width: viewWidth, height: calloutHeight + tappedView.frame.height)
-            previewingContext.sourceRect = frame
+            // Look for a popover, and include it in the rect if it exists
+            var popover: UIView?
+            for view in tappedView.subviews {
+                for view in view.subviews {
+                    for view in view.subviews {
+                        popover = view
+                    }
+                }
+            }
+
+            // Add the popover to the 3D Touch rect
+            if let popover = popover, frame = popover.superview?.convertRect(popover.frame, toView: tappedView) {
+                previewingContext.sourceRect = CGRect(
+                    x: frame.origin.x,
+                    y: frame.origin.y,
+                    width: frame.width,
+                    height: frame.height + tappedView.frame.height
+                )
+            }
 
             // Return either a detail or list view
             if locations.count == 1 {
