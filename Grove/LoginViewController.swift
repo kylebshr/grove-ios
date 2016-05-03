@@ -43,8 +43,6 @@ class LoginViewController: UIViewController {
         requestLocationPermissionIfNeeded()
         setUpNotificationCenter()
         setUpCycleImage()
-
-        log.info("Presenting login view")
     }
 
     override func viewDidAppear(animated: Bool) {
