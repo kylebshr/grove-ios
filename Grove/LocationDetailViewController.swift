@@ -17,12 +17,11 @@ class LocationDetailViewController: UIViewController {
 
     // MARK: Outlets
 
-    @IBOutlet weak var capacityLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var imageDimmingView: UIView!
     @IBOutlet var imageHeightConstraint: NSLayoutConstraint!
     @IBOutlet var tableView: UITableView!
-
+    @IBOutlet var titleLabel: UILabel!
 
     // MARK: Properties
 
@@ -59,7 +58,7 @@ class LocationDetailViewController: UIViewController {
         // Configure the TextInputView action
         textInputView.addTarget(self, action: #selector(textInputViewSendTapped))
 
-        navigationItem.title = location.title
+        titleLabel.text = location.title
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -100,7 +99,7 @@ class LocationDetailViewController: UIViewController {
         alert.addAction(directions)
         alert.addAction(cancel)
 
-        presentViewController(alert, animated: true, completion: nil)
+        alert.presentOverKeyboard(true, completion: nil)
     }
 
     // MARK: Helper functions
@@ -118,7 +117,7 @@ class LocationDetailViewController: UIViewController {
         alert.addAction(other)
         alert.addAction(cancel)
 
-        presentViewController(alert, animated: true, completion: nil)
+        alert.presentOverKeyboard(true, completion: nil)
     }
 
     func openLocationInMaps() {

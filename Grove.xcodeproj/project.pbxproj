@@ -44,6 +44,8 @@
 		27DECBF01CCD68B500A4BCD2 /* HammockLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DECBEF1CCD68B500A4BCD2 /* HammockLocation.swift */; };
 		27DECBF51CCD7DDA00A4BCD2 /* Knoxville.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 27DECBF41CCD7DDA00A4BCD2 /* Knoxville.gpx */; };
 		27DECBFA1CCD901D00A4BCD2 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DECBF91CCD901D00A4BCD2 /* UITextField+Extensions.swift */; };
+		27FF77221CD949EB0051787D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF77211CD949EB0051787D /* GradientView.swift */; };
+		27FF77241CD950CB0051787D /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF77231CD950CB0051787D /* UIAlertController+Extensions.swift */; };
 		3B722447C3CDB0FFB1B5BF0B /* Pods_GroveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC078A32BBF94C87DE98670 /* Pods_GroveTests.framework */; };
 		3DC093D76DCBA63B4B5F625C /* Pods_Grove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDCE2D774BD42C3EA6C89DE /* Pods_Grove.framework */; };
 		B33EC7B266EBE7D02EF8DEDA /* Pods_GroveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C670B4F585C8C56F8E2468B1 /* Pods_GroveUITests.framework */; };
@@ -112,6 +114,8 @@
 		27DECBEF1CCD68B500A4BCD2 /* HammockLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HammockLocation.swift; sourceTree = "<group>"; };
 		27DECBF41CCD7DDA00A4BCD2 /* Knoxville.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Knoxville.gpx; sourceTree = "<group>"; };
 		27DECBF91CCD901D00A4BCD2 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		27FF77211CD949EB0051787D /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		27FF77231CD950CB0051787D /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
 		4F9348406D02EB6563C67B51 /* Pods-GroveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GroveUITests/Pods-GroveUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4FC078A32BBF94C87DE98670 /* Pods_GroveTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GroveTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CDCE2D774BD42C3EA6C89DE /* Pods_Grove.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Grove.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +169,7 @@
 				27D533A61CCEC516007FC6A1 /* TextInputView.swift */,
 				270327981CD597F900F3BA0B /* MapTitleView.xib */,
 				2703279A1CD5980500F3BA0B /* MapTitleView.swift */,
+				27FF77211CD949EB0051787D /* GradientView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -292,6 +297,7 @@
 				27A923291CD032CE0020739D /* String+Extensions.swift */,
 				27742DBF1CD1CC6C0039A54C /* Double+Extensions.swift */,
 				27A923371CD135750020739D /* UIViewController+Extensions.swift */,
+				27FF77231CD950CB0051787D /* UIAlertController+Extensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -611,6 +617,7 @@
 				27B345C81CCD669A005BA871 /* MapViewController.swift in Sources */,
 				27A923341CD127F80020739D /* UIImage+Extensions.swift in Sources */,
 				27A923361CD129510020739D /* ObjectFetcher.swift in Sources */,
+				27FF77221CD949EB0051787D /* GradientView.swift in Sources */,
 				27251B7A1CCECF3800FD4FC9 /* UIColor+Extensions.swift in Sources */,
 				27006A8F1CCFF58200790B95 /* Router.swift in Sources */,
 				27D533A71CCEC516007FC6A1 /* TextInputView.swift in Sources */,
@@ -621,6 +628,7 @@
 				27235A351CCE78FD006B1475 /* DetailCommentCell.swift in Sources */,
 				27235A301CCE67D9006B1475 /* LocationComment.swift in Sources */,
 				27235A2C1CCE5B96006B1475 /* R.generated.swift in Sources */,
+				27FF77241CD950CB0051787D /* UIAlertController+Extensions.swift in Sources */,
 				27A9232A1CD032CE0020739D /* String+Extensions.swift in Sources */,
 				273000731CD3046100DA6DB5 /* AppDelegate.swift in Sources */,
 				2750DE0A1CCFDEEE002F9C72 /* AddLocationViewController.swift in Sources */,
