@@ -78,7 +78,50 @@ class LocationDetailViewController: UIViewController {
 
     // MARK: IBActions
 
-    @IBAction func openLocationInMaps() {
+
+    @IBAction func openMenuTapped(sender: UIBarButtonItem) {
+
+        let alert = UIAlertController(title: "Options", message: nil, preferredStyle: .ActionSheet)
+        let logOut = UIAlertAction(title: "Report Location", style: .Destructive) { [weak self] _ in
+            log.debug("Tapped report location")
+            self?.presentReportSheet()
+        }
+        let favorite = UIAlertAction(title: "Favorite", style: .Default) { _ in
+            log.debug("Tapped favorite")
+        }
+        let directions = UIAlertAction(title: "Get Directions", style: .Default) { [weak self] _ in
+            log.debug("Tapped directions")
+            self?.openLocationInMaps()
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+
+        alert.addAction(logOut)
+        alert.addAction(favorite)
+        alert.addAction(directions)
+        alert.addAction(cancel)
+
+        presentViewController(alert, animated: true, completion: nil)
+    }
+
+    // MARK: Helper functions
+
+    func presentReportSheet() {
+
+        let alert = UIAlertController(title: "Report", message: "Please select a reason for reporting", preferredStyle: .ActionSheet)
+        let innapropiate = UIAlertAction(title: "Innapropiate Content", style: .Default, handler: nil)
+        let badLocation = UIAlertAction(title: "Unable to Hammock Here", style: .Default, handler: nil)
+        let other = UIAlertAction(title: "Other Reason", style: .Default, handler: nil)
+        let cancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+
+        alert.addAction(innapropiate)
+        alert.addAction(badLocation)
+        alert.addAction(other)
+        alert.addAction(cancel)
+
+        presentViewController(alert, animated: true, completion: nil)
+    }
+
+    func openLocationInMaps() {
 
         // Create the map item with the coordinates of the location
         let coordinate = CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)
@@ -89,9 +132,6 @@ class LocationDetailViewController: UIViewController {
         mapItem.name = location.title
         mapItem.openInMapsWithLaunchOptions([MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeWalking])
     }
-
-
-    // MARK: Helper functions
 
     /* 
      Since we're not using a UITableViewController, we need to manually 

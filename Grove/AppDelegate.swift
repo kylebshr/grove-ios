@@ -65,6 +65,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func setUpLogger() {
         log.addDestination(ConsoleDestination())
         log.debug("Logging to console enabled")
+
+//        let platform = SBPlatformDestination(appID: "", appSecret: "", encryptionKey: "")
+//        log.addDestination(platform)
+//        log.debug("Logging to cloud enabled")
     }
 
     // Handle routing (login)

@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Image..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wys-kB-zTQ">
-                                <rect key="frame" x="0.0" y="226" width="600" height="18"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="180"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -214,6 +214,7 @@ Must be a nice quiet place!</string>
                             <constraint firstItem="icZ-S3-4U1" firstAttribute="leading" secondItem="bnS-ME-ujK" secondAttribute="leading" id="IBP-4c-R9F"/>
                             <constraint firstItem="lHM-xE-JmI" firstAttribute="top" secondItem="bmC-Ju-PSl" secondAttribute="bottom" id="Syk-aY-STY"/>
                             <constraint firstItem="lHM-xE-JmI" firstAttribute="leading" secondItem="bnS-ME-ujK" secondAttribute="leading" id="ggd-9C-frJ"/>
+                            <constraint firstItem="wys-kB-zTQ" firstAttribute="top" secondItem="icZ-S3-4U1" secondAttribute="top" id="i6z-nU-qUF"/>
                             <constraint firstAttribute="trailing" secondItem="icZ-S3-4U1" secondAttribute="trailing" id="iOC-vB-Quk"/>
                             <constraint firstItem="icZ-S3-4U1" firstAttribute="top" secondItem="bmC-Ju-PSl" secondAttribute="bottom" id="oJz-wU-4fX"/>
                             <constraint firstItem="Eo2-4Y-NCz" firstAttribute="bottom" secondItem="icZ-S3-4U1" secondAttribute="bottom" id="qmo-ZZ-JNa"/>
@@ -227,9 +228,9 @@ Must be a nice quiet place!</string>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="wJV-dI-6WC">
-                        <barButtonItem key="rightBarButtonItem" image="map" id="Jg3-eA-IWz">
+                        <barButtonItem key="rightBarButtonItem" image="menu" id="Jg3-eA-IWz">
                             <connections>
-                                <action selector="openLocationInMaps" destination="92n-4j-syC" id="q4E-AR-fq7"/>
+                                <action selector="openMenuTapped:" destination="92n-4j-syC" id="0bX-KT-Sun"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -338,7 +339,7 @@ Must be a nice quiet place!</string>
     </scenes>
     <resources>
         <image name="location-arrow" width="22" height="22"/>
-        <image name="map" width="22" height="22"/>
+        <image name="menu" width="22" height="6"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>
