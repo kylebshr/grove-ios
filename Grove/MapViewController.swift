@@ -238,7 +238,7 @@ extension MapViewController: UIViewControllerPreviewingDelegate {
                 let vc = R.storyboard.map.locationListViewController()!
 
                 // Set a nice preferred content size to only be as tall as needed
-                let size = CGSize(width: view.frame.width, height: min(CGFloat(locations.count * 140) - 5, mapView.frame.height))
+                let size = CGSize(width: view.frame.width, height: min(CGFloat(locations.count * 140) - 5, mapView.frame.height - (navigationController?.navigationBar.frame.height ?? 0) * 2))
                 vc.preferredContentSize = size
 
                 vc.locations = locations

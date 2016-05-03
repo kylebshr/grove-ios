@@ -15,11 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tCy-zo-wBY" customClass="RealmMapView" customModule="RealmMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.96078431372549022" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.050980392159999999" green="0.58039215690000001" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -72,28 +72,28 @@
                         <viewControllerLayoutGuide type="bottom" id="Ehz-XB-5Pd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bnS-ME-ujK">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Image..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wys-kB-zTQ">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="180"/>
+                                <rect key="frame" x="0.0" y="226" width="600" height="18"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="icZ-S3-4U1">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="180"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="hqO-VC-2oO"/>
                                 </constraints>
                             </imageView>
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eo2-4Y-NCz">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="180"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="180"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lHM-xE-JmI">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="s1s-OD-OjH">
                                     <rect key="frame" x="0.0" y="290" width="600" height="0.0"/>
@@ -179,7 +179,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x04-BE-6ZF">
-                                                    <rect key="frame" x="206.5" y="50" width="188" height="42"/>
+                                                    <rect key="frame" x="206" y="50" width="188" height="42"/>
                                                     <string key="text">No comments
 Must be a nice quiet place!</string>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
@@ -212,14 +212,19 @@ Must be a nice quiet place!</string>
                             <constraint firstItem="icZ-S3-4U1" firstAttribute="top" secondItem="bnS-ME-ujK" secondAttribute="top" id="BwV-dC-mqO"/>
                             <constraint firstItem="Eo2-4Y-NCz" firstAttribute="leading" secondItem="icZ-S3-4U1" secondAttribute="leading" id="C8u-ED-BYF"/>
                             <constraint firstItem="icZ-S3-4U1" firstAttribute="leading" secondItem="bnS-ME-ujK" secondAttribute="leading" id="IBP-4c-R9F"/>
-                            <constraint firstItem="wys-kB-zTQ" firstAttribute="top" secondItem="icZ-S3-4U1" secondAttribute="top" id="bGZ-Id-C31"/>
+                            <constraint firstItem="lHM-xE-JmI" firstAttribute="top" secondItem="bmC-Ju-PSl" secondAttribute="bottom" id="Syk-aY-STY"/>
                             <constraint firstItem="lHM-xE-JmI" firstAttribute="leading" secondItem="bnS-ME-ujK" secondAttribute="leading" id="ggd-9C-frJ"/>
-                            <constraint firstItem="lHM-xE-JmI" firstAttribute="top" secondItem="bnS-ME-ujK" secondAttribute="top" id="gsr-Ks-6RE"/>
                             <constraint firstAttribute="trailing" secondItem="icZ-S3-4U1" secondAttribute="trailing" id="iOC-vB-Quk"/>
+                            <constraint firstItem="icZ-S3-4U1" firstAttribute="top" secondItem="bmC-Ju-PSl" secondAttribute="bottom" id="oJz-wU-4fX"/>
                             <constraint firstItem="Eo2-4Y-NCz" firstAttribute="bottom" secondItem="icZ-S3-4U1" secondAttribute="bottom" id="qmo-ZZ-JNa"/>
                             <constraint firstItem="Eo2-4Y-NCz" firstAttribute="top" secondItem="icZ-S3-4U1" secondAttribute="top" id="wQB-Lo-0rh"/>
                             <constraint firstItem="wys-kB-zTQ" firstAttribute="bottom" secondItem="icZ-S3-4U1" secondAttribute="bottom" id="zgd-Bs-vZf"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="BwV-dC-mqO"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="wJV-dI-6WC">
                         <barButtonItem key="rightBarButtonItem" image="map" id="Jg3-eA-IWz">
@@ -228,7 +233,7 @@ Must be a nice quiet place!</string>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="imageDimmingView" destination="Eo2-4Y-NCz" id="jIs-a3-3My"/>
                         <outlet property="imageHeightConstraint" destination="hqO-VC-2oO" id="boZ-3Q-Tnm"/>
@@ -316,10 +321,10 @@ Must be a nice quiet place!</string>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h24-by-ugM" customClass="GroveNavigationController" customModule="Grove" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="2mZ-QF-eIW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="2mZ-QF-eIW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.062745098039215685" green="0.15686274509803921" blue="0.30588235294117649" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.0" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
