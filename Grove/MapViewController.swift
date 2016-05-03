@@ -144,22 +144,26 @@ extension MapViewController: MKMapViewDelegate {
 
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
 
-        if let annotation = annotation as? ABFAnnotation {
+        guard let annotation = annotation as? ABFAnnotation else {
+            return nil
+        }
 
-            // Deque an annotation view, or create a new one
-            let annotationView =
-                mapView.dequeueReusableAnnotationViewWithIdentifier(annotationViewReuseId) as? ABFClusterAnnotationView ??
-                    ABFClusterAnnotationView(annotation: annotation, reuseIdentifier: annotationViewReuseId)
+        if let annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(annotationViewReuseId) as? ABFClusterAnnotationView {
 
-            // Different tint color than our map, we have to set that
-            let disclosureButton = UIButton(type: .DetailDisclosure)
-            disclosureButton.tintColor = UIColor.dodgerBlue()
+            annotationView.annotation = annotation
+            annotationView.count = UInt(annotation.safeObjects.count)
+
+            return annotationView
+        }
+        else {
+
+            let annotationView = ABFClusterAnnotationView(annotation: annotation, reuseIdentifier: annotationViewReuseId)
 
             // Configure the view with the annotation info
             annotationView.canShowCallout = true
             annotationView.count = UInt(annotation.safeObjects.count)
             annotationView.annotation = annotation
-            annotationView.rightCalloutAccessoryView = disclosureButton
+            annotationView.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
             annotationView.color = UIColor.dodgerBlue()
 
             // Register for 3D Touch
@@ -167,8 +171,6 @@ extension MapViewController: MKMapViewDelegate {
 
             return annotationView
         }
-
-        return nil
     }
 
     func mapView(mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
