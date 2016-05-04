@@ -335,12 +335,13 @@ Must be a nice quiet place!</string>
             </objects>
             <point key="canvasLocation" x="2028" y="1414"/>
         </scene>
-        <!--Grove Navigation Controller-->
+        <!--Map-->
         <scene sceneID="Tfi-Fg-D1M">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h24-by-ugM" customClass="GroveNavigationController" customModule="Grove" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Map" image="map" selectedImage="map-filled" id="Tok-YJ-Xnc"/>
                     <toolbarItems/>
-                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="2mZ-QF-eIW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -358,6 +359,8 @@ Must be a nice quiet place!</string>
     </scenes>
     <resources>
         <image name="location-arrow" width="22" height="22"/>
+        <image name="map" width="22" height="22"/>
+        <image name="map-filled" width="22" height="22"/>
         <image name="menu" width="22" height="6"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

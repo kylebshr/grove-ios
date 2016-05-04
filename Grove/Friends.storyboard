@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hxV-Zh-M26">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Friends-->
+        <scene sceneID="abG-Hb-m7Q">
+            <objects>
+                <navigationController id="hxV-Zh-M26" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Friends" image="friends" selectedImage="friends-filled" id="Ndk-IJ-jsv"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LEl-z9-3GA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="94d-n7-gpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-447" y="269"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="friends" width="22" height="22"/>
+        <image name="friends-filled" width="22" height="22"/>
+    </resources>
+</document>

@@ -44,6 +44,10 @@
 		27DECBF01CCD68B500A4BCD2 /* HammockLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DECBEF1CCD68B500A4BCD2 /* HammockLocation.swift */; };
 		27DECBF51CCD7DDA00A4BCD2 /* Knoxville.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 27DECBF41CCD7DDA00A4BCD2 /* Knoxville.gpx */; };
 		27DECBFA1CCD901D00A4BCD2 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DECBF91CCD901D00A4BCD2 /* UITextField+Extensions.swift */; };
+		27F912491CDA61A20058C297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F912481CDA61A20058C297 /* Main.storyboard */; };
+		27F9124B1CDA621B0058C297 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F9124A1CDA621B0058C297 /* Favorites.storyboard */; };
+		27F9124D1CDA62210058C297 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F9124C1CDA62210058C297 /* Account.storyboard */; };
+		27F9124F1CDA622C0058C297 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F9124E1CDA622C0058C297 /* Friends.storyboard */; };
 		27FF77221CD949EB0051787D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF77211CD949EB0051787D /* GradientView.swift */; };
 		27FF77241CD950CB0051787D /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF77231CD950CB0051787D /* UIAlertController+Extensions.swift */; };
 		3B722447C3CDB0FFB1B5BF0B /* Pods_GroveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC078A32BBF94C87DE98670 /* Pods_GroveTests.framework */; };
@@ -114,6 +118,10 @@
 		27DECBEF1CCD68B500A4BCD2 /* HammockLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HammockLocation.swift; sourceTree = "<group>"; };
 		27DECBF41CCD7DDA00A4BCD2 /* Knoxville.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Knoxville.gpx; sourceTree = "<group>"; };
 		27DECBF91CCD901D00A4BCD2 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		27F912481CDA61A20058C297 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		27F9124A1CDA621B0058C297 /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		27F9124C1CDA62210058C297 /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
+		27F9124E1CDA622C0058C297 /* Friends.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Friends.storyboard; sourceTree = "<group>"; };
 		27FF77211CD949EB0051787D /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		27FF77231CD950CB0051787D /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
 		4F9348406D02EB6563C67B51 /* Pods-GroveUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GroveUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GroveUITests/Pods-GroveUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -256,6 +264,10 @@
 		27DECBED1CCD687600A4BCD2 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				27F912481CDA61A20058C297 /* Main.storyboard */,
+				27F9124A1CDA621B0058C297 /* Favorites.storyboard */,
+				27F9124E1CDA622C0058C297 /* Friends.storyboard */,
+				27F9124C1CDA62210058C297 /* Account.storyboard */,
 				27742DC11CD267740039A54C /* Login.storyboard */,
 				27B345C91CCD669A005BA871 /* Map.storyboard */,
 				2750DE071CCFDC44002F9C72 /* Compose.storyboard */,
@@ -440,13 +452,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				270327991CD597F900F3BA0B /* MapTitleView.xib in Resources */,
+				27F9124F1CDA622C0058C297 /* Friends.storyboard in Resources */,
+				27F912491CDA61A20058C297 /* Main.storyboard in Resources */,
 				2722FB6D1CD3F7B700F4708F /* Settings.bundle in Resources */,
 				27B345D01CCD669A005BA871 /* LaunchScreen.storyboard in Resources */,
 				27B345CD1CCD669A005BA871 /* Assets.xcassets in Resources */,
 				27742DC21CD267740039A54C /* Login.storyboard in Resources */,
 				27D533A51CCEC50B007FC6A1 /* TextInputView.xib in Resources */,
+				27F9124B1CDA621B0058C297 /* Favorites.storyboard in Resources */,
 				27DECBF51CCD7DDA00A4BCD2 /* Knoxville.gpx in Resources */,
 				27B345CB1CCD669A005BA871 /* Map.storyboard in Resources */,
+				27F9124D1CDA62210058C297 /* Account.storyboard in Resources */,
 				2750DE081CCFDC44002F9C72 /* Compose.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

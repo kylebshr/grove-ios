@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sFe-Hc-jmo">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Favorites-->
+        <scene sceneID="fvM-JM-npk">
+            <objects>
+                <navigationController id="sFe-Hc-jmo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" image="star" selectedImage="star-filled" id="eK8-Gp-etQ"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MB2-W7-3qb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xeQ-dL-Mxu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-601" y="263"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star" width="22" height="21"/>
+        <image name="star-filled" width="22" height="21"/>
+    </resources>
+</document>
