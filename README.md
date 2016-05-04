@@ -11,4 +11,4 @@ All you need to do is download or clone the project, open in Xcode 7.3, and run 
 
 ## More!
 
-The API can be found [here](https://github.com/jaredmichaelsmith/grove), and was created by my friend and incredible developer @jaredmichaelsmith.
+The API can be found [here](https://github.com/jaredmichaelsmith/grove), and was created by my friend and incredible developer [@jaredmichaelsmith](https://github.com/jaredmichaelsmith).
