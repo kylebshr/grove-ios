@@ -15,10 +15,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="cva-kZ-hdR" kind="relationship" relationship="rootViewController" id="hCc-CD-la3"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94d-n7-gpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-447" y="269"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="X3J-is-HP1">
+            <objects>
+                <tableViewController id="cva-kZ-hdR" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FSh-AW-piS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="eNC-we-zkN">
+                            <rect key="frame" x="0.0" y="64" width="600" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="cva-kZ-hdR" id="CSY-Ch-804"/>
+                            <outlet property="delegate" destination="cva-kZ-hdR" id="9iV-6p-WyK"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Bon-AM-zzh"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zyb-85-QMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="308" y="269"/>
         </scene>
     </scenes>
     <resources>

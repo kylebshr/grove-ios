@@ -14,6 +14,10 @@ extension UIColor {
         return UIColor(hex: "#10284E")
     }
 
+    static func zodiacBarBlue() -> UIColor {
+        return UIColor(hex: "#00002D")
+    }
+
     static func dodgerBlue() -> UIColor {
         return UIColor(hex: "#0D94FC")
     }

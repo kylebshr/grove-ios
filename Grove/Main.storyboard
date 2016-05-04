@@ -9,7 +9,7 @@
         <scene sceneID="y6J-sp-lTI">
             <objects>
                 <tabBarController id="i7d-cF-iNq" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="ZDN-B0-Xse">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="ZDN-B0-Xse">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

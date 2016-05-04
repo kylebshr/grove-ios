@@ -34,7 +34,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Set up a few things
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+        UITabBar.appearance().tintColor = .dodgerBlue()
+        UINavigationBar.appearance().barTintColor = .zodiacBarBlue()
+        UINavigationBar.appearance().barStyle = .Black
+
+
         NetworkActivityIndicatorManager.sharedManager.isEnabled = true
+        
         PKHUD.sharedHUD.userInteractionOnUnderlyingViewsEnabled = false
         PKHUD.sharedHUD.dimsBackground = false
 

@@ -15,10 +15,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="Yak-tB-nut" kind="relationship" relationship="rootViewController" id="Pkt-da-BDT"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeQ-dL-Mxu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-601" y="263"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="9TG-lg-E3A">
+            <objects>
+                <tableViewController id="Yak-tB-nut" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jn4-Ix-Aij">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="Qk5-HU-rMG">
+                            <rect key="frame" x="0.0" y="64" width="600" height="0.0"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <connections>
+                            <outlet property="dataSource" destination="Yak-tB-nut" id="0Qw-W9-2BF"/>
+                            <outlet property="delegate" destination="Yak-tB-nut" id="Smy-wB-Gyh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="fWQ-Gv-LsQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Xq-fX-jr7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="194" y="263"/>
         </scene>
     </scenes>
     <resources>
