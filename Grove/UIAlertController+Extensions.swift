@@ -18,7 +18,8 @@ extension UIAlertController {
          declare it in an instance method. (I think that's why; regardless
          of why, I tested it out and I'm sure it's deallocated).
         */
-        let alertWindow = AlertWindow(frame: UIScreen.mainScreen().bounds)
+        let alertWindow = UIWindow(frame: UIScreen.mainScreen().bounds)
+        alertWindow.rootViewController = whiteStatusBarVC()
         alertWindow.windowLevel = 10000001
         alertWindow.hidden = false
         alertWindow.tintColor = UIColor.dodgerBlue()
@@ -27,24 +28,7 @@ extension UIAlertController {
 }
 
 private class whiteStatusBarVC: UIViewController {
-
     private override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
-    }
-}
-
-private class AlertWindow: UIWindow {
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        rootViewController = whiteStatusBarVC()
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    deinit {
-        log.verbose("AlertWindow has been deallocated")
     }
 }
