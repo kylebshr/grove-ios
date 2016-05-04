@@ -22,22 +22,8 @@ import UIKit
         }
     }
 
-    private func setupView(){
-
-        let colors:Array = [startColor.CGColor, endColor.CGColor]
-
-        gradientLayer?.colors = colors
-//        gradientLayer?.endPoint = CGPoint(x: 0.5, y: 1)
-
-        self.setNeedsDisplay()
-    }
-
     var gradientLayer: CAGradientLayer? {
         return layer as? CAGradientLayer
-    }
-
-    override class func layerClass()->AnyClass{
-        return CAGradientLayer.self
     }
 
     override init(frame: CGRect) {
@@ -49,4 +35,15 @@ import UIKit
         super.init(coder: aDecoder)
         setupView()
     }
+
+    override class func layerClass()->AnyClass{
+        return CAGradientLayer.self
+    }
+
+    private func setupView(){
+        let colors:Array = [startColor.CGColor, endColor.CGColor]
+        gradientLayer?.colors = colors
+        self.setNeedsDisplay()
+    }
+
 }

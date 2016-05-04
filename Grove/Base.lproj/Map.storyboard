@@ -76,43 +76,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading Image..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wys-kB-zTQ">
-                                <rect key="frame" x="0.0" y="64" width="600" height="220"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="200"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="icZ-S3-4U1">
-                                <rect key="frame" x="0.0" y="64" width="600" height="220"/>
+                                <rect key="frame" x="0.0" y="64" width="600" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="hqO-VC-2oO">
+                                    <constraint firstAttribute="height" constant="200" id="hqO-VC-2oO">
                                         <variation key="heightClass=compact" constant="180"/>
+                                        <variation key="widthClass=compact" constant="140"/>
                                     </constraint>
                                 </constraints>
                             </imageView>
-                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eo2-4Y-NCz">
-                                <rect key="frame" x="0.0" y="64" width="600" height="220"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwW-XM-ebk">
+                                <rect key="frame" x="0.0" y="64" width="600" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwW-XM-ebk" customClass="GradientView" customModule="Grove" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="179" width="600" height="105"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
-                                        <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
-                                        <color key="value" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DP-W2-c18">
-                                <rect key="frame" x="20" y="239" width="560" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3DP-W2-c18">
+                                <rect key="frame" x="20" y="149" width="560" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lHM-xE-JmI">
-                                <rect key="frame" x="0.0" y="401" width="600" height="199"/>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eo2-4Y-NCz">
+                                <rect key="frame" x="0.0" y="64" width="600" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lHM-xE-JmI">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="s1s-OD-OjH">
                                     <rect key="frame" x="0.0" y="290" width="600" height="0.0"/>
@@ -227,15 +221,14 @@ Must be a nice quiet place!</string>
                             <constraint firstItem="wys-kB-zTQ" firstAttribute="leading" secondItem="icZ-S3-4U1" secondAttribute="leading" id="1QL-Id-VeH"/>
                             <constraint firstAttribute="trailing" secondItem="lHM-xE-JmI" secondAttribute="trailing" id="3Hm-MB-zlR"/>
                             <constraint firstItem="Eo2-4Y-NCz" firstAttribute="trailing" secondItem="icZ-S3-4U1" secondAttribute="trailing" id="3bk-aM-h8K"/>
-                            <constraint firstItem="3DP-W2-c18" firstAttribute="bottom" secondItem="icZ-S3-4U1" secondAttribute="bottom" constant="-16" id="4M1-AO-HLI"/>
                             <constraint firstItem="NwW-XM-ebk" firstAttribute="trailing" secondItem="icZ-S3-4U1" secondAttribute="trailing" id="4X1-gR-jRU"/>
                             <constraint firstItem="wys-kB-zTQ" firstAttribute="trailing" secondItem="icZ-S3-4U1" secondAttribute="trailing" id="92C-Eh-QQu"/>
                             <constraint firstItem="Ehz-XB-5Pd" firstAttribute="top" secondItem="lHM-xE-JmI" secondAttribute="bottom" id="9iF-ib-omy"/>
                             <constraint firstItem="icZ-S3-4U1" firstAttribute="top" secondItem="bnS-ME-ujK" secondAttribute="top" id="BwV-dC-mqO"/>
                             <constraint firstItem="Eo2-4Y-NCz" firstAttribute="leading" secondItem="icZ-S3-4U1" secondAttribute="leading" id="C8u-ED-BYF"/>
+                            <constraint firstItem="NwW-XM-ebk" firstAttribute="top" secondItem="icZ-S3-4U1" secondAttribute="top" id="GPn-hI-0E8"/>
                             <constraint firstItem="icZ-S3-4U1" firstAttribute="leading" secondItem="bnS-ME-ujK" secondAttribute="leading" id="IBP-4c-R9F"/>
                             <constraint firstItem="lHM-xE-JmI" firstAttribute="top" secondItem="bmC-Ju-PSl" secondAttribute="bottom" id="Syk-aY-STY"/>
-                            <constraint firstItem="NwW-XM-ebk" firstAttribute="top" secondItem="3DP-W2-c18" secondAttribute="top" constant="-60" id="Uxr-Gw-dfb"/>
                             <constraint firstItem="3DP-W2-c18" firstAttribute="leading" secondItem="icZ-S3-4U1" secondAttribute="leading" constant="20" id="ZAv-DV-5ne"/>
                             <constraint firstItem="NwW-XM-ebk" firstAttribute="bottom" secondItem="icZ-S3-4U1" secondAttribute="bottom" id="bBB-wH-OH0"/>
                             <constraint firstItem="3DP-W2-c18" firstAttribute="trailing" secondItem="icZ-S3-4U1" secondAttribute="trailing" constant="-20" id="eGO-cx-e69"/>
@@ -245,6 +238,7 @@ Must be a nice quiet place!</string>
                             <constraint firstItem="icZ-S3-4U1" firstAttribute="top" secondItem="bmC-Ju-PSl" secondAttribute="bottom" id="oJz-wU-4fX"/>
                             <constraint firstItem="Eo2-4Y-NCz" firstAttribute="bottom" secondItem="icZ-S3-4U1" secondAttribute="bottom" id="qmo-ZZ-JNa"/>
                             <constraint firstItem="Eo2-4Y-NCz" firstAttribute="top" secondItem="icZ-S3-4U1" secondAttribute="top" id="wQB-Lo-0rh"/>
+                            <constraint firstItem="3DP-W2-c18" firstAttribute="centerY" secondItem="icZ-S3-4U1" secondAttribute="centerY" id="zQ3-Hi-rC8"/>
                             <constraint firstItem="wys-kB-zTQ" firstAttribute="bottom" secondItem="icZ-S3-4U1" secondAttribute="bottom" id="zgd-Bs-vZf"/>
                         </constraints>
                         <variation key="default">
@@ -302,7 +296,7 @@ Must be a nice quiet place!</string>
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="135"/>
                                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvY-co-afW">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tvY-co-afW">
                                             <rect key="frame" x="20" y="53" width="560" height="29"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
