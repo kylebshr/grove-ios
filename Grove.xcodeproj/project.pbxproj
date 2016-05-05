@@ -18,7 +18,6 @@
 		27235A351CCE78FD006B1475 /* DetailCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A341CCE78FD006B1475 /* DetailCommentCell.swift */; };
 		27235A3E1CCEA6E5006B1475 /* NSDate+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A3D1CCEA6E5006B1475 /* NSDate+Extensions.swift */; };
 		27251B7A1CCECF3800FD4FC9 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27251B791CCECF3800FD4FC9 /* UIColor+Extensions.swift */; };
-		273000711CD3040E00DA6DB5 /* GroveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345DA1CCD669A005BA871 /* GroveTests.swift */; };
 		273000731CD3046100DA6DB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273000721CD3046100DA6DB5 /* AppDelegate.swift */; };
 		2750DE081CCFDC44002F9C72 /* Compose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2750DE071CCFDC44002F9C72 /* Compose.storyboard */; };
 		2750DE0A1CCFDEEE002F9C72 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2750DE091CCFDEEE002F9C72 /* AddLocationViewController.swift */; };
@@ -39,6 +38,7 @@
 		27B345E61CCD669A005BA871 /* GroveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345E51CCD669A005BA871 /* GroveUITests.swift */; };
 		27CCFB181CCFBF7B00399F35 /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCFB171CCFBF7B00399F35 /* LocationListViewController.swift */; };
 		27CCFB1A1CCFC0A800399F35 /* LocationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCFB191CCFC0A800399F35 /* LocationListCell.swift */; };
+		27D042331CDAEBA300F3B85A /* GroveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345DA1CCD669A005BA871 /* GroveTests.swift */; };
 		27D533A51CCEC50B007FC6A1 /* TextInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D533A41CCEC50B007FC6A1 /* TextInputView.xib */; };
 		27D533A71CCEC516007FC6A1 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D533A61CCEC516007FC6A1 /* TextInputView.swift */; };
 		27DECBF01CCD68B500A4BCD2 /* HammockLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DECBEF1CCD68B500A4BCD2 /* HammockLocation.swift */; };
@@ -660,7 +660,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				273000711CD3040E00DA6DB5 /* GroveTests.swift in Sources */,
+				27D042331CDAEBA300F3B85A /* GroveTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
