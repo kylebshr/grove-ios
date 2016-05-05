@@ -345,7 +345,7 @@ Must be a nice quiet place!</string>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="2mZ-QF-eIW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.0" blue="0.1764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.035294117647058823" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

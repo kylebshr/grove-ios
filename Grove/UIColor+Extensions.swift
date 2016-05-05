@@ -11,11 +11,11 @@ import UIKit
 extension UIColor {
 
     static func zodiacBlue() -> UIColor {
-        return UIColor(hex: "#10284E")
+        return UIColor(hex: "#13305e")
     }
 
     static func zodiacBarBlue() -> UIColor {
-        return UIColor(hex: "#00002D")
+        return UIColor(hex: "#000940")
     }
 
     static func dodgerBlue() -> UIColor {
