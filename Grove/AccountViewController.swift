@@ -35,13 +35,11 @@ class AccountViewController: UIViewController {
 extension AccountViewController: UITableViewDataSource {
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        return 0
     }
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "Hello \(indexPath.row)"
-        return cell
+        return UITableViewCell()
     }
 }
 

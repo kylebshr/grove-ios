@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="-471" y="264"/>
         </scene>
-        <!--My Account-->
+        <!--Coming Soon-->
         <scene sceneID="OTC-L0-IKc">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="IjB-d2-nc0" customClass="AccountViewController" customModule="Grove" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,7 +35,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bPn-QB-HXs">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bPn-QB-HXs">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="pil-XE-XQk">
@@ -57,7 +57,7 @@
                             <constraint firstAttribute="trailing" secondItem="bPn-QB-HXs" secondAttribute="trailing" id="rul-jt-kgT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="My Account" id="p01-rp-rde">
+                    <navigationItem key="navigationItem" title="Coming Soon" id="p01-rp-rde">
                         <barButtonItem key="backBarButtonItem" title=" " id="A23-7b-cnC"/>
                     </navigationItem>
                     <connections>

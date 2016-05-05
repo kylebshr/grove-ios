@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="-447" y="269"/>
         </scene>
-        <!--Friends-->
+        <!--Coming Soon-->
         <scene sceneID="X3J-is-HP1">
             <objects>
                 <tableViewController id="cva-kZ-hdR" sceneMemberID="viewController">
@@ -41,7 +41,7 @@
                             <outlet property="delegate" destination="cva-kZ-hdR" id="9iV-6p-WyK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Friends" id="5j0-R1-7Do">
+                    <navigationItem key="navigationItem" title="Coming Soon" id="5j0-R1-7Do">
                         <barButtonItem key="backBarButtonItem" title=" " id="z4x-2T-GWd"/>
                     </navigationItem>
                 </tableViewController>

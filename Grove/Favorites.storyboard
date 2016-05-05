@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="-601" y="263"/>
         </scene>
-        <!--Favorites-->
+        <!--Coming Soon-->
         <scene sceneID="9TG-lg-E3A">
             <objects>
                 <tableViewController id="Yak-tB-nut" sceneMemberID="viewController">
@@ -41,7 +41,7 @@
                             <outlet property="delegate" destination="Yak-tB-nut" id="Smy-wB-Gyh"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Favorites" id="fWQ-Gv-LsQ">
+                    <navigationItem key="navigationItem" title="Coming Soon" id="fWQ-Gv-LsQ">
                         <barButtonItem key="backBarButtonItem" title=" " id="so9-Jh-3Iu"/>
                     </navigationItem>
                 </tableViewController>

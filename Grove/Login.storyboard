@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login4" translatesAutoresizingMaskIntoConstraints="NO" id="qcL-Te-g8m">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="-40" y="-40" width="680" height="680"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UG0-zA-afe">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
@@ -145,13 +145,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="UG0-zA-afe" secondAttribute="trailing" id="GSv-V5-f5V"/>
-                            <constraint firstItem="qcL-Te-g8m" firstAttribute="trailing" secondItem="ePz-ww-pkf" secondAttribute="trailing" id="IWp-th-M6o"/>
+                            <constraint firstItem="qcL-Te-g8m" firstAttribute="trailing" secondItem="ePz-ww-pkf" secondAttribute="trailing" constant="40" id="IWp-th-M6o"/>
                             <constraint firstItem="QlR-ER-AxJ" firstAttribute="top" secondItem="UG0-zA-afe" secondAttribute="bottom" id="JBk-6C-HRG"/>
-                            <constraint firstItem="qcL-Te-g8m" firstAttribute="bottom" secondItem="QlR-ER-AxJ" secondAttribute="top" id="JQ1-F8-bTr"/>
+                            <constraint firstItem="qcL-Te-g8m" firstAttribute="bottom" secondItem="QlR-ER-AxJ" secondAttribute="top" constant="40" id="JQ1-F8-bTr"/>
                             <constraint firstItem="UG0-zA-afe" firstAttribute="leading" secondItem="ePz-ww-pkf" secondAttribute="leading" id="Rnm-Kf-dku"/>
-                            <constraint firstAttribute="top" secondItem="qcL-Te-g8m" secondAttribute="top" id="SBT-zd-i2z"/>
+                            <constraint firstAttribute="top" secondItem="qcL-Te-g8m" secondAttribute="top" constant="40" id="SBT-zd-i2z"/>
                             <constraint firstItem="UG0-zA-afe" firstAttribute="top" secondItem="ePz-ww-pkf" secondAttribute="topMargin" id="asG-Ll-IxI"/>
-                            <constraint firstAttribute="leading" secondItem="qcL-Te-g8m" secondAttribute="leading" id="ngi-Zb-Fxo"/>
+                            <constraint firstAttribute="leading" secondItem="qcL-Te-g8m" secondAttribute="leading" constant="40" id="ngi-Zb-Fxo"/>
                         </constraints>
                     </view>
                     <connections>

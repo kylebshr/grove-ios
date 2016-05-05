@@ -34,7 +34,7 @@ class LoginViewController: UIViewController {
     }()
 
     var currentImageName: String = "login4"
-
+    var firstAppearance = true
     var timer: NSTimer?
 
 
@@ -51,7 +51,15 @@ class LoginViewController: UIViewController {
         timer = NSTimer.scheduledTimerWithTimeInterval(imageTime, target: self, selector: #selector(cycleImage), userInfo: nil, repeats: true)
 
         // Call this for the first image
-        doKenBurnsEffect()
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        if firstAppearance {
+            doKenBurnsEffect()
+            firstAppearance = false
+        }
     }
 
 
