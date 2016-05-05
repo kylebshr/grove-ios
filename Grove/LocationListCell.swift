@@ -38,7 +38,9 @@ class LocationListCell: UITableViewCell {
     func setTapped(tapped: Bool, animated: Bool) {
 
         let duration = animated ? 0.33 : 0
-        let color = tapped ? UIColor.blackColor().colorWithAlphaComponent(0.7) : UIColor.blackColor().colorWithAlphaComponent(0.5)
+        let color = tapped ?
+            UIColor.blackColor().colorWithAlphaComponent(0.6) :
+            UIColor.blackColor().colorWithAlphaComponent(0.3)
 
         UIView.animateWithDuration(duration) { 
             self.dimmingView.backgroundColor = color

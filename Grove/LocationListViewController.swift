@@ -26,6 +26,9 @@ class LocationListViewController: UITableViewController {
 
         // Register for cell 3D Touch
         registerForPreviewingWithDelegate(self, sourceView: tableView)
+
+        // Set up cells
+        setUpTableView()
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -40,6 +43,11 @@ class LocationListViewController: UITableViewController {
 
     // MARK: Helpers
 
+    func setUpTableView() {
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 124
+        tableView.registerNib(R.nib.locationListCell)
+    }
 
     func viewControllerForLocation(location: HammockLocation) -> LocationDetailViewController {
         let vc = R.storyboard.map.locationDetailViewController()!

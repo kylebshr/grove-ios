@@ -64,7 +64,7 @@ class TextInputView: UIView, UITextViewDelegate {
         separator.leadingAnchor.constraintEqualToAnchor(leadingAnchor).active = true
         separator.trailingAnchor.constraintEqualToAnchor(trailingAnchor).active = true
         separator.heightAnchor.constraintEqualToConstant(0.5).active = true
-        separator.backgroundColor = UIColor(hex: "#D0D0D0")
+        separator.backgroundColor = .separatorColor()
     }
 
     override func updateConstraints() {

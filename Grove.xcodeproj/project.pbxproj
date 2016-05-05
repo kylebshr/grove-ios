@@ -39,6 +39,10 @@
 		27CCFB181CCFBF7B00399F35 /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCFB171CCFBF7B00399F35 /* LocationListViewController.swift */; };
 		27CCFB1A1CCFC0A800399F35 /* LocationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCFB191CCFC0A800399F35 /* LocationListCell.swift */; };
 		27D042331CDAEBA300F3B85A /* GroveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345DA1CCD669A005BA871 /* GroveTests.swift */; };
+		27D042361CDAEE0100F3B85A /* LocationListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D042351CDAEE0100F3B85A /* LocationListCell.xib */; };
+		27D042381CDAEFE300F3B85A /* MyLocationsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D042371CDAEFE300F3B85A /* MyLocationsHeader.xib */; };
+		27D0423A1CDAF06B00F3B85A /* MyLocationsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D042391CDAF06B00F3B85A /* MyLocationsHeader.swift */; };
+		27D0423E1CDAF1EB00F3B85A /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D0423D1CDAF1EB00F3B85A /* AccountViewController.swift */; };
 		27D533A51CCEC50B007FC6A1 /* TextInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D533A41CCEC50B007FC6A1 /* TextInputView.xib */; };
 		27D533A71CCEC516007FC6A1 /* TextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D533A61CCEC516007FC6A1 /* TextInputView.swift */; };
 		27DECBF01CCD68B500A4BCD2 /* HammockLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DECBEF1CCD68B500A4BCD2 /* HammockLocation.swift */; };
@@ -105,14 +109,18 @@
 		27B345CC1CCD669A005BA871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27B345CF1CCD669A005BA871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27B345D11CCD669A005BA871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27B345D61CCD669A005BA871 /* Grove.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Grove.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B345D61CCD669A005BA871 /* GroveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B345DA1CCD669A005BA871 /* GroveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroveTests.swift; sourceTree = "<group>"; };
 		27B345DC1CCD669A005BA871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27B345E11CCD669A005BA871 /* Grove.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Grove.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27B345E11CCD669A005BA871 /* GroveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B345E51CCD669A005BA871 /* GroveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroveUITests.swift; sourceTree = "<group>"; };
 		27B345E71CCD669A005BA871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27CCFB171CCFBF7B00399F35 /* LocationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListViewController.swift; sourceTree = "<group>"; };
 		27CCFB191CCFC0A800399F35 /* LocationListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListCell.swift; sourceTree = "<group>"; };
+		27D042351CDAEE0100F3B85A /* LocationListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationListCell.xib; sourceTree = "<group>"; };
+		27D042371CDAEFE300F3B85A /* MyLocationsHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyLocationsHeader.xib; sourceTree = "<group>"; };
+		27D042391CDAF06B00F3B85A /* MyLocationsHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyLocationsHeader.swift; sourceTree = "<group>"; };
+		27D0423D1CDAF1EB00F3B85A /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		27D533A41CCEC50B007FC6A1 /* TextInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextInputView.xib; sourceTree = "<group>"; };
 		27D533A61CCEC516007FC6A1 /* TextInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextInputView.swift; sourceTree = "<group>"; };
 		27DECBEF1CCD68B500A4BCD2 /* HammockLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HammockLocation.swift; sourceTree = "<group>"; };
@@ -173,11 +181,8 @@
 		27235A311CCE77E5006B1475 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				27D533A41CCEC50B007FC6A1 /* TextInputView.xib */,
-				27D533A61CCEC516007FC6A1 /* TextInputView.swift */,
-				270327981CD597F900F3BA0B /* MapTitleView.xib */,
-				2703279A1CD5980500F3BA0B /* MapTitleView.swift */,
 				27FF77211CD949EB0051787D /* GradientView.swift */,
+				27D042341CDAEDEB00F3B85A /* With Xibs */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -198,8 +203,8 @@
 			isa = PBXGroup;
 			children = (
 				27B345C21CCD669A005BA871 /* Grove.app */,
-				27B345D61CCD669A005BA871 /* Grove.xctest */,
-				27B345E11CCD669A005BA871 /* Grove.xctest */,
+				27B345D61CCD669A005BA871 /* GroveTests.xctest */,
+				27B345E11CCD669A005BA871 /* GroveUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -243,17 +248,48 @@
 			children = (
 				27235A321CCE78F2006B1475 /* DetailHeaderCell.swift */,
 				27235A341CCE78FD006B1475 /* DetailCommentCell.swift */,
-				27CCFB191CCFC0A800399F35 /* LocationListCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
 		};
-		27DECBEC1CCD686E00A4BCD2 /* View Controllers */ = {
+		27D042341CDAEDEB00F3B85A /* With Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				27D533A41CCEC50B007FC6A1 /* TextInputView.xib */,
+				27D533A61CCEC516007FC6A1 /* TextInputView.swift */,
+				270327981CD597F900F3BA0B /* MapTitleView.xib */,
+				2703279A1CD5980500F3BA0B /* MapTitleView.swift */,
+				27D042351CDAEE0100F3B85A /* LocationListCell.xib */,
+				27CCFB191CCFC0A800399F35 /* LocationListCell.swift */,
+				27D042371CDAEFE300F3B85A /* MyLocationsHeader.xib */,
+				27D042391CDAF06B00F3B85A /* MyLocationsHeader.swift */,
+			);
+			name = "With Xibs";
+			sourceTree = "<group>";
+		};
+		27D0423B1CDAF1D400F3B85A /* Map */ = {
 			isa = PBXGroup;
 			children = (
 				27B345C71CCD669A005BA871 /* MapViewController.swift */,
 				27235A2D1CCE5BAA006B1475 /* LocationDetailViewController.swift */,
 				27CCFB171CCFBF7B00399F35 /* LocationListViewController.swift */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		27D0423C1CDAF1DF00F3B85A /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				27D0423D1CDAF1EB00F3B85A /* AccountViewController.swift */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		27DECBEC1CCD686E00A4BCD2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				27D0423C1CDAF1DF00F3B85A /* Account */,
+				27D0423B1CDAF1D400F3B85A /* Map */,
 				2750DE091CCFDEEE002F9C72 /* AddLocationViewController.swift */,
 				27742DC31CD272F00039A54C /* LoginViewController.swift */,
 				279744371CD2C739001A36BF /* GroveNavigationController.swift */,
@@ -379,7 +415,7 @@
 			);
 			name = GroveTests;
 			productName = GroveTests;
-			productReference = 27B345D61CCD669A005BA871 /* Grove.xctest */;
+			productReference = 27B345D61CCD669A005BA871 /* GroveTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		27B345E01CCD669A005BA871 /* GroveUITests */ = {
@@ -399,7 +435,7 @@
 			);
 			name = GroveUITests;
 			productName = GroveUITests;
-			productReference = 27B345E11CCD669A005BA871 /* Grove.xctest */;
+			productReference = 27B345E11CCD669A005BA871 /* GroveUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -455,10 +491,12 @@
 				27F9124F1CDA622C0058C297 /* Friends.storyboard in Resources */,
 				27F912491CDA61A20058C297 /* Main.storyboard in Resources */,
 				2722FB6D1CD3F7B700F4708F /* Settings.bundle in Resources */,
+				27D042381CDAEFE300F3B85A /* MyLocationsHeader.xib in Resources */,
 				27B345D01CCD669A005BA871 /* LaunchScreen.storyboard in Resources */,
 				27B345CD1CCD669A005BA871 /* Assets.xcassets in Resources */,
 				27742DC21CD267740039A54C /* Login.storyboard in Resources */,
 				27D533A51CCEC50B007FC6A1 /* TextInputView.xib in Resources */,
+				27D042361CDAEE0100F3B85A /* LocationListCell.xib in Resources */,
 				27F9124B1CDA621B0058C297 /* Favorites.storyboard in Resources */,
 				27DECBF51CCD7DDA00A4BCD2 /* Knoxville.gpx in Resources */,
 				27B345CB1CCD669A005BA871 /* Map.storyboard in Resources */,
@@ -649,7 +687,9 @@
 				273000731CD3046100DA6DB5 /* AppDelegate.swift in Sources */,
 				2750DE0A1CCFDEEE002F9C72 /* AddLocationViewController.swift in Sources */,
 				27CCFB181CCFBF7B00399F35 /* LocationListViewController.swift in Sources */,
+				27D0423A1CDAF06B00F3B85A /* MyLocationsHeader.swift in Sources */,
 				2703279B1CD5980500F3BA0B /* MapTitleView.swift in Sources */,
+				27D0423E1CDAF1EB00F3B85A /* AccountViewController.swift in Sources */,
 				27235A331CCE78F2006B1475 /* DetailHeaderCell.swift in Sources */,
 				27235A2E1CCE5BAA006B1475 /* LocationDetailViewController.swift in Sources */,
 				27DECBF01CCD68B500A4BCD2 /* HammockLocation.swift in Sources */,
@@ -834,7 +874,7 @@
 				INFOPLIST_FILE = GroveTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kylebashour.GroveTests;
-				PRODUCT_NAME = Grove;
+				PRODUCT_NAME = GroveTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grove.app/Grove";
 			};
 			name = Debug;
@@ -847,7 +887,7 @@
 				INFOPLIST_FILE = GroveTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kylebashour.GroveTests;
-				PRODUCT_NAME = Grove;
+				PRODUCT_NAME = GroveTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grove.app/Grove";
 			};
 			name = Release;
@@ -859,7 +899,7 @@
 				INFOPLIST_FILE = GroveUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kylebashour.GroveUITests;
-				PRODUCT_NAME = Grove;
+				PRODUCT_NAME = GroveUITests;
 				TEST_TARGET_NAME = Grove;
 			};
 			name = Debug;
@@ -871,7 +911,7 @@
 				INFOPLIST_FILE = GroveUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kylebashour.GroveUITests;
-				PRODUCT_NAME = Grove;
+				PRODUCT_NAME = GroveUITests;
 				TEST_TARGET_NAME = Grove;
 			};
 			name = Release;

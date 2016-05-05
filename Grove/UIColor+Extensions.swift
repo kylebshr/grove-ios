@@ -11,7 +11,7 @@ import UIKit
 extension UIColor {
 
     static func zodiacBlue() -> UIColor {
-        return UIColor(hex: "#13305e")
+        return UIColor(hex: "#252C5B")
     }
 
     static func zodiacBarBlue() -> UIColor {
@@ -20,6 +20,10 @@ extension UIColor {
 
     static func dodgerBlue() -> UIColor {
         return UIColor(hex: "#0D94FC")
+    }
+
+    static func separatorColor() -> UIColor {
+        return UIColor(hex: "#D0D0D0")
     }
 
     public convenience init(hex hexString: String) {

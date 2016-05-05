@@ -90,7 +90,7 @@
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NwW-XM-ebk">
                                 <rect key="frame" x="0.0" y="64" width="600" height="180"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3DP-W2-c18">
                                 <rect key="frame" x="20" y="139" width="560" height="29"/>
@@ -274,53 +274,10 @@ Must be a nice quiet place!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="gVv-CN-w98">
-                            <rect key="frame" x="0.0" y="232" width="600" height="0.0"/>
+                            <rect key="frame" x="0.0" y="64" width="600" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationListCell" rowHeight="140" id="7EV-Wt-iv3" customClass="LocationListCell" customModule="Grove" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="600" height="140"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7EV-Wt-iv3" id="JpR-Ub-wFr">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="139.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="23U-Pz-iGa">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="135"/>
-                                        </imageView>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ngC-w2-0hR">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="135"/>
-                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tvY-co-afW">
-                                            <rect key="frame" x="20" y="53" width="560" height="29"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="ngC-w2-0hR" firstAttribute="top" secondItem="23U-Pz-iGa" secondAttribute="top" id="18n-w4-lEt"/>
-                                        <constraint firstItem="ngC-w2-0hR" firstAttribute="trailing" secondItem="23U-Pz-iGa" secondAttribute="trailing" id="6be-yo-n0W"/>
-                                        <constraint firstItem="23U-Pz-iGa" firstAttribute="top" secondItem="JpR-Ub-wFr" secondAttribute="top" id="7fs-IM-W3P"/>
-                                        <constraint firstItem="tvY-co-afW" firstAttribute="centerY" secondItem="23U-Pz-iGa" secondAttribute="centerY" id="80S-Zj-Gxp"/>
-                                        <constraint firstItem="tvY-co-afW" firstAttribute="trailing" secondItem="23U-Pz-iGa" secondAttribute="trailing" constant="-20" id="BTP-QY-qH5"/>
-                                        <constraint firstItem="23U-Pz-iGa" firstAttribute="leading" secondItem="JpR-Ub-wFr" secondAttribute="leading" id="JfV-qW-KgZ"/>
-                                        <constraint firstItem="ngC-w2-0hR" firstAttribute="leading" secondItem="23U-Pz-iGa" secondAttribute="leading" id="UB1-HB-OVv"/>
-                                        <constraint firstItem="ngC-w2-0hR" firstAttribute="bottom" secondItem="23U-Pz-iGa" secondAttribute="bottom" id="ZoK-15-ISU"/>
-                                        <constraint firstAttribute="trailing" secondItem="23U-Pz-iGa" secondAttribute="trailing" id="l3F-uU-AbZ"/>
-                                        <constraint firstItem="tvY-co-afW" firstAttribute="leading" secondItem="23U-Pz-iGa" secondAttribute="leading" constant="20" id="lRn-ah-zdT"/>
-                                        <constraint firstAttribute="bottom" secondItem="23U-Pz-iGa" secondAttribute="bottom" constant="4" id="mql-my-hQB"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="dimmingView" destination="ngC-w2-0hR" id="bLS-Nj-o8A"/>
-                                    <outlet property="largeImageView" destination="23U-Pz-iGa" id="e4t-w7-qgt"/>
-                                    <outlet property="titleLabel" destination="tvY-co-afW" id="7tZ-Te-PeN"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="KZi-xs-pJr" id="YCa-Um-cJA"/>
                             <outlet property="delegate" destination="KZi-xs-pJr" id="rfx-H0-jVi"/>
