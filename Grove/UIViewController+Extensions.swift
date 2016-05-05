@@ -17,10 +17,10 @@ extension UIViewController {
         let okButton = UIAlertAction(title: buttonTitle, style: .Cancel, handler: handler)
 
         alert.addAction(okButton)
-        alert.view.tintColor = UIColor.dodgerBlue()
+        alert.view.tintColor = .dodgerBlue()
 
         presentViewController(alert, animated: true) {
-            alert.view.tintColor = UIColor.dodgerBlue()
+            alert.view.tintColor = .dodgerBlue()
         }
     }
 

@@ -22,7 +22,7 @@ extension UIAlertController {
         alertWindow.rootViewController = whiteStatusBarVC()
         alertWindow.windowLevel = 10000001
         alertWindow.hidden = false
-        alertWindow.tintColor = UIColor.dodgerBlue()
+        alertWindow.tintColor = .dodgerBlue()
         alertWindow.rootViewController?.presentViewController(self, animated: animated, completion: completion)
     }
 }

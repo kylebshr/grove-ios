@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Set up a few things
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
-        UITabBar.appearance().tintColor = .dodgerBlue()
+        UITabBar.appearance().tintColor = .zodiacBlue()
         UINavigationBar.appearance().barTintColor = .zodiacBarBlue()
         UINavigationBar.appearance().barStyle = .Black
 
