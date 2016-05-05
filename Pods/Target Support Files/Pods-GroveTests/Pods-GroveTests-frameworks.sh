@@ -82,3 +82,44 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/ABFRealmMapView/ABFRealmMapView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/AsyncSwift/Async.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/BNRDynamicTypeManager/BNRDynamicTypeManager.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/INTULocationManager/INTULocationManager.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/JLRoutes/JLRoutes.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Kingfisher/Kingfisher.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ModelMapper/Mapper.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/PKHUD/PKHUD.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/R.swift.Library/Rswift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RBQFetchedResultsController/RBQFetchedResultsController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Realm/Realm.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RealmMapView/RealmMapView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RealmSwift/RealmSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SSKeychain/SSKeychain.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftFetchedResultsController/SwiftFetchedResultsController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftyBeaver/SwiftyBeaver.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/ABFRealmMapView/ABFRealmMapView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/AsyncSwift/Async.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/BNRDynamicTypeManager/BNRDynamicTypeManager.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/INTULocationManager/INTULocationManager.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/JLRoutes/JLRoutes.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Kingfisher/Kingfisher.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ModelMapper/Mapper.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/PKHUD/PKHUD.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/R.swift.Library/Rswift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RBQFetchedResultsController/RBQFetchedResultsController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Realm/Realm.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RealmMapView/RealmMapView.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RealmSwift/RealmSwift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SSKeychain/SSKeychain.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftFetchedResultsController/SwiftFetchedResultsController.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftyBeaver/SwiftyBeaver.framework"
+fi

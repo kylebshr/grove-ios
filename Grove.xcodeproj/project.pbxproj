@@ -288,8 +288,8 @@
 		27DECBEC1CCD686E00A4BCD2 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				27D0423C1CDAF1DF00F3B85A /* Account */,
 				27D0423B1CDAF1D400F3B85A /* Map */,
+				27D0423C1CDAF1DF00F3B85A /* Account */,
 				2750DE091CCFDEEE002F9C72 /* AddLocationViewController.swift */,
 				27742DC31CD272F00039A54C /* LoginViewController.swift */,
 				279744371CD2C739001A36BF /* GroveNavigationController.swift */,
@@ -301,12 +301,12 @@
 			isa = PBXGroup;
 			children = (
 				27F912481CDA61A20058C297 /* Main.storyboard */,
+				27B345C91CCD669A005BA871 /* Map.storyboard */,
 				27F9124A1CDA621B0058C297 /* Favorites.storyboard */,
 				27F9124E1CDA622C0058C297 /* Friends.storyboard */,
 				27F9124C1CDA62210058C297 /* Account.storyboard */,
-				27742DC11CD267740039A54C /* Login.storyboard */,
-				27B345C91CCD669A005BA871 /* Map.storyboard */,
 				2750DE071CCFDC44002F9C72 /* Compose.storyboard */,
+				27742DC11CD267740039A54C /* Login.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
