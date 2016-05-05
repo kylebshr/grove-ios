@@ -26,6 +26,8 @@
 		27742DC21CD267740039A54C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27742DC11CD267740039A54C /* Login.storyboard */; };
 		27742DC41CD272F00039A54C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27742DC31CD272F00039A54C /* LoginViewController.swift */; };
 		279744381CD2C739001A36BF /* GroveNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279744371CD2C739001A36BF /* GroveNavigationController.swift */; };
+		279B3D7F1CDBA27200CE7817 /* GroveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279B3D7E1CDBA27200CE7817 /* GroveTests.swift */; };
+		279B3D8D1CDBA27700CE7817 /* GroveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279B3D8C1CDBA27700CE7817 /* GroveUITests.swift */; };
 		27A9232A1CD032CE0020739D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A923291CD032CE0020739D /* String+Extensions.swift */; };
 		27A9232C1CD0378B0020739D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9232B1CD0378B0020739D /* User.swift */; };
 		27A923341CD127F80020739D /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A923331CD127F80020739D /* UIImage+Extensions.swift */; };
@@ -35,10 +37,8 @@
 		27B345CB1CCD669A005BA871 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B345C91CCD669A005BA871 /* Map.storyboard */; };
 		27B345CD1CCD669A005BA871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B345CC1CCD669A005BA871 /* Assets.xcassets */; };
 		27B345D01CCD669A005BA871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B345CE1CCD669A005BA871 /* LaunchScreen.storyboard */; };
-		27B345E61CCD669A005BA871 /* GroveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345E51CCD669A005BA871 /* GroveUITests.swift */; };
 		27CCFB181CCFBF7B00399F35 /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCFB171CCFBF7B00399F35 /* LocationListViewController.swift */; };
 		27CCFB1A1CCFC0A800399F35 /* LocationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCFB191CCFC0A800399F35 /* LocationListCell.swift */; };
-		27D042331CDAEBA300F3B85A /* GroveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B345DA1CCD669A005BA871 /* GroveTests.swift */; };
 		27D042361CDAEE0100F3B85A /* LocationListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D042351CDAEE0100F3B85A /* LocationListCell.xib */; };
 		27D042381CDAEFE300F3B85A /* MyLocationsHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D042371CDAEFE300F3B85A /* MyLocationsHeader.xib */; };
 		27D0423A1CDAF06B00F3B85A /* MyLocationsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D042391CDAF06B00F3B85A /* MyLocationsHeader.swift */; };
@@ -54,20 +54,20 @@
 		27F9124F1CDA622C0058C297 /* Friends.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F9124E1CDA622C0058C297 /* Friends.storyboard */; };
 		27FF77221CD949EB0051787D /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF77211CD949EB0051787D /* GradientView.swift */; };
 		27FF77241CD950CB0051787D /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FF77231CD950CB0051787D /* UIAlertController+Extensions.swift */; };
-		3B722447C3CDB0FFB1B5BF0B /* Pods_GroveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC078A32BBF94C87DE98670 /* Pods_GroveTests.framework */; };
 		3DC093D76DCBA63B4B5F625C /* Pods_Grove.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDCE2D774BD42C3EA6C89DE /* Pods_Grove.framework */; };
-		B33EC7B266EBE7D02EF8DEDA /* Pods_GroveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C670B4F585C8C56F8E2468B1 /* Pods_GroveUITests.framework */; };
+		C296AD30D1277ED215DD54DB /* Pods_GroveUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C670B4F585C8C56F8E2468B1 /* Pods_GroveUITests.framework */; };
+		CF5014FB06E2B8D623ECB2E9 /* Pods_GroveTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC078A32BBF94C87DE98670 /* Pods_GroveTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		27B345D71CCD669A005BA871 /* PBXContainerItemProxy */ = {
+		279B3D811CDBA27200CE7817 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 27B345BA1CCD669A005BA871 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 27B345C11CCD669A005BA871;
 			remoteInfo = Grove;
 		};
-		27B345E21CCD669A005BA871 /* PBXContainerItemProxy */ = {
+		279B3D8F1CDBA27700CE7817 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 27B345BA1CCD669A005BA871 /* Project object */;
 			proxyType = 1;
@@ -98,6 +98,12 @@
 		27742DC11CD267740039A54C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		27742DC31CD272F00039A54C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		279744371CD2C739001A36BF /* GroveNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroveNavigationController.swift; sourceTree = "<group>"; };
+		279B3D7C1CDBA27200CE7817 /* GroveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		279B3D7E1CDBA27200CE7817 /* GroveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroveTests.swift; sourceTree = "<group>"; };
+		279B3D801CDBA27200CE7817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		279B3D8A1CDBA27700CE7817 /* GroveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		279B3D8C1CDBA27700CE7817 /* GroveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroveUITests.swift; sourceTree = "<group>"; };
+		279B3D8E1CDBA27700CE7817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27A923291CD032CE0020739D /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		27A9232B1CD0378B0020739D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		27A923331CD127F80020739D /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
@@ -109,12 +115,6 @@
 		27B345CC1CCD669A005BA871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27B345CF1CCD669A005BA871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27B345D11CCD669A005BA871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27B345D61CCD669A005BA871 /* GroveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		27B345DA1CCD669A005BA871 /* GroveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroveTests.swift; sourceTree = "<group>"; };
-		27B345DC1CCD669A005BA871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		27B345E11CCD669A005BA871 /* GroveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		27B345E51CCD669A005BA871 /* GroveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroveUITests.swift; sourceTree = "<group>"; };
-		27B345E71CCD669A005BA871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27CCFB171CCFBF7B00399F35 /* LocationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListViewController.swift; sourceTree = "<group>"; };
 		27CCFB191CCFC0A800399F35 /* LocationListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListCell.swift; sourceTree = "<group>"; };
 		27D042351CDAEE0100F3B85A /* LocationListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationListCell.xib; sourceTree = "<group>"; };
@@ -142,27 +142,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		279B3D791CDBA27200CE7817 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF5014FB06E2B8D623ECB2E9 /* Pods_GroveTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		279B3D871CDBA27700CE7817 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C296AD30D1277ED215DD54DB /* Pods_GroveUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27B345BF1CCD669A005BA871 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3DC093D76DCBA63B4B5F625C /* Pods_Grove.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		27B345D31CCD669A005BA871 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3B722447C3CDB0FFB1B5BF0B /* Pods_GroveTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		27B345DE1CCD669A005BA871 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B33EC7B266EBE7D02EF8DEDA /* Pods_GroveUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,12 +187,30 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		279B3D7D1CDBA27200CE7817 /* GroveTests */ = {
+			isa = PBXGroup;
+			children = (
+				279B3D7E1CDBA27200CE7817 /* GroveTests.swift */,
+				279B3D801CDBA27200CE7817 /* Info.plist */,
+			);
+			path = GroveTests;
+			sourceTree = "<group>";
+		};
+		279B3D8B1CDBA27700CE7817 /* GroveUITests */ = {
+			isa = PBXGroup;
+			children = (
+				279B3D8C1CDBA27700CE7817 /* GroveUITests.swift */,
+				279B3D8E1CDBA27700CE7817 /* Info.plist */,
+			);
+			path = GroveUITests;
+			sourceTree = "<group>";
+		};
 		27B345B91CCD669A005BA871 = {
 			isa = PBXGroup;
 			children = (
 				27B345C41CCD669A005BA871 /* Grove */,
-				27B345D91CCD669A005BA871 /* GroveTests */,
-				27B345E41CCD669A005BA871 /* GroveUITests */,
+				279B3D7D1CDBA27200CE7817 /* GroveTests */,
+				279B3D8B1CDBA27700CE7817 /* GroveUITests */,
 				27B345C31CCD669A005BA871 /* Products */,
 				9B7C0CC523668FF2C3234C8A /* Pods */,
 				5E151DA70E544710E75248E9 /* Frameworks */,
@@ -203,8 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				27B345C21CCD669A005BA871 /* Grove.app */,
-				27B345D61CCD669A005BA871 /* GroveTests.xctest */,
-				27B345E11CCD669A005BA871 /* GroveUITests.xctest */,
+				279B3D7C1CDBA27200CE7817 /* GroveTests.xctest */,
+				279B3D8A1CDBA27700CE7817 /* GroveUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,24 +241,6 @@
 				27DECBEE1CCD687C00A4BCD2 /* Assets */,
 			);
 			path = Grove;
-			sourceTree = "<group>";
-		};
-		27B345D91CCD669A005BA871 /* GroveTests */ = {
-			isa = PBXGroup;
-			children = (
-				27B345DA1CCD669A005BA871 /* GroveTests.swift */,
-				27B345DC1CCD669A005BA871 /* Info.plist */,
-			);
-			path = GroveTests;
-			sourceTree = "<group>";
-		};
-		27B345E41CCD669A005BA871 /* GroveUITests */ = {
-			isa = PBXGroup;
-			children = (
-				27B345E51CCD669A005BA871 /* GroveUITests.swift */,
-				27B345E71CCD669A005BA871 /* Info.plist */,
-			);
-			path = GroveUITests;
 			sourceTree = "<group>";
 		};
 		27CCFB1B1CCFC0AE00399F35 /* Cells */ = {
@@ -376,6 +376,47 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		279B3D7B1CDBA27200CE7817 /* GroveTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 279B3D831CDBA27200CE7817 /* Build configuration list for PBXNativeTarget "GroveTests" */;
+			buildPhases = (
+				283AAEFD999456CBC720B00D /* 📦 Check Pods Manifest.lock */,
+				279B3D781CDBA27200CE7817 /* Sources */,
+				279B3D791CDBA27200CE7817 /* Frameworks */,
+				279B3D7A1CDBA27200CE7817 /* Resources */,
+				42CD5844F7DAD931C1000279 /* 📦 Embed Pods Frameworks */,
+				C33EC28E632D2D3C93C42F37 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				279B3D821CDBA27200CE7817 /* PBXTargetDependency */,
+			);
+			name = GroveTests;
+			productName = GroveTests;
+			productReference = 279B3D7C1CDBA27200CE7817 /* GroveTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		279B3D891CDBA27700CE7817 /* GroveUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 279B3D911CDBA27700CE7817 /* Build configuration list for PBXNativeTarget "GroveUITests" */;
+			buildPhases = (
+				FA982E94F6860F4A571DCE57 /* 📦 Check Pods Manifest.lock */,
+				279B3D861CDBA27700CE7817 /* Sources */,
+				279B3D871CDBA27700CE7817 /* Frameworks */,
+				279B3D881CDBA27700CE7817 /* Resources */,
+				4CA860908A85CE5640FE9D19 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				279B3D901CDBA27700CE7817 /* PBXTargetDependency */,
+			);
+			name = GroveUITests;
+			productName = GroveUITests;
+			productReference = 279B3D8A1CDBA27700CE7817 /* GroveUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		27B345C11CCD669A005BA871 /* Grove */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27B345EA1CCD669A005BA871 /* Build configuration list for PBXNativeTarget "Grove" */;
@@ -397,47 +438,6 @@
 			productReference = 27B345C21CCD669A005BA871 /* Grove.app */;
 			productType = "com.apple.product-type.application";
 		};
-		27B345D51CCD669A005BA871 /* GroveTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 27B345ED1CCD669A005BA871 /* Build configuration list for PBXNativeTarget "GroveTests" */;
-			buildPhases = (
-				EC21053FB36659E47A0EBA53 /* 📦 Check Pods Manifest.lock */,
-				27B345D21CCD669A005BA871 /* Sources */,
-				27B345D31CCD669A005BA871 /* Frameworks */,
-				27B345D41CCD669A005BA871 /* Resources */,
-				0C35328E2B60F2A9CFEBBEFB /* 📦 Embed Pods Frameworks */,
-				D5BAD9823D4294CD420EAD41 /* 📦 Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				27B345D81CCD669A005BA871 /* PBXTargetDependency */,
-			);
-			name = GroveTests;
-			productName = GroveTests;
-			productReference = 27B345D61CCD669A005BA871 /* GroveTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		27B345E01CCD669A005BA871 /* GroveUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 27B345F01CCD669A005BA871 /* Build configuration list for PBXNativeTarget "GroveUITests" */;
-			buildPhases = (
-				2EC087DD5BD8254D9221EFB5 /* 📦 Check Pods Manifest.lock */,
-				27B345DD1CCD669A005BA871 /* Sources */,
-				27B345DE1CCD669A005BA871 /* Frameworks */,
-				27B345DF1CCD669A005BA871 /* Resources */,
-				0F595A8C7C9B213F65245247 /* 📦 Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				27B345E31CCD669A005BA871 /* PBXTargetDependency */,
-			);
-			name = GroveUITests;
-			productName = GroveUITests;
-			productReference = 27B345E11CCD669A005BA871 /* GroveUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -448,17 +448,17 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Kyle Bashour";
 				TargetAttributes = {
+					279B3D7B1CDBA27200CE7817 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 27B345C11CCD669A005BA871;
+					};
+					279B3D891CDBA27700CE7817 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 27B345C11CCD669A005BA871;
+					};
 					27B345C11CCD669A005BA871 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = ZEAD23GG77;
-					};
-					27B345D51CCD669A005BA871 = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = 27B345C11CCD669A005BA871;
-					};
-					27B345E01CCD669A005BA871 = {
-						CreatedOnToolsVersion = 7.3;
-						TestTargetID = 27B345C11CCD669A005BA871;
 					};
 				};
 			};
@@ -476,13 +476,27 @@
 			projectRoot = "";
 			targets = (
 				27B345C11CCD669A005BA871 /* Grove */,
-				27B345D51CCD669A005BA871 /* GroveTests */,
-				27B345E01CCD669A005BA871 /* GroveUITests */,
+				279B3D7B1CDBA27200CE7817 /* GroveTests */,
+				279B3D891CDBA27700CE7817 /* GroveUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		279B3D7A1CDBA27200CE7817 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		279B3D881CDBA27700CE7817 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27B345C01CCD669A005BA871 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -505,20 +519,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		27B345D41CCD669A005BA871 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		27B345DF1CCD669A005BA871 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -537,36 +537,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		0C35328E2B60F2A9CFEBBEFB /* 📦 Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GroveTests/Pods-GroveTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0F595A8C7C9B213F65245247 /* 📦 Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GroveUITests/Pods-GroveUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		27235A2A1CCE5B6A006B1475 /* R.swift */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -581,7 +551,7 @@
 			shellPath = /bin/sh;
 			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
 		};
-		2EC087DD5BD8254D9221EFB5 /* 📦 Check Pods Manifest.lock */ = {
+		283AAEFD999456CBC720B00D /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -611,7 +581,37 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Grove/Pods-Grove-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D5BAD9823D4294CD420EAD41 /* 📦 Copy Pods Resources */ = {
+		42CD5844F7DAD931C1000279 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GroveTests/Pods-GroveTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4CA860908A85CE5640FE9D19 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GroveUITests/Pods-GroveUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C33EC28E632D2D3C93C42F37 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -624,21 +624,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GroveTests/Pods-GroveTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EC21053FB36659E47A0EBA53 /* 📦 Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "📦 Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		ED00E8F80F903BCF556D03B3 /* 📦 Embed Pods Frameworks */ = {
@@ -656,9 +641,40 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Grove/Pods-Grove-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FA982E94F6860F4A571DCE57 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		279B3D781CDBA27200CE7817 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279B3D7F1CDBA27200CE7817 /* GroveTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		279B3D861CDBA27700CE7817 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				279B3D8D1CDBA27700CE7817 /* GroveUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		27B345BE1CCD669A005BA871 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -696,34 +712,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		27B345D21CCD669A005BA871 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				27D042331CDAEBA300F3B85A /* GroveTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		27B345DD1CCD669A005BA871 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				27B345E61CCD669A005BA871 /* GroveUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		27B345D81CCD669A005BA871 /* PBXTargetDependency */ = {
+		279B3D821CDBA27200CE7817 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 27B345C11CCD669A005BA871 /* Grove */;
-			targetProxy = 27B345D71CCD669A005BA871 /* PBXContainerItemProxy */;
+			targetProxy = 279B3D811CDBA27200CE7817 /* PBXContainerItemProxy */;
 		};
-		27B345E31CCD669A005BA871 /* PBXTargetDependency */ = {
+		279B3D901CDBA27700CE7817 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 27B345C11CCD669A005BA871 /* Grove */;
-			targetProxy = 27B345E21CCD669A005BA871 /* PBXContainerItemProxy */;
+			targetProxy = 279B3D8F1CDBA27700CE7817 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -747,6 +747,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		279B3D841CDBA27200CE7817 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0056E4470DD35EA7349FB58D /* Pods-GroveTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GroveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kylebashour.GroveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grove.app/Grove";
+			};
+			name = Debug;
+		};
+		279B3D851CDBA27200CE7817 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA8709BF696F26280CEE2924 /* Pods-GroveTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GroveTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kylebashour.GroveTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grove.app/Grove";
+			};
+			name = Release;
+		};
+		279B3D921CDBA27700CE7817 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 636C6C8A766698738BA2C2ED /* Pods-GroveUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = GroveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kylebashour.GroveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Grove;
+			};
+			name = Debug;
+		};
+		279B3D931CDBA27700CE7817 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F9348406D02EB6563C67B51 /* Pods-GroveUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = GroveUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kylebashour.GroveUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Grove;
+			};
+			name = Release;
+		};
 		27B345E81CCD669A005BA871 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -866,59 +916,27 @@
 			};
 			name = Release;
 		};
-		27B345EE1CCD669A005BA871 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0056E4470DD35EA7349FB58D /* Pods-GroveTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = GroveTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kylebashour.GroveTests;
-				PRODUCT_NAME = GroveTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grove.app/Grove";
-			};
-			name = Debug;
-		};
-		27B345EF1CCD669A005BA871 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA8709BF696F26280CEE2924 /* Pods-GroveTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = GroveTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kylebashour.GroveTests;
-				PRODUCT_NAME = GroveTests;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Grove.app/Grove";
-			};
-			name = Release;
-		};
-		27B345F11CCD669A005BA871 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 636C6C8A766698738BA2C2ED /* Pods-GroveUITests.debug.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = GroveUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kylebashour.GroveUITests;
-				PRODUCT_NAME = GroveUITests;
-				TEST_TARGET_NAME = Grove;
-			};
-			name = Debug;
-		};
-		27B345F21CCD669A005BA871 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4F9348406D02EB6563C67B51 /* Pods-GroveUITests.release.xcconfig */;
-			buildSettings = {
-				INFOPLIST_FILE = GroveUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kylebashour.GroveUITests;
-				PRODUCT_NAME = GroveUITests;
-				TEST_TARGET_NAME = Grove;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		279B3D831CDBA27200CE7817 /* Build configuration list for PBXNativeTarget "GroveTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				279B3D841CDBA27200CE7817 /* Debug */,
+				279B3D851CDBA27200CE7817 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		279B3D911CDBA27700CE7817 /* Build configuration list for PBXNativeTarget "GroveUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				279B3D921CDBA27700CE7817 /* Debug */,
+				279B3D931CDBA27700CE7817 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		27B345BD1CCD669A005BA871 /* Build configuration list for PBXProject "Grove" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -933,24 +951,6 @@
 			buildConfigurations = (
 				27B345EB1CCD669A005BA871 /* Debug */,
 				27B345EC1CCD669A005BA871 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		27B345ED1CCD669A005BA871 /* Build configuration list for PBXNativeTarget "GroveTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				27B345EE1CCD669A005BA871 /* Debug */,
-				27B345EF1CCD669A005BA871 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		27B345F01CCD669A005BA871 /* Build configuration list for PBXNativeTarget "GroveUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				27B345F11CCD669A005BA871 /* Debug */,
-				27B345F21CCD669A005BA871 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

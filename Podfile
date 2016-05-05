@@ -1,7 +1,8 @@
 platform :ios, '9.0'
-use_frameworks!
 
-def pods
+target 'Grove' do
+  use_frameworks!
+
     pod 'Alamofire'
     pod 'AlamofireNetworkActivityIndicator'
     pod 'RealmSwift'
@@ -16,18 +17,15 @@ def pods
     pod 'INTULocationManager'
     pod 'BNRDynamicTypeManager'
     pod 'SwiftyBeaver'
-end
 
-target 'Grove' do
-    pods
-end
+  target 'GroveTests' do
+    inherit! :search_paths
+  end
 
-target 'GroveTests' do
-    pods
-end
+  target 'GroveUITests' do
+    inherit! :search_paths
+  end
 
-target 'GroveUITests' do
-    pods
 end
 
 post_install do |installer|

@@ -1,15 +1,15 @@
 //
-//  WherenoTests.swift
-//  WherenoTests
+//  GroveTests.swift
+//  GroveTests
 //
-//  Created by Kyle Bashour on 4/24/16.
+//  Created by Kyle Bashour on 5/5/16.
 //  Copyright © 2016 Kyle Bashour. All rights reserved.
 //
 
 import XCTest
 @testable import Grove
 
-class Grove: XCTestCase {
+class GroveTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -20,8 +20,8 @@ class Grove: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-
-    func testTest() {
+    
+    func testExample() {
         XCTAssert(true != false)
     }
 }
