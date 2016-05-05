@@ -21,6 +21,10 @@ class LoginViewController: UIViewController {
 
     // MARK: Properties
 
+    let privacyURL = NSURL(string: "http://kylebashour.com/grove/privacy")!
+    let termsURL = NSURL(string: "http://kylebashour.com/grove/terms")!
+    let facebookURL = NSURL(string: "https://grove-api.herokuapp.com/login/facebook")!
+
     let locationManager = CLLocationManager()
     let imageTime = 4.5
     let fadeTime = 1.0
@@ -59,12 +63,24 @@ class LoginViewController: UIViewController {
     // MARK: IBActions
 
     @IBAction func facebookButtonTapped(sender: UIButton) {
-        let vc = SFSafariViewController(URL: NSURL(string: "https://grove-api.herokuapp.com/login/facebook")!)
-        presentViewController(vc, animated: true, completion: nil)
+        presentSafariVCWithURL(facebookURL)
+    }
+
+    @IBAction func privacyButtonTapped(sender: UIButton) {
+        presentSafariVCWithURL(privacyURL)
+    }
+
+    @IBAction func termsButtonTapped(sender: UIButton) {
+        presentSafariVCWithURL(termsURL)
     }
 
 
     // MARK: Helpers
+
+    func presentSafariVCWithURL(url: NSURL) {
+        let vc = SFSafariViewController(URL: url)
+        presentViewController(vc, animated: true, completion: nil)
+    }
 
     // Listen for login or login failed notifications
     func setUpNotificationCenter() {
