@@ -47,12 +47,7 @@ class LoginViewController: UIViewController {
         requestLocationPermissionIfNeeded()
         setUpNotificationCenter()
         setUpCycleImage()
-    }
 
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-
-        // Cycle the
         timer = NSTimer.scheduledTimerWithTimeInterval(imageTime, target: self, selector: #selector(cycleImage), userInfo: nil, repeats: true)
 
         // Call this for the first image
