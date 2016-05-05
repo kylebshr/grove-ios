@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27B345D51CCD669A005BA871"
-               BuildableName = "Grove.xctest"
+               BuildableName = "GroveTests.xctest"
                BlueprintName = "GroveTests"
                ReferencedContainer = "container:Grove.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "27B345E01CCD669A005BA871"
-               BuildableName = "Grove.xctest"
+               BuildableName = "GroveUITests.xctest"
                BlueprintName = "GroveUITests"
                ReferencedContainer = "container:Grove.xcodeproj">
             </BuildableReference>
