@@ -14,23 +14,23 @@ PODS:
   - BNRDynamicTypeManager/Core (0.1.0)
   - INTULocationManager (4.2.0)
   - JLRoutes (1.6)
-  - Kingfisher (2.3.1)
+  - Kingfisher (2.4.0)
   - ModelMapper (2.1.0)
   - PKHUD (3.1.0)
-  - R.swift (2.1.0):
-    - R.swift.Library (~> 2.0.0)
-  - R.swift.Library (2.0.0)
+  - R.swift (2.2.0):
+    - R.swift.Library (~> 2.1.0)
+  - R.swift.Library (2.1.0)
   - RBQFetchedResultsController (4.0.3):
     - Realm (>= 0.99.1)
-  - Realm (0.100.0):
-    - Realm/Headers (= 0.100.0)
-  - Realm/Headers (0.100.0)
+  - Realm (0.101.0):
+    - Realm/Headers (= 0.101.0)
+  - Realm/Headers (0.101.0)
   - RealmMapView (1.8):
     - ABFRealmMapView (>= 1.8)
     - RealmSwift (>= 0.98)
     - SwiftFetchedResultsController (>= 2.4.3)
-  - RealmSwift (0.100.0):
-    - Realm (= 0.100.0)
+  - RealmSwift (0.101.0):
+    - Realm (= 0.101.0)
   - SSKeychain (1.4.0)
   - SwiftFetchedResultsController (4.0.3):
     - RBQFetchedResultsController (>= 4.0.3)
@@ -61,15 +61,15 @@ SPEC CHECKSUMS:
   BNRDynamicTypeManager: 44ee2970cd0120cbedd3dec84da41d0381525219
   INTULocationManager: 73f8254b3d05c897c56bb13c190e5b7c648c0998
   JLRoutes: 435d791422e96c9b9b5e1c4db1aedb3ae1b1a08f
-  Kingfisher: 6d3fbada4829cbc7b89e883e8218c28afeb64e42
+  Kingfisher: 9171a424ee7f8031f518f649bb850d1eab541247
   ModelMapper: e599744bc1e869bdb87b453b7ce16981028b8513
   PKHUD: 4167eccdb1b3a892fd80ce2b51cb6ba412a889ab
-  R.swift: efff131531b5cf142e28fd94957806ff71ccbcf2
-  R.swift.Library: 9f4b2d12040daa1ffe336d8f7e1574f73721fd01
+  R.swift: 93333ff6e5da17ec1f38463671d5ea306197cf96
+  R.swift.Library: e5e077ed04f6867a95676af491650091b23518e9
   RBQFetchedResultsController: fcc29d033acb7875af5c85976bd4f1ddb4ff75bc
-  Realm: b13b548e712d28a66678970c45cd245ebb94ba3b
+  Realm: b21596d6d7e1c054f6fae967d27263d2593ca309
   RealmMapView: e7857bc757f54baf81133b24e91383da292dbf5e
-  RealmSwift: 1bb0ba2ceaa06b65d740b4f91bfa06e3fd1b805c
+  RealmSwift: 5247501bcd68b9db3a718cba808e1ce45ba67034
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   SwiftFetchedResultsController: 5ba43769b1198195e087f37536c99611505da5ec
   SwiftyBeaver: 3a2481e7c24e8ef75252ec9eeebf1f456ac2d2f7

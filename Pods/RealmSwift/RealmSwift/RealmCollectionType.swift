@@ -45,34 +45,34 @@ public final class RLMGenerator<T: Object>: GeneratorType {
  collections, and reports the current state of the collection and what changes
  were made to the collection since the last time the notification was called.
 
- The arrays of indices in the .Update varation follow UITableView's batching
+ The arrays of indices in the .Update case follow UITableView's batching
  conventions, and can be passed as-is to a table view's batch update functions
  after converting to index paths in the appropriate section. For example, for a
  simple one-section table view, you can do the following:
 
-        self.notificationToken = results.addNotificationBlock { changes
-            switch changes {
-            case .Initial:
-                // Results are now populated and can be accessed without blocking the UI
-                self.tableView.reloadData()
-                break
-            case .Update(_, let deletions, let insertions, let modifications):
-                // Query results have changed, so apply them to the TableView
-                self.tableView.beginUpdates()
-                self.tableView.insertRowsAtIndexPaths(insertions.map { NSIndexPath(forRow: $0, inSection: 0) },
-                    withRowAnimation: .Automatic)
-                self.tableView.deleteRowsAtIndexPaths(deletions.map { NSIndexPath(forRow: $0, inSection: 0) },
-                    withRowAnimation: .Automatic)
-                self.tableView.reloadRowsAtIndexPaths(modifications.map { NSIndexPath(forRow: $0, inSection: 0) },
-                    withRowAnimation: .Automatic)
-                self.tableView.endUpdates()
-                break
-            case .Error(let err):
-                // An error occurred while opening the Realm file on the background worker thread
-                fatalError("\(err)")
-                break
-            }
+    self.notificationToken = results.addNotificationBlock { changes
+        switch changes {
+        case .Initial:
+            // Results are now populated and can be accessed without blocking the UI
+            self.tableView.reloadData()
+            break
+        case .Update(_, let deletions, let insertions, let modifications):
+            // Query results have changed, so apply them to the TableView
+            self.tableView.beginUpdates()
+            self.tableView.insertRowsAtIndexPaths(insertions.map { NSIndexPath(forRow: $0, inSection: 0) },
+                withRowAnimation: .Automatic)
+            self.tableView.deleteRowsAtIndexPaths(deletions.map { NSIndexPath(forRow: $0, inSection: 0) },
+                withRowAnimation: .Automatic)
+            self.tableView.reloadRowsAtIndexPaths(modifications.map { NSIndexPath(forRow: $0, inSection: 0) },
+                withRowAnimation: .Automatic)
+            self.tableView.endUpdates()
+            break
+        case .Error(let err):
+            // An error occurred while opening the Realm file on the background worker thread
+            fatalError("\(err)")
+            break
         }
+    }
  */
 public enum RealmCollectionChange<T> {
     /// The initial run of the query has completed (if applicable), and the
@@ -296,6 +296,61 @@ public protocol RealmCollectionType: CollectionType, CustomStringConvertible {
     func setValue(value: AnyObject?, forKey key: String)
 
     // MARK: Notifications
+
+    /**
+     Register a block to be called each time the collection changes.
+
+     The block will be asynchronously called with the initial results, and then
+     called again after each write transaction which changes either any of the
+     objects in the collection, or which objects are in the collection.
+
+     At the time when the block is called, the collection object will be fully
+     evaluated and up-to-date, and as long as you do not perform a write
+     transaction on the same thread or explicitly call realm.refresh(),
+     accessing it will never perform blocking work.
+
+     Notifications are delivered via the standard run loop, and so can't be
+     delivered while the run loop is blocked by other activity. When
+     notifications can't be delivered instantly, multiple notifications may be
+     coalesced into a single notification. This can include the notification
+     with the initial collection. For example, the following code performs a write
+     transaction immediately after adding the notification block, so there is no
+     opportunity for the initial notification to be delivered first. As a
+     result, the initial notification will reflect the state of the Realm after
+     the write transaction.
+
+         let results = realm.objects(Dog)
+         print("dogs.count: \(dogs?.count)") // => 0
+         let token = dogs.addNotificationBlock { (changes: RealmCollectionChange) in
+             switch changes {
+                 case .Initial(let dogs):
+                     // Will print "dogs.count: 1"
+                     print("dogs.count: \(dogs.count)")
+                     break
+                 case .Update:
+                     // Will not be hit in this example
+                     break
+                 case .Error:
+                     break
+             }
+         }
+         try! realm.write {
+             let dog = Dog()
+             dog.name = "Rex"
+             person.dogs.append(dog)
+         }
+         // end of run loop execution context
+
+     You must retain the returned token for as long as you want updates to continue
+     to be sent to the block. To stop receiving updates, call stop() on the token.
+
+     - warning: This method cannot be called during a write transaction, or when
+                the source realm is read-only.
+
+     - parameter block: The block to be called with the evaluated collection and change information.
+     - returns: A token which must be held for as long as you want updates to be delivered.
+     */
+    func addNotificationBlock(block: (RealmCollectionChange<Self>) -> Void) -> NotificationToken
 
     /// :nodoc:
     func _addNotificationBlock(block: (RealmCollectionChange<AnyRealmCollection<Element>>) -> Void) -> NotificationToken
