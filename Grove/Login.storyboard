@@ -48,8 +48,8 @@
                                             <rect key="frame" x="9" y="175" width="272" height="86"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0R-gM-vns">
-                                        <rect key="frame" x="169" y="505" width="263" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0R-gM-vns">
+                                        <rect key="frame" x="169" y="495" width="263" height="45"/>
                                         <accessibility key="accessibilityConfiguration" label="Login with Facebook"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" image="facebook-login">
@@ -62,19 +62,75 @@
                                             <action selector="facebookButtonTapped:" destination="cYL-GU-1dL" eventType="touchUpInside" id="fPO-Qv-879"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkW-wg-vxr">
+                                        <rect key="frame" x="189" y="564" width="77" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                        <state key="normal" title="Privacy Policy">
+                                            <color key="titleColor" red="0.45714786474277269" green="0.74529036942698723" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuk-Jr-PBr">
+                                        <rect key="frame" x="268" y="570" width="21" height="14"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYb-0r-aEE">
+                                        <rect key="frame" x="291" y="564" width="120" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                        <state key="normal" title="Terms and Conditions">
+                                            <color key="titleColor" red="0.45714786474277269" green="0.74529036942698723" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vE2-Ti-5pr">
+                                        <rect key="frame" x="415" y="577" width="181" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="XdR-Ki-Jv0"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QPI-jI-Omw">
+                                        <rect key="frame" x="4" y="577" width="181" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="f1d-g4-igC"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" text="By signing in, you agree to our" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRh-GT-H0m">
+                                        <rect key="frame" x="217" y="556" width="166" height="14"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="11"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="NYb-0r-aEE" firstAttribute="leading" secondItem="xuk-Jr-PBr" secondAttribute="trailing" constant="2" id="1Wb-SM-TeR"/>
                                     <constraint firstItem="1Eo-OM-wh6" firstAttribute="top" secondItem="UG0-zA-afe" secondAttribute="top" constant="80" id="5yJ-e1-hpf">
                                         <variation key="heightClass=compact" constant="20"/>
                                     </constraint>
+                                    <constraint firstAttribute="trailing" secondItem="vE2-Ti-5pr" secondAttribute="trailing" constant="4" id="60j-Pc-Gjq"/>
+                                    <constraint firstItem="NYb-0r-aEE" firstAttribute="centerY" secondItem="xuk-Jr-PBr" secondAttribute="centerY" id="C5i-84-UyL"/>
+                                    <constraint firstItem="QPI-jI-Omw" firstAttribute="leading" secondItem="UG0-zA-afe" secondAttribute="leading" constant="4" id="GpT-FX-mri"/>
+                                    <constraint firstItem="xuk-Jr-PBr" firstAttribute="top" secondItem="BRh-GT-H0m" secondAttribute="bottom" id="IMO-qh-1TL"/>
+                                    <constraint firstItem="pkW-wg-vxr" firstAttribute="leading" secondItem="QPI-jI-Omw" secondAttribute="trailing" constant="4" id="KtO-d9-Edn"/>
                                     <constraint firstItem="9lt-B7-r5m" firstAttribute="top" secondItem="1Eo-OM-wh6" secondAttribute="bottom" constant="20" id="MW6-ms-FbC"/>
                                     <constraint firstItem="S0R-gM-vns" firstAttribute="centerX" secondItem="UG0-zA-afe" secondAttribute="centerX" id="OxG-ye-ujx"/>
+                                    <constraint firstItem="xuk-Jr-PBr" firstAttribute="leading" secondItem="pkW-wg-vxr" secondAttribute="trailing" constant="2" id="PDl-Zh-bVc"/>
+                                    <constraint firstItem="QPI-jI-Omw" firstAttribute="width" secondItem="vE2-Ti-5pr" secondAttribute="width" id="PeY-G2-1GG"/>
                                     <constraint firstAttribute="trailing" secondItem="9lt-B7-r5m" secondAttribute="trailing" constant="20" id="SbU-p3-kqO"/>
+                                    <constraint firstItem="vE2-Ti-5pr" firstAttribute="centerY" secondItem="NYb-0r-aEE" secondAttribute="centerY" id="Sph-EG-2eV"/>
                                     <constraint firstItem="9lt-B7-r5m" firstAttribute="leading" secondItem="UG0-zA-afe" secondAttribute="leading" constant="20" id="XFO-aE-axD"/>
-                                    <constraint firstAttribute="bottom" secondItem="S0R-gM-vns" secondAttribute="bottom" constant="50" id="qdp-Ra-d2L">
-                                        <variation key="heightClass=compact" constant="30"/>
+                                    <constraint firstItem="BRh-GT-H0m" firstAttribute="centerX" secondItem="UG0-zA-afe" secondAttribute="centerX" id="aLa-gS-gC9"/>
+                                    <constraint firstItem="BRh-GT-H0m" firstAttribute="top" secondItem="S0R-gM-vns" secondAttribute="bottom" constant="16" id="b85-z3-rjs">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="8"/>
                                     </constraint>
+                                    <constraint firstAttribute="bottom" secondItem="xuk-Jr-PBr" secondAttribute="bottom" constant="16" id="dWe-Tw-Hti">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="8"/>
+                                    </constraint>
+                                    <constraint firstItem="vE2-Ti-5pr" firstAttribute="leading" secondItem="NYb-0r-aEE" secondAttribute="trailing" constant="4" id="hdh-Zd-wTX"/>
+                                    <constraint firstItem="pkW-wg-vxr" firstAttribute="centerY" secondItem="xuk-Jr-PBr" secondAttribute="centerY" id="n3G-or-GHI"/>
+                                    <constraint firstItem="QPI-jI-Omw" firstAttribute="centerY" secondItem="pkW-wg-vxr" secondAttribute="centerY" id="q52-TT-Toj"/>
                                     <constraint firstItem="1Eo-OM-wh6" firstAttribute="centerX" secondItem="UG0-zA-afe" secondAttribute="centerX" id="x7W-vR-J30"/>
                                     <constraint firstItem="S0R-gM-vns" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9lt-B7-r5m" secondAttribute="bottom" constant="20" id="zzP-oc-8AI"/>
                                 </constraints>
