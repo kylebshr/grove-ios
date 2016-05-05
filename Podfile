@@ -1,30 +1,30 @@
 platform :ios, '9.0'
 
 target 'Grove' do
-  use_frameworks!
+    use_frameworks!
 
-    pod 'Alamofire'
-    pod 'AlamofireNetworkActivityIndicator'
-    pod 'RealmSwift'
-    pod 'RealmMapView'
-    pod 'ModelMapper'
-    pod 'AsyncSwift'
-    pod 'R.swift'
-    pod 'Kingfisher'
-    pod 'JLRoutes'
-    pod 'SSKeychain'
-    pod 'PKHUD'
-    pod 'INTULocationManager'
-    pod 'BNRDynamicTypeManager'
-    pod 'SwiftyBeaver'
+        pod 'Alamofire'
+        pod 'AlamofireNetworkActivityIndicator'
+        pod 'RealmSwift'
+        pod 'RealmMapView'
+        pod 'ModelMapper'
+        pod 'AsyncSwift'
+        pod 'R.swift'
+        pod 'Kingfisher'
+        pod 'JLRoutes'
+        pod 'SSKeychain'
+        pod 'PKHUD'
+        pod 'INTULocationManager'
+        pod 'BNRDynamicTypeManager'
+        pod 'SwiftyBeaver'
 
-  target 'GroveTests' do
-    inherit! :search_paths
-  end
+    target 'GroveTests' do
+        inherit! :search_paths
+    end
 
-  target 'GroveUITests' do
-    inherit! :search_paths
-  end
+    target 'GroveUITests' do
+        inherit! :search_paths
+    end
 
 end
 
