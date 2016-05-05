@@ -15,7 +15,7 @@ class LocationListViewController: UITableViewController {
 
     var locations: [HammockLocation]!
 
-
+    
     // MARK: Lifecycle
 
     override func viewDidLoad() {

@@ -25,6 +25,7 @@ class MapViewController: UIViewController {
     let annotationViewReuseId = "AnnotationViewReuseId"
     let realm = try! Realm()
     let titleView = R.nib.mapTitleView.firstView(owner: nil)!
+    let locationCellHeight = 124
 
     var didShowInitialLocation = false
 
@@ -73,7 +74,7 @@ class MapViewController: UIViewController {
 
     // Create a region from coordinates and animate to that region
     func updateMapRegion(coordinate: CLLocationCoordinate2D) {
-        let region = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.02))
+        let region = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.015, longitudeDelta: 0.015))
         mapView.setRegion(region, animated: true)
     }
 
@@ -239,8 +240,8 @@ extension MapViewController: UIViewControllerPreviewingDelegate {
             else {
                 let vc = R.storyboard.map.locationListViewController()!
 
-                // Set a nice preferred content size to only be as tall as needed
-                let size = CGSize(width: view.frame.width, height: min(CGFloat(locations.count * 140) - 5, mapView.frame.height - (navigationController?.navigationBar.frame.height ?? 0) * 2))
+                // Set a nice preferred content size to only be as tall as needed, minus the white space and separator
+                let size = CGSize(width: view.frame.width, height: min(CGFloat(locations.count * locationCellHeight) - 5, mapView.frame.height - (navigationController?.navigationBar.frame.height ?? 0) * 2))
                 vc.preferredContentSize = size
 
                 vc.locations = locations
