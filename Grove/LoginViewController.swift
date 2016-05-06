@@ -34,7 +34,6 @@ class LoginViewController: UIViewController {
     }()
 
     var currentImageName: String = "login4"
-    var firstAppearance = true
     var timer: NSTimer?
 
 
@@ -47,19 +46,21 @@ class LoginViewController: UIViewController {
         requestLocationPermissionIfNeeded()
         setUpNotificationCenter()
         setUpCycleImage()
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
 
         timer = NSTimer.scheduledTimerWithTimeInterval(imageTime, target: self, selector: #selector(cycleImage), userInfo: nil, repeats: true)
 
-        // Call this for the first image
+        imageView.image = nextRandomImage()
+        doKenBurnsEffect()
     }
 
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
 
-        if firstAppearance {
-            doKenBurnsEffect()
-            firstAppearance = false
-        }
+        timer?.invalidate()
     }
 
 
