@@ -12,6 +12,9 @@ PODS:
   - BNRDynamicTypeManager/Controls (0.1.0):
     - BNRDynamicTypeManager/Core
   - BNRDynamicTypeManager/Core (0.1.0)
+  - Crashlytics (3.7.0):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.7)
   - INTULocationManager (4.2.0)
   - JLRoutes (1.6)
   - Kingfisher (2.4.0)
@@ -42,6 +45,8 @@ DEPENDENCIES:
   - AlamofireNetworkActivityIndicator
   - AsyncSwift
   - BNRDynamicTypeManager
+  - Crashlytics
+  - Fabric
   - INTULocationManager
   - JLRoutes
   - Kingfisher
@@ -59,6 +64,8 @@ SPEC CHECKSUMS:
   AlamofireNetworkActivityIndicator: 49a6e39afb947136f7b1872bae2d684957c26697
   AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
   BNRDynamicTypeManager: 44ee2970cd0120cbedd3dec84da41d0381525219
+  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
+  Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   INTULocationManager: 73f8254b3d05c897c56bb13c190e5b7c648c0998
   JLRoutes: 435d791422e96c9b9b5e1c4db1aedb3ae1b1a08f
   Kingfisher: 9171a424ee7f8031f518f649bb850d1eab541247
@@ -74,6 +81,6 @@ SPEC CHECKSUMS:
   SwiftFetchedResultsController: 5ba43769b1198195e087f37536c99611505da5ec
   SwiftyBeaver: 3a2481e7c24e8ef75252ec9eeebf1f456ac2d2f7
 
-PODFILE CHECKSUM: 025983976b3050f696f68d97c8239b5bf8f4b2bb
+PODFILE CHECKSUM: fba8d6324cd79f36b8350539b2e4f2d7627c9873
 
 COCOAPODS: 1.0.0.rc.2

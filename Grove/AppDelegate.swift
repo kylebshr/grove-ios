@@ -16,6 +16,8 @@ import AlamofireNetworkActivityIndicator
 import JLRoutes
 import PKHUD
 import SwiftyBeaver
+import Fabric
+import Crashlytics
 
 let log = SwiftyBeaver.self
 
@@ -33,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // Set up a few things
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+
+        Fabric.with([Crashlytics.self])
 
         UITabBar.appearance().tintColor = .zodiacBlue()
         UINavigationBar.appearance().barTintColor = .zodiacBarBlue()

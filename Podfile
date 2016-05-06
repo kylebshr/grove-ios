@@ -17,6 +17,8 @@ target 'Grove' do
         pod 'INTULocationManager'
         pod 'BNRDynamicTypeManager'
         pod 'SwiftyBeaver'
+        pod 'Fabric'
+        pod 'Crashlytics'
 
     target 'GroveTests' do
         inherit! :search_paths
