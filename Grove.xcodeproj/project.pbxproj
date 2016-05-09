@@ -28,6 +28,7 @@
 		279744381CD2C739001A36BF /* GroveNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279744371CD2C739001A36BF /* GroveNavigationController.swift */; };
 		279B3D7F1CDBA27200CE7817 /* GroveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279B3D7E1CDBA27200CE7817 /* GroveTests.swift */; };
 		279B3D8D1CDBA27700CE7817 /* GroveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279B3D8C1CDBA27700CE7817 /* GroveUITests.swift */; };
+		27A2E99D1CE01C2000C3785C /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2E99C1CE01C2000C3785C /* FriendCell.swift */; };
 		27A9232A1CD032CE0020739D /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A923291CD032CE0020739D /* String+Extensions.swift */; };
 		27A9232C1CD0378B0020739D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A9232B1CD0378B0020739D /* User.swift */; };
 		27A923341CD127F80020739D /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A923331CD127F80020739D /* UIImage+Extensions.swift */; };
@@ -104,6 +105,7 @@
 		279B3D8A1CDBA27700CE7817 /* GroveUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroveUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		279B3D8C1CDBA27700CE7817 /* GroveUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroveUITests.swift; sourceTree = "<group>"; };
 		279B3D8E1CDBA27700CE7817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27A2E99C1CE01C2000C3785C /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		27A923291CD032CE0020739D /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		27A9232B1CD0378B0020739D /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		27A923331CD127F80020739D /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 		27CCFB1B1CCFC0AE00399F35 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				27A2E99C1CE01C2000C3785C /* FriendCell.swift */,
 				27235A321CCE78F2006B1475 /* DetailHeaderCell.swift */,
 				27235A341CCE78FD006B1475 /* DetailCommentCell.swift */,
 			);
@@ -698,6 +701,7 @@
 				279744381CD2C739001A36BF /* GroveNavigationController.swift in Sources */,
 				27A923381CD135750020739D /* UIViewController+Extensions.swift in Sources */,
 				2750DE0C1CCFEF8C002F9C72 /* Alamofire+Extensions.swift in Sources */,
+				27A2E99D1CE01C2000C3785C /* FriendCell.swift in Sources */,
 				27235A3E1CCEA6E5006B1475 /* NSDate+Extensions.swift in Sources */,
 				27B345C81CCD669A005BA871 /* MapViewController.swift in Sources */,
 				27A923341CD127F80020739D /* UIImage+Extensions.swift in Sources */,
