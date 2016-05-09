@@ -49,6 +49,8 @@
 		27DECBF01CCD68B500A4BCD2 /* HammockLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DECBEF1CCD68B500A4BCD2 /* HammockLocation.swift */; };
 		27DECBF51CCD7DDA00A4BCD2 /* Knoxville.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 27DECBF41CCD7DDA00A4BCD2 /* Knoxville.gpx */; };
 		27DECBFA1CCD901D00A4BCD2 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DECBF91CCD901D00A4BCD2 /* UITextField+Extensions.swift */; };
+		27F788A21CE1136000AD1C8A /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F788A11CE1136000AD1C8A /* Friend.swift */; };
+		27F788A61CE1171300AD1C8A /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F788A51CE1171300AD1C8A /* FriendsViewController.swift */; };
 		27F912491CDA61A20058C297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F912481CDA61A20058C297 /* Main.storyboard */; };
 		27F9124B1CDA621B0058C297 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F9124A1CDA621B0058C297 /* Favorites.storyboard */; };
 		27F9124D1CDA62210058C297 /* Account.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F9124C1CDA62210058C297 /* Account.storyboard */; };
@@ -128,6 +130,8 @@
 		27DECBEF1CCD68B500A4BCD2 /* HammockLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HammockLocation.swift; sourceTree = "<group>"; };
 		27DECBF41CCD7DDA00A4BCD2 /* Knoxville.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Knoxville.gpx; sourceTree = "<group>"; };
 		27DECBF91CCD901D00A4BCD2 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		27F788A11CE1136000AD1C8A /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		27F788A51CE1171300AD1C8A /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		27F912481CDA61A20058C297 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		27F9124A1CDA621B0058C297 /* Favorites.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
 		27F9124C1CDA62210058C297 /* Account.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Account.storyboard; sourceTree = "<group>"; };
@@ -294,6 +298,7 @@
 				27D0423B1CDAF1D400F3B85A /* Map */,
 				27D0423C1CDAF1DF00F3B85A /* Account */,
 				2750DE091CCFDEEE002F9C72 /* AddLocationViewController.swift */,
+				27F788A51CE1171300AD1C8A /* FriendsViewController.swift */,
 				27742DC31CD272F00039A54C /* LoginViewController.swift */,
 				279744371CD2C739001A36BF /* GroveNavigationController.swift */,
 			);
@@ -333,6 +338,7 @@
 				27DECBEF1CCD68B500A4BCD2 /* HammockLocation.swift */,
 				27235A2F1CCE67D9006B1475 /* LocationComment.swift */,
 				27A9232B1CD0378B0020739D /* User.swift */,
+				27F788A11CE1136000AD1C8A /* Friend.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -725,9 +731,11 @@
 				27D0423A1CDAF06B00F3B85A /* MyLocationsHeader.swift in Sources */,
 				2703279B1CD5980500F3BA0B /* MapTitleView.swift in Sources */,
 				27D0423E1CDAF1EB00F3B85A /* AccountViewController.swift in Sources */,
+				27F788A61CE1171300AD1C8A /* FriendsViewController.swift in Sources */,
 				27235A331CCE78F2006B1475 /* DetailHeaderCell.swift in Sources */,
 				27235A2E1CCE5BAA006B1475 /* LocationDetailViewController.swift in Sources */,
 				27DECBF01CCD68B500A4BCD2 /* HammockLocation.swift in Sources */,
+				27F788A21CE1136000AD1C8A /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

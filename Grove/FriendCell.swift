@@ -19,4 +19,10 @@ class FriendCell: UITableViewCell {
 
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
     }
+
+    func configureForFriend(friend: Friend) {
+        profileImageView.kf_setImageWithURL(friend.profileImageURL, placeholderImage: R.image.profilePlaceholder())
+        nameLabel.text = "\(friend.firstName) \(friend.lastName)"
+        locationCountLabel.text = "\(friend.locations.count) " + (friend.locations.count == 1 ? "Location" : "Locations")
+    }
 }

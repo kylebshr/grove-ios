@@ -48,7 +48,6 @@ final class HammockLocation: Object, Mappable {
         try capacity = map.from("capacity")
 
         let comments: [LocationComment] = (try? map.from("comments")) ?? []
-
         self.comments.appendContentsOf(comments)
     }
 
