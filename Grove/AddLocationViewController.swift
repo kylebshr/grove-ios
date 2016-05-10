@@ -45,7 +45,7 @@ class AddLocationViewController: UITableViewController {
         descriptionTextView.textContainerInset = UIEdgeInsets(top: 0, left: -4, bottom: 0, right: 0)
 
         INTULocationManager.sharedInstance().requestLocationWithDesiredAccuracy(.Room, timeout: 10) { location, _, _ in
-            self.coordinates = location.coordinate
+            self.coordinates = location?.coordinate
         }
     }
 

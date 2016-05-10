@@ -10,6 +10,7 @@ import UIKit
 import RealmSwift
 import RealmMapView
 import Async
+import CoreLocation
 
 class MapViewController: UIViewController {
 
@@ -65,6 +66,31 @@ class MapViewController: UIViewController {
 
     // Present the creation UI
     @IBAction func addLocationButtonTapped(sender: UIBarButtonItem) {
+
+        guard CLLocationManager.authorizationStatus() == .AuthorizedWhenInUse else {
+
+            let alert = UIAlertController(
+                title: "We Need Your Location!",
+                message: "To post new hammock locations, we need permission to get your current location.",
+                preferredStyle: .Alert
+            )
+
+            let settings = UIAlertAction(title: "Take Me To Settings", style: .Default) { (alertAction) in
+                if let appSettings = NSURL(string: UIApplicationOpenSettingsURLString) {
+                    UIApplication.sharedApplication().openURL(appSettings)
+                }
+            }
+
+            let cancel = UIAlertAction(title: "Cancel", style: .Cancel, handler: nil)
+
+            alert.addAction(settings)
+            alert.addAction(cancel)
+                
+            presentViewController(alert, animated: true, completion: nil)
+
+            return
+        }
+
         let nav = R.storyboard.compose.initialViewController()!
         presentViewController(nav, animated: true, completion: nil)
     }
