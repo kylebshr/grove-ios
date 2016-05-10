@@ -2,7 +2,7 @@ PODS:
   - ABFRealmMapView (1.8):
     - RBQFetchedResultsController (>= 2.0)
     - Realm (>= 0.98)
-  - Alamofire (3.3.1)
+  - Alamofire (3.4.0)
   - AlamofireNetworkActivityIndicator (1.0.1):
     - Alamofire (~> 3.3)
   - AsyncSwift (1.7.2)
@@ -17,23 +17,23 @@ PODS:
   - Fabric (1.6.7)
   - INTULocationManager (4.2.0)
   - JLRoutes (1.6)
-  - Kingfisher (2.4.0)
+  - Kingfisher (2.4.1)
   - ModelMapper (2.1.0)
   - PKHUD (3.1.0)
-  - R.swift (2.2.0):
+  - R.swift (2.2.2):
     - R.swift.Library (~> 2.1.0)
   - R.swift.Library (2.1.0)
   - RBQFetchedResultsController (4.0.3):
     - Realm (>= 0.99.1)
-  - Realm (0.101.0):
-    - Realm/Headers (= 0.101.0)
-  - Realm/Headers (0.101.0)
+  - Realm (0.102.0):
+    - Realm/Headers (= 0.102.0)
+  - Realm/Headers (0.102.0)
   - RealmMapView (1.8):
     - ABFRealmMapView (>= 1.8)
     - RealmSwift (>= 0.98)
     - SwiftFetchedResultsController (>= 2.4.3)
-  - RealmSwift (0.101.0):
-    - Realm (= 0.101.0)
+  - RealmSwift (0.102.0):
+    - Realm (= 0.102.0)
   - SSKeychain (1.4.0)
   - SwiftFetchedResultsController (4.0.3):
     - RBQFetchedResultsController (>= 4.0.3)
@@ -60,7 +60,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   ABFRealmMapView: b440d11a5666a4575847a8e02313e57c370a4d38
-  Alamofire: 369bc67b6f5ac33ded3648d7bd21c5bfb91c2ecc
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   AlamofireNetworkActivityIndicator: 49a6e39afb947136f7b1872bae2d684957c26697
   AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
   BNRDynamicTypeManager: 44ee2970cd0120cbedd3dec84da41d0381525219
@@ -68,15 +68,15 @@ SPEC CHECKSUMS:
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   INTULocationManager: 73f8254b3d05c897c56bb13c190e5b7c648c0998
   JLRoutes: 435d791422e96c9b9b5e1c4db1aedb3ae1b1a08f
-  Kingfisher: 9171a424ee7f8031f518f649bb850d1eab541247
+  Kingfisher: 41aed5b6c1ed8fa98cf6d75283ce89cf7890f517
   ModelMapper: e599744bc1e869bdb87b453b7ce16981028b8513
   PKHUD: 4167eccdb1b3a892fd80ce2b51cb6ba412a889ab
-  R.swift: 93333ff6e5da17ec1f38463671d5ea306197cf96
+  R.swift: ed40b24d65ad70c6cf48a2f249a26a3e5a4a7bc0
   R.swift.Library: e5e077ed04f6867a95676af491650091b23518e9
   RBQFetchedResultsController: fcc29d033acb7875af5c85976bd4f1ddb4ff75bc
-  Realm: b21596d6d7e1c054f6fae967d27263d2593ca309
+  Realm: 5d219f9037e3ec2019c599b8227bfc95433cb10e
   RealmMapView: e7857bc757f54baf81133b24e91383da292dbf5e
-  RealmSwift: 5247501bcd68b9db3a718cba808e1ce45ba67034
+  RealmSwift: e6f436f9fea1c57b9ad6d1c46d57562c845f3c4c
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   SwiftFetchedResultsController: 5ba43769b1198195e087f37536c99611505da5ec
   SwiftyBeaver: 3a2481e7c24e8ef75252ec9eeebf1f456ac2d2f7
