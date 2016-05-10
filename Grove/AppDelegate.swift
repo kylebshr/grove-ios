@@ -36,26 +36,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // Set up a few things
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
+        // Start Fabric
         Fabric.with([Crashlytics.self])
 
-        UITabBar.appearance().tintColor = .zodiacBlue()
-        UINavigationBar.appearance().barTintColor = .zodiacBarBlue()
-        UINavigationBar.appearance().barStyle = .Black
-
-
-        NetworkActivityIndicatorManager.sharedManager.isEnabled = true
-        
-        PKHUD.sharedHUD.userInteractionOnUnderlyingViewsEnabled = false
-        PKHUD.sharedHUD.dimsBackground = false
-
+        // Set up things that need setting up
         setUpRoutes()
         setUpLogger()
+        setUpAppearances()
 
         // Temporary (maybe) until I figure out a better way to delete deleted locations
         deleteOutDatedLocations()
-        
+
+        #if DEBUG
+            Realm.Configuration.defaultConfiguration.deleteRealmIfMigrationNeeded = true
+        #endif
+
         return true
     }
+
+
+    // MARK: Routing
 
     // Handle 3D Touch shortcuts
     func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
@@ -70,15 +70,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 rootViewController.presentViewController(vc, animated: false, completion: nil)
             }
         }
-    }
-
-    func setUpLogger() {
-        log.addDestination(ConsoleDestination())
-        log.debug("Logging to console enabled")
-
-//        let platform = SBPlatformDestination(appID: "", appSecret: "", encryptionKey: "")
-//        log.addDestination(platform)
-//        log.debug("Logging to cloud enabled")
     }
 
     // Handle routing (login)
@@ -123,10 +114,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+
+    // MARK: Helpers
+
     func deleteOutDatedLocations() {
         try! realm.write {
             self.realm.delete(self.realm.objects(HammockLocation))
             self.realm.delete(self.realm.objects(LocationComment))
         }
+    }
+
+    func setUpLogger() {
+        log.addDestination(ConsoleDestination())
+        log.debug("Logging to console enabled")
+    }
+
+    func setUpAppearances() {
+        
+        UITabBar.appearance().tintColor = .zodiacBlue()
+        UINavigationBar.appearance().barTintColor = .zodiacBarBlue()
+        UINavigationBar.appearance().barStyle = .Black
+
+
+        NetworkActivityIndicatorManager.sharedManager.isEnabled = true
+
+        PKHUD.sharedHUD.userInteractionOnUnderlyingViewsEnabled = false
+        PKHUD.sharedHUD.dimsBackground = false
     }
 }
