@@ -25,7 +25,7 @@ extension Alamofire.Request {
             switch result {
             case .Success(let value):
                 guard let jsonArray = value as? [[String: AnyObject]] else {
-                    return .Failure(SerializationError.errorWithType(.invalidJSON))
+                    return .Failure(NetworkError.errorWithType(.invalidJSON))
                 }
                 return .Success(jsonArray.flatMap { return T.from($0) })
             case .Failure(let error): return .Failure(error)
@@ -48,7 +48,7 @@ extension Alamofire.Request {
             switch result {
             case .Success(let value):
                 guard let dictValue = value as? NSDictionary, object = T.from(dictValue) else {
-                    return .Failure(SerializationError.errorWithType(.invalidJSON))
+                    return .Failure(NetworkError.errorWithType(.invalidJSON))
                 }
                 return .Success(object)
             case .Failure(let error): return .Failure(error)
@@ -71,7 +71,7 @@ extension Alamofire.Request {
             switch result {
             case .Success(let value):
                 guard let dictValue = value as? [String: AnyObject], url = dictValue["secure_url"] as? String else {
-                    return .Failure(SerializationError.errorWithType(.invalidJSON))
+                    return .Failure(NetworkError.errorWithType(.invalidJSON))
                 }
                 return .Success(url)
             case .Failure(let error): return .Failure(error)
@@ -79,15 +79,5 @@ extension Alamofire.Request {
         }
 
         return response(responseSerializer: responseSerializer, completionHandler: completionHandler)
-    }
-}
-
-enum SerializationError: String, ErrorType {
-
-    case invalidJSON
-
-    static func errorWithType(type: SerializationError) -> NSError {
-        let userInfo = [NSLocalizedFailureReasonErrorKey: "Serialization Error: \(type)"]
-        return NSError(domain: "com.kylebashour.Whereno", code: -1, userInfo: userInfo)
     }
 }
