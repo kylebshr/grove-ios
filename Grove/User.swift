@@ -16,9 +16,9 @@ final class User: Object, Mappable {
 
     // MARK: Static properties
 
-    private static let serviceName = "grove_service"
-    private static let account = "user_token"
-    private static let realm = try! Realm()
+    internal static let serviceName = "grove_service"
+    internal static let account = "user_token"
+    internal static let realm = try! Realm()
 
     static var authenticatedUser: User? {
         let user = realm.objects(User).first
@@ -43,7 +43,12 @@ final class User: Object, Mappable {
             return SSKeychain.passwordForService(User.serviceName, account: User.account)
         }
         set {
-            SSKeychain.setPassword(newValue, forService: User.serviceName, account: User.account)
+            if let newValue = newValue {
+                SSKeychain.setPassword(newValue, forService: User.serviceName, account: User.account)
+            }
+            else {
+                SSKeychain.deletePasswordForService(User.serviceName, account: User.account)
+            }
         }
     }
 
@@ -55,7 +60,7 @@ final class User: Object, Mappable {
     required convenience init(map: Mapper) throws {
         self.init()
 
-        authToken = nil
+        logOut()
 
         try id = map.from("id")
         try authToken = map.from("auth_token")

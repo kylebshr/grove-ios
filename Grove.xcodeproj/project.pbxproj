@@ -11,6 +11,7 @@
 		27006A8F1CCFF58200790B95 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27006A8E1CCFF58200790B95 /* Router.swift */; };
 		270327991CD597F900F3BA0B /* MapTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 270327981CD597F900F3BA0B /* MapTitleView.xib */; };
 		2703279B1CD5980500F3BA0B /* MapTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2703279A1CD5980500F3BA0B /* MapTitleView.swift */; };
+		270A1B4E1CF1F916004484C8 /* UserSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270A1B4D1CF1F916004484C8 /* UserSpec.swift */; };
 		27140FB41CE3BC3B000C7E85 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27140FB31CE3BC3B000C7E85 /* NetworkError.swift */; };
 		2722FB6D1CD3F7B700F4708F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2722FB6C1CD3F7B700F4708F /* Settings.bundle */; };
 		27235A2C1CCE5B96006B1475 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27235A2B1CCE5B96006B1475 /* R.generated.swift */; };
@@ -90,6 +91,7 @@
 		27006A8E1CCFF58200790B95 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		270327981CD597F900F3BA0B /* MapTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapTitleView.xib; sourceTree = "<group>"; };
 		2703279A1CD5980500F3BA0B /* MapTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTitleView.swift; sourceTree = "<group>"; };
+		270A1B4D1CF1F916004484C8 /* UserSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSpec.swift; sourceTree = "<group>"; };
 		27140FB31CE3BC3B000C7E85 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		2722FB6C1CD3F7B700F4708F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		27235A2B1CCE5B96006B1475 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
@@ -215,6 +217,7 @@
 			children = (
 				273F11541CF120B1003362BB /* HammockLocationSpec.swift */,
 				278FF75D1CF13D3C00AA1C33 /* LocationCommentSpec.swift */,
+				270A1B4D1CF1F916004484C8 /* UserSpec.swift */,
 				273F11521CF11F0E003362BB /* LocationListCellSpec.swift */,
 				279B3D801CDBA27200CE7817 /* Info.plist */,
 			);
@@ -699,6 +702,7 @@
 				278FF75E1CF13D3C00AA1C33 /* LocationCommentSpec.swift in Sources */,
 				273F11551CF120B1003362BB /* HammockLocationSpec.swift in Sources */,
 				273F11531CF11F0E003362BB /* LocationListCellSpec.swift in Sources */,
+				270A1B4E1CF1F916004484C8 /* UserSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
