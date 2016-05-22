@@ -19,7 +19,9 @@ PODS:
   - JLRoutes (1.6)
   - Kingfisher (2.4.1)
   - ModelMapper (2.1.0)
+  - Nimble (4.0.1)
   - PKHUD (3.1.0)
+  - Quick (0.9.2)
   - R.swift (2.2.2):
     - R.swift.Library (~> 2.1.0)
   - R.swift.Library (2.1.0)
@@ -51,7 +53,9 @@ DEPENDENCIES:
   - JLRoutes
   - Kingfisher
   - ModelMapper
+  - Nimble
   - PKHUD
+  - Quick
   - R.swift
   - RealmMapView
   - RealmSwift
@@ -70,7 +74,9 @@ SPEC CHECKSUMS:
   JLRoutes: 435d791422e96c9b9b5e1c4db1aedb3ae1b1a08f
   Kingfisher: 41aed5b6c1ed8fa98cf6d75283ce89cf7890f517
   ModelMapper: e599744bc1e869bdb87b453b7ce16981028b8513
+  Nimble: 0f3c8b8b084cda391209c3c5efbb48bedeeb920a
   PKHUD: 4167eccdb1b3a892fd80ce2b51cb6ba412a889ab
+  Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
   R.swift: ed40b24d65ad70c6cf48a2f249a26a3e5a4a7bc0
   R.swift.Library: e5e077ed04f6867a95676af491650091b23518e9
   RBQFetchedResultsController: fcc29d033acb7875af5c85976bd4f1ddb4ff75bc
@@ -81,6 +87,6 @@ SPEC CHECKSUMS:
   SwiftFetchedResultsController: 5ba43769b1198195e087f37536c99611505da5ec
   SwiftyBeaver: 3a2481e7c24e8ef75252ec9eeebf1f456ac2d2f7
 
-PODFILE CHECKSUM: 56dfce5c8bf48174663a35fa6f579afa47270f2a
+PODFILE CHECKSUM: bc646b7b1c61fcd5be5fc4d26f91709cb54a4be0
 
 COCOAPODS: 1.0.0

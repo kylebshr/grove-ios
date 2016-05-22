@@ -1,0 +1,28 @@
+{
+  "feed": [
+        {
+        "capacity": 5,
+        "comments": [
+            {
+                "date_created": "2016-04-28 04:16:19",
+                "id": "09021a5f-cc63-447f-93fa-444eb6a97693",
+                "location_id": "03ffe9e8-8a0b-4ac1-bea8-52bfc6f08c39",
+                "text": "Stoners here have the best weed.",
+                "user_id": "ed05267d-6ffe-4dc2-a458-1485a2a5d3fd"
+            }
+        ],
+        "date_created": "2016-04-28 04:16:19",
+        "description": "Wow. Such flag. \n\nVery X. \n\nSo black. \n\nSo green. ",
+        "id": "03ffe9e8-8a0b-4ac1-bea8-52bfc6f08c39",
+        "latitude": 35.959531,
+        "longitude": -83.929423,
+        "photo": "https://res.cloudinary.com/whereno/image/upload/v1461818976/arjnqoh2kmakj4obitvj.jpg",
+        "title": "Nice Hammock Place",
+        "user_id": "ed05267d-6ffe-4dc2-a458-1485a2a5d3fd"
+    }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}

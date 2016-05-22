@@ -9,21 +9,21 @@
 import Foundation
 import Mapper
 
-private let formatter: NSDateFormatter = {
-    let formatter = NSDateFormatter()
-    let locale = NSLocale(localeIdentifier: "en_US")
-    formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-    formatter.locale = locale
-    return formatter
-}()
-
 extension NSDate: Convertible {
 
     public static func fromMap(value: AnyObject?) throws -> NSDate {
         guard let string = value as? String, date = formatter.dateFromString(string) else {
-            throw MapperError.CustomError(field: nil, message: "Improperly formatter date")
+            throw MapperError.CustomError(field: nil, message: "Improperly formatted date")
         }
 
         return date
+    }
+
+    internal static var formatter: NSDateFormatter {
+        let formatter = NSDateFormatter()
+        let locale = NSLocale(localeIdentifier: "en_US")
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.locale = locale
+        return formatter
     }
 }
