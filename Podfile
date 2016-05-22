@@ -46,11 +46,4 @@ post_install do |installer|
             config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
         end
     end
-    installer.aggregate_targets.each do |target|
-        # Without this hack resources from module tests won't make it to the unit test bundle
-        # See https://github.com/CocoaPods/CocoaPods/issues/4752
-        if target.name == "Pods-GroveTests" then
-            %x~ sed -i '' 's/CONFIGURATION_BUILD_DIR/TARGET_BUILD_DIR/g' '#{target.support_files_dir}/#{target.name}-resources.sh' ~
-        end
-    end
 end
