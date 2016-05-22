@@ -29,6 +29,7 @@
 		27742DC01CD1CC6C0039A54C /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27742DBF1CD1CC6C0039A54C /* Double+Extensions.swift */; };
 		27742DC21CD267740039A54C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27742DC11CD267740039A54C /* Login.storyboard */; };
 		27742DC41CD272F00039A54C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27742DC31CD272F00039A54C /* LoginViewController.swift */; };
+		278FF75E1CF13D3C00AA1C33 /* LocationCommentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278FF75D1CF13D3C00AA1C33 /* LocationCommentSpec.swift */; };
 		279744381CD2C739001A36BF /* GroveNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279744371CD2C739001A36BF /* GroveNavigationController.swift */; };
 		279B3D8D1CDBA27700CE7817 /* GroveUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279B3D8C1CDBA27700CE7817 /* GroveUITests.swift */; };
 		27A2E99D1CE01C2000C3785C /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A2E99C1CE01C2000C3785C /* FriendCell.swift */; };
@@ -107,6 +108,7 @@
 		27742DBF1CD1CC6C0039A54C /* Double+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 		27742DC11CD267740039A54C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		27742DC31CD272F00039A54C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		278FF75D1CF13D3C00AA1C33 /* LocationCommentSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCommentSpec.swift; sourceTree = "<group>"; };
 		279744371CD2C739001A36BF /* GroveNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroveNavigationController.swift; sourceTree = "<group>"; };
 		279B3D7C1CDBA27200CE7817 /* GroveTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GroveTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		279B3D801CDBA27200CE7817 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				273F11541CF120B1003362BB /* HammockLocationSpec.swift */,
+				278FF75D1CF13D3C00AA1C33 /* LocationCommentSpec.swift */,
 				273F11521CF11F0E003362BB /* LocationListCellSpec.swift */,
 				279B3D801CDBA27200CE7817 /* Info.plist */,
 			);
@@ -693,6 +696,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				278FF75E1CF13D3C00AA1C33 /* LocationCommentSpec.swift in Sources */,
 				273F11551CF120B1003362BB /* HammockLocationSpec.swift in Sources */,
 				273F11531CF11F0E003362BB /* LocationListCellSpec.swift in Sources */,
 			);
