@@ -20,17 +20,17 @@ target 'Grove' do
         pod 'SwiftyBeaver'
         pod 'Fabric'
         pod 'Crashlytics'
-        pod 'Quick'
-        pod 'Nimble'
 
     target 'GroveTests' do
         inherit! :search_paths
+
+        pod 'Quick'
+        pod 'Nimble'
     end
 
     target 'GroveUITests' do
         inherit! :search_paths
     end
-
 end
 
 post_install do |installer|
