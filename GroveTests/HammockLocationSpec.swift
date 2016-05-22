@@ -8,6 +8,7 @@
 
 import Quick
 import Nimble
+import Mapper
 @testable import Grove
 
 class HammockLocationSpec: QuickSpec {
@@ -20,13 +21,14 @@ class HammockLocationSpec: QuickSpec {
         let imageURLString = "https://image.com/image.jpg"
         let imageURL = NSURL(string: imageURLString)!
         let ownerID = "ytgd28d2-2d97g8ugbd2-owner-id"
-        let date = NSDate()
-        let dateString = NSDate.formatter.stringFromDate(date)
+        let realDate = NSDate()
+        let dateString = NSDate.formatter.stringFromDate(realDate)
+        let date = NSDate.formatter.dateFromString(dateString)!
         let capacity = 8
         let latitude = 42.412
         let longitude = 124.214
 
-        let json = [
+        let json: NSDictionary = [
             "id": id,
             "title": title,
             "description": descriptionText,
