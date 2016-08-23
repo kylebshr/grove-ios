@@ -18,6 +18,7 @@ import PKHUD
 import SwiftyBeaver
 import Fabric
 import Crashlytics
+import DigitsKit
 
 let log = SwiftyBeaver.self
 
@@ -37,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
         // Start Fabric
-        Fabric.with([Crashlytics.self])
+        Fabric.with([Crashlytics.self, Digits.self])
 
         // Set up things that need setting up
         setUpRoutes()

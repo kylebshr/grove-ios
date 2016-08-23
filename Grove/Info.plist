@@ -2,6 +2,31 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    <key>Fabric</key>
+    <dict>
+        <key>APIKey</key>
+        <string>2416b2b457462d15b9264d49110ab434805cd7a6</string>
+        <key>Kits</key>
+        <array>
+            <dict>
+                <key>KitInfo</key>
+                <dict>
+                    <key>consumerKey</key>
+                    <string>qGOloBSIJus93YgDm6BDJgQsu</string>
+                    <key>consumerSecret</key>
+                    <string>vnG7yw7BrSOD6yxLVQQ15rJEa8X2kMlHjBy2SSIJQytJc02yB1</string>
+                </dict>
+                <key>KitName</key>
+                <string>Digits</string>
+            </dict>
+            <dict>
+                <key>KitInfo</key>
+                <dict/>
+                <key>KitName</key>
+                <string>Crashlytics</string>
+            </dict>
+        </array>
+    </dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en_US</string>
 	<key>CFBundleDisplayName</key>
@@ -37,21 +62,7 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>15</string>
-	<key>Fabric</key>
-	<dict>
-		<key>APIKey</key>
-		<string>2416b2b457462d15b9264d49110ab434805cd7a6</string>
-		<key>Kits</key>
-		<array>
-			<dict>
-				<key>KitInfo</key>
-				<dict/>
-				<key>KitName</key>
-				<string>Crashlytics</string>
-			</dict>
-		</array>
-	</dict>
-	<key>ITSAppUsesNonExemptEncryption</key>
+    <key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

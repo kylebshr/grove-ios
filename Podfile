@@ -20,6 +20,7 @@ target 'Grove' do
         pod 'SwiftyBeaver'
         pod 'Fabric'
         pod 'Crashlytics'
+        pod 'Digits'
 
     target 'GroveTests' do
         inherit! :search_paths

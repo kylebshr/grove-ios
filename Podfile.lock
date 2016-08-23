@@ -14,6 +14,8 @@ PODS:
   - BNRDynamicTypeManager/Core (0.1.0)
   - Crashlytics (3.7.0):
     - Fabric (~> 1.6.3)
+  - Digits (2.3.0):
+    - TwitterCore (= 2.3.0)
   - Fabric (1.6.7)
   - INTULocationManager (4.2.0)
   - JLRoutes (1.6)
@@ -41,6 +43,8 @@ PODS:
     - RBQFetchedResultsController (>= 4.0.3)
     - RealmSwift (>= 0.99.1)
   - SwiftyBeaver (0.5.2)
+  - TwitterCore (2.3.0):
+    - Fabric
 
 DEPENDENCIES:
   - Alamofire
@@ -48,6 +52,7 @@ DEPENDENCIES:
   - AsyncSwift
   - BNRDynamicTypeManager
   - Crashlytics
+  - Digits
   - Fabric
   - INTULocationManager
   - JLRoutes
@@ -69,6 +74,7 @@ SPEC CHECKSUMS:
   AsyncSwift: 46a78bceb11f0e5bb52747f740d9692ec78d2d7c
   BNRDynamicTypeManager: 44ee2970cd0120cbedd3dec84da41d0381525219
   Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
+  Digits: af82d24ec38035cc555b60f55cca5abc68a76bed
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   INTULocationManager: 73f8254b3d05c897c56bb13c190e5b7c648c0998
   JLRoutes: 435d791422e96c9b9b5e1c4db1aedb3ae1b1a08f
@@ -86,7 +92,8 @@ SPEC CHECKSUMS:
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   SwiftFetchedResultsController: 5ba43769b1198195e087f37536c99611505da5ec
   SwiftyBeaver: 3a2481e7c24e8ef75252ec9eeebf1f456ac2d2f7
+  TwitterCore: 817eae3e291fa4125b47789e26a4f6f024115c1f
 
-PODFILE CHECKSUM: ac9cbc7c94923dfc46b0938311bb5ffd086ee2dd
+PODFILE CHECKSUM: 29a3da926f58fc9d68092b2e7819ae3bf639b6b6
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.0.1
