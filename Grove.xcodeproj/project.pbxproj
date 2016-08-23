@@ -43,6 +43,7 @@
 		27B345CB1CCD669A005BA871 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B345C91CCD669A005BA871 /* Map.storyboard */; };
 		27B345CD1CCD669A005BA871 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B345CC1CCD669A005BA871 /* Assets.xcassets */; };
 		27B345D01CCD669A005BA871 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27B345CE1CCD669A005BA871 /* LaunchScreen.storyboard */; };
+		27C403301D6CD71700072C71 /* UIView+IBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C4032F1D6CD71700072C71 /* UIView+IBDesignable.swift */; };
 		27CCFB181CCFBF7B00399F35 /* LocationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCFB171CCFBF7B00399F35 /* LocationListViewController.swift */; };
 		27CCFB1A1CCFC0A800399F35 /* LocationListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CCFB191CCFC0A800399F35 /* LocationListCell.swift */; };
 		27D042361CDAEE0100F3B85A /* LocationListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27D042351CDAEE0100F3B85A /* LocationListCell.xib */; };
@@ -129,6 +130,7 @@
 		27B345CC1CCD669A005BA871 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27B345CF1CCD669A005BA871 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27B345D11CCD669A005BA871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27C4032F1D6CD71700072C71 /* UIView+IBDesignable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+IBDesignable.swift"; sourceTree = "<group>"; };
 		27CCFB171CCFBF7B00399F35 /* LocationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListViewController.swift; sourceTree = "<group>"; };
 		27CCFB191CCFC0A800399F35 /* LocationListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListCell.swift; sourceTree = "<group>"; };
 		27D042351CDAEE0100F3B85A /* LocationListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationListCell.xib; sourceTree = "<group>"; };
@@ -369,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				27251B791CCECF3800FD4FC9 /* UIColor+Extensions.swift */,
+				27C4032F1D6CD71700072C71 /* UIView+IBDesignable.swift */,
 				27A923331CD127F80020739D /* UIImage+Extensions.swift */,
 				27DECBF91CCD901D00A4BCD2 /* UITextField+Extensions.swift */,
 				27235A3D1CCEA6E5006B1475 /* NSDate+Extensions.swift */,
@@ -735,6 +738,7 @@
 				27A9232C1CD0378B0020739D /* User.swift in Sources */,
 				27742DC41CD272F00039A54C /* LoginViewController.swift in Sources */,
 				27CCFB1A1CCFC0A800399F35 /* LocationListCell.swift in Sources */,
+				27C403301D6CD71700072C71 /* UIView+IBDesignable.swift in Sources */,
 				27140FB41CE3BC3B000C7E85 /* NetworkError.swift in Sources */,
 				27235A351CCE78FD006B1475 /* DetailCommentCell.swift in Sources */,
 				27235A301CCE67D9006B1475 /* LocationComment.swift in Sources */,
@@ -865,6 +869,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -912,6 +917,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

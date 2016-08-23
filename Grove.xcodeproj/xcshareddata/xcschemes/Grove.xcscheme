@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "27B345D51CCD669A005BA871"
+               BlueprintIdentifier = "279B3D7B1CDBA27200CE7817"
                BuildableName = "GroveTests.xctest"
                BlueprintName = "GroveTests"
                ReferencedContainer = "container:Grove.xcodeproj">
@@ -42,7 +42,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "27B345E01CCD669A005BA871"
+               BlueprintIdentifier = "279B3D891CDBA27700CE7817"
                BuildableName = "GroveUITests.xctest"
                BlueprintName = "GroveUITests"
                ReferencedContainer = "container:Grove.xcodeproj">

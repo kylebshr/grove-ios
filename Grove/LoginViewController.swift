@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 import SafariServices
+import DigitsKit
 
 class LoginViewController: UIViewController {
 
@@ -51,6 +52,9 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
+        view.setNeedsLayout()
+        view.layoutIfNeeded()
+
         timer = NSTimer.scheduledTimerWithTimeInterval(imageTime, target: self, selector: #selector(cycleImage), userInfo: nil, repeats: true)
 
         imageView.image = nextRandomImage()
@@ -67,7 +71,7 @@ class LoginViewController: UIViewController {
     // MARK: IBActions
 
     @IBAction func facebookButtonTapped(sender: UIButton) {
-        presentSafariVCWithURL(facebookURL)
+        presentDigitsLogin()
     }
 
     @IBAction func privacyButtonTapped(sender: UIButton) {
@@ -92,6 +96,24 @@ class LoginViewController: UIViewController {
             .addObserver(self, selector: #selector(login), name: AppDelegate.loginNotification, object: nil)
         NSNotificationCenter.defaultCenter()
             .addObserver(self, selector: #selector(loginFailed), name: AppDelegate.loginFailedNotification, object: nil)
+    }
+
+    func presentDigitsLogin() {
+
+        let configuration = DGTAuthenticationConfiguration(accountFields: .DefaultOptionMask)
+        let appearance = DGTAppearance()
+
+        appearance.accentColor = .dodgerBlue()
+        appearance.backgroundColor = .whiteColor()
+        configuration.appearance = appearance
+
+        Digits.sharedInstance().authenticateWithViewController(self, configuration: configuration) { (session, error) in
+            if let error = error {
+                print(error)
+            } else if let session = session {
+                print(session)
+            }
+        }
     }
 
     // Called by the login notification
