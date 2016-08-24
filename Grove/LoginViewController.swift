@@ -52,9 +52,6 @@ class LoginViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
-        view.setNeedsLayout()
-        view.layoutIfNeeded()
-
         timer = NSTimer.scheduledTimerWithTimeInterval(imageTime, target: self, selector: #selector(cycleImage), userInfo: nil, repeats: true)
 
         imageView.image = nextRandomImage()
@@ -140,6 +137,7 @@ class LoginViewController: UIViewController {
     // For the initial set up of the first image
     func setUpCycleImage() {
         changeCycleImageConstraints()
+        view.setNeedsLayout()
         view.layoutIfNeeded()
     }
 
