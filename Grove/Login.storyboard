@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A304a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -50,12 +50,14 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" verticalCompressionResistancePriority="752" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S0R-gM-vns">
                                         <rect key="frame" x="175.5" y="495" width="250" height="45"/>
-                                        <color key="backgroundColor" red="0.050980392156862744" green="0.58039215686274503" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.0" green="0.63921568627450975" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                         <accessibility key="accessibilityConfiguration" label="Login with Facebook"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <inset key="contentEdgeInsets" minX="60" minY="12" maxX="60" maxY="12"/>
-                                        <state key="normal" title="Login or Sign Up"/>
+                                        <state key="normal" title="Login or Sign Up">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="5"/>
@@ -72,7 +74,7 @@
                                         <rect key="frame" x="205" y="564" width="75" height="26"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                         <state key="normal" title="Privacy Policy">
-                                            <color key="titleColor" red="0.56373289609993849" green="0.72585100105398603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.4004030182764064" green="0.77940593274111669" blue="0.49549637969677102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="privacyButtonTapped:" destination="cYL-GU-1dL" eventType="touchUpInside" id="f7J-rY-glN"/>
@@ -88,7 +90,7 @@
                                         <rect key="frame" x="304" y="564" width="91" height="26"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
                                         <state key="normal" title="Terms of Service">
-                                            <color key="titleColor" red="0.56373289609993849" green="0.72585100105398603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleColor" red="0.4004030182764064" green="0.77940593274111669" blue="0.49549637969677102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="termsButtonTapped:" destination="cYL-GU-1dL" eventType="touchUpInside" id="ADa-fx-yRi"/>
@@ -115,7 +117,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.45000000000000001" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="NYb-0r-aEE" firstAttribute="leading" secondItem="xuk-Jr-PBr" secondAttribute="trailing" constant="2" id="1Wb-SM-TeR"/>
                                     <constraint firstItem="1Eo-OM-wh6" firstAttribute="top" secondItem="UG0-zA-afe" secondAttribute="top" constant="80" id="5yJ-e1-hpf">

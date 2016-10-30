@@ -132,8 +132,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func setUpAppearances() {
         
-        UITabBar.appearance().tintColor = .zodiacBlue()
-        UINavigationBar.appearance().barTintColor = .zodiacBarBlue()
+        UITabBar.appearance().tintColor = .limeGreen()
+        UINavigationBar.appearance().barTintColor = .limeGreen()
         UINavigationBar.appearance().barStyle = .Black
 
 

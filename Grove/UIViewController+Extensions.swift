@@ -17,11 +17,6 @@ extension UIViewController {
         let okButton = UIAlertAction(title: buttonTitle, style: .Cancel, handler: handler)
 
         alert.addAction(okButton)
-        alert.view.tintColor = .dodgerBlue()
-
-        presentViewController(alert, animated: true) {
-            alert.view.tintColor = .dodgerBlue()
-        }
     }
 
     // Show a network alert (used in several places)

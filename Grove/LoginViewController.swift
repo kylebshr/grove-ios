@@ -100,7 +100,7 @@ class LoginViewController: UIViewController {
         let configuration = DGTAuthenticationConfiguration(accountFields: .DefaultOptionMask)
         let appearance = DGTAppearance()
 
-        appearance.accentColor = .dodgerBlue()
+        appearance.accentColor = .darkerGreen()
         appearance.backgroundColor = .whiteColor()
         configuration.appearance = appearance
 

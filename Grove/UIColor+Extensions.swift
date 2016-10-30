@@ -10,16 +10,12 @@ import UIKit
 
 extension UIColor {
 
-    static func zodiacBlue() -> UIColor {
-        return UIColor(hex: "#252C5B")
+    static func limeGreen() -> UIColor {
+        return UIColor(hex: "#2BAD18")
     }
 
-    static func zodiacBarBlue() -> UIColor {
-        return UIColor(hex: "#000940")
-    }
-
-    static func dodgerBlue() -> UIColor {
-        return UIColor(hex: "#0D94FC")
+    static func darkerGreen() -> UIColor {
+        return UIColor(hex: "#00A314")
     }
 
     static func separatorColor() -> UIColor {

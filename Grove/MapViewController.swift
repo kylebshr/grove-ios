@@ -191,7 +191,7 @@ extension MapViewController: MKMapViewDelegate {
             annotationView.count = UInt(annotation.safeObjects.count)
             annotationView.annotation = annotation
             annotationView.rightCalloutAccessoryView = UIButton(type: .DetailDisclosure)
-            annotationView.color = .dodgerBlue()
+            annotationView.color = .darkerGreen()
 
             // Register for 3D Touch
             registerForPreviewingWithDelegate(self, sourceView: annotationView)
