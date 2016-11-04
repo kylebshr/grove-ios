@@ -104,11 +104,12 @@ class LoginViewController: UIViewController {
         appearance.backgroundColor = .whiteColor()
         configuration.appearance = appearance
 
-        Digits.sharedInstance().authenticateWithViewController(self, configuration: configuration) { (session, error) in
+        Digits.sharedInstance().authenticateWithViewController(self, configuration: configuration) { [weak self] (session, error) in
             if let error = error {
                 print(error)
             } else if let session = session {
                 print(session)
+                self?.dismissViewControllerAnimated(true, completion: nil)
             }
         }
     }
